@@ -1,6 +1,10 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"APSR":
+  url: https://www.cambridge.org/core/journals/american-political-science-review
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"WD":
+  url: https://www.sciencedirect.com/journal/world-development
+
+
+"AJPS":
+  url: https://onlinelibrary.wiley.com/journal/15405907

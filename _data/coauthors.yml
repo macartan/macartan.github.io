@@ -1,34 +1,97 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Wilke":
+  - firstname: ["Anna M", "Anna", "A.M.", "A. M.", "AM", "A.", "A"]
+    url: https://anna-wilke.com/
 
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Leavitt":
+  - firstname: ["Thomas", "T", "T."]
+    url: https://www.tomleavitt.com/
 
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Shirikov":
+  - firstname: ["Anton", "A.", "A"]
+    url: https://www.shirikov.com/
 
-"Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Tietz":
+  - firstname: ["Till", "T.", "T"]
+    url: https://github.com/till-tietz
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Humphreys":
+  - firstname: ["Macartan", "M.", "M"]
+    url: http://macartan.nyc/
 
-"Przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"McMurry":
+  - firstname: ["Nina", "N.", "N"]
+    url: https://www.ninamcmurry.com/
 
-"Schrödinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"Stukal":
+  - firstname: ["Denis", "D.", "D"]
+    url: https://www.hse.ru/en/staff/stukal
 
-"Lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"Rozenas":
+  - firstname: ["Arturas", "A.", "A"]
+    url: http://www.arozenas.net/
 
-"Planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"Gans-Morse":
+  - firstname: ["Jordan", "J.", "J"]
+    url: https://sites.northwestern.edu/jgansmorse/
+
+"Frye":
+  - firstname: ["Timothy", "Timothy M", "T", "T.", "TM", "T.M.", "T. M."]
+    url: https://www.timothyfrye.com/
+
+"Ting":
+  - firstname: ["Michael", "Michael M", "M", "M.", "MM", "M.M.", "M. M."]
+    url: http://www.columbia.edu/~mmt2033/Michael_Tings_Columbia_website/Welcome.html
+
+"Polishchuk":
+  - firstname: ["Leonid", "L", "L."]
+    url: https://www.hse.ru/en/org/persons/65104
+
+"Scacco":
+  - firstname: ["Alexandra", "A", "A."]
+    url: https://www.wzb.eu/en/persons/alexandra-scacco
+
+"Rochlitz":
+  - firstname: ["Michael", "M", "M."]
+    url: https://sites.google.com/site/michaelrochlitz/
+
+"Laughlin":
+  - firstname: ["Benjamin", "B", "B."]
+    url: http://www.benjamin-laughlin.com/
+
+"Malkov":
+  - firstname: ["Egor", "E", "E."]
+    url: https://sites.google.com/a/umn.edu/emalkov
+
+"Warren":
+  - firstname: ["Shana", "Shana S", "S.S.", "S", "S."]
+    url: https://www.poverty-action.org/people/shana-warren
+
+"Meriggi":
+  - firstname: ["Niccolò", "Niccolò F", "N.F.", "N", "N."]
+    url: https://research.wur.nl/en/persons/niccol%C3%B2-meriggi
+
+"Voors":
+  - firstname: ["Maarten", "M", "M."]
+    url: https://sites.google.com/site/maartenvoors/
+
+"Medina":
+  - firstname: ["Lily", "L", "L."]
+    url: https://lilymedina.github.io/
+
+"Blair":
+  - firstname: ["Graeme", "G", "G."]
+    url: https://graemeblair.com/
+
+"Cooper":
+  - firstname: ["Jasper", "Jasper J", "J.", "J", "J.J."]
+    url: https://www.linkedin.com/in/jasper-jack-cooper/
+
+"Coppock":
+  - firstname: ["Alexander", "A", "A."]
+    url: https://alexandercoppock.com/
+
+"Jacobs":
+  - firstname: ["Alan", "A", "A."]
+    url: https://politics.ubc.ca/persons/alan-jacobs/
+
+
