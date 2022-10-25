@@ -2,24 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: > 
+  Director @ <a href='https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality'>WZB Berlin</a> • Professor @ <a href='https://polisci.columbia.edu/'>Columbia University</a>
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  image: profile_pic.jpg
+  address: 
 
 news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am a Professor of Political Science at <a href='https://polisci.columbia.edu/'>Columbia University</a> and director of the Institutions and Political Inequality group at the WZB Berlin. I work on the political economy of development. Ongoing research focuses on post-conflict development, ethnic politics, political authority and leadership, and democratic development with a current focus on the use of field experiments to study democratic decision-making in post-conflict and developing areas. I have worked in Chad, Ghana, Haiti, Indonesia, Liberia, Mali, Sao Tome and Principe, Sierra Leone, Senegal, Uganda, and elsewhere. Recent work has appeared in the American Political Science Review, Journal of Development Economics, Science Advances, and elsewhere. I have written or coauthored books on ethnic politics, natural resource management, and game theory and politics. I am a former Trudeau fellow and scholar of the Harvard Academy.
