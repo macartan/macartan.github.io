@@ -1,10 +1,14 @@
-"APSR":
-  url: https://www.cambridge.org/core/journals/american-political-science-review
-  color: "#00369f"
-
 "WD":
   url: https://www.sciencedirect.com/journal/world-development
 
 
 "AJPS":
   url: https://onlinelibrary.wiley.com/journal/15405907
+
+
+"APSR":
+  url: https://www.cambridge.org/core/journals/american-political-science-review
+  color: "#00369f"
+
+"JCR":
+ url: https://journals.sagepub.com/home/JCR
