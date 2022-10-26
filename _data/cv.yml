@@ -4,7 +4,7 @@
     - name: Full Name
       value: Macartan Humphreys
     - name: Date of Birth
-      value: 14th March 1879
+      value: 19 April 1972
     - name: Languages
       value: English, German
 
@@ -15,18 +15,19 @@
       institution: Harvard University
       year: 2003
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Dissertation: "The political economy of factions"
+    - title: MPhil
+      institution: Oxford University
+      year: 2000
       description:
-        - Description 1.
-        - Description 2.
+        - Economics
+        - Thesis: "Essays on Trade and Poverty"
+
+    - title: BA
+      institution: Oxford University
+      year: 2000
+      description:
+        - Thesis: History and Political Science
 
 - title: Experience
   type: time_table
@@ -47,37 +48,3 @@
       year: 2017-2022
 
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, etc.
