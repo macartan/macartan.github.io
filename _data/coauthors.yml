@@ -1,3 +1,12 @@
+ 
+"Weinstein":
+  - firstname: ["Jeremy M", "Jeremy", "J.M."]
+    url: https://politicalscience.stanford.edu/people/jeremy-weinstein
+
+"Jacobs":
+  - firstname: ["Alan M", "Alan", "A.M."]
+    url: https://politics.ubc.ca/profile/alan-jacobs/
+
 "Wilke":
   - firstname: ["Anna M", "Anna", "A.M.", "A. M.", "AM", "A.", "A"]
     url: https://anna-wilke.com/
