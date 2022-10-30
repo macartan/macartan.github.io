@@ -1,3 +1,15 @@
+"Grossman":
+  - firstname: ["Guy", "G."]
+    url: https://guygrossman.com/
+
+
+"Windt":
+  - firstname: ["Peter", "peter van der"]
+    url: https://www.petervanderwindt.com/
+
+"Van der Windt":
+  - firstname: ["Peter", "peter van der"]
+    url: https://www.petervanderwindt.com/
  
 "Weinstein":
   - firstname: ["Jeremy M", "Jeremy", "J.M."]
