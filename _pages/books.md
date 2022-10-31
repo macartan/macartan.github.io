@@ -12,3 +12,25 @@ nav_order: 1
   {% bibliography -f papers -q @book %}
 
 </div>
+
+
+
+Experimental
+
+<div class="publications">
+
+{% bibliography -q @*[keywords ~= experimental]* %}
+
+</div>
+
+
+
+Health
+
+<div class="publications">
+
+{% bibliography -q @*[keywords ~= health]* %}
+
+</div>
+
+

@@ -7,6 +7,9 @@ dropdown: true
 children: 
     - title: all publications
       permalink: /publications/
+    - title: by topic
+      permalink: /publications/by_topic
+    - title: divider
     - title: books
       permalink: /publications/books
     - title: unpublished
