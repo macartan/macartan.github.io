@@ -9,7 +9,7 @@ category: work
 <div class="nopadding col-md-12 col-xs-12">
 <div class="description">
 <div class="LinesEllipsis LinesEllipsis--clamped ">
-<div><img class="wp-image-420 alignleft" src="http://macartan.nyc/wp-content/uploads/2020/02/hop-242x300.png" alt="" width="116" height="144" /></div>
+<div><img class="wp-image-420 alignleft" src="political_games.jpg" alt="" width="116" height="144" /></div>
 <div></div>
 <div></div>
 <div><a href="https://wwnorton.com/books/9780393263336">Political Games</a> presents forty-nine intriguing insights from game theory, illuminating the common logics underlying diverse political problems.</div>

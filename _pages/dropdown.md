@@ -12,9 +12,8 @@ children:
     - title: divider
     - title: books
       permalink: /publications/books
+    - title: articles
+      permalink: /publications/articles
     - title: unpublished
       permalink: /publications/working_papers
-    - title: divider
-    - title: projects
-      permalink: /projects/
 ---
