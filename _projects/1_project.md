@@ -1,80 +1,111 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
+title: Political Games
+img: assets/img/political_games.jpg
 importance: 1
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+<div class="nopadding col-md-12 col-xs-12">
+<div class="description">
+<div class="LinesEllipsis LinesEllipsis--clamped ">
+<div><img class="wp-image-420 alignleft" src="http://macartan.nyc/wp-content/uploads/2020/02/hop-242x300.png" alt="" width="116" height="144" /></div>
+<div></div>
+<div></div>
+<div><a href="https://wwnorton.com/books/9780393263336">Political Games</a> presents forty-nine intriguing insights from game theory, illuminating the common logics underlying diverse political problems.</div>
+<div></div>
+<div></div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
 </div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
 </div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+<ul>
+ 	<li><strong>text</strong>: segments available from <a href="https://wwnorton.com/books/9780393263336">Norton</a></li>
+ 	<li><strong>code:  </strong>see the accompanying <a href="https://github.com/macartan/hop">hop</a> package for graphing and solving game (<a href="https://macartan.github.io/hop/">guide</a>); see <a href="https://macartan.github.io/hop/endnotes.html">here</a> for code for endnotes</li>
+</ul>
+&nbsp;
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+<strong>Contents</strong>
 
+<strong>Introduction:</strong> What Game Theory Is and Isn't
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+<strong>Dilemmas of Collective Action</strong>
+1. The Tragedy of the Commons (The Prisoner's Dilemma)
+2. Strategic Substitution (The Game of Chicken)
+3. Strategic Complementarities (The Assurance Dilemma)
 
+<strong>Solutions to Social Dilemmas</strong>
+4. The Shadow of the Future (The Folk Theorems)
+5. Playing with Your Progeny (Overlapping Generations)
+6. Playing with the Wrong Goals (The Evolution of Preferences)
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+<strong>What Groups Want</strong>
+7. The Problem with Utilitarians (The Robbins Critique)
+8. Irrational Majorities (Condorcet's Paradox)
+9. There Is No General Will (Arrow's Theorem)
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+<strong>Majority Rule</strong>
+10. Majority Rule Aggregates Knowledge (Condorcet's Jury Theorem)
+11. What's Special about Simple Majority Rule? (May's Theorem)
+12. Why the Middle Matters (The Median Voter Theorem)
+13. Voting Weight and Political Influence (Power Indices)
+
+<strong>The Instability of Majority Rule</strong>
+14. You Can't Satisfy All the Majorities Any of the Time (Plott's Theorem)
+15. Naive Majorities are Capable of Anything (The McKelvey-Schofield Chaos Theorem)
+16. How Sticky are Sticky Rules? (Nakamura's Theorem)
+
+<strong>Manipulation</strong>
+17. Sophisticated Majorities Might Also Do Anything (Agenda Manipulation)
+18. Power from Proposing Prospers (Legislative Bargaining)
+19. It's Hard to Get People to Vote Honestly (The Gibbard-Satterthwaite Theorem)
+
+<strong>Strategic Voting</strong>
+20. Is It Rational to Vote? (The Rational Voter Paradox)
+21. Strategic Abstention (The Swing Voter's Curse)
+22. Conformist Voting (Information Cascades)
+
+<strong>Arguing</strong>
+23. Listening to Pain (Costly Signaling)
+24. When to Listen to Threats (Cheap Talk)
+25. Deep Democracy Among Strategists (The Limits of Deliberation)
+26. You Can't Agree to Disagree (Aumann's Agreement Theorem)
+
+<strong>Bargaining</strong>
+27. The Bargaining Problem (The Nash Bargaining Solution)
+28. Alternating Offers (The Ståhl-Rubinstein Solution)
+29. The Benefits of Constraints (The Schelling Conjecture)
+30. Changing Fortunes Threaten Negotiations (The Commitment Problem)
+
+<strong>Selling</strong>
+31. Let the Market Decide (The Coase Theorem)
+32. Auctions (The Revenue Equivalence Theorem)
+33. The Missing Market for Lemons (Asymmetric Information and Market Failure)
+34. The Impossibility of Informationally Efficient Markets (The Grossman-Stiglitz Paradox)
+
+<strong>Institutional Design</strong>
+35. Solomon's Dilemma (Maskin Monotonicity)
+36. How to Choose a Policy (The Clarke-Groves Mechanism)
+37. Not Getting to Yes (The Myerson-Satterthwaite Theorem)
+
+<strong>Political Economy</strong>
+38. Throw the Rascals Out (The Logic of Political Accountability)
+39. Why More Inclusive Governments Produce More Public Goods (The Selectorate Model)
+40. Redistribution and Inequality (The Meltzer-Richard Model)
+41. Redistribution and Inefficiency (The Dixit-Londregan Model)
+
+<strong>Revolting</strong>
+42. Small Is Beautiful (The Logic of Collective Action)
+43. Surprised by Revolt (Threshold Models)
+44. Dashed Expectations (Psychological Games)
+45. Feigning Tough (Reputation Models)
+
+<strong>Limited Rationality</strong>
+46. Strategy without Strategizing (Evolutionary Stability)
+47. Adaptive Play and the Dominance of Fear (Stochastic Stability)
+48. Too Clever by Half (The k-level Model)
+49. The Irrationality of Others (A Theorem of Imitation)
+
+<strong>Appendix A: Foundational Results in the Theory of Games</strong>
+A1. Reasoning Backward (Zermelo's Theorem)
+A2. Solving Zero-Sum Games (The Minimax Theorem)
+A3. A Beautiful World? (Nash's Theorem)
