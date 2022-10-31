@@ -5,9 +5,12 @@ title: topics
 description:
 nav: false
 nav_order: 1
-key: [development, violence, methods, experimental, theory, health, identity-politics]
+toc: true
+key: [development, violence, methods, experimental, theory, health, identity politics]
 ---
 
+* toc
+{:toc}
 
 <div class="publications">
 
