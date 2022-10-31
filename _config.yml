@@ -157,6 +157,8 @@ kramdown:
     block:
       line_numbers: false
       start_line: 1
+  toc_levels: 1..2
+  auto_ids: true
 
 # Includes & excludes
 include: ['_pages']
