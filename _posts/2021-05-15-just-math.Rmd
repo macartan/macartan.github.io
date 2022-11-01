@@ -1,0 +1,35 @@
+---
+layout: post
+title: "Testing"
+date: 2021-07-04 17:39:00
+output: 
+  html_document:
+    keep_md: true
+description: "TM testing math"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fabricatr)
+```
+
+<!-- Frequent Worries about RCTs: Questions and Answers -->
+<!-- Author: Macartan Humphreys -->
+
+* TOC
+{:toc}
+
+# Estimation
+
+
+$$\frac{1}2 = \pi$$
+
+
+```{r}
+
+hist(rnorm(20))
+
+```
