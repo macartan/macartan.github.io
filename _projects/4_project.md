@@ -1,80 +1,46 @@
 ---
 layout: page
-title: project 4
-description: another without an image
+title: Causal inference
 img:
 importance: 3
 category: fun
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+##  Pedagogical material
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+<strong><a href="https://web.archive.org/web/20190721083550/http://www.macartan.nyc/wp-content/uploads/2015/08/causal.inference.pdf"><img class="wp-image-137 alignnone" src="https://web.archive.org/web/20190721083550im_/http://www.macartan.nyc/wp-content/uploads/2015/08/Slides.png" alt="Slides" width="25" height="25" /> </a></strong><a href="http://macartan.nyc/wp-content/uploads/2020/09/six_lectures.pdf">six_lectures on causal inference</a>
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+<strong><a href="https://web.archive.org/web/20190721083550/http://www.macartan.nyc/wp-content/uploads/2015/08/causal.inference.pdf"><img class="wp-image-137 alignnone" src="https://web.archive.org/web/20190721083550im_/http://www.macartan.nyc/wp-content/uploads/2015/08/Slides.png" alt="Slides" width="25" height="25" /> </a></strong>Of causes and postulates: Slides for Berlin Summer School 2018
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+<a href="https://web.archive.org/web/20190721083550/http://www.macartan.nyc/wp-content/uploads/2015/08/pdf.png"><img class="wp-image-40 alignnone" src="https://web.archive.org/web/20190721083550im_/http://www.macartan.nyc/wp-content/uploads/2015/08/pdf.png" alt="pdf" width="21" height="21" /></a>  <a href="https://egap.org/resource/10-strategies-for-figuring-out-if-x-caused-y/">Ten strategies for figuring out causal effects</a>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+<a href="https://web.archive.org/web/20190721083550/http://www.macartan.nyc/wp-content/uploads/2015/08/pdf.png"><img class="wp-image-40 alignnone" src="https://web.archive.org/web/20190721083550im_/http://www.macartan.nyc/wp-content/uploads/2015/08/pdf.png" alt="pdf" width="21" height="21" /></a><a href="https://egap.org/resource/10-things-to-know-about-causal-inference/"><span style="display: inline !important; float: none; background-color: #ffffff; color: #444444; cursor: text; font-family: 'Open Sans',Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;"> </span> Ten things you need to know about causal inference</a>
+
+<a href="https://web.archive.org/web/20190721083550/http://www.macartan.nyc/wp-content/uploads/2015/08/pdf.png"><img class="wp-image-40 alignnone" src="https://web.archive.org/web/20190721083550im_/http://www.macartan.nyc/wp-content/uploads/2015/08/pdf.png" alt="pdf" width="21" height="21" /></a><a href="http://egap.org/list-methods-guides"> Other egap guides</a>
 
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+## Short working papers
+
+
+
+<a href="https://web.archive.org/web/20190721083550/http://www.macartan.nyc/wp-content/uploads/2015/08/pdf.png"><img class="alignnone wp-image-40" src="https://web.archive.org/web/20190721083550im_/http://www.macartan.nyc/wp-content/uploads/2015/08/pdf.png" alt="pdf" width="21" height="21" /></a>  <a href="http://www.columbia.edu/~mh2245/papers1/monotonicity7.pdf">Bounds on OLS estimates of causal effects</a>
+
+<a href="https://web.archive.org/web/20190721083550/http://www.macartan.nyc/wp-content/uploads/2015/08/Curse-of-Control.pdf"><img class="alignnone wp-image-40" src="https://web.archive.org/web/20190721083550im_/http://www.macartan.nyc/wp-content/uploads/2015/08/pdf.png" alt="control" width="21" height="21" /></a>  <a href="http://www.macartan.nyc/wp-content/uploads/2015/08/Curse-of-Control.pdf">Why a Bayesian researcher might prefer observational data</a>
+
+
+## Short working papers 
+
+https://egap.org/resource/10-strategies-for-figuring-out-if-x-caused-y/
+
+<div class="publications">
+
+{%- for y in page.years %}
+  <h2 class="year">{{y}}</h2>
+  {% bibliography -f papers -q @*[year={{y}}]* %}
+{% endfor %}
+
 </div>
 
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+x

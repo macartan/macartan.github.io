@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: home
 permalink: /
 subtitle: > 
   Director @ <a href='https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality'>WZB Berlin</a> • Professor @ <a href='https://polisci.columbia.edu/'>Columbia University</a>
