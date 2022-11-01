@@ -3,7 +3,7 @@ layout: page
 permalink: /teaching/
 title: teaching
 description: classes, workshops, and teaching materials
-nav: true
+nav: false
 nav_order: 4
 ---
 
@@ -28,11 +28,4 @@ nav_order: 4
 <ul>
  	<li>Syllabus from senior honors thesis seminar<a href="http://www.columbia.edu/%7Emh2245/HonorsSyllabus1415.pdf"> (2014-15</a> <a href="http://macartan.nyc/?page_id=513">2015-16</a> <a href="http://macartan.nyc/wp-content/uploads/2020/04/HonorsSyllabus1617.pdf">2016-17</a>) <a href="http://macartan.nyc/teaching/honors-seminar-21-22/">2021-22</a></li>
  	<li><a href="http://www.columbia.edu/%7Emh2245/disssyllabus.pdf">Syllabus from dissertation seminar (2007)</a></li>
-</ul>
-<strong>Bits and Pieces</strong>
-<ul>
- 	<li>How to critique: <a href="http://macartan.nyc/teaching/how-to-critique/">A checklist for discussants and reviewers</a></li>
- 	<li><a href="http://www.macartan.nyc/teaching/how-to-read/">How to read</a></li>
- 	<li><a href="http://macartan.nyc/teaching/how-to-write/">How to write</a></li>
- 	<li><a href="http://macartan.nyc/?page_id=402">Informal advice for prospective students</a></li>
 </ul>
