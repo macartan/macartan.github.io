@@ -9,5 +9,9 @@ children:
       permalink: /teaching/
     - title: resources
       permalink: /teaching/resources
+    - title: applying for a PhD
+      permalink: /teaching/applying-for-a-phd
     - title: divider
 ---
+
+

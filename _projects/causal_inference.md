@@ -23,24 +23,9 @@ category: fun
 
 
 
-<a href="https://web.archive.org/web/20190721083550/http://www.macartan.nyc/wp-content/uploads/2015/08/pdf.png"><img class="alignnone wp-image-40" src="https://web.archive.org/web/20190721083550im_/http://www.macartan.nyc/wp-content/uploads/2015/08/pdf.png" alt="pdf" width="21" height="21" /></a>  <a href="http://www.columbia.edu/~mh2245/papers1/monotonicity7.pdf">Bounds on OLS estimates of causal effects</a>
-
-<a href="https://web.archive.org/web/20190721083550/http://www.macartan.nyc/wp-content/uploads/2015/08/Curse-of-Control.pdf"><img class="alignnone wp-image-40" src="https://web.archive.org/web/20190721083550im_/http://www.macartan.nyc/wp-content/uploads/2015/08/pdf.png" alt="control" width="21" height="21" /></a>  <a href="http://www.macartan.nyc/wp-content/uploads/2015/08/Curse-of-Control.pdf">Why a Bayesian researcher might prefer observational data</a>
-
-
-## Short working papers 
-
-https://egap.org/resource/10-strategies-for-figuring-out-if-x-caused-y/
-
+<!-- _pages/publications.md -->
 <div class="publications">
 
-{%- for y in page.years %}
-  <h2 class="year">{{y}}</h2>
-  {% bibliography -f papers -q @*[year={{y}}]* %}
-{% endfor %}
+  {% bibliography -f papers -q @*[keywords~=causal inference]* %}
 
 </div>
-
-
-
-x
