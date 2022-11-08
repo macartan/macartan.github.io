@@ -22,7 +22,6 @@ The propositions:
 <ul>
     <li>A: Any policy that is incompatible with survival of a polity is ipso facto not legitimate</li>
     <li>B: Non-authoritarian policies are incompatible with the survival of a polity in situation X (a state of exception)</li>
-    <li>raybans</li>
     <li>C: Authoritarian policies are legitimate in situation X</li>
 </ul>
 
@@ -72,7 +71,7 @@ This discussion has been interesting because it was between an empirical and a t
 
 **A** (the normative claim): Assuming _A_ is not meant to be true by definition I’d like to learn more about why we should believe A. Addressing this requires a sharper statement of legitimacy (and not just of FL and CL) than we have in the text, I think. It doesn’t seem hard to me to imagine notions of legitimacy that are consistent with self sacrifice: taking actions that threaten survival but are good for other reasons purpose.  Does _A_ hold broad support among theorists? 
 
-**B** (the empirical claim): Wuttke is concerned with B and I think both sides agree that you can’t use Mittiga’s argument to get to D if you don’t buy B.  Mittiga doesn’t do a lot to establish B however. Should he? More generally, what do we think is the responsibility of theorists to establish the plausibility of a condition on which a normative conclusion (here C and D) depends? I think the answer depends in part on whether claims like the strong claim or the weak claim are meant.  If the strong claim is meant then B really is needed for the argument and Wuttke’s concerns are critical.  If the weak claim is meant then the importance of the claim (rather than the validity of the claim) depends on whether B is plausible. In that case might it be enough to argue that many people believe B or at least that many believe B to be possible?
+**B** (the empirical claim): Wuttke is concerned with _B_ and I think both sides agree that you can’t use Mittiga’s argument to get to _D_ if you don’t buy _B_.  Mittiga doesn’t do a lot to establish _B_ however. Should he? More generally, what do we think is the responsibility of theorists to establish the plausibility of a condition on which a normative conclusion (here _C_ and _D_) depends? I think the answer depends in part on whether claims like the strong claim or the weak claim are meant.  If the strong claim is meant then _B_ really is needed for the argument and Wuttke’s concerns are critical.  If the weak claim is meant then the _importance_ of the claim (rather than the validity of the claim) depends on whether _B_ is plausible. In that case might it be enough to argue that many people believe B or at least that many believe _B_ to be possible?
 
 <hr>
 
