@@ -1,7 +1,8 @@
 ---
 layout: post
-title: a post with redirect
-date: 2021-07-04 17:39:00
-description: you can also redirect to assets like pdf
-redirect: /assets/pdf/example_pdf.pdf
+title: How to make field experiments more ethical?
+date: 2014-11-02 
+description: Article at the Washington Post
+
 ---
+Original publication can be find <a href="https://www.washingtonpost.com/news/monkey-cage/wp/2014/11/02/how-to-make-field-experiments-more-ethical/">here</a>
