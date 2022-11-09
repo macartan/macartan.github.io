@@ -2,9 +2,7 @@
 layout: post
 title: "rmd Testing"
 date: 2021-07-04 17:39:00
-output: 
-  html_document:
-    keep_md: true
+output: md_document
 description: "rmd testing math"
 ---
 
@@ -37,7 +35,7 @@ dev.off()
 
 ```{r}
 knitr::include_graphics("../assets/img/posts/hist.png")
-knitr::include_graphics("assets/img/posts/hist.png")
-knitr::include_graphics(https://macartan.github.io/assets/img/posts/hist.jpg)
+# knitr::include_graphics("assets/img/posts/hist.png")
+knitr::include_graphics("https://macartan.github.io/assets/img/posts/hist.jpg")
 
 ```

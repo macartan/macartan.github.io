@@ -1,14 +1,3 @@
----
-layout: post
-title: "rmd nnly"
-date: 2021-07-04 17:39:00
-output: 
-  html_document:
-    keep_md: true
-description: "Rmd."
----
+Just rmd \[1\]
 
-Just  rmd [1]
-
-
-[1] This note
+\[1\] This note
