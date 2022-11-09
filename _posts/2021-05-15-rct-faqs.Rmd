@@ -24,8 +24,6 @@ library(fabricatr)
 {:toc}
 
 
-$$\frac{1}2 + e^3$$
-
 # Estimation
 
 ## Controls: You didn't control for \<this thing\>, should I be worried? {#nocontrols}
