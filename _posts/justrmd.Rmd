@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "rmd nnly"
-date: 2022-07-04 17:39:00
+date: 2021-07-04 17:39:00
 output: 
   html_document:
     keep_md: true

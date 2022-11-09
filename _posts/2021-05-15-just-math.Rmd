@@ -5,7 +5,7 @@ date: 2021-07-04 17:39:00
 output: 
   html_document:
     keep_md: true
-description: "TM testing math"
+description: "rmd testing math"
 ---
 
 ```{r setup, include=FALSE}
@@ -18,6 +18,8 @@ library(fabricatr)
 
 <!-- Frequent Worries about RCTs: Questions and Answers -->
 <!-- Author: Macartan Humphreys -->
+
+an rmd file
 
 * TOC
 {:toc}
@@ -35,5 +37,6 @@ dev.off()
 
 ```{r}
 knitr::include_graphics("../assets/img/posts/hist.png")
+knitr::include_graphics(https://macartan.github.io/assets/img/posts/hist.jpg)
 
 ```

@@ -16,7 +16,7 @@ nav_order: 4
  	<li>political violence <a href="http://www.columbia.edu/%7Emh2245/Syllabus_20110122.pdf">syllabus 2011 </a>| <a href="http://www.columbia.edu/%7Emh2245/Syllabus_20100118.pdf">(2010) </a></li>
  	<li>ethnic politics <a href="http://www.columbia.edu/%7Emh2245/ethnic_politics_syllabus.pdf">syllabus </a>(Spring 2008)</li>
  	<li>african civil wars in comparative perspective <a href="http://www.columbia.edu/%7Emh2245/cw_syllabus.pdf">primary syllabus</a> | <a href="http://www.columbia.edu/%7Emh2245/syllabus2.pdf">annex</a> (Fall 2005)</li>
- 	<li>african politics <a href="../pdf/teaching/2004_africa_politics_syllabus.pdf">syllabus</a> | <a href="http://www.columbia.edu/%7Emh2245/AfricaCourse2004.pdf">notes</a> (Spring 2004)</li>
+ 	<li>african politics <a href="../assets/pdf/teaching/2004_africa_politics_syllabus.pdf">syllabus</a> | <a href="http://www.columbia.edu/%7Emh2245/AfricaCourse2004.pdf">notes</a> (Spring 2004)</li>
 </ul>
 <strong>Game Theory</strong>
 <ul>
