@@ -20,7 +20,8 @@ library(fabricatr)
 
 <!-- Author: Macartan Humphreys -->
 
--   TOC {:toc}
+* TOC 
+{:toc}
 
 # Estimation
 
