@@ -35,7 +35,12 @@ dev.off()
 
 ```{r}
 knitr::include_graphics("../assets/img/posts/hist.png")
+```
+
+```{r}
+
 # knitr::include_graphics("assets/img/posts/hist.png")
+
 knitr::include_graphics("https://macartan.github.io/assets/img/posts/hist.jpg")
 
 ```
