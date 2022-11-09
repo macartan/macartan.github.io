@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Testing"
+title: "rmd Testing"
 date: 2021-07-04 17:39:00
 output: 
   html_document:
@@ -27,9 +27,13 @@ library(fabricatr)
 
 $$\frac{1}2 = \pi$$
 
+```{r}
+png("../assets/img/posts/hist.png")
+hist(rnorm(20))
+dev.off()
+```
 
 ```{r}
-
-hist(rnorm(20))
+knitr::include_graphics("../assets/img/posts/hist.png")
 
 ```
