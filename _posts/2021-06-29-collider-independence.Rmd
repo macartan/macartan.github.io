@@ -9,7 +9,11 @@ output:
 ---
 
 
-
+```{r setup, include=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)
+library(DeclareDesign)
+library(knitr)
+```
 
 <!-- Frequent Worries about RCTs: Questions and Answers -->
 
@@ -38,34 +42,21 @@ Here I "declare" a version of this counterexample, confirm that it is indeed a c
 
 The example involves a situation in which there is a graph with a path of the form $D \rightarrow M \leftarrow U$ but for which $D$ is independent of $U$ when $M=1$. Specifically we have this causal graph involving $D$ (Race), $M$ (Being stopped), $U$ (Unobserved factor affecting stops and the use of force) and $Y$ (use of force).
 
-
-```{.r .fold-show}
+```{r, class.source = "fold-show", results = 'hide'}
 library(CausalQueries)
-```
-
-```
-## Loading required package: Rcpp
-```
-
-```{.r .fold-show}
 make_model("Y <- D -> M -> Y <- U; U ->M") %>% plot
+
 ```
-
-![](2021-06-29-collider-independence_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
-
-```r
+```{r}
 knitr::include_graphics("https://macartan.github.io/assets/img/collider-independence-dag.jpg")
 ```
-
-![](https://macartan.github.io/assets/img/collider-independence-dag.jpg)<!-- -->
 
 
 I use [DeclareDesign](declaredesign.org) to declare the design and counterexample which lets us assess properties of the design quickly.
 
 Declaration in this chunk:
 
-
-```{.r .fold-show}
+```{r, class.source = "fold-show"}
 pr_D = .66  # Probability D = 1
 pr_U = .45  # Probability U = 1
 a <- 4      # A parameter
@@ -86,96 +77,45 @@ design <-
   declare_estimator(Y ~ D, subset = M == 1, estimand = "CDE")
 ```
 
-```
-## Warning: 'declare_estimand' is deprecated.
-## Use 'declare_inquiry' instead.
-## See help("Deprecated")
-```
-
 Sample data can be drawn from the design:
 
-
-```{.r .fold-show}
+```{r, class.source = "fold-show"}
 df <- draw_data(design)
 ```
 
 We see that the variables that should be correlated with each other are correlated with each other:
 
-
-```{.r .fold-hide}
+```{r, comment = "", class.source = "fold-hide"}
 df %>% select(D, M, U, Y) %>% cor %>% kable
 ```
 
-
-
-|   |         D|         M|         U|         Y|
-|:--|---------:|---------:|---------:|---------:|
-|D  | 1.0000000| 0.5279044| 0.0110675| 0.5063309|
-|M  | 0.5279044| 1.0000000| 0.3745801| 0.7771743|
-|U  | 0.0110675| 0.3745801| 1.0000000| 0.5344361|
-|Y  | 0.5063309| 0.7771743| 0.5344361| 1.0000000|
-
 Here is the diagnosis:
 
-
-```r
+```{r, message = FALSE, warning = FALSE}
 design %>% 
   diagnose_design %>% reshape_diagnosis %>% kable(caption = "Diagnosis")
 ```
 
-
-
-Table: Diagnosis
-
-|Design |Inquiry |Estimator |Outcome |Term |N Sims |Mean Estimand |Mean Estimate |Bias   |SD Estimate |RMSE   |Power  |Coverage |
-|:------|:-------|:---------|:-------|:----|:------|:-------------|:-------------|:------|:-----------|:------|:------|:--------|
-|.      |CDE     |estimator |Y       |D    |500    |0.41          |0.41          |-0.00  |0.02        |0.02   |1.00   |0.97     |
-|       |        |          |        |     |       |(0.00)        |(0.00)        |(0.00) |(0.00)      |(0.00) |(0.00) |(0.01)   |
-
 And here is the diagnosis of a perturbed design. Here I just change parameter `a` and diagnose again. 
 
-
-```r
+```{r, message = FALSE, warning=FALSE}
 design %>% 
   redesign(a = 5) %>% diagnose_design %>% reshape_diagnosis %>% kable(caption = "A perturbation")
 ```
-
-
-
-Table: A perturbation
-
-|Design |a  |Inquiry |Estimator |Outcome |Term |N Sims |Mean Estimand |Mean Estimate |Bias   |SD Estimate |RMSE   |Power  |Coverage |
-|:------|:--|:-------|:---------|:-------|:----|:------|:-------------|:-------------|:------|:-----------|:------|:------|:--------|
-|.      |5  |CDE     |estimator |Y       |D    |500    |0.32          |0.32          |-0.00  |0.02        |0.02   |1.00   |0.98     |
-|       |   |        |          |        |     |       |(0.00)        |(0.00)        |(0.00) |(0.00)      |(0.00) |(0.00) |(0.01)   |
 
 
 # Why no collider bias?
 
 We can see in the data that conditional independence seems to hold when $M=1$ despite $M$ being a collider:
 
-
-```r
+```{r, comment = ""}
 df %>% filter(M==1) %>% select(D, U) %>% cor
-```
-
-```
-           D          U
-D 1.00000000 0.01019801
-U 0.01019801 1.00000000
 ```
 
 Though not when $M=0$.
 
-
-```r
+```{r, comment = ""}
 df %>% filter(M==0) %>% select(D, U) %>% cor
-```
-
-```
-           D          U
-D  1.0000000 -0.4638666
-U -0.4638666  1.0000000
 ```
 
 Why is that? Is the counterexample "generic"?
@@ -210,53 +150,23 @@ Some takes:
 
 To wit, a modification that moves us away from the knife edge but for which bias remains quite small:
 
-
-```{.r .fold-show}
+```{r, class.source = "fold-show"}
 design_2 <- replace_step(design,step = 2,
                          declare_potential_outcomes(M ~ rbinom(N, size = 1,  prob = D/3 +(1+3*D)*(1+U)/12),
                              conditions = list(D = 0:1, U = 0:1)))
+
 ```
 
 
-
-```{.r .fold-hide}
+```{r, comment = "", class.source = "fold-hide"}
 df_2 <- draw_data(design_2) 
 df_2 %>% select(D, M, U, Y) %>% cor %>% kable
 ```
 
-
-
-|   |          D|         M|          U|         Y|
-|:--|----------:|---------:|----------:|---------:|
-|D  |  1.0000000| 0.6459388| -0.0134557| 0.5560953|
-|M  |  0.6459388| 1.0000000|  0.2543268| 0.7512154|
-|U  | -0.0134557| 0.2543268|  1.0000000| 0.4526432|
-|Y  |  0.5560953| 0.7512154|  0.4526432| 1.0000000|
-
-
-```r
+```{r, message = FALSE}
 df_2 %>% filter(M==1) %>% select(D, U) %>% cor %>% kable(caption = "Collider bias (conditional correlation)")
 ```
 
-
-
-Table: Collider bias (conditional correlation)
-
-|   |         D|         U|
-|:--|---------:|---------:|
-|D  |  1.000000| -0.043318|
-|U  | -0.043318|  1.000000|
-
-
-```r
+```{r, message = FALSE, warning = FALSE}
 design_2 %>%  diagnose_design %>% reshape_diagnosis %>% kable(caption = "Diagnosis: Another perturbation")
 ```
-
-
-
-Table: Diagnosis: Another perturbation
-
-|Design |Inquiry |Estimator |Outcome |Term |N Sims |Mean Estimand |Mean Estimate |Bias   |SD Estimate |RMSE   |Power  |Coverage |
-|:------|:-------|:---------|:-------|:----|:------|:-------------|:-------------|:------|:-----------|:------|:------|:--------|
-|.      |CDE     |estimator |Y       |D    |500    |0.39          |0.37          |-0.02  |0.03        |0.03   |1.00   |0.88     |
-|       |        |          |        |     |       |(0.00)        |(0.00)        |(0.00) |(0.00)      |(0.00) |(0.00) |(0.01)   |
