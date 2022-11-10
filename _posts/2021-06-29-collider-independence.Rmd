@@ -5,9 +5,10 @@ date: "6/29/2020"
 output: 
   html_document:
     keep_md: true
+    number_sections: true
+    toc: true
     code_folding: "hide"
 ---
-
 
 ```{r setup, include=FALSE, message=FALSE, echo=FALSE}
 library(tidyverse)
@@ -42,11 +43,12 @@ Here I "declare" a version of this counterexample, confirm that it is indeed a c
 
 The example involves a situation in which there is a graph with a path of the form $D \rightarrow M \leftarrow U$ but for which $D$ is independent of $U$ when $M=1$. Specifically we have this causal graph involving $D$ (Race), $M$ (Being stopped), $U$ (Unobserved factor affecting stops and the use of force) and $Y$ (use of force).
 
-```{r, class.source = "fold-show", results = 'hide'}
+```{r, eval = FALSE}
 library(CausalQueries)
 make_model("Y <- D -> M -> Y <- U; U ->M") %>% plot
 
 ```
+
 ```{r}
 knitr::include_graphics("https://macartan.github.io/assets/img/collider-independence-dag.jpg")
 ```

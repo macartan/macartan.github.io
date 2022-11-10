@@ -5,9 +5,10 @@ date: "6/29/2020"
 output: 
   html_document:
     keep_md: true
+    number_sections: true
+    toc: true
     code_folding: "hide"
 ---
-
 
 
 
@@ -39,19 +40,11 @@ Here I "declare" a version of this counterexample, confirm that it is indeed a c
 The example involves a situation in which there is a graph with a path of the form $D \rightarrow M \leftarrow U$ but for which $D$ is independent of $U$ when $M=1$. Specifically we have this causal graph involving $D$ (Race), $M$ (Being stopped), $U$ (Unobserved factor affecting stops and the use of force) and $Y$ (use of force).
 
 
-```{.r .fold-show}
+```r
 library(CausalQueries)
-```
-
-```
-## Loading required package: Rcpp
-```
-
-```{.r .fold-show}
 make_model("Y <- D -> M -> Y <- U; U ->M") %>% plot
 ```
 
-![](2021-06-29-collider-independence_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
 
 ```r
 knitr::include_graphics("https://macartan.github.io/assets/img/collider-independence-dag.jpg")
@@ -108,12 +101,12 @@ df %>% select(D, M, U, Y) %>% cor %>% kable
 
 
 
-|   |          D|         M|          U|         Y|
-|:--|----------:|---------:|----------:|---------:|
-|D  |  1.0000000| 0.5241100| -0.0073193| 0.4939559|
-|M  |  0.5241100| 1.0000000|  0.3700492| 0.7756747|
-|U  | -0.0073193| 0.3700492|  1.0000000| 0.5312605|
-|Y  |  0.4939559| 0.7756747|  0.5312605| 1.0000000|
+|   |         D|         M|         U|         Y|
+|:--|---------:|---------:|---------:|---------:|
+|D  | 1.0000000| 0.5268440| 0.0118100| 0.4987454|
+|M  | 0.5268440| 1.0000000| 0.3740786| 0.7666156|
+|U  | 0.0118100| 0.3740786| 1.0000000| 0.5388138|
+|Y  | 0.4987454| 0.7666156| 0.5388138| 1.0000000|
 
 Here is the diagnosis:
 
@@ -129,7 +122,7 @@ Table: Diagnosis
 
 |Design |Inquiry |Estimator |Outcome |Term |N Sims |Mean Estimand |Mean Estimate |Bias   |SD Estimate |RMSE   |Power  |Coverage |
 |:------|:-------|:---------|:-------|:----|:------|:-------------|:-------------|:------|:-----------|:------|:------|:--------|
-|.      |CDE     |estimator |Y       |D    |500    |0.41          |0.41          |-0.00  |0.02        |0.02   |1.00   |0.98     |
+|.      |CDE     |estimator |Y       |D    |500    |0.41          |0.41          |-0.00  |0.02        |0.02   |1.00   |0.97     |
 |       |        |          |        |     |       |(0.00)        |(0.00)        |(0.00) |(0.00)      |(0.00) |(0.00) |(0.01)   |
 
 And here is the diagnosis of a perturbed design. Here I just change parameter `a` and diagnose again. 
@@ -146,7 +139,7 @@ Table: A perturbation
 
 |Design |a  |Inquiry |Estimator |Outcome |Term |N Sims |Mean Estimand |Mean Estimate |Bias   |SD Estimate |RMSE   |Power  |Coverage |
 |:------|:--|:-------|:---------|:-------|:----|:------|:-------------|:-------------|:------|:-----------|:------|:------|:--------|
-|.      |5  |CDE     |estimator |Y       |D    |500    |0.32          |0.32          |-0.00  |0.02        |0.02   |1.00   |0.97     |
+|.      |5  |CDE     |estimator |Y       |D    |500    |0.32          |0.32          |-0.00  |0.02        |0.02   |1.00   |0.98     |
 |       |   |        |          |        |     |       |(0.00)        |(0.00)        |(0.00) |(0.00)      |(0.00) |(0.00) |(0.01)   |
 
 
@@ -160,9 +153,9 @@ df %>% filter(M==1) %>% select(D, U) %>% cor
 ```
 
 ```
-            D           U
-D  1.00000000 -0.01167906
-U -0.01167906  1.00000000
+             D            U
+D  1.000000000 -0.006677471
+U -0.006677471  1.000000000
 ```
 
 Though not when $M=0$.
@@ -174,8 +167,8 @@ df %>% filter(M==0) %>% select(D, U) %>% cor
 
 ```
            D          U
-D  1.0000000 -0.4675017
-U -0.4675017  1.0000000
+D  1.0000000 -0.4481776
+U -0.4481776  1.0000000
 ```
 
 Why is that? Is the counterexample "generic"?
@@ -228,10 +221,10 @@ df_2 %>% select(D, M, U, Y) %>% cor %>% kable
 
 |   |          D|         M|          U|         Y|
 |:--|----------:|---------:|----------:|---------:|
-|D  |  1.0000000| 0.6739079| -0.0021072| 0.5568669|
-|M  |  0.6739079| 1.0000000|  0.2460591| 0.7409422|
-|U  | -0.0021072| 0.2460591|  1.0000000| 0.4647825|
-|Y  |  0.5568669| 0.7409422|  0.4647825| 1.0000000|
+|D  |  1.0000000| 0.6724033| -0.0136583| 0.5571423|
+|M  |  0.6724033| 1.0000000|  0.2362326| 0.7404312|
+|U  | -0.0136583| 0.2362326|  1.0000000| 0.4572451|
+|Y  |  0.5571423| 0.7404312|  0.4572451| 1.0000000|
 
 
 ```r
@@ -244,8 +237,8 @@ Table: Collider bias (conditional correlation)
 
 |   |          D|          U|
 |:--|----------:|----------:|
-|D  |  1.0000000| -0.0368825|
-|U  | -0.0368825|  1.0000000|
+|D  |  1.0000000| -0.0398197|
+|U  | -0.0398197|  1.0000000|
 
 
 ```r
