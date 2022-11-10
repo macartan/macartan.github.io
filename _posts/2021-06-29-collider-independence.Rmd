@@ -10,7 +10,8 @@ output:
     code_folding: "hide"
 ---
 
-```{r setup, include=FALSE, message=FALSE, echo=FALSE}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(DeclareDesign)
 library(knitr)

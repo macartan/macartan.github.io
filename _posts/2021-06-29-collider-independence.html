@@ -552,29 +552,29 @@ are correlated with each other:</p>
 <tr class="odd">
 <td align="left">D</td>
 <td align="right">1.0000000</td>
-<td align="right">0.5153887</td>
-<td align="right">0.0081181</td>
-<td align="right">0.5052056</td>
+<td align="right">0.5101216</td>
+<td align="right">0.0015718</td>
+<td align="right">0.4980726</td>
 </tr>
 <tr class="even">
 <td align="left">M</td>
-<td align="right">0.5153887</td>
+<td align="right">0.5101216</td>
 <td align="right">1.0000000</td>
-<td align="right">0.3771249</td>
-<td align="right">0.7843064</td>
+<td align="right">0.3749769</td>
+<td align="right">0.7753171</td>
 </tr>
 <tr class="odd">
 <td align="left">U</td>
-<td align="right">0.0081181</td>
-<td align="right">0.3771249</td>
+<td align="right">0.0015718</td>
+<td align="right">0.3749769</td>
 <td align="right">1.0000000</td>
-<td align="right">0.5294099</td>
+<td align="right">0.5253109</td>
 </tr>
 <tr class="even">
 <td align="left">Y</td>
-<td align="right">0.5052056</td>
-<td align="right">0.7843064</td>
-<td align="right">0.5294099</td>
+<td align="right">0.4980726</td>
+<td align="right">0.7753171</td>
+<td align="right">0.5253109</td>
 <td align="right">1.0000000</td>
 </tr>
 </tbody>
@@ -625,8 +625,8 @@ are correlated with each other:</p>
 <td align="left">D</td>
 <td align="left">500</td>
 <td align="left">0.41</td>
-<td align="left">0.40</td>
-<td align="left">-0.00</td>
+<td align="left">0.41</td>
+<td align="left">0.00</td>
 <td align="left">0.02</td>
 <td align="left">0.02</td>
 <td align="left">1.00</td>
@@ -731,14 +731,14 @@ bias?</h1>
 <p>We can see in the data that conditional independence seems to hold
 when <span class="math inline">\(M=1\)</span> despite <span class="math inline">\(M\)</span> being a collider:</p>
 <pre class="r"><code>df %&gt;% filter(M==1) %&gt;% select(D, U) %&gt;% cor</code></pre>
-<pre><code>           D          U
-D 1.00000000 0.02142829
-U 0.02142829 1.00000000</code></pre>
+<pre><code>             D            U
+D  1.000000000 -0.006540089
+U -0.006540089  1.000000000</code></pre>
 <p>Though not when <span class="math inline">\(M=0\)</span>.</p>
 <pre class="r"><code>df %&gt;% filter(M==0) %&gt;% select(D, U) %&gt;% cor</code></pre>
 <pre><code>           D          U
-D  1.0000000 -0.4690721
-U -0.4690721  1.0000000</code></pre>
+D  1.0000000 -0.4586646
+U -0.4586646  1.0000000</code></pre>
 <p>Why is that? Is the counterexample “generic”?</p>
 <p>Pearl readers expect such exceptions to be rare, but let’s look more
 carefully to see why we get an exception here. Let’s say <span class="math inline">\(p_{u,d,m}\)</span> is the probability that <span class="math inline">\(U=u, D=d\)</span> and <span class="math inline">\(M=m\)</span>. We are interested in whether <span class="math inline">\(U\)</span> and <span class="math inline">\(D\)</span> are independent given <span class="math inline">\(M=1\)</span>. Now let’s ask in particular if <span class="math inline">\(\Pr(U=1 | D=1, M=1)= \Pr(U=1 | D=0,
@@ -791,29 +791,29 @@ df_2 %&gt;% select(D, M, U, Y) %&gt;% cor %&gt;% kable</code></pre>
 <tr class="odd">
 <td align="left">D</td>
 <td align="right">1.0000000</td>
-<td align="right">0.6439939</td>
-<td align="right">-0.0068405</td>
-<td align="right">0.5485529</td>
+<td align="right">0.6540526</td>
+<td align="right">0.0106054</td>
+<td align="right">0.5531229</td>
 </tr>
 <tr class="even">
 <td align="left">M</td>
-<td align="right">0.6439939</td>
+<td align="right">0.6540526</td>
 <td align="right">1.0000000</td>
-<td align="right">0.2626910</td>
-<td align="right">0.7471614</td>
+<td align="right">0.2722615</td>
+<td align="right">0.7531466</td>
 </tr>
 <tr class="odd">
 <td align="left">U</td>
-<td align="right">-0.0068405</td>
-<td align="right">0.2626910</td>
+<td align="right">0.0106054</td>
+<td align="right">0.2722615</td>
 <td align="right">1.0000000</td>
-<td align="right">0.4689217</td>
+<td align="right">0.4795801</td>
 </tr>
 <tr class="even">
 <td align="left">Y</td>
-<td align="right">0.5485529</td>
-<td align="right">0.7471614</td>
-<td align="right">0.4689217</td>
+<td align="right">0.5531229</td>
+<td align="right">0.7531466</td>
+<td align="right">0.4795801</td>
 <td align="right">1.0000000</td>
 </tr>
 </tbody>
@@ -831,13 +831,13 @@ df_2 %&gt;% select(D, M, U, Y) %&gt;% cor %&gt;% kable</code></pre>
 <tbody>
 <tr class="odd">
 <td align="left">D</td>
-<td align="right">1.0000000</td>
-<td align="right">-0.0389988</td>
+<td align="right">1.000000</td>
+<td align="right">-0.035145</td>
 </tr>
 <tr class="even">
 <td align="left">U</td>
-<td align="right">-0.0389988</td>
-<td align="right">1.0000000</td>
+<td align="right">-0.035145</td>
+<td align="right">1.000000</td>
 </tr>
 </tbody>
 </table>
@@ -887,7 +887,7 @@ df_2 %&gt;% select(D, M, U, Y) %&gt;% cor %&gt;% kable</code></pre>
 <td align="left">0.39</td>
 <td align="left">0.37</td>
 <td align="left">-0.02</td>
-<td align="left">0.03</td>
+<td align="left">0.02</td>
 <td align="left">0.03</td>
 <td align="left">1.00</td>
 <td align="left">0.89</td>
