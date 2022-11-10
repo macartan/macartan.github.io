@@ -33,7 +33,7 @@ Here I "declare" a version of this counterexample, confirm that it is indeed a c
 The example involves a situation in which there is a graph with a path of the form $D \rightarrow M \leftarrow U$ but for which $D$ is independent of $U$ when $M=1$. Specifically we have this causal graph involving $D$ (Race), $M$ (Being stopped), $U$ (Unobserved factor affecting stops and the use of force) and $Y$ (use of force).
 
 
-```r
+```{.r .fold-show}
 library(CausalQueries)
 ```
 
@@ -41,7 +41,7 @@ library(CausalQueries)
 ## Loading required package: Rcpp
 ```
 
-```r
+```{.r .fold-show}
 make_model("Y <- D -> M -> Y <- U; U ->M") %>% plot
 ```
 
@@ -102,12 +102,12 @@ df %>% select(D, M, U, Y) %>% cor %>% kable
 
 
 
-|   |         D|         M|         U|         Y|
-|:--|---------:|---------:|---------:|---------:|
-|D  | 1.0000000| 0.5230164| 0.0338886| 0.5002321|
-|M  | 0.5230164| 1.0000000| 0.3951848| 0.7784635|
-|U  | 0.0338886| 0.3951848| 1.0000000| 0.5512398|
-|Y  | 0.5002321| 0.7784635| 0.5512398| 1.0000000|
+|   |          D|         M|          U|         Y|
+|:--|----------:|---------:|----------:|---------:|
+|D  |  1.0000000| 0.5263184| -0.0086005| 0.5024292|
+|M  |  0.5263184| 1.0000000|  0.3595255| 0.7709871|
+|U  | -0.0086005| 0.3595255|  1.0000000| 0.5201415|
+|Y  |  0.5024292| 0.7709871|  0.5201415| 1.0000000|
 
 Here is the diagnosis:
 
@@ -123,7 +123,7 @@ Table: Diagnosis
 
 |Design |Inquiry |Estimator |Outcome |Term |N Sims |Mean Estimand |Mean Estimate |Bias   |SD Estimate |RMSE   |Power  |Coverage |
 |:------|:-------|:---------|:-------|:----|:------|:-------------|:-------------|:------|:-----------|:------|:------|:--------|
-|.      |CDE     |estimator |Y       |D    |500    |0.40          |0.40          |-0.00  |0.02        |0.02   |1.00   |0.96     |
+|.      |CDE     |estimator |Y       |D    |500    |0.41          |0.40          |-0.00  |0.02        |0.02   |1.00   |0.97     |
 |       |        |          |        |     |       |(0.00)        |(0.00)        |(0.00) |(0.00)      |(0.00) |(0.00) |(0.01)   |
 
 And here is the diagnosis of a perturbed design. Here I just change parameter `a` and diagnose again. 
@@ -140,7 +140,7 @@ Table: A perturbation
 
 |Design |a  |Inquiry |Estimator |Outcome |Term |N Sims |Mean Estimand |Mean Estimate |Bias   |SD Estimate |RMSE   |Power  |Coverage |
 |:------|:--|:-------|:---------|:-------|:----|:------|:-------------|:-------------|:------|:-----------|:------|:------|:--------|
-|.      |5  |CDE     |estimator |Y       |D    |500    |0.32          |0.32          |-0.00  |0.02        |0.02   |1.00   |0.98     |
+|.      |5  |CDE     |estimator |Y       |D    |500    |0.32          |0.32          |0.00   |0.02        |0.02   |1.00   |0.97     |
 |       |   |        |          |        |     |       |(0.00)        |(0.00)        |(0.00) |(0.00)      |(0.00) |(0.00) |(0.01)   |
 
 
@@ -154,9 +154,9 @@ df %>% filter(M==1) %>% select(D, U) %>% cor
 ```
 
 ```
-           D          U
-D 1.00000000 0.01421044
-U 0.01421044 1.00000000
+             D            U
+D  1.000000000 -0.009996797
+U -0.009996797  1.000000000
 ```
 
 Though not when $M=0$.
@@ -167,9 +167,9 @@ df %>% filter(M==0) %>% select(D, U) %>% cor
 ```
 
 ```
-           D          U
-D  1.0000000 -0.4385105
-U -0.4385105  1.0000000
+          D         U
+D  1.000000 -0.474484
+U -0.474484  1.000000
 ```
 
 Why is that? Is the counterexample "generic"?
@@ -222,10 +222,10 @@ df_2 %>% select(D, M, U, Y) %>% cor %>% kable
 
 |   |          D|         M|          U|         Y|
 |:--|----------:|---------:|----------:|---------:|
-|D  |  1.0000000| 0.6687886| -0.0038876| 0.5590111|
-|M  |  0.6687886| 1.0000000|  0.2408943| 0.7443863|
-|U  | -0.0038876| 0.2408943|  1.0000000| 0.4590611|
-|Y  |  0.5590111| 0.7443863|  0.4590611| 1.0000000|
+|D  |  1.0000000| 0.6687713| -0.0150050| 0.5574009|
+|M  |  0.6687713| 1.0000000|  0.2344493| 0.7438051|
+|U  | -0.0150050| 0.2344493|  1.0000000| 0.4485936|
+|Y  |  0.5574009| 0.7438051|  0.4485936| 1.0000000|
 
 
 ```r
@@ -238,8 +238,8 @@ Table: Collider bias (conditional correlation)
 
 |   |          D|          U|
 |:--|----------:|----------:|
-|D  |  1.0000000| -0.0228818|
-|U  | -0.0228818|  1.0000000|
+|D  |  1.0000000| -0.0429594|
+|U  | -0.0429594|  1.0000000|
 
 
 ```r
@@ -252,5 +252,5 @@ Table: Diagnosis: Another perturbation
 
 |Design |Inquiry |Estimator |Outcome |Term |N Sims |Mean Estimand |Mean Estimate |Bias   |SD Estimate |RMSE   |Power  |Coverage |
 |:------|:-------|:---------|:-------|:----|:------|:-------------|:-------------|:------|:-----------|:------|:------|:--------|
-|.      |CDE     |estimator |Y       |D    |500    |0.39          |0.37          |-0.02  |0.03        |0.03   |1.00   |0.90     |
+|.      |CDE     |estimator |Y       |D    |500    |0.39          |0.37          |-0.02  |0.02        |0.03   |1.00   |0.89     |
 |       |        |          |        |     |       |(0.00)        |(0.00)        |(0.00) |(0.00)      |(0.00) |(0.00) |(0.01)   |
