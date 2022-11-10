@@ -36,11 +36,15 @@ Here I "declare" a version of this counterexample, confirm that it is indeed a c
 
 The example involves a situation in which there is a graph with a path of the form $D \rightarrow M \leftarrow U$ but for which $D$ is independent of $U$ when $M=1$. Specifically we have this causal graph involving $D$ (Race), $M$ (Being stopped), $U$ (Unobserved factor affecting stops and the use of force) and $Y$ (use of force).
 
-```{r, message = FALSE}
+```{r, echo=T, results = 'hide'}
 library(CausalQueries)
 make_model("Y <- D -> M -> Y <- U; U ->M") %>% plot
 
 ```
+```{r}
+knitr::include_graphics("https://macartan.github.io/assets/img/collider-independence-dag.jpg")
+```
+
 
 I use [DeclareDesign](declaredesign.org) to declare the design and counterexample which lets us assess properties of the design quickly.
 
@@ -81,14 +85,14 @@ df %>% select(D, M, U, Y) %>% cor %>% kable
 
 Here is the diagnosis:
 
-```{r, message=FALSE}
+```{r, message = FALSE, warning = FALSE}
 design %>% 
   diagnose_design %>% reshape_diagnosis %>% kable(caption = "Diagnosis")
 ```
 
 And here is the diagnosis of a perturbed design. Here I just change parameter `a` and diagnose again. 
 
-```{r}
+```{r, message = FALSE, warning=FALSE}
 design %>% 
   redesign(a = 5) %>% diagnose_design %>% reshape_diagnosis %>% kable(caption = "A perturbation")
 ```
@@ -153,10 +157,10 @@ df_2 <- draw_data(design_2)
 df_2 %>% select(D, M, U, Y) %>% cor %>% kable
 ```
 
-```{r, comment = ""}
+```{r, message = FALSE}
 df_2 %>% filter(M==1) %>% select(D, U) %>% cor %>% kable(caption = "Collider bias (conditional correlation)")
 ```
 
-```{r}
+```{r, message = FALSE, warning = FALSE}
 design_2 %>%  diagnose_design %>% reshape_diagnosis %>% kable(caption = "Diagnosis: Another perturbation")
 ```
