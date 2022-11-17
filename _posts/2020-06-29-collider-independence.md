@@ -41,7 +41,7 @@ The example involves a situation in which there is a graph with a path of the fo
 library(CausalQueries)
 make_model("Y <- D -> M -> Y <- U; U ->M") %>% plot
 ```
-![](https://macartan.github.io/assets/img/dag.jpg)
+![](https://macartan.github.io/assets/img/dag.png)
 
 I use [DeclareDesign](declaredesign.org) to declare the design and counterexample which lets us assess properties of the design quickly.
 
@@ -79,7 +79,7 @@ We see that the variables that should be correlated with each other are correlat
 ```r
 df %>% select(D, M, U, Y) %>% cor %>% kable
 ```
-![](https://macartan.github.io/assets/img/table-1.jpg)
+![](https://macartan.github.io/assets/img/table-1.png)
 
 
 Here is the diagnosis:
@@ -88,7 +88,7 @@ Here is the diagnosis:
 design %>% 
   diagnose_design %>% reshape_diagnosis %>% kable(caption = "Diagnosis")
 ```
-![](https://macartan.github.io/assets/img/table-2.jpg)
+![](https://macartan.github.io/assets/img/table-2.png)
 
 And here is the diagnosis of a perturbed design. Here I just change parameter `a` and diagnose again.
 
@@ -96,7 +96,7 @@ And here is the diagnosis of a perturbed design. Here I just change parameter `a
 design %>% 
   redesign(a = 5) %>% diagnose_design %>% reshape_diagnosis %>% kable(caption = "A perturbation")
 ```
-![](https://macartan.github.io/assets/img/table-3.jpg)
+![](https://macartan.github.io/assets/img/table-3.png)
 
 # Why no collider bias?
 
@@ -105,20 +105,21 @@ We can see in the data that conditional independence seems to hold when $$M=1$$ 
 ```r
 df %>% filter(M==1) %>% select(D, U) %>% cor
 ```
-![](https://macartan.github.io/assets/img/table-4.jpg)
+![](https://macartan.github.io/assets/img/table-4.png)
 
 Though not when $$M=0$$.
 
 ```r
 df %>% filter(M==0) %>% select(D, U) %>% cor
 ```
-![](https://macartan.github.io/assets/img/table-5.jpg)
+![](https://macartan.github.io/assets/img/table-5.png)
 
 
 Why is that? Is the counterexample "generic"?
 
-Pearl readers expect such exceptions to be rare, but let's look more carefully to see why we get an exception here. Let's say **p<sup>u,d,m</sup>** is the probability that $$U=u, D=d$$ and $$M=m$$. We are interested in whether $$U$$ and $$D$$ are independent given $$M=1$$. Now let's ask in particular if ***Pr(U=1 | D=1, M=1) = Pr(U=1 | D=0, M=1)***
+Pearl readers expect such exceptions to be rare, but let's look more carefully to see why we get an exception here. Let's say **p<sub>u,d,m</sub>** is the probability that $$U=u, D=d$$ and $$M=m$$. We are interested in whether $$U$$ and $$D$$ are independent given $$M=1$$. Now let's ask in particular if $$Pr(U=1 | D=1, M=1)$$ = $$Pr(U=1 | D=0, M=1)$$
 
 Or:
+
 
 
