@@ -42,7 +42,7 @@ library(CausalQueries)
 make_model("Y <- D -> M -> Y <- U; U ->M") %>% plot
 {% endhighlight %}
 
-![](https://macartan.github.io/assets/img/dag.png){width=250}
+![](https://macartan.github.io/assets/img/dag.png = 300x300)
 
 I use [DeclareDesign](declaredesign.org) to declare the design and counterexample which lets us assess properties of the design quickly.
 
