@@ -116,7 +116,9 @@ df %>% filter(M==0) %>% select(D, U) %>% cor
 
 Why is that? Is the counterexample "generic"?
 
-Pearl readers expect such exceptions to be rare, but let's look more carefully to see why we get an exception here. Let's say $$p_{u,d,m}$$ is the probability that $$U=u, D=d$$ and $$M=m$$. We are interested in whether $$U$$ and $$D$$ are independent given $$M=1$$. Now let's ask in particular if $$\Pr(U=1 | D=1, M=1)= \Pr(U=1 | D=0, M=1)$$
+Pearl readers expect such exceptions to be rare, but let's look more carefully to see why we get an exception here. Let's say $$p_{u,d,m}$$ is the probability that $$U=u, D=d$$ and $$M=m$$. We are interested in whether $$U$$ and $$D$$ are independent given $$M=1$$. Now let's ask in particular if 
+
+$$\Pr(U=1 | D=1, M=1)= \Pr(U=1 | D=0, M=1)$$
 
 Or:
 
@@ -167,7 +169,7 @@ df_2 %>% filter(M==1) %>% select(D, U) %>% cor %>% kable(caption = "Collider bia
 ```r
 design_2 %>%  diagnose_design %>% reshape_diagnosis %>% kable(caption = "Diagnosis: Another perturbation")
 ```
-<img src="https://macartan.github.io/assets/img/table-8.png" width="924" height="154">
+<img src="https://macartan.github.io/assets/img/table-8.png" width="925" height="150">
 
 
 
