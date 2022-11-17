@@ -35,12 +35,55 @@ Here I "declare" a version of this counterexample, confirm that it is indeed a c
 
 # The counterexample really is a counterexample with real causal relations between nodes
 
-The example involves a situation in which there is a graph with a path of the form _D &rarr; M &larr; U_ but for which _D_ is independent of _U_ when _M=1_. Specifically we have this causal graph involving _D_ (Race), _M_ (Being stopped), _U_ (Unobserved factor affecting stops and the use of force) and _Y_ (use of force).
+The example involves a situation in which there is a graph with a path of the form ***D &rarr; M &larr; U*** but for which ***D*** is independent of ***U*** when ***M=1***. Specifically we have this causal graph involving ***D*** (Race), ***M*** (Being stopped), ***U*** (Unobserved factor affecting stops and the use of force) and ***Y*** (use of force).
 
 ```r
 library(CausalQueries)
 make_model("Y <- D -> M -> Y <- U; U ->M") %>% plot
 ```
 
-![](https://macartan.github.io/assets/img/collider-independence-dag.jpg)
+![](https://macartan.github.io/assets/img/collider-technical/dag.jpg)
+
+I use [DeclareDesign](declaredesign.org) to declare the design and counterexample which lets us assess properties of the design quickly.
+
+Declaration in this chunk:
+
+```r
+pr_D = .66  # Probability D = 1
+pr_U = .45  # Probability U = 1
+a <- 4      # A parameter
+
+design <-
+  
+  declare_population(N = 10000,
+                     D = rbinom(N, size = 1, prob = pr_D),
+                     U = rbinom(N, size = 1, prob = pr_U)) +
+  declare_potential_outcomes(M ~ rbinom(N, size = 1,  prob = (1+3*D)*(1+U)/8),
+                             conditions = list(D = 0:1, U = 0:1)) +
+  declare_reveal(outcome_variables = "M", assignment_variables = c("D", "U")) +
+  declare_potential_outcomes(Y ~ M*rbinom(N, size = 1, prob = (1+D)*(1+U)/a),
+                             conditions = list(D = 0:1)) +
+  declare_reveal(outcome_variables = "Y",
+                 assignment_variables = c("D")) +
+  declare_estimand(CDE = mean((Y_D_1 - Y_D_0)[M==1])) +
+  declare_estimator(Y ~ D, subset = M == 1, estimand = "CDE")
+  
+```
+
+Sample data can be drawn from the design:
+
+```r
+df <- draw_data(design)
+```
+
+We see that the variables that should be correlated with each other are correlated with each other:
+
+
+```r
+df %>% select(D, M, U, Y) %>% cor %>% kable
+```
+
+![](https://macartan.github.io/assets/img/collider-technical/table1.jpg)
+
+
 
