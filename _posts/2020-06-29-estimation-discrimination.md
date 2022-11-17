@@ -53,20 +53,7 @@ We have enough information here to write the estimands and estimates in terms of
 
 
 The estimands are:
-
-\begin{eqnarray}
-
-ATE &=& (p_{10}y_{10}+p_{11}y_{11})/2 - (p_{00}y_{00}+p_{01}y_{01})/2\\
-
-CDE_{M=1} &=& \frac{(p_{10}+p_{00})(\overline{y}_{10}-\overline{y}_{00}) + (p_{11}+p_{01})(\overline{y}_{11}- \overline{y}_{01})}{p_{10}+p_{11}+p_{00}+p_{01}} \\
-
-
-
-ATE_{M=1} &=& CDE_{M=1} + \frac{(p_{10}-p_{00})y_{00} + (p_{11}-p_{01})y_{01}}{p_{00} + p_{01} + p_{10} + p_{11}}
-\end{eqnarray}
-
-<!-- ATE_{M=1} &=&   \frac{2p_{00}(y_{10} - y_{00}) +   2p_{01}(y_{11} - y_{01}) -->
-<!--    + (p_{10}-p_{00})y_{10} + (p_{11}-p_{01})y_{11}}{p_{00} + p_{01} + p_{10} + p_{11}} \\ -->
+  (formulas to be added)
 
 In words, the $$ATE$$ is the effect of $$D$$ on getting stopped and experiencing force (averaged over eh different $$U$$ types).  $$CDE_{M=1}$$ is the average affect of $$D$$ on force among those in the $$M=1$$ group, keeping $$M=1$$ fixed as we consider counterfactual changes in $$D$$. $$ATE_{M=1}$$ is the average affect of $$D$$ on force among those in the $$M=1$$ group, but allowing $$M$$ to change as we consider counterfactual changes in $$D$$.
  
