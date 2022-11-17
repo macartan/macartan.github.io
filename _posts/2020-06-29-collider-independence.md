@@ -24,9 +24,9 @@ description:
 Since then:
 
 * Gaebler et al provide a counterexample to [Knox, Lowe, and Mummolo](https://www.cambridge.org/core/journals/american-political-science-review/article/administrative-records-mask-racially-biased-policing/66BC0F9998543868BB20F241796B79B8) here:
-https://gist.github.com/jg43b/a5926fc98bf26cb157f4001d5a76f5a9
+[https://gist.github.com/jg43b/a5926fc98bf26cb157f4001d5a76f5a9](https://gist.github.com/jg43b/a5926fc98bf26cb157f4001d5a76f5a9)
 
-* Knox et al dismiss the counterexample as trickery. https://twitter.com/dean_c_knox/status/1276508890990075904 
+* Knox et al dismiss the counterexample as trickery. [https://twitter.com/dean_c_knox/status/1276508890990075904](https://twitter.com/dean_c_knox/status/1276508890990075904) 
 
 * I think there's a bit more to it. 
 
