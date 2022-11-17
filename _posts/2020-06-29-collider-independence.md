@@ -37,17 +37,18 @@ Here I "declare" a version of this counterexample, confirm that it is indeed a c
 
 The example involves a situation in which there is a graph with a path of the form ***D &rarr; M &larr; U*** but for which $$D$$ is independent of $$U$$ when $$M=1$$. Specifically we have this causal graph involving $$D$$ (Race), $$M$$ (Being stopped), $$U$$ (Unobserved factor affecting stops and the use of force) and $$Y$$ (use of force).
 
-```s
+{% highlight s linenos %}
 library(CausalQueries)
 make_model("Y <- D -> M -> Y <- U; U ->M") %>% plot
-```
+{% endhighlight %}
+
 ![](https://macartan.github.io/assets/img/dag.png)
 
 I use [DeclareDesign](declaredesign.org) to declare the design and counterexample which lets us assess properties of the design quickly.
 
 Declaration in this chunk:
 
-```s
+{% highlight s linenos %}
 pr_D = .66  # Probability D = 1
 pr_U = .45  # Probability U = 1
 a <- 4      # A parameter
@@ -67,5 +68,5 @@ design <-
   declare_estimand(CDE = mean((Y_D_1 - Y_D_0)[M==1])) +
   declare_estimator(Y ~ D, subset = M == 1, estimand = "CDE")
   
-```
+{% endhighlight %}
 
