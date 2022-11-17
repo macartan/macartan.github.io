@@ -35,7 +35,7 @@ Here I "declare" a version of this counterexample, confirm that it is indeed a c
 
 # The counterexample really is a counterexample with real causal relations between nodes
 
-The example involves a situation in which there is a graph with a path of the form $D \rightarrow M \leftarrow U$ but for which $D$ is independent of $U$ when $M=1$. Specifically we have this causal graph involving $D$ (Race), $M$ (Being stopped), $U$ (Unobserved factor affecting stops and the use of force) and $Y$ (use of force).
+The example involves a situation in which there is a graph with a path of the form _D &rarr; M &larr; U_ but for which _D_ is independent of _U_ when _M=1_. Specifically we have this causal graph involving _D_ (Race), _M_ (Being stopped), _U_ (Unobserved factor affecting stops and the use of force) and _Y_ (use of force).
 
 ```r
 library(CausalQueries)
