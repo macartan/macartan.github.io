@@ -35,7 +35,7 @@ Here I "declare" a version of this counterexample, confirm that it is indeed a c
 
 # The counterexample really is a counterexample with real causal relations between nodes
 
-The example involves a situation in which there is a graph with a path of the form $$D &rarr; M &larr; U$$ but for which $$D$$ is independent of $$U$$ when $$M=1$$. Specifically we have this causal graph involving $$D$$ (Race), $$M$$ (Being stopped), $$U$$ (Unobserved factor affecting stops and the use of force) and $$Y$$ (use of force).
+The example involves a situation in which there is a graph with a path of the form ***D &rarr; M &larr; U*** but for which $$D$$ is independent of $$U$$ when $$M=1$$. Specifically we have this causal graph involving $$D$$ (Race), $$M$$ (Being stopped), $$U$$ (Unobserved factor affecting stops and the use of force) and $$Y$$ (use of force).
 
 ```r
 library(CausalQueries)
@@ -117,7 +117,7 @@ df %>% filter(M==0) %>% select(D, U) %>% cor
 
 Why is that? Is the counterexample "generic"?
 
-Pearl readers expect such exceptions to be rare, but let's look more carefully to see why we get an exception here. Let's say $$p<sup>u,d,m</sup>$$ is the probability that $$U=u, D=d$$ and $$M=m$$. We are interested in whether $$U$$ and $$D$$ are independent given $$M=1$$. Now let's ask in particular if $$Pr(U=1 | D=1, M=1) = Pr(U=1 | D=0, M=1)$$
+Pearl readers expect such exceptions to be rare, but let's look more carefully to see why we get an exception here. Let's say **p<sup>u,d,m</sup>** is the probability that $$U=u, D=d$$ and $$M=m$$. We are interested in whether $$U$$ and $$D$$ are independent given $$M=1$$. Now let's ask in particular if ***Pr(U=1 | D=1, M=1) = Pr(U=1 | D=0, M=1)***
 
 Or:
 
