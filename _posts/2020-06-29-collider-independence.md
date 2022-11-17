@@ -35,14 +35,13 @@ Here I "declare" a version of this counterexample, confirm that it is indeed a c
 
 # The counterexample really is a counterexample with real causal relations between nodes
 
-The example involves a situation in which there is a graph with a path of the form ***D &rarr; M &larr; U*** but for which ***D*** is independent of ***U*** when ***M=1***. Specifically we have this causal graph involving ***D*** (Race), ***M*** (Being stopped), ***U*** (Unobserved factor affecting stops and the use of force) and ***Y*** (use of force).
+The example involves a situation in which there is a graph with a path of the form $$D &rarr; M &larr; U$$ but for which $$D$$ is independent of $$U$$ when $$M=1$$. Specifically we have this causal graph involving $$D$$ (Race), $$M$$ (Being stopped), $$U$$ (Unobserved factor affecting stops and the use of force) and $$Y$$ (use of force).
 
 ```r
 library(CausalQueries)
 make_model("Y <- D -> M -> Y <- U; U ->M") %>% plot
 ```
-
-![](https://macartan.github.io/assets/img/collider-technical/dag.jpg)
+![](https://macartan.github.io/assets/img/dag.jpg)
 
 I use [DeclareDesign](declaredesign.org) to declare the design and counterexample which lets us assess properties of the design quickly.
 
@@ -75,15 +74,51 @@ Sample data can be drawn from the design:
 ```r
 df <- draw_data(design)
 ```
-
 We see that the variables that should be correlated with each other are correlated with each other:
-
 
 ```r
 df %>% select(D, M, U, Y) %>% cor %>% kable
 ```
+![](https://macartan.github.io/assets/img/table-1.jpg)
 
-![](https://macartan.github.io/assets/img/collider-technical/table1.jpg)
 
+Here is the diagnosis:
+
+```r
+design %>% 
+  diagnose_design %>% reshape_diagnosis %>% kable(caption = "Diagnosis")
+```
+![](https://macartan.github.io/assets/img/table-2.jpg)
+
+And here is the diagnosis of a perturbed design. Here I just change parameter `a` and diagnose again.
+
+```r
+design %>% 
+  redesign(a = 5) %>% diagnose_design %>% reshape_diagnosis %>% kable(caption = "A perturbation")
+```
+![](https://macartan.github.io/assets/img/table-3.jpg)
+
+# Why no collider bias?
+
+We can see in the data that conditional independence seems to hold when $$M=1$$ despite $$M$$ being a collider:
+
+```r
+df %>% filter(M==1) %>% select(D, U) %>% cor
+```
+![](https://macartan.github.io/assets/img/table-4.jpg)
+
+Though not when $$M=0$$.
+
+```r
+df %>% filter(M==0) %>% select(D, U) %>% cor
+```
+![](https://macartan.github.io/assets/img/table-5.jpg)
+
+
+Why is that? Is the counterexample "generic"?
+
+Pearl readers expect such exceptions to be rare, but let's look more carefully to see why we get an exception here. Let's say $$p<sup>u,d,m</sup>$$ is the probability that $$U=u, D=d$$ and $$M=m$$. We are interested in whether $$U$$ and $$D$$ are independent given $$M=1$$. Now let's ask in particular if $$Pr(U=1 | D=1, M=1) = Pr(U=1 | D=0, M=1)$$
+
+Or:
 
 
