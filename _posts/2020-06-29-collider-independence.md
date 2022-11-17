@@ -79,8 +79,13 @@ We see that the variables that should be correlated with each other are correlat
 ```r
 df %>% select(D, M, U, Y) %>% cor %>% kable
 ```
-![](https://macartan.github.io/assets/img/table-1.png)
 
+|   |          D|         M|          U|         Y|
+|:--|----------:|---------:|----------:|---------:|
+|D  |  1.0000000| 0.5206849| -0.0172115| 0.4868161|
+|M  |  0.5206849| 1.0000000|  0.3677719| 0.7731379|
+|U  | -0.0172115| 0.3677719|  1.0000000| 0.5301634|
+|Y  |  0.4868161| 0.7731379|  0.5301634| 1.0000000|
 
 Here is the diagnosis:
 
@@ -88,7 +93,14 @@ Here is the diagnosis:
 design %>% 
   diagnose_design %>% reshape_diagnosis %>% kable(caption = "Diagnosis")
 ```
-![](https://macartan.github.io/assets/img/table-2.png)
+
+Table: Diagnosis
+
+|Design |Inquiry |Estimator |Outcome |Term |N Sims |Mean Estimand |Mean Estimate |Bias   |SD Estimate |RMSE   |Power  |Coverage |
+|:------|:-------|:---------|:-------|:----|:------|:-------------|:-------------|:------|:-----------|:------|:------|:--------|
+|.      |CDE     |estimator |Y       |D    |500    |0.40          |0.40          |-0.00  |0.02        |0.02   |1.00   |0.97     |
+|       |        |          |        |     |       |(0.00)        |(0.00)        |(0.00) |(0.00)      |(0.00) |(0.00) |(0.01)   |
+
 
 And here is the diagnosis of a perturbed design. Here I just change parameter `a` and diagnose again.
 
@@ -96,7 +108,14 @@ And here is the diagnosis of a perturbed design. Here I just change parameter `a
 design %>% 
   redesign(a = 5) %>% diagnose_design %>% reshape_diagnosis %>% kable(caption = "A perturbation")
 ```
-![](https://macartan.github.io/assets/img/table-3.png)
+Table: A perturbation
+
+|Design |a  |Inquiry |Estimator |Outcome |Term |N Sims |Mean Estimand |Mean Estimate |Bias   |SD Estimate |RMSE   |Power  |Coverage |
+|:------|:--|:-------|:---------|:-------|:----|:------|:-------------|:-------------|:------|:-----------|:------|:------|:--------|
+|.      |5  |CDE     |estimator |Y       |D    |500    |0.32          |0.32          |-0.00  |0.02        |0.02   |1.00   |0.98     |
+|       |   |        |          |        |     |       |(0.00)        |(0.00)        |(0.00) |(0.00)      |(0.00) |(0.00) |(0.01)   |
+
+
 
 # Why no collider bias?
 
@@ -105,21 +124,37 @@ We can see in the data that conditional independence seems to hold when $$M=1$$ 
 ```r
 df %>% filter(M==1) %>% select(D, U) %>% cor
 ```
-![](https://macartan.github.io/assets/img/table-4.png)
+```
+            D           U
+D  1.00000000 -0.02826486
+U -0.02826486  1.00000000
+```
 
 Though not when $$M=0$$.
 
 ```r
 df %>% filter(M==0) %>% select(D, U) %>% cor
 ```
-![](https://macartan.github.io/assets/img/table-5.png)
-
+```r
+           D          U
+D  1.0000000 -0.4775497
+U -0.4775497  1.0000000
+```
 
 Why is that? Is the counterexample "generic"?
 
-Pearl readers expect such exceptions to be rare, but let's look more carefully to see why we get an exception here. Let's say **p<sub>u,d,m</sub>** is the probability that $$U=u, D=d$$ and $$M=m$$. We are interested in whether $$U$$ and $$D$$ are independent given $$M=1$$. Now let's ask in particular if $$Pr(U=1 | D=1, M=1)$$ = $$Pr(U=1 | D=0, M=1)$$
+Pearl readers expect such exceptions to be rare, but let's look more carefully to see why we get an exception here. Let's say **p<sub>u,d,m</sub>** is the probability that $$U=u, D=d$$ and $$M=m$$. We are interested in whether $$U$$ and $$D$$ are independent given $$M=1$$. Now let's ask in particular if $$\Pr(U=1 | D=1, M=1)= \Pr(U=1 | D=0, M=1)$$
 
 Or:
 
+$$\frac{p_{1,1,1}}{p_{1,1,1} + p_{0,1,1}} = \frac{p_{1,0,1}}{p_{1,0,1} + p_{0,0,1}}$$
+
+$$({p_{1,0,1} + p_{0,0,1}} ){p_{1,1,1}} = ({p_{1,1,1} + p_{0,1,1}}){p_{1,0,1}}$$
+$${p_{0,0,1}} {p_{1,1,1}} = {p_{0,1,1}}{p_{1,0,1}}$$
+
+
+Note that given the graph, this does not depend on $$\Pr(U=1)$$ or $$\Pr(D=1)$$ but rather on whether:
+
+$$\Pr(M=1 | U = 1, D=1)\Pr(M = 1 | U = 0, D=0) = \Pr(M=1 | U = 1, D=0)\Pr(M = 1 | U = 0, D=1)$$
 
 
