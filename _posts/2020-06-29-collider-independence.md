@@ -35,12 +35,12 @@ Here I "declare" a version of this counterexample, confirm that it is indeed a c
 
 # The counterexample really is a counterexample with real causal relations between nodes
 
-The example involves a situation in which there is a graph with a path of the form ***D &rarr; M &larr; U*** but for which $$D$$ is independent of $$U$$ when $$M=1$$. Specifically we have this causal graph involving $$D$$ (Race), $$M$$ (Being stopped), $$U$$ (Unobserved factor affecting stops and the use of force) and $$Y$$ (use of force).
+The example involves a situation in which there is a graph with a path of the form ***D &rarr; M &larr; U***  but for which $$D$$ is independent of $$U$$ when $$M=1$$. Specifically we have this causal graph involving $$D$$ (Race), $$M$$ (Being stopped), $$U$$ (Unobserved factor affecting stops and the use of force) and $$Y$$ (use of force).
 
-{% highlight s linenos %}
+```r
 library(CausalQueries)
 make_model("Y <- D -> M -> Y <- U; U ->M") %>% plot
-{% endhighlight %}
+```
 
 <img src="https://macartan.github.io/assets/img/dag.png" width="816" height="474">
 
@@ -48,7 +48,7 @@ I use [DeclareDesign](declaredesign.org) to declare the design and counterexampl
 
 Declaration in this chunk:
 
-{% highlight s linenos %}
+```r
 pr_D = .66  # Probability D = 1
 pr_U = .45  # Probability U = 1
 a <- 4      # A parameter
@@ -68,5 +68,106 @@ design <-
   declare_estimand(CDE = mean((Y_D_1 - Y_D_0)[M==1])) +
   declare_estimator(Y ~ D, subset = M == 1, estimand = "CDE")
   
-{% endhighlight %}
+```
+Sample data can be drawn from the design:
+
+```r
+df <- draw_data(design)
+```
+
+We see that the variables that should be correlated with each other are correlated with each other:
+```r
+df %>% select(D, M, U, Y) %>% cor %>% kable
+```
+<img src="https://macartan.github.io/assets/img/table-1.png" width="938" height="180">
+
+Here is the diagnosis:
+
+```r
+design %>% 
+  diagnose_design %>% reshape_diagnosis %>% kable(caption = "Diagnosis")
+```
+<img src="https://macartan.github.io/assets/img/table-2.png" width="941" height="159">
+
+And here is the diagnosis of a perturbed design. Here I just change parameter `a` and diagnose again. 
+```r
+design %>% 
+  redesign(a = 5) %>% diagnose_design %>% reshape_diagnosis %>% kable(caption = "A perturbation")
+```
+<img src="https://macartan.github.io/assets/img/table-3.png" width="942" height="158">
+
+
+
+# Why no collider bias?
+
+We can see in the data that conditional independence seems to hold when $$M=1$$ despite $$M$$ being a collider:
+```r
+df %>% filter(M==1) %>% select(D, U) %>% cor
+```
+<img src="https://macartan.github.io/assets/img/table-4.png" width="928" height="94">
+
+Though not when $$M=0$$.
+
+```r
+df %>% filter(M==0) %>% select(D, U) %>% cor
+```
+<img src="https://macartan.github.io/assets/img/table-5.png" width="919" height="85">
+
+
+Why is that? Is the counterexample "generic"?
+
+Pearl readers expect such exceptions to be rare, but let's look more carefully to see why we get an exception here. Let's say $$p_{u,d,m}$$ is the probability that $$U=u, D=d$$ and $$M=m$$. We are interested in whether $$U$$ and $$D$$ are independent given $$M=1$$. Now let's ask in particular if $$\Pr(U=1 | D=1, M=1)= \Pr(U=1 | D=0, M=1)$$
+
+Or:
+
+$$\frac{p_{1,1,1}}{p_{1,1,1} + p_{0,1,1}} = \frac{p_{1,0,1}}{p_{1,0,1} + p_{0,0,1}}$$
+
+$$({p_{1,0,1} + p_{0,0,1}} ){p_{1,1,1}} = ({p_{1,1,1} + p_{0,1,1}}){p_{1,0,1}}$$
+$${p_{0,0,1}} {p_{1,1,1}} = {p_{0,1,1}}{p_{1,0,1}}$$
+
+Note that given the graph, this does not depend on $$\Pr(U=1)$$ or $$\Pr(D=1)$$ but rather on whether:
+
+$$\Pr(M=1 | U = 1, D=1)\Pr(M = 1 | U = 0, D=0) = \Pr(M=1 | U = 1, D=0)\Pr(M = 1 | U = 0, D=1)$$
+
+Thanks to the multiplicative function in the current example we indeed have:
+
+$$\frac{(1+3)(1+1)}8 \frac{(1+0)(1+0)}8 = \frac{(1+0)(1+1)}8 \frac{(1+3)(1+0)}8$$
+
+
+The key thing here it that this condition poses a constraint on the relationship between these four probabilities. Intuitively, they have to live on a plane in a cube.
+
+
+# Some Takes
+
+Some takes:
+
+* One take: there are indeed cases in which there is no bias from colliders.
+* Second take: yes but these are pathological.
+* Third take: maybe, but they usefully remind us that there are possibly regions where bias is small. 
+
+To wit, a modification that moves us away from the knife edge but for which bias remains quite small:
+
+```r
+design_2 <- replace_step(design,step = 2,
+                         declare_potential_outcomes(M ~ rbinom(N, size = 1,  prob = D/3 +(1+3*D)*(1+U)/12),
+                             conditions = list(D = 0:1, U = 0:1)))
+```
+
+```r
+df_2 <- draw_data(design_2) 
+df_2 %>% select(D, M, U, Y) %>% cor %>% kable
+```
+<img src="https://macartan.github.io/assets/img/table-6.png" width="925" height="165">
+
+```r
+df_2 %>% filter(M==1) %>% select(D, U) %>% cor %>% kable(caption = "Collider bias (conditional correlation)")
+```
+<img src="https://macartan.github.io/assets/img/table-7.png" width="923" height="132">
+
+```r
+design_2 %>%  diagnose_design %>% reshape_diagnosis %>% kable(caption = "Diagnosis: Another perturbation")
+```
+<img src="https://macartan.github.io/assets/img/table-8.png" width="924" height="154">
+
+
 
