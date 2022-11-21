@@ -21,6 +21,6 @@ My biggest <strong>substantive interest</strong> has been in understanding patte
 
 ____
 
-<a href="img/201709_Macartan-Humphreys.jpg" target="_blank" rel="noopener noreferrer"> <i class="fas fa-image"></i> </a> 
-High res <a href="img/201709_Macartan-Humphreys.jpg" target="_blank" rel="noopener noreferrer"> image</a> 
+<a href="https://macartan.github.io/assets/img/201709_Macartan-Humphreys.jpg" target="_blank" rel="noopener noreferrer"> <i class="fas fa-image"></i> </a> 
+High res <a href="https://macartan.github.io/assets/img/201709_Macartan-Humphreys.jpg" target="_blank" rel="noopener noreferrer"> image</a> 
 
