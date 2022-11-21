@@ -17,7 +17,7 @@ My biggest <strong>substantive interest</strong> has been in understanding patte
 
 <strong>AFFILIATIONS</strong>: I am a Professor of <a href="http://polisci.columbia.edu/">Political Science at Columbia University</a> and a Director of the Research group "<a href="https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality">Institutions and Political Inequality</a>" at the <a href="https:/www.wzb.eu/en">WZB in Berlin.</a>
 
-<strong>CONTACT INFORMATION:</strong> Best by email: mh2245 at columbia.edu
+<strong>CONTACT INFORMATION:</strong> Best by email: [mh2245@columbia.edu](mailto:mh2245@columbia.edu)
 
 ____
 
