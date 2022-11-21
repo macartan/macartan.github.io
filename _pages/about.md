@@ -7,7 +7,7 @@ subtitle: >
 
 profile:
   align: left
-  image: assets/img/profile_pic.jpg
+  image: profile_pic.jpg
   address: 
 
 news: false  # includes a list of news items
