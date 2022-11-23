@@ -18,7 +18,7 @@ nav_order: 4
  	<a href="../assets/pdf/teaching/CP_2014_Handbook.pdf">2015 CP handbook</a> (<a href="../assets/pdf/teaching/CP_2014_Handbook.bib">bib</a>)</li>
  	
  	<li>seminar on the study of development strategies (ssds) 
- 	2010-11  |  2013-14  |  2015-16 | <a href="/teaching/ssds">(2015-16)</a>
+ 	2010-11  |  2013-14  |  2015-16 | <a href="/teaching/ssds-2016">(2015-16)</a>
 
  	</li>
 

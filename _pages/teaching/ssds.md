@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /teaching/ssds2016
+permalink: /teaching/ssds-2016
 title: SSDS
 nav: false
 nav_order: 4

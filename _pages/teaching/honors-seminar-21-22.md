@@ -20,7 +20,7 @@ Instruction will be held in person in concentrated weeks---13-17 Sept, 11-15 Oct
 
 Admission to the Spring semester is conditional on successful defense of your design in the Fall.
 
-Three people are crucially involved in guiding and advising you throughout the year and together they constitute an informal “<strong>thesis committee</strong>.” The most important of these is your faculty advisor. He or she is the person whose individual research is most related to your own topic and, as such, is able to provide you the most specialized and in-depth feedback.  Second, the seminar leader (this year, Macartan Humphreys) will read and review all thesis assignments. The role of the seminar leader is to provide a structure for writing the thesis and a sounding board for outlines and chapters. Finally, the seminar preceptor serves as an additional resource for students in the course who can support you in thinking through arguments and evidence, providing technical support, and pointing you to resources at Columbia and beyond.
+Three people are crucially involved in guiding and advising you throughout the year and together they constitute an informal “<strong>thesis committee</strong>.” The most important of these is your faculty advisor. He or she is the person whose individual research is most related to your own topic and, as such, is able to provide you the most specialized and in-depth feedback. Second, the seminar leader (this year, Macartan Humphreys) will read and review all thesis assignments. The role of the seminar leader is to provide a structure for writing the thesis and a sounding board for outlines and chapters. Finally, the seminar preceptor serves as an additional resource for students in the course who can support you in thinking through arguments and evidence, providing technical support, and pointing you to resources at Columbia and beyond.
 
 
 # 2 Requirements and Grades
@@ -106,16 +106,16 @@ Deposit first draft of thesis outlines / design form due including table of cont
 <tr>
 <td width="36"></td>
 <td width="228">25- 29 Oct</td>
-<td width="1176"><u>Design defenses [<strong>ZOOM</strong>] </u>Book a 30-minute slot; coordinate your booking with your faculty advisor. Prepare a ten-minute presentation to be followed by 20 minute discussion.  A pass is a license to start writing. Otherwise revisions will be requested.</td>
+<td width="1176"><u>Design defenses [<strong>ZOOM</strong>] </u>Book a 30-minute slot; coordinate your booking with your faculty advisor. Prepare a ten-minute presentation to be followed by 20 minute discussion. A pass is a license to start writing. Otherwise revisions will be requested.</td>
 </tr>
 <tr>
 <td width="36"></td>
-<td width="228">Nov  8</td>
+<td width="228">Nov 8</td>
 <td width="1176">Post revised outlines to dropbox / drive</td>
 </tr>
 <tr>
 <td width="36"></td>
-<td width="228">Nov  8 - 12</td>
+<td width="228">Nov 8 - 12</td>
 <td width="1176">Small group meetings to discuss design revisions and chapter outlines</td>
 </tr>
 <tr>

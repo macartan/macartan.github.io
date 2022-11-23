@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/applying-for-a-phd
 title: Applying for a a PhD
-description: advise
+description: advice
 nav: false
 nav_order: 4
 ---
