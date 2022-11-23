@@ -1,191 +1,110 @@
 ---
 layout: page
-permalink: /teaching/how-to-write
-title: How to write
-description: writing
+permalink: /teaching/how-to-critique
+title: How to critique
+description: critiquing
 nav: false
 nav_order: 4
 ---
 
-<strong>1 Sections</strong>
+Here are some pointers on the things to look for when discussing or reviewing a paper.
 
-<strong>1.1 Front Matter</strong>
-<ul>
- 	<li><strong>Table of contents</strong>:
-<ul>
- 	<li>Have a table of contents.</li>
- 	<li>Go two or at most three <strong>levels</strong> deep (so sections and subsections, but generally not subsubsections).</li>
- 	<li>Use <strong>informative section headers</strong> so that readers can figure out the logical structure of the thesis from the table of contents.</li>
- 	<li>Have your table of contents <strong>generated automatically</strong> and have it <strong>hyperlink</strong> to sections. Number all sections. In latex using \section{}; in R markdown using #, ## ; in Word using “Heading 1” “Heading 2” styles – and setting the number to be of the form 1, 1.1, 1.12, 1.2, 2 etc these all can be used to generate automatic table of contents. No handcrafting of numbering or of Tables of Contents.</li>
-</ul>
-</li>
- 	<li><strong>Acknowledgements</strong>: You can include acknowledgements and thank colleagues and friends -- anyone who gave you support; normally this is added after a defense and before submission.</li>
- 	<li><strong>Dedication</strong>: It's not uncommon to dedicate a thesis (or dissertation but not a paper) to someone.</li>
- 	<li><strong>Abstract</strong>: You can have a short abstract (quarter page) <em>and</em> a longer executive summary (two pages). Abstracts should give (1) brief motivation (2) overview of strategy (3) main findings. People often use an abstract to report what they <em>did</em> but the most important purpose is to report what you <em>found</em>. Remember findings can be positive and negative--- if you find that the data simply does not support some intuitively plausible or commonly believed proposition that is big news; don’t bury that.</li>
-</ul>
-<strong>1.2 Introductions</strong>
+<strong>Discussants</strong>
 
-Introductions should give a high level motivation, a brief description of what you will do, a summary of findings, and a clarification of contributions (why what you did matters or how it is innovative). Saying early on what your main findings or claims are is very important. Given the abstract, exec summary, and intro, the reader should have no doubt about where things are going by the time they get into it. Doing this lets readers evaluate your claims more quickly and more directly; it shouldn’t be a puzzle for the reader to figure out your conclusion and your key points should not come as a surprise in the last pages.
-
-<strong>1.3 Theory Chapters</strong>
-
-A good structure for a formal theory chapter is this:
+Generally discussants have 10 - 15 minutes to give comments on a paper, sometimes less. With that much time you can make <strong>3 good comments</strong>. You should not use this time to say everything you liked or did not like about a paper and you should not get lost in the weeds. If you describe errors you have to get to the so what. The fact that there is an error is not in itself of interest. You should select your comments so that:
 <ol>
- 	<li>Motivate the model. Why do we care?</li>
- 	<li>Describe the model formally, this requires a full description of (a) the players – how many are they? What are their roles  (b) the strategies – what choices do they have (c) the preferences. In addition this may require a description of the sequence of moves and the information available to all players.</li>
- 	<li>The game description should normally include all parameters of interest including any for which you plan to take comparative statics.</li>
- 	<li>Provide key results in the form of formal propositions. Eg Proposition 1: “under the following conditions (eg all groups are of size ….) the following strategies (…) form an equilibrium.” Primary propositions often describe a particular equilibrium, describe the uniqueness or non-uniqueness of equilibriums, or describe properties of equilibriums.</li>
- 	<li>Give formal statements of propositions on comparative statics (Y is higher when Xis high).</li>
- 	<li>End the chapter by turning these comparative statics claims into empirical hypotheses</li>
- 	<li>This leads naturally on to subsequent chapters.</li>
+ 	<li>they <strong>open up</strong> a conversation</li>
+ 	<li>they speak to the <strong>major issues</strong> the paper addresses</li>
+ 	<li>they provide pointers to <strong>how to do better</strong>.</li>
 </ol>
-<strong>1.4 Empirical Chapters</strong>
+Remember as a discussant it is <strong>not about you</strong>, it is about making the paper better and helping people understand its strengths and limitations. Mostly it's about the speaker. If you think the paper is great you do not have to drum up a critique, but you should still try to help people see why it is great. Having slides helps organize your presentation and helps people follow. A single slide with three bullets on the three big points is enough. If you have a laundry list of smaller points, share it with the speaker afterwards.
 
-Whether empirical chapters are quantitative or qualitative they should lead off with a description of your <em>strategy</em>. What are you looking for to find evidence in favor or against a proposition. This strategy is often laid out in earlier chapters (for many people, in chapter 2) but there should still be a recap here. For a <strong>quantitative analysis</strong> the standard ordering (whether in one chapter or many) is:
-<ol>
- 	<li>Describe hypotheses</li>
- 	<li>Describe measures</li>
- 	<li>Describe tests</li>
- 	<li>Describe core results</li>
- 	<li>Interpret results substantively</li>
- 	<li>Describe robustness</li>
- 	<li>Describe any extensions</li>
- 	<li>Draw overall inferences</li>
-</ol>
-If divided into chapters you might have 1-3 in one chapter, 4-5 in a second, 6-7 in a third and 8 in a conclusion.
+<strong>Same language, different perspective</strong>: The really useful critiques often come from taking a really fresh perspective on  a piece of work. This requires stepping back and not becoming beholden to the author's spinning of their findings. Often useful to figure out what this is a case of? What is the general class of phenomena this speaks to? If you had lots of resources how would you address the question? If you could set it up as an experiment how would you do it? If you really had to take a policy action based on this work, which elements would give you pause?  But as you take different perspectives you should try to speak the same language otherwise you can end up talking to yourself and influencing no one.
 
-For a <strong>qualitative thesis</strong> the elements might be:
-<ol>
- 	<li>Strategy</li>
- 	<li>Description of case selection process</li>
- 	<li>For each case:
-<ol>
- 	<li>General description</li>
- 	<li>Describe how case relates to general model (eg discuss residuals, or the estimated contributions of different factors to the outcome in the case)</li>
- 	<li>Discuss X and Y for case if relevant (are measures measuring what we thought they were)</li>
- 	<li>Describe within case evidence (eg are we seeing what we expect to see if theory is right)</li>
-</ol>
-</li>
- 	<li>Summary of evidence across cases, maybe gathered together in a single table.</li>
- 	<li>Conclusion</li>
-</ol>
-These will vary depending on your project.
+<strong>Reviewing</strong>
 
-<strong>1.5 Conclusions</strong>
-
-You can loosen up in the conclusion a bit to describe possible implications of your work in your domain or other domains. Draw linkages with other work and point to gaps in knowledge. While there is some value in speculation, this does not mean that you should make claims that are not supported by your analyses.
-
-<strong>2 Presentation</strong>
-
-<strong>2.1 Know your tools</strong>
-
-Microsoft Word is fine for lots of writing but for technical writing it is worth investing is learning <a href="https://web.archive.org/web/20190730143111/http:/www.latex-project.org/">LaTeX</a> -- a free system for preparing documents. For real transparency it is good to integrate your analysis with your writing. This can be done in various ways but the simplest might be <a href="https://web.archive.org/web/20190730143111/http:/rmarkdown.rstudio.com/">Rmarkdown</a>. Be prepared to learn these new tools.
-
-<strong>2.2 Style</strong>
-
-Your aim in writing is to communicate your <em>results</em> as faithfully as possible not to communicate your <em>process</em> faithfully (of course you have to be transparent about how you did your analysis). It’s normal to go in circles as you develop your thinking on a topic but you do not have to bring the reader in the same circles. Instead try to think about what presentational structure would make it easiest for readers to understand your work quickly. <em>Never</em> try to make things seem more complicated than they are.
-
-A couple of pointers on style:
-
-<strong>Lots of signposting</strong>
-
-Readers should know why they are reading any given section and any given paragraph with a section. Start off sections with a brief statement of the purpose of the section and end with a quick recap. Organize paragraphs so that each paragraph serves a clear function and readers can tell from the first line what the function is. Many readers won't read a section if they don't know  why they need to read it.
-
-<strong>Keep writing tight</strong>
-
-Remove unnecessary flab at the beginning of sentences: “In order to” “I am now going to talk about” “I would argue that”; “It should therefore come as no surprise that” à (try: “Unsurprisingly”)
-
-Remove unoriginal flower: “much ink has been spilled,” “hardly a day goes past”
-
-<strong>Formality:</strong>
-
-Keep the writing formal: No contractions in formal writing (it’s, that’s, should've, etc)
-
-<strong>Royal wheez:</strong>
-
-Saying “we’ for a single authored piece can be a little weird. It works for sentences that implicates the reader or the disciplines (“we see from this figure…”, “we know that <em>X</em> causes <em>Y</em>”). For single authored pieces "I" usually works fine. Avoid "this paper argues." I argue.
-
-<strong>Use the present tense when describing things being done in the text</strong>:
-
-"I describe my strategy in Chapter 2 and my findings in Chapter 3." Not "I will describe my strategy in Chapter 2 and my findings in Chapter 3." And not "I described my strategy in Chapter 2 and my findings in Chapter 3."   Past tense of course find for past events: "I <strong>use</strong> information from interviews <strong>conducted</strong> in . . ."
-
-<strong>Math: </strong>
-
-Get math formatting right. In particular never start a sentence with math; always have math in italics. So not “x denotes commodities” but “We use <em>x</em> to denote commodities.” Use the equation editor in word or if you have a lot of math use <a href="https://web.archive.org/web/20190730143111/http:/www.latex-project.org/">LaTeX.</a>
-
-<strong>Hyperbole:</strong>
-
-Avoid superlatives: vast, massive, extraordinary
-
-Remove; “necessarily” (“while we do not necessarily argue…”)
-
-Remove: “important”, “importantly” (let the reader decide)
-
-Don’t overclaim – if you are arguing that <em>X</em> causes <em>Y</em> don’t call this “my theory”; it is an empirical claim not a theoretical claim. Don’t use “prove” unless you mean an analytic proof – empirical tests never prove anything. Be especially careful about null results – a null result means that you cannot reject the null of no effect, not that you have proved that there is no effect.
-
-<strong>Avoid common writing errors:</strong>
-
-The past tense of lead is led, not lead
-
-Get “affect” and “effect” right
-
-Get “advise” and “advice” right
-
-Get “its” and “it’s” right (hint: never use “it’s”; use “its” and “it is”)
-
-“Question begging” is a technical term; use it if you know what it means; if you just mean “raises the question” say “raises the question.”
-
-<strong>Other formatting</strong>
-
--Don't forget page numbers! Really.
-
--Most formatting, like font size and margin size, as well as citation style etc. are up to you, as long as you are consistent. However single or 1.5 spacing is easier on paper; and larger font is easier on the eyes. A good standard is 12 point font, 1.5 spacing, and moderate margins.
-
-<strong>2.3 Tables</strong>
+For a formal review or referee report you have space to go into much more depth. A standard approach is to divide these reviews into three parts.
 <ul>
- 	<li>Tables and figures should be in the main body of the text, not at the end (unless they are only meant as extra material).</li>
+ 	<li>The first part can be a single paragraph -- it <strong>summarizes</strong> the key contribution of the paper as you see it, gives an overall assessment, and points to the key issues, concerns, or strengths. <strong>Don't forget the strengths</strong>.<strong> </strong>Try to articulate succinctly what you know now that you didn't know before you read the piece. Often a quick summary can draw attention to strong features you were not conscious of, or makes you realize that what you were impressed by is not so impressive after all.</li>
+ 	<li>The second part discusses <strong>3 - 6 major features</strong> of the paper; the checklist below lists features that could be useful to think through when selecting themes. Try to organize by theme (measurement, explanation etc.).</li>
+ 	<li>The third part is for "<strong>smaller issues</strong>" where you can bullet point things from ambiguities, to estimation issues, to pointers to other work.</li>
 </ul>
+Other things:
 <ul>
- 	<li>Tables and figures should be numbered and captioned/titled, in most cases. You can do automatic numbering word using “captions”, and in Latex using \caption{}</li>
+ 	<li>It's useful to authors when you can <strong>point to literature</strong> they have not read, if relevant.</li>
+ 	<li>It's useful to authors to know <strong>what to cut</strong>: reviews tend to worry about length but still ask for more.</li>
+ 	<li>Your <strong>tone</strong> should be such that you would not feel embarrassed if someday your review gets into the public domain by mistake.</li>
+ 	<li>You should feel free to ask for <strong>extra material</strong> such as replication data or analysis plans. Sometimes reviewing can go quicker if you can access data.</li>
+ 	<li>Don't ask the authors to ask and answer a <strong>different question</strong>; respond to the paper you have been sent.</li>
+ 	<li>Be <strong>generous</strong>: share references if they are missing but don't assume that researchers intentionally ignored the work of others (or your work!); raise ethical issues if you see them but don't assume researchers acted without ethical concern; ask for multiple comparisons corrections but don't assume deliberately misleading reporting.</li>
+ 	<li><strong>Pronouns</strong>. For anonymous review it's usually safe to use pronouns "you" or "they" even if single authorship has been indicated.</li>
 </ul>
-<ul>
- 	<li>If it’s a table call it a table, don’t call it a figure</li>
-</ul>
-<ul>
- 	<li>Tables and other output should NOT be presented as Stata output or other raw output.</li>
-</ul>
-<ul>
- 	<li>The standard approach is to make a table where each regression is a column. One option is to use Stata function "outreg2," which can produce very high quality Word (or LaTeX) regression output quite easily. Similar equivalents in R (eg <a href="https://web.archive.org/web/20190730143111/http:/cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf">http://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf</a>).</li>
-</ul>
-<ul>
- 	<li>Coefficients should be arranged in rows with comprehensible and consistent variable names</li>
-</ul>
-<ul>
- 	<li>standard errors should be shown in parentheses (or you should note what measure of uncertainty you are displaying if it is not standard errors)</li>
-</ul>
-<ul>
- 	<li>include descriptive statistics like number of observations (N) and R-squared should be included.</li>
-</ul>
-<ul>
- 	<li>Make sure to say what the dependent variables is</li>
-</ul>
-<ul>
- 	<li>Useful also to show how a table result links to a hypothesis.</li>
-</ul>
-<ul>
- 	<li>You do not however have to report everything in your tables. For example you do not have to report the values on all control variables if they are not of interest. Table writing is like writing – you should set the tables up so that they communicate the key information as clearly as possible.</li>
-</ul>
-<ul>
- 	<li><strong>Precision</strong>: numbers should normally reported to two significant digits. Eg 0.12 not 0.000121313245</li>
- 	<li><strong>Bottom line</strong>: It's often useful and legitimate to give the bottom line of a table at the bottom of the table: "Table shows that there is no evidence that democracy causes growth"</li>
-</ul>
-<strong>2.4 Figures</strong>
+<strong>The Checklist</strong>
 
-When possible use figures rather than tables. Figures can give the same information as tables but in a more immediate way. When they show distributions of individual data points they often provide much <em>more</em> information.
+Here is my list of what to look out for as I read a paper:
 
-<strong>2.5 References</strong>
-
-Use APSR citation style (<em>www.apsanet.org/portals/54/apsa%20files/publications/apsastylemanual2006.pdf</em>)
-
-If working in rmarkdown or latex, use bibtex for this
-
+<strong>Theory</strong>
+<ul>
+ 	<li>Is the theory internally consistent?</li>
+ 	<li>Is it consistent with past literature and findings?</li>
+ 	<li>Is it novel or surprising?</li>
+ 	<li>Are elements that are excluded or simplified plausibly unimportant for the outcomes?</li>
+ 	<li>Is the theory general or specific? Are there more general theories on which this theory could draw or contribute?</li>
+</ul>
+<strong>From Theory to Hypotheses</strong>
+<ul>
+ 	<li>Is the theory really needed to generate the hypotheses?</li>
+ 	<li>Does the theory generate more hypotheses than considered?</li>
+ 	<li>Are the hypotheses really implied by the theory? Or are there ambiguities arising from say non-monotonicities or multiple equilibria?</li>
+ 	<li>Does the theory specify mechanisms?</li>
+ 	<li>Does the theory suggest heterogeneous effects?</li>
+</ul>
+<strong>Hypotheses</strong>
+<ul>
+ 	<li>Are the hypotheses complex? (eg in fact 2 or 3 hypotheses bundled together)</li>
+ 	<li>Are the hypotheses falsifiable?</li>
+</ul>
+<strong>Evidence I: Design</strong>
+<ul>
+ 	<li>External validity: is the population examined representative of the larger population of interest?</li>
+ 	<li>External validity: Are the conditions under which they are examined consistent with the conditions of interest?</li>
+ 	<li>Measure validity: Do the measures capture the objects specified by the theory?</li>
+ 	<li>Consistency: Is the empirical model used consistent with the theory?</li>
+ 	<li>Mechanisms: Are mechanisms tested? How are they identified?</li>
+ 	<li>Replicability: Has the study been done in a way that it can be replicated?</li>
+ 	<li>Interpretation: Do the results admit rival interpretations?</li>
+</ul>
+<strong>Evidence II: Analysis and Testing</strong>
+<ul>
+ 	<li>Identification: are there concerns with reverse causality?</li>
+ 	<li>Identification: are there concerns of omitted variable bias?</li>
+ 	<li>Identification: does the model control for pre treatment variables only? Does it control or does it match?</li>
+ 	<li>Identification: Are poorly identified claims flagged as such?</li>
+ 	<li>Robustness: Are results robust to changes in the model, to subsetting the data, to changing the period of measurement or of analysis, to the addition or exclusion of plausible controls?</li>
+ 	<li>Standard errors: does the calculation of test statistics make use of the design? Do standard errors take account of plausibly clustering structures/differences in levels?</li>
+ 	<li>Presentation: Are the results presented in an intelligible way? Eg using fitted values or graphs? How can this be improved?</li>
+ 	<li>Interpretation: Can no evidence of effect be interpreted as evidence of only weak effects?</li>
+</ul>
+<strong>Evidence III: Other sources of bias</strong>
+<ul>
+ 	<li>Fishing: were hypotheses generated prior to testing? Was any training data separated from test data?</li>
+ 	<li>Measurement error: is error from sampling, case selection, or missing data plausibly correlated with outcomes?</li>
+ 	<li>Spillovers / Contamination: Is it plausible that outcomes in control units were altered because of the treatment received by the treated?</li>
+ 	<li>Compliance: Did the treated really get treatment? Did the controls really not?</li>
+ 	<li>Hawthorne effects: Are subjects modifying behavior simply because they know they are under study?</li>
+ 	<li>Measurement: Is treatment the only systematic difference between treatment and control or are there differences in how items were measured?</li>
+ 	<li>Implications of Bias: Are any sources of bias likely to work for or against the hypothesis tested?</li>
+</ul>
+<strong>Explanation</strong>
+<ul>
+ 	<li>Does the evidence support the particular causal account given?</li>
+ 	<li>Are mechanisms examined? Can they be?</li>
+ 	<li>Are there observable implications we might expect to see associated with different possible mechanisms?</li>
+</ul>
+<strong>Policy Implications</strong>
+<ul>
+ 	<li>Do the policy implications really follow from the results?</li>
+ 	<li>If implemented would the policy changes have effects other thank those specified by the research?</li>
+ 	<li>Have the policy claims been tested directly?</li>
+ 	<li>Is the author overselling or underselling the findings?</li>
+</ul>
