@@ -5,7 +5,8 @@ title: Honors seminar 2021-22
 description: syllabus
 nav: false
 nav_order: 4
-  ---
+---
+
 
 W3998-W3999Y
 
