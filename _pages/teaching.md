@@ -18,10 +18,7 @@ nav_order: 4
  	<a href="../assets/pdf/teaching/CP_2014_Handbook.pdf">2015 CP handbook</a> (<a href="../assets/pdf/teaching/CP_2014_Handbook.bib">bib</a>)</li>
  	
  	<li>seminar on the study of development strategies (ssds) 
- 	# <a href="http:/cu-csds.org/ssds/ssds-2010-11/">2010-11 </a> | 
- 	# <a href="http:/cu-csds.org/ssds/2013-14/">2013-14 </a> | 
- 	# <a href="http://macartan.nyc/teaching/ssds-15-16/">2015-16</a>
- 	<a href="ssds/">(2015-16)</a>
+ 	2010-11  |  2013-14  |  2015-16 | <a href="/ssds">(2015-16)</a>
 
  	</li>
 
@@ -72,7 +69,7 @@ nav_order: 4
  	<a href="../assets/pdf/teaching/HON_2014-15_flyer.pdf"> (flyer) </a>   | 
  	<a href="../assets/pdf/teaching/HON_2014_syllabus.pdf"> (2015-16) </a>  | 
  	<a href="../assets/pdf/teaching/HON_2016_syllabus.pdf"> (2016-17) </a>)  | 
- 	<a href="honors-seminar-21-22/">(2021-22)</a></li>
+ 	<a href="honors-seminar-21-22">(2021-22)</a></li>
 
  	<li>Syllabus from dissertation seminar 
  	<a href="../assets/pdf/teaching/DISS_2007_syllabus.pdf">(2007)</a></li>
