@@ -1,0 +1,450 @@
+\documentclass[11pt]{article}
+\usepackage{setspace}
+\usepackage{amssymb, natbib} 
+\usepackage[tbtags]{amsmath}
+\usepackage{rotating}
+\usepackage{ctable}
+\usepackage{sectsty}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{appendix}
+\usepackage{color}
+\usepackage{termcal}
+\usepackage{bibentry}
+
+
+%\usepackage{graphicx,fullpage}
+\bibpunct{(}{)}{;}{a}{}{,}
+ 
+\RequirePackage{url}
+\RequirePackage{keyval}
+
+
+\usepackage[, pdftitle={CP}, pdfauthor={M},
+			hyperfootnotes=true, linkbordercolor={1 .9 .2}, citebordercolor={.2 .9 .5},
+			urlbordercolor={.1 .9 1}]{hyperref}
+
+%\usepackage{hypernat}
+\usepackage{usebib}
+\usepackage{filecontents}
+\usepackage{natbib}
+\usepackage{bibentry}
+
+\addtolength{\hoffset}{-1.25cm}
+\addtolength{\textwidth}{3cm}
+\addtolength{\voffset}{-2cm}
+\addtolength{\textheight}{3cm}
+\addtolength{\footskip}{1cm}
+%\addtolength{\headheight}{-2cm}
+
+
+\newcommand{\revertstretch}{\setstretch{1.3}}
+\revertstretch
+
+% \sectionfont{\large\mdseries\scshape\centering}
+% \subsectionfont{\small\mdseries\scshape\raggedright}
+% \subsubsectionfont{\small\mdseries\itshape\raggedright}
+% \makeatletter
+% \def\@seccntformat#1{\csname the#1\endcsname.\quad}
+% \makeatother
+
+
+
+
+
+
+% THEOREM Environments ---------------------------------------------------
+ \newtheorem{thm}{Theorem}%[subsection]
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{thma}{Theorem}%[subsection]
+ \newtheorem{lema}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+% \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+% \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+ \newtheorem{hypo}{Hypothesis}
+% \numberwithin{equation}{subsection} % MATH ------------------------------------------------------------------- %
+\DeclareMathOperator{\IM}{Im} % \DeclareMathOperator{\ess}{ess}
+ \newcommand{\eps}{\varepsilon}
+ \newcommand{\fn}{\footnote}
+ \newcommand{\To}{\longrightarrow}
+ \newcommand{\h}{\mathcal{H}}
+ \newcommand{\s}{\mathcal{S}}
+ \newcommand{\A}{\mathcal{A}}
+ \newcommand{\J}{\mathcal{J}}
+ \newcommand{\M}{\mathcal{M}}
+ \newcommand{\W}{\mathcal{W}}
+ \newcommand{\X}{\mathcal{X}}
+ \newcommand{\BOP}{\mathbf{B}}
+ \newcommand{\BH}{\mathbf{B}(\mathcal{H})}
+ \newcommand{\KH}{\mathcal{K}(\mathcal{H})}
+ \newcommand{\Real}{\mathbb{R}}
+ \newcommand{\Complex}{\mathbb{C}}
+ \newcommand{\Field}{\mathbb{F}}
+ \newcommand{\RPlus}{\Real^{+}}
+ \newcommand{\Polar}{\mathcal{P}_{\s}}
+ \newcommand{\Poly}{\mathcal{P}(E)}
+ \newcommand{\EssD}{\mathcal{D}}
+ \newcommand{\Lom}{\mathcal{L}}
+ \newcommand{\States}{\mathcal{T}}
+ \newcommand{\abs}[1]{\left\vert#1\right\vert}
+ \newcommand{\set}[1]{\left\{#1\right\}}
+ \newcommand{\seq}[1]{\left<#1\right>}
+ \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+ \newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+%%% ----------------------------------------------------------------------
+\newenvironment{changemargin}[2]{%
+ \begin{list}{}{%
+  \setlength{\topsep}{0pt}%
+  \setlength{\leftmargin}{#1}%
+  \setlength{\rightmargin}{#2}%
+  \setlength{\listparindent}{\parindent}%
+  \setlength{\itemindent}{\parindent}%
+  \setlength{\parsep}{\parskip}%
+ }%
+\item[]}{\end{list}}
+
+
+
+
+\title{Formal Theory and Political Philosophy $|$ W3952 (4)}
+\author{{\bf Macartan Humphreys} \\ 812 IAB $|$ mh2245@columbia.edu}
+\date{Spring 2014 $|$  M 18:10-20:00pm $|$ 711 IAB}
+
+\nobibliography*
+
+\begin{document}
+\singlespacing
+\maketitle
+
+\tableofcontents
+
+\vspace{10mm}
+
+\thispagestyle{empty}
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+
+
+%\begin{abstract} \end{abstract}
+
+
+
+\newpage
+\section*{Expectations}
+This seminar explores game theoretic ideas that shed light on major questions in political philosophy. The material is of relevance both to those interested in questions in political philosophy of the form: what is a just way to organize society? what does it mean to say a public policy is fair or unfair? what are rights and how are they established? It will also be of interest to students of comparative politics and international relations interested in how people form moral judgments on questions of policy importance. As well as reading key texts in formal theory with bearing on political philosophy you will get practice implementing and analyzing experimental games.	
+
+\subsection*{Requirements}
+\textbf{Admission}. To do now:  Fill up \href{https://docs.google.com/forms/d/1yBF8tjPJnl7-9syEklFMaOt05fUVI-38zevPY01mv9Y/viewform}{this} form before Tuesday 28 Jan midnight: \\
+\url{http://tinyurl.com/w3952ss14}.  
+
+\subsubsection*{Reading and arguing [20\%]}
+The Syllabus lists both required reading and further reading. You will be expected to have completed all the required readings before class \textit{to the point where you can be called on to critique or defend any reading at any time}. You should contribute actively and be engaged in the discussion at \textit{all} times. If the discussion does not make sense to you then stop the class and say so | it probably doesn't make sense to others either. Any computer use should be for note taking only and quick checking of facts directly related to class discussion; emailing, browsing, SMSing etc \textit{are strictly not allowed and you will be asked to withdraw if you wander like that}. 
+
+\subsubsection*{Presentations and simulations [24\%]}
+You will be divided into two ``research teams'' (RT1, RT2) which will be tasked with implementing three short projects each on themes of the class. These projects are highlighted in the syllabus with the name of the assigned team. In each case you are charged with developing a game to be played with class members -- or better, with a larger group outside of class -- prior to class that engages with the readings of the week. You should present results of the game and discuss implications of your findings. In each case you should submit a 2 page memo summarizing findings and implications on the day of class. 
+
+\subsubsection*{Writing [56\%]}
+You will write three papers that engage with readings or topics of the course.  Each paper will be no more than 2000 words in length. The first will be a bit more exam style, focussing on key concepts (15\% of grade); the second will be more like an assigned essay question (15\% of grade), the third will be more like a mini-seminar paper on a  \textit{topic provided by you} (26\% of grade )! For the last two you should be prepared to move beyond the readings of the class. Each paper will be followed by a discussion with the instructor in which you will be asked to defend or expand on ideas provided in your written answers. See schedule below (and sign up for a time right away; first come, first served).
+
+\begin{table}[h!]
+  \centering
+  \caption{Short paper schedule}
+    \begin{tabular}{cccc}
+    \toprule
+    Question provided & Due   & Meet with Instructor & Signup link\\
+    \midrule
+    03-Feb & 10-Feb & 18-Feb & \url{http://doodle.com/29mzkyarpfiah7ts}  \\
+    3-Mar & 10-Mar & 18-Mar & \url{http://doodle.com/v58feeh9r5ywsqfz} \\
+    7-Apr & 22-Apr & 29-Apr & \url{http://doodle.com/3kr7ks9bzhman3b4} \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+
+\subsection*{Really Reading}
+The reading loads are not especially heavy but some of the readings are hard. You should aim to read them carefully and reflectively. Before approaching each reading think about what the key questions are for the week and about how the questions from this week relate to what you know from previous weeks. Then skim over the reading to get a sense of the themes it covers, and, before reading further, jot down what questions you hope the reading will be able to answer for you. Next, read the introduction and conclusion. This is normally enough to get a sense of the big picture. Ask yourself: Are the claims in the text surprising? Do you believe them? Can you think of examples of ethical problems that do not seem consistent with the logic of the argument? Is the reading answering the questions you hoped it would answer? If not, is it answering more or less interesting questions than you had thought of? Next ask yourself: What types of arguments would you need to see in order to be convinced of the main claims? Now read through the whole text, checking as you go through how the arguments used to support the claims of the author. It is rare to find a piece of writing that you agree with entirely. So, as you come across issues that you are not convinced by, write them down and bring them along to class for discussion. Also note when you are pleasantly surprised, when the author produced a convincing argument that you had not thought of. 
+
+Note all readings are available on line or on courseworks however you are encouraged to \textbf{buy} \bibentry{roemer1998theories}. If you need additional reading on game theoretic concepts  you might try
+\bibentry{dixit2008art} or  \bibentry{osborne2004introduction}. A more advanced but very clear and sophisticated introduction to the key ideas is: \bibentry{myerson1997game}.
+
+
+A draft of my game theory concepts text \textit{Hell is Other People} (\textbf{{HOP}}) is also available on courseworks. Please note that scanned and posted readings are not for circulation outside this course.
+ 
+Note also that all \textit{numbered} readings (above the line) are required; all \textit{bulleted} readings (below the line) are (strongly) recommended. 
+
+
+
+\newpage
+
+
+\section{Primitives}
+\subsection{27 Jan: Games and Strategies}
+\textbf{Goal}: Introduction to game theoretic concepts; optimization, normal form games, extensive form games, equilibrium.
+\begin{enumerate}
+\item \bibentry{camerer2003behavioral}. Appendix A1.1.
+\item HOP (1,2,3, A3)
+\end{enumerate}
+
+
+\subsection{03 Feb: Preferences and Motivations I}
+\textbf{Goal}: Figure out what is meant by preferences and welfare. Focus on formal representations of the structure of preferences and varying accounts of the \textit{content} of preferences.  
+\begin{enumerate}
+\item \bibentry{elster2007explaining}. Chapters 4, 5, 8, and 9.
+\item \bibentry{parfit1984reasons}. Chapters 1 sections (1.1, 1.2, 1.10, 1.11, 1.18), 2 (all) and 3 (all)
+\item \bibentry{camerer2003behavioral}. Section 2.8.
+
+\end{enumerate}
+
+\textbf{Additional Reading}
+\begin{itemize}
+\item \bibentry{binmore2005natural}. Chapter 8. 
+\item \bibentry{scanlon1993}. \href{<http://ebooks.cambridge.org/chapter.jsf?bid=CBO9781139172387&cid=CBO9781139172387A009>}{Available \textbf{here}}.
+\end{itemize}
+
+
+\subsection{10 Feb: Preferences and Motivations II}
+\textbf{Goal:} Assess accounts of the evolution or preferences, and, more broadly, the origins of ethical thinking. 
+\begin{enumerate}
+\item \bibentry{joyce2006evolution}. Chapters 1--4.
+\item \bibentry{descioli2012solution}.
+\item \bibentry{dekel2007evolution}.
+\item HOP (7) 
+\end{enumerate}
+
+\textbf{Additional Reading}
+\begin{itemize}
+\item \bibentry{dawkins2006selfish}. Chapters 1, 5 and 10.
+\item \bibentry{hutcheson1728illustrations}.
+\item \bibentry{guth1995evolutionary}.
+\item \bibentry{sethi2001preference}.
+\item \bibentry{mackie1990ethics}.
+\end{itemize}
+
+
+
+\subsection{17 Feb: Data (RT1)}
+\textbf{Goal:} Examine experimental results that seek to measure preferences. \textbf{RT1: }Implement a game in class (or outside it)  from the Camerer reading and re-examine of the accounts of preferences discussed in last two weeks. 
+\begin{enumerate}
+\item \bibentry{camerer2003behavioral}. Sections 2.1--2.4.
+\item \bibentry{waldmann2007throwing}.
+\item \bibentry{graham2009liberals}.
+\item Do the fat man and the trolley problems \href{http://www.philosophyexperiments.com/fatman/Default.aspx}{here}.
+\end{enumerate}
+
+\textbf{Additional Reading}
+\begin{itemize}
+\item \bibentry{fehr2002altruistic}.
+\item \bibentry{daly1988evolutionary}.
+\item \bibentry{pierce2012wild}.
+\item \bibentry{descioli2009mysteries}.
+\item \bibentry{thomson1976killing}.
+\item \bibentry{baron2004omission}.
+\item \bibentry{greene2008cognitive}.
+\end{itemize}
+
+
+
+
+\section{Aggregations \& Projections}
+\subsection{24 Feb: Paretian Aggregation \& The General Will}
+\textbf{Goal:} Consider the problem of how you aggregate individual preferences into a statement about ``social preferences.'' What kind of information about preferences do you need in order to be able to do this? 
+\begin{enumerate}
+\item \bibentry{roemer1998theories}. Chapter 1.
+\item \bibentry{sen1979personal}.
+\item HOP (9,10,13)
+\end{enumerate}
+
+\textbf{Additional Reading}
+\begin{itemize}
+\item \bibentry{runciman1965vi}.
+\item \bibentry{sen1977weights}.
+\item \bibentry{arrow2012social}.
+\item \bibentry{elster1993interpersonal}. Introduction.
+%\item \bibentry{weymark1991reconsideration}.
+%\item \bibentry{schwartzberg2008voting}.
+\item \bibentry{grofman1988rousseau}.
+\end{itemize}
+
+
+\subsection{03 Mar: Veils of Ignorance, Utilitarianism and Egalitarianism (RT2)}
+\textbf{Goal}: Consider approaches that seek to derive principles from the adoption of a `neutral' position. How do conclusions depend on assumptions about preferences?  \textbf{RT2}: Implement a veils of ignorance experiment in class: what kind of social welfare function is implied by your results?
+\begin{enumerate}
+\item \bibentry{harsanyi1953cardinal}.
+\item \bibentry{roemer1998theories}. Chapter 5 (sections 5.1--5.3).
+\item \bibentry{roemer2002egalitarianism}.
+\item \bibentry{parfit1984reasons}. Chapters 17 and 18.
+\item HOP (8)
+\end{enumerate}
+
+\textbf{Additional Reading}
+\begin{itemize}
+\item \bibentry{kant2002groundwork}. Section 1.
+\item \bibentry{smith2010theory}. Book III, Chapter 4.
+\item \bibentry{rawls1999theory}.
+\item \bibentry{binmore2005natural}. Chapters \textcolor{red}{Chapters}
+\item \bibentry{sen1979utilitarianism}.
+\item \bibentry{mill1971utilitarianism}. Chapters 1--2.
+\item \bibentry{roemer1998theories}. Chapter 4.
+\item \bibentry{jj1987utilitarianism}.
+\end{itemize}
+
+
+\subsection{10 Mar: Egalitarianism and Equilisanda}
+\textbf{Goal}: Assess how arguments for egalitarianism are sensitive to different specifications of what exactly gets equalized: utility? resources? opportunities?  
+\begin{enumerate}
+\item \bibentry{dworkin1981equality}.
+\item \bibentry{sen1993capability}.
+\item \bibentry{cohen1989currency}.
+\item \bibentry{binmore2005natural}. Chapter 11.
+\end{enumerate}
+
+\textbf{Additional Reading}
+\begin{itemize}
+\item \bibentry{johnston1994idea}. Chapter 4, section 5.
+\item \bibentry{roemer1994future}.
+\item \bibentry{roemer1998theories}. Chapters 3 and 7.
+\end{itemize}
+
+
+\subsection{24 Mar: Deliberation (RT1)}
+\textbf{Goal}: Assess when and how deliberation can lead to the uncovering (or generation?) of socially optimal outcomes. \textbf{RT1 task:} Design and implement a deliberation game that assesses conditions under which deliberation improves social decision making.
+\begin{enumerate}
+% \item \bibentry{austen2006deliberation}.
+\item \bibentry{dryzek2003social}.
+\item \bibentry{fearon1998}.
+\item \bibentry{hafer2007deliberation}.
+\item HOP (15, 20, 24, 25)
+\end{enumerate}
+
+\textbf{Additional Reading}
+\begin{itemize}
+\item \bibentry{sen2009idea}. Part IV.
+\item \bibentry{cohen1989deliberation}.
+\item \bibentry{mill2010considerations}. Chapters 2, 5 and 7.
+\item \bibentry{habermas1992moral}.
+\item \bibentry{list2007deliberation}.
+\end{itemize}
+
+
+
+\section{Allocations \& Rights}
+\subsection{31 Mar: Fair Divisions \& Status Quos}
+\textbf{Goal}: Assess arguments that introduce, or challenge, the idea that fair outcomes are those that result from bargaining. 
+\begin{enumerate}
+\item \bibentry{roemer1998theories}. Chapter 2. 
+\item \bibentry{brams2003fair}.
+\item \bibentry{fehr1999theory}.
+\item HOP (26, 29, 30, 31)
+\end{enumerate}
+
+\textbf{Additional Reading}
+\begin{itemize}
+\item \bibentry{zajac1996political}.
+% \item \bibentry{sen1970collective}. 118--123.
+\item \bibentry{braithwaite1955theory}.
+% \item \bibentry{lucas1959moralists}.
+\item \bibentry{elster1985making}. Chapters 4 and 6.
+\item ** For data see Abigail Barr.
+\end{itemize}
+
+
+\subsection{07 Apr: Rights and Processes (RT2)}
+\textbf{Goal}: Assess arguments that suggest, or challenge the consistency of rights based approaches and welfarist desiderata. \textbf{RT2}: Design and implement a bargaining or fair division game and assess results in light of the theories studied last week.
+\begin{enumerate}
+\item \bibentry{sen2009idea}. Chapter 14.
+\item \bibentry{gibbard1974pareto}.
+\item \bibentry{roemer1998theories}. Chapter 6.
+\item HOP (4)
+\end{enumerate}
+
+\textbf{Additional Reading}
+\begin{itemize}
+\item \bibentry{sugden1985liberty}.
+\item \bibentry{coase1960problem}.
+\item \bibentry{binmore2005natural}. Chapter 6.
+\item \bibentry{sen1970impossibility}.
+\end{itemize}
+
+
+
+\section{Systems}
+\subsection{14 Apr: Repeated Games and the Golden Rule}
+\textbf{Goal}: Assess arguments that seek to explain cooperation as the result of repeated interaction.
+\begin{enumerate}
+\item \bibentry{johnston2011brief}.
+\item \bibentry{shepsle1997analyzing}. Chapters 8 and 9.
+\item \bibentry{young1996economics}.
+\item \bibentry{parfit2011matters}. Chapter 14.
+
+\item HOP (5, 6)
+\end{enumerate}
+
+\textbf{Additional Reading}
+\begin{itemize}
+\item \bibentry{binmore2005natural}. Chapters 5 and 7.
+\item \bibentry{roemer2010kantian}.
+\end{itemize}
+
+
+\subsection{21 Apr: Anarchism and Law (RT1)}
+\textbf{Goal}: Assess arguments that seek to justify or challenge the institution of law. \textbf{RT1}: Design and implement a repeated interaction game and assess informational or other conditions under which cooperation can be sustained without external enforcement. 
+\begin{enumerate}
+\item \bibentry{taylor1982community}. {Chapters 1 and 2}
+\item \bibentry{muthoo2005stable}.
+\item \bibentry{mcadams2000focal}.
+\end{enumerate}
+
+\textbf{Additional Reading}
+\begin{itemize}
+\item \bibentry{gauthier1986morals}.
+\item \bibentry{myerson2004justice}.
+\end{itemize}
+
+
+\subsection{28 Apr: Leviathans}
+\textbf{Goal}: Assess arguments that seek to explain, or to justify, submission to state authority. 
+\begin{enumerate}
+\item \bibentry{taylor1987possibility}. {\color{red}{The state}}
+\item \bibentry{konrad2012market}.
+\item \bibentry{hampton1988hobbes}.
+\end{enumerate}
+
+\textbf{Additional Reading}
+\begin{itemize}
+\item \bibentry{gauthier1969logic}.
+\end{itemize}
+
+
+\subsection{05 May: Markets (RT2)}
+\textbf{Goal:} What special moral considerations are raised by the use of market systems? What ethical theories are consistent with the processes and outcomes implied by free market models. \textbf{RT2}: Design and implement a game that illustrates conditions under which free exchange leads to social inequality.
+** Note: this weeks session may be replaced by a session with student presentations of final projects.  
+\begin{enumerate}
+\item \bibentry{sen1985moral}.
+\item \bibentry{gibbard1985morally}
+\item \bibentry{bowles1998endogenous}.
+\item \bibentry{roemer1982new}.
+\item HOP (34)
+\end{enumerate}
+
+\textbf{Additional Reading}
+\begin{itemize}
+\item \bibentry{raz1986morality}. Chapter 8, section 2.
+\item \bibentry{stiglitz1996whither}. Chapter 14.
+\item \bibentry{wood1979marx}.
+\item \bibentry{hirschman1992rival}.
+\end{itemize}
+
+
+
+\newpage
+\addcontentsline{toc}{section}{5  Bibliography}
+%\bibliographystyle{apalike}
+\bibliographystyle{plainnat}
+%\bibinput{spring2014_syllabus}
+\bibliography{spring2014_syllabus}
+
+\end{document}

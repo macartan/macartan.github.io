@@ -1,21 +1,18 @@
 ---
 layout: page
-permalink: /teachinghonors-seminar-21-22
+permalink: /teaching/honors-seminar-21-22
 title: Honors seminar 2021-22
 description: syllabus
 nav: false
 nav_order: 4
----
+  ---
 
 W3998-W3999Y
 
-Prof. Macartan Humphreys
-
-<em>Preceptor:</em>
-Zara Riaz
+Prof. Macartan Humphreys | <em>Preceptor:</em> Zara Riaz
 
 
-# 1 Overview<
+# 1 Overview
 
 The Senior Honors Seminar is a yearlong course designed to help seniors in the major complete a publishable scholarly paper on the topic of their choice. Honors theses are typically 80-120 pages, although there is no set page minimum or maximum. At the beginning of the academic year, we will meet as a group to discuss basic principles of research and thesis design. Beginning in mid-October, however, much of your work will be conducted independently. To make sure that you stay on track, it is critical for you to keep in touch with your faculty advisor as well as the seminar advisor and preceptor. Spring semester meetings will be conducted as writing workshops, where students’ work is circulated, presented, and critiqued.
 
