@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /teaching/resources
-title: How to...
+title: Teaching resources
 nav: false
 nav_order: 4
 ---
@@ -16,6 +16,6 @@ nav_order: 4
 
 # Slides from talks
 
-<a href="{{'assets/slides/dd_diagnosis_and_diagnosands.html' | relative_url}}" target="_blank" rel="noopener noreferrer"> <i class="fas fa-slides"></i> Power analysis with declare design</a> 
+<a href="{{'slides/dd_diagnosis_and_diagnosands.html' | relative_url}}" target="_blank" rel="noopener noreferrer"> <i class="fas fa-slides"></i> Power analysis with declare design</a> 
 
 
