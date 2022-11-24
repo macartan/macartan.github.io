@@ -70,7 +70,7 @@ gitlab_username: # your GitLab user name
 twitter_username: maqartan # your Twitter handle
 linkedin_username: # your LinkedIn user name
 scholar_userid: NGNhTDoAAAAJ # your Google Scholar ID
-mastodon_username: # your mastodon instance+username in the format instance.tld/@username
+mastodon_username: sciences.social/@macartan # your mastodon instance+username in the format  instance.tld/@username
 semanticscholar_id: # your Semantic Scholar ID
 orcid_id: 0000-0001-7029-2326 # your ORCID ID
 medium_username: # your Medium username
