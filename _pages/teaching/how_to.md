@@ -19,3 +19,6 @@ nav_order: 4
 <a href="{{'slides/202211_declaredesign_and_power.html' | relative_url}}" target="_blank" rel="noopener noreferrer"> <i class="fas fa-slides"></i> Power analysis with declare design</a> 
 
 
+<a href="{{'slides\201705_lectures_on_causal_inference.pdf' | relative_url}}" target="_blank" rel="noopener noreferrer"> <i class="fas fa-slides"></i> Six lectures on causal inference</a> 
+
+
