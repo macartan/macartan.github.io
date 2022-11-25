@@ -1,11 +1,10 @@
 ---
 layout: page
 title: DeclareDesign
-description: Declare and diagnose research designs
-img: assets/img/dd.svg
+img: assets/img/posts/dd.png
 redirect: https://declaredesign.org/
 importance: 3
-category: work
+category: methods
 ---
 
 Every project has a beautiful feature showcase page.

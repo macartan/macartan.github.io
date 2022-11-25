@@ -1,27 +1,18 @@
 ---
 layout: page
-title: Political Games
-img: assets/img/political_games.jpg
+title: game theory
+img: assets/img/posts/political_games.jpg
 importance: 1
-category: work
+category: theory
 ---
 
-<div class="nopadding col-md-12 col-xs-12">
-<div class="description">
-<div class="LinesEllipsis LinesEllipsis--clamped ">
-<div>
-<img class="wp-image-420 alignleft" src='assets/img/political_games.jpg' width="116" height="144"/>
-</div>
-<div></div>
-<div>
+<img class="wp-image-420 alignleft" src='img/political_games.jpg' width="116" height="144"/>
+
 <a href="https://wwnorton.com/books/9780393263336">Political Games</a> presents forty-nine insights from game theory, illuminating the common logics underlying diverse political problems.
-</div>
-</div>
-</div>
-</div>
+
 <ul>
- 	<li><strong>text</strong>: segments available from <a href="https://wwnorton.com/books/9780393263336">Norton</a></li>
- 	<li><strong>code:  </strong>see the accompanying <a href="https://github.com/macartan/hop">hop</a> package for graphing and solving game (<a href="https://macartan.github.io/hop/">guide</a>); see <a href="https://macartan.github.io/hop/endnotes.html">here</a> for code for endnotes</li>
+ 	<li><strong>text</strong>: segments available from <a href="https://wwnorton.com/books/9780393263336">Norton</a></li>
+ 	<li><strong>code: </strong>see the accompanying <a href="https://github.com/macartan/hop">hop</a> package for graphing and solving game (<a href="https://macartan.github.io/hop/">guide</a>); see <a href="https://macartan.github.io/hop/endnotes.html">here</a> for code for endnotes</li>
 </ul>
 &nbsp;
 

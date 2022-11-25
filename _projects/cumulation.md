@@ -1,10 +1,9 @@
 ---
 layout: page
 title: cumulation
-description: Cumulation
-img: assets/img/stacking.png
+img: assets/img/posts/stacking.png
 importance: 2
-category: work
+category: methods
 ---
 
 
@@ -17,9 +16,12 @@ At the <a href="https://www.wzb.eu/en/research/political-economy-of-development/
  	<li><strong>Meta-models: </strong>Our <a href="https://wzb-ipi.github.io/corona/">Correlates of Corona</a> project examines socioeconomic predictors of Covid mortality. Experimental stages now in the field (with Miriam Golden, Alexandra Scacco and colleagues) focus on aggregating disciplinary beliefs about logics driving Corona and strategies to connect observational patterns with causal logics. See <a href="https://eos.wzb.eu/ipi/shiny-covid-crowdsourcing/">here</a> for our challenge.</li>
 </ul>
 Related writing:
-<ul>
- 	<li><a href="https://declaredesign.org/blog/2018-12-11-meta-analysis.html">Meta-analysis can be used not just to guess about effects out-of-sample but also to re-evaluate effects in sample</a> (Declare Design Team)</li>
- 	<li><a href="http://www.macartan.nyc/wp-content/uploads/2019/11/Wilke_Humphreys_field_experiments_arxiv.pdf">Field Experiments, Theory, and External Validity?</a> (Wilke and Humphreys )</li>
- 	<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0305750X19304553">The Aggregation Challenge</a> (Humphreys and Scacco)</li>
- 	<li><a href="https://www.cambridge.org/core/journals/american-political-science-review/article/mixing-methods-a-bayesian-approach/BB1DFC2FDA3D7F2224F3341042FEA5F4">Mixing Methods: A Bayesian Approach</a> (Humphreys and Jacobs)</li>
-</section></div>
+
+* <a href="https://declaredesign.org/blog/2018-12-11-meta-analysis.html">Meta-analysis can be used not just to guess about effects out-of-sample but also to re-evaluate effects in sample</a> (Declare Design Team)
+
+<!-- _pages/publications.md -->
+<div class="publications">
+
+  {% bibliography -f papers -q @*[project~=cumulation]* %}
+
+</div>
