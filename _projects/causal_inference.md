@@ -6,10 +6,17 @@ importance: 3
 category: methods
 ---
 
-## Book
+## Book on causal models for qualititative and mixed methods research
 
+Alan Jacobs and I have been working on figuring out principles for simultaneously drawing inferences from qualitative and quantitative data. The key idea is that when scholars use qualitative inference they update beliefs about causal effects (or more, generally about their model of the world, M) by making inferences using data about many facts of a given case ($D1$). They estimate a posterior $\Pr(M|D1)$. Quantitative  scholars update beliefs about causal effects by making inferences using data about a few facts about many cases ($D2$), forming posterior $\Pr(M|D2)$.  From there it’s not such a huge thing to make integrated inferences of the form $\Pr(M|D1&D2)$.
 
-<i class="fas fa-book"></i> <a href="https://macartan.github.io/integrated_inferences/"> Integrated inferences</a> (with Alan Jacobs, forthcoming, Cambridge University)
+Simple as that sounds, people do not do this, but doing it opens up many insights about how we learn from cases and how we aggregate knowledge. The broad approach becomes considerably more powerful when causal models are used to justify beliefs on data patterns.
+
+* <i class="fas fa-book"></i> <a href="https://macartan.github.io/integrated_inferences/"> Integrated inferences</a> (with Alan Jacobs, forthcoming, Cambridge University)
+
+* [Rmd Replication of Natural Resources illustration](http://www.columbia.edu/~mh2245/biqq/nr_replication.html)
+
+* [Guide to our package for making, updating, and querying causal models](https://macartan.github.io/causalmodels/)
 
 ##  Pedagogical material
 
@@ -25,7 +32,6 @@ category: methods
 
 
 ## Short working papers
-
 
 
 <!-- _pages/publications.md -->
