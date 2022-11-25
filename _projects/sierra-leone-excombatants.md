@@ -2,7 +2,7 @@
 layout: page
 title: Sierra Leone conflict
 img: assets/img/posts/SLXC.png
-importance: 3
+importance: 8
 category: field projects
 ---
 
