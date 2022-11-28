@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Kampada Citizens' Charter project
+title: Kampala Citizens' Charter project
 img: assets/img/posts/bodas.png
-importance: 3
+importance: 1
 category: field projects
 ---
 
@@ -18,3 +18,4 @@ Through a close analysis of the Kampala citizen's charter construction process w
 
 * [Registered Design](https://osf.io/htnjz)
 * <i class="fa-solid fa-presentation-screen"></i> <a href="{{'slides/20221128_Beirat.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Slides (short) 202211</a> 
+<a href="{{'slides/20221128_Beirat.pdf' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> (pdf) 202211</a> 
