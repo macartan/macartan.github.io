@@ -17,5 +17,4 @@ Through a close analysis of the Kampala citizen's charter construction process w
 * output: inequality in how much decisions favor specific individuals / groups
 
 * [Registered Design](https://osf.io/htnjz)
-* <i class="fa-solid fa-presentation-screen"></i> <a href="{{'slides/20221128_Beirat.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Slides (short) 202211</a> 
-<a href="{{'slides/20221128_Beirat.pdf' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> (pdf)</a> 
+* <i class="fa-solid fa-presentation-screen"></i> <a href="{{'slides/20221128_short.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Slides (short) 202211</a> 
