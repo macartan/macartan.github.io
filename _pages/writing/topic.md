@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /publications/by_topic
+permalink: /writing/by_topic/
 title: topics
 description:
 nav: false
