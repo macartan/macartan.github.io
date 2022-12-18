@@ -5,15 +5,15 @@ nav: true
 nav_order: 1
 dropdown: true
 children: 
-    - title: all publications
-      permalink: /publications/
+    - title: all writing
+      permalink: /writing/by_year
     - title: by topic
-      permalink: /publications/by_topic
+      permalink: /writing/by_topic
     - title: divider
     - title: books
-      permalink: /publications/books
+      permalink: /writing/books
     - title: articles
-      permalink: /publications/articles
+      permalink: /writing/articles
     - title: unpublished
-      permalink: /publications/working_papers
+      permalink: /writing/working_papers
 ---

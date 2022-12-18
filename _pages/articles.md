@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /publications/articles
+permalink: /writing/articles
 title: articles
 description:
 nav: false
