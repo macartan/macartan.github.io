@@ -21,4 +21,4 @@ I am a Professor of Political Science at <a href='https://polisci.columbia.edu/'
 
 More about me <a href="https://macartan.github.io/about/">here</a>
 
-All writing, by topic, <a href="https://macartan.github.io/publications/by_topic">here</a>
+All writing, by topic, <a href="https://macartan.github.io/writing/by_topic">here</a>
