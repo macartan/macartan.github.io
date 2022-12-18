@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /publications/working_papers
+permalink: /writing/working_papers
 title: working papers
 description:
 nav: false

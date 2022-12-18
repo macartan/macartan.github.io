@@ -2,7 +2,7 @@
 layout: page
 title: writing
 nav: true
-nav_order: 1
+nav_order: 7
 dropdown: true
 children: 
     - title: all writing
