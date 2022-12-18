@@ -10,7 +10,28 @@
 "Van der Windt":
   - firstname: ["Peter", "peter van der"]
     url: https://www.petervanderwindt.com/
- 
+
+"Kluever":
+  - firstname: ["Heike", "H"]
+    url: http://www.heike-kluever.com/
+
+"Huck"
+  - firstname: ["Steffen", "S"]
+    url: https://www.wzb.eu/de/personen/steffen-huck
+
+"Schweighofer-Kodritsch"
+  - firstname: ["Sebastian", "S"]
+    url: https://sites.google.com/site/sebastiankodritsch/
+
+"Habyarimana"
+  - firstname: ["James"]
+    url: https://gufaculty360.georgetown.edu/s/contact/00336000014RXPpAAO/james-habyarimana
+
+"Posner"
+  - firstname: ["Daniel"]
+    url: http://danielnposner.com/
+
+
 "Weinstein":
   - firstname: ["Jeremy M", "Jeremy", "J.M."]
     url: https://politicalscience.stanford.edu/people/jeremy-weinstein
