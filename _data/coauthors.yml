@@ -2,7 +2,6 @@
   - firstname: ["Guy", "G."]
     url: https://guygrossman.com/
 
-
 "Windt":
   - firstname: ["Peter", "peter van der"]
     url: https://www.petervanderwindt.com/
@@ -15,19 +14,19 @@
   - firstname: ["Heike", "H"]
     url: http://www.heike-kluever.com/
 
-"Huck"
+"Huck":
   - firstname: ["Steffen", "S"]
     url: https://www.wzb.eu/de/personen/steffen-huck
 
-"Schweighofer-Kodritsch"
+"Schweighofer-Kodritsch":
   - firstname: ["Sebastian", "S"]
     url: https://sites.google.com/site/sebastiankodritsch/
 
-"Habyarimana"
+"Habyarimana":
   - firstname: ["James"]
     url: https://gufaculty360.georgetown.edu/s/contact/00336000014RXPpAAO/james-habyarimana
 
-"Posner"
+"Posner":
   - firstname: ["Daniel"]
     url: http://danielnposner.com/
 
