@@ -6,8 +6,6 @@ importance: 1
 category: theory
 ---
 
-<img class="wp-image-420 alignleft" src='img/political_games.jpg' width="116" height="144"/>
-
 <a href="https://wwnorton.com/books/9780393263336">Political Games</a> presents forty-nine insights from game theory, illuminating the common logics underlying diverse political problems.
 
 <ul>
@@ -15,6 +13,9 @@ category: theory
  	<li><strong>code: </strong>see the accompanying <a href="https://github.com/macartan/hop">hop</a> package for graphing and solving game (<a href="https://macartan.github.io/hop/">guide</a>); see <a href="https://macartan.github.io/hop/endnotes.html">here</a> for code for endnotes</li>
 </ul>
 &nbsp;
+
+
+[Payoff matrix produced by hop package](https://macartan.github.io/assets/img/posts/payoffmatrix.png)
 
 <strong>Contents</strong>
 
