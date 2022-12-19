@@ -1,9 +1,12 @@
 "WD":
   url: https://www.sciencedirect.com/journal/world-development
-  color: "blue"
 
 "AJPS":
   url: https://onlinelibrary.wiley.com/journal/15405907
+  color: "pink"
+
+"BJPS":
+  url: https://www.cambridge.org/core/journals/british-journal-of-political-science
   color: "pink"
 
 "JOP":
@@ -23,7 +26,7 @@
  color: "pink"
 
 
-"WP":
+"WorldPol":
  url: https://www.cambridge.org/core/journals/world-politics
  color: "pink"
 

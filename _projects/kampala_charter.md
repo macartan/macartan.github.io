@@ -6,7 +6,7 @@ importance: 1
 category: field projects
 ---
 
-**With**: Manuel Bosancianu,  	Grace-Edward Galabuzi , Ana Garcia_Hernandez 
+**With**: Manuel Bosancianu, Grace-Edward Galabuzi , Ana Garcia_Hernandez 
 
 How can we best measure citizens’ degree of political power?
 How do gaps in voice relate to systemic
@@ -20,5 +20,5 @@ Through a close analysis of the Kampala citizen's charter construction process w
 
 * [Registered Design](https://osf.io/htnjz)
 * <i class="fa-solid fa-presentation-screen"></i> <a href="{{'slides/20221128_short.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Slides (short) 202211</a> 
-* [Policy report]("projects\kampala_charter\20210317_report.pdf") (input to Kampala charter)
+* [Policy report]("https://macartan.github.io/assets/pdf/projects/kampala_charter/20210317_report.pdf") (input to Kampala charter)
 
