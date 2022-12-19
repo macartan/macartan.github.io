@@ -1,26 +1,36 @@
 "WD":
   url: https://www.sciencedirect.com/journal/world-development
-  color: "orange"
+  color: "blue"
 
 "AJPS":
   url: https://onlinelibrary.wiley.com/journal/15405907
-  color: "brown"
+  color: "pink"
 
 "JOP":
   url: https://www.journals.uchicago.edu/toc/jop/current
-  color: "purple"
+  color: "pink"
 
 "APSR":
   url: https://www.cambridge.org/core/journals/american-political-science-review
-  color: "#00369f"
+  color: "pink"
 
 "JCR":
  url: https://journals.sagepub.com/home/JCR
- color: "red"
+ color: "pink"
 
 "PA":
  url: https://www.cambridge.org/core/journals/political-analysis
  color: "pink"
 
+
+"WP":
+ url: https://www.cambridge.org/core/journals/world-politics
+ color: "pink"
+
 "WP":
  color: "grey"
+ 
+"ARPS":
+ url: https://www.annualreviews.org/journal/polisci
+ color: "pink"
+
