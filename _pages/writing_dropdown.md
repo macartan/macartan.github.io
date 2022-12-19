@@ -16,6 +16,6 @@ children:
       permalink: /writing/articles
     - title: unpublished
       permalink: /writing/working_papers
-    - title: unpublished
-      permalink:   https://macartan.github.io/posts/
+    - title: posts
+      permalink:   https://macartan.github.io/blog/
 ---

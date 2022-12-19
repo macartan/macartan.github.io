@@ -15,7 +15,7 @@ category: theory
 &nbsp;
 
 
-[Payoff matrix produced by hop package](https://macartan.github.io/assets/img/posts/payoffmatrix.png)
+![Payoff matrix produced by hop package](https://macartan.github.io/assets/img/posts/payoffmatrix.png){width=20%}
 
 <strong>Contents</strong>
 
