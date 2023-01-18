@@ -8,7 +8,7 @@ category: methods
 
 ## Book on causal models for qualititative and mixed methods research
 
-Alan Jacobs and I have been working on figuring out principles for simultaneously drawing inferences from qualitative and quantitative data. The key idea is that when scholars use qualitative inference they update beliefs about causal effects (or more, generally about their model of the world, M) by making inferences using data about many facts of a given case ($D_1$). They estimate a posterior $\Pr(M\midline D_1)$. Quantitative  scholars update beliefs about causal effects by making inferences using data about a few facts about many cases ($D2$), forming posterior $\Pr(M \midline D_2)$.  From there it’s not such a huge thing to make integrated inferences of the form $\Pr(M \midline D_1\&D_2)$.
+Alan Jacobs and I have been working on figuring out principles for simultaneously drawing inferences from qualitative and quantitative data. The key idea is that when scholars use qualitative inference they update beliefs about causal effects (or more, generally about their model of the world, $M$) by making inferences using data about many facts of a given case ($D_1$). They estimate a posterior $$ \Pr(M\midline D_1) $$. Quantitative  scholars update beliefs about causal effects by making inferences using data about a few facts about many cases ($D2$), forming posterior $\Pr(M \midline D_2)$.  From there it’s not such a huge thing to make integrated inferences of the form $\Pr(M \midline D_1\&D_2)$.
 
 Simple as that sounds, people do not do this, but doing it opens up many insights about how we learn from cases and how we aggregate knowledge. The broad approach becomes considerably more powerful when causal models are used to justify beliefs on data patterns.
 
