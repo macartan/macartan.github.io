@@ -1,0 +1,87 @@
+---
+title: "IPI Data Task for Pre-doctoral Fellow Position"
+date: "9 Feb 2023"
+output:
+  html_document:
+    df_print: paged
+---
+
+
+```{r, echo=FALSE, warning = FALSE, message=FALSE}
+library(readxl)
+library(dplyr)
+library(tidyr)
+overwrite_csv <- FALSE
+```
+
+**Instructions**
+
+- Please complete these tasks _one hour_ of receipt of our email. Please include  your answers to all questions in a _single_ document (this can be .html, .pdf, .doc, .R, .do, .xlsx, etc). 
+
+- Part A should take about 15-20 mins, Part B 35 - 40 minutes. If you run out of time you can describe the strategy that you would use to complete the tasks.
+
+- Ideal answers to Part B should include reproducible script that goes from the data import to the final output, or as many steps as possible so that someone else may recreate your answers. You are encouraged to include comments to your code if submitting work in R or Stata. We encourage you to use .Rmd or quorto if you are comfortable with these tools.
+
+
+# Part A: Causal inference
+
+Imagine you implemented a "dictator" game  with 99 subjects. A dictator game is a simple game in which one player-- the "dictator" ("offerer") -- decides on how to dived $1 between themselves and another player.
+
+66 of the subjects are from group A and 33 are from group B. Each player played each role in a dictator game once (so they offered a share of $1 to a receiver once and they also received once).
+
+They were randomly matched with partners and the average outcomes are as follows (Numbers show the average number of cents out of $1 given by an offerer to a receiver, with the number of cases in parentheses underneath). 
+
+
+
+|         |                   | Receiver   |         |       |
+|---------|-------------------|------------|---------|-------|
+|         |                   | Group A    | Group B | All   |
+| Offerer | Group A (average) | 36         | 18      | 30    |
+|         | (n)               | (44)       | (22)    | (66)  |
+|         | Group B (average) | 18         | 9       | 15    |
+|         | (n)               | (22)       | (11)    | (33)  |
+|         | All (average)     | 30         | 15      | 25    |
+|         | (n)               | (66)       | (33)    | (99)  |
+
+
+You are interested in the "effect of in-group membership" on offers: *how much more or less do subjects offer to in-group members compared to outgroup members on average?* 
+
+From this data:
+
+* what would be a reasonable estimate of the "in-group effect" on the size of offers made? Explain your answer in a line or two.   Don't rush this one.
+* How might you calculate uncertainty in your estimates? You do not have to calculate any quantities but rather describe in a line or two how you would go about calculating uncertainty.
+* Comment on the meaningfulness (strengths of weaknesses) of this analysis.
+
+
+```{r, echo=FALSE, warnings = FALSE, message=FALSE, eval = FALSE}
+
+#  (2/3) * 18 - (1/3)*9 = 9
+
+```
+
+# Part B: Data analysis
+
+Here is a small data analysis exercise.
+
+You have access to a dataset [here](Data_Extract_From_World_Development_Indicators_WZB.csv) from the world development indicators.
+
+<!-- **https://www.dropbox.com/sh/sue4y5jke9uygww/AADap31mVKH2jNRj7mgB88_1a?dl=0** -->
+<!-- **https://drive.google.com/drive/folders/1u5v7ecSqdD1vZ5xt_XSboJx-koEdV780** -->
+
+```{r, echo=FALSE, warnings = FALSE, message=FALSE, eval = FALSE}
+
+# estimatr::lm_robust(se.prm.enrl ~ sp.ado.tfrt + as.factor(year), fixed_effects = ~ country_name, data = df4)
+# estimatr::lm_robust(se.prm.enrl ~ sp.ado.tfrt, data = df4)
+
+```
+
+
+
+1. What can you say about the relationship between the number of students enrolled in primary education (`se.prm.enrl`) and adolescent fertility rates (`sp.ado.tfrt`) when controlling for variation across time and countries? Explain your results and present a table if appropriate.
+
+2. What kind of conclusions, if any, might you draw from this?
+
+3. Provide a visualization that describes some aspect of the data for all or any group of countries and explain what we can learn from it.
+
+
+
