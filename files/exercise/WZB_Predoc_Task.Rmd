@@ -16,7 +16,7 @@ overwrite_csv <- FALSE
 
 **Instructions**
 
-- Please complete these tasks _one hour_ of receipt of our email. Please include  your answers to all questions in a _single_ document (this can be .html, .pdf, .doc, .R, .do, .xlsx, etc). 
+- Please complete these tasks within _one hour_ of receipt of our email. Please include  your answers to all questions in a _single_ document (this can be .html, .pdf, .doc, .R, .do, .xlsx, etc). 
 
 - Part A should take about 15-20 mins, Part B 35 - 40 minutes. If you run out of time you can describe the strategy that you would use to complete the tasks.
 
