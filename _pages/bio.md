@@ -2,7 +2,7 @@
 layout: page
 permalink: /about/
 title: bio
-description: classes, workshops, and teaching materials
+description: bio, cv, profile
 nav: true
 nav_order: 8
 ---
