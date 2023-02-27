@@ -8,7 +8,7 @@ category: field projects
 
 **With**: Manuel Bosancianu, Grace-Edward Galabuzi , Ana Garcia_Hernandez 
 
-We have been working to gather citizen input to the creation of a citizens' charter for service delivery in Kampala --- an tool intended to enhance accountability.
+We have been working to gather citizen input to the creation of a citizens' charter for service delivery in Kampala --- a tool intended to enhance accountability.
 
 As part of this work we have been able to get to learn about citizen input and citizen influence. In particular we get to ask:
 
