@@ -32,7 +32,7 @@ run <- FALSE
 
 * Develop skills in empirical methods
 * Exposure to open science practices
-* Strength professional networks
+* Strengthen professional networks
 * Engage deeply with fresh cutting edge work
 
 
@@ -105,7 +105,7 @@ Many are previous CU. A number were students in this class not long ago!
 
 ## Replication files
 
-* Best in self-contained documents for easy third party viewing. e.g. `.html` via .qmd` or `.Rmd`
+* Best in self-contained documents for easy third party viewing. e.g. `.html` via `.qmd` or `.Rmd`
 
 Some examples:
 
@@ -134,7 +134,7 @@ Some examples:
 
 Nothing local, everything relative: so please do not include hardcoded paths to your computer
 
-* First best: if someone has access to your `.Rmd`/ `.qmd` file they can hit render or compile and the whole thing reproduces first time.
+* First best: if someone has access to your `.Rmd`/`.qmd` file they can hit render or compile and the whole thing reproduces first time.
 
 *  But: often you need ancillary files for data and code. That's OK but aims should still be that with a self contained folder someone can open a `master.Rmd` file, hit compile and get everything. I usually have an `input` and an `output` subfolder.
 
@@ -154,7 +154,7 @@ Sample TOC:
 * Design (e.g. ex ante perspective): A **design diagnosis**
 * Analysis:
   * replication
-  * re-analysis: for robustnes, for stengthening
+  * re-analysis: for robustness, for strengthening
 * Interpretation (explanation, implications, generalizability)
 
 
@@ -229,7 +229,7 @@ Two distinct overarching goals:
 * Check against pre-analysis plans
 
 
-## Stengthening: Things you might do
+## Strengthening: Things you might do
 
 * Principled exploration of heterogeneity (e.g. using causal forests)
 * Principled incorporation of controls (e.g. Lasso approaches)
@@ -346,7 +346,7 @@ knitr::include_graphics("cheat_sheet.png")
 
 ## A simple design
 
-```{r, comment = ""}
+```{r, comment = "", echo = TRUE}
 
 N <- 100
 b <- .5
@@ -367,7 +367,7 @@ If you just type `design` it will *run* the design---a good check to make sure t
 
 ## Make data from the design
 
-```{r}
+```{r, echo = TRUE}
 data <- draw_data(design)
 
 data |> head () |> kable()
@@ -377,7 +377,7 @@ data |> head () |> kable()
 ## Draw estimands
 
 
-```{r, comment = ""}
+```{r, comment = "", echo = TRUE}
 
 draw_estimands(design) |>
   kable(digits = 2)
@@ -387,7 +387,7 @@ draw_estimands(design) |>
 ## Draw estimates
 
 
-```{r, comment = ""}
+```{r, comment = "", echo = TRUE}
 
 draw_estimates(design) |> 
   kable(digits = 2) 
@@ -397,7 +397,7 @@ draw_estimates(design) |>
 
 ## Get estimates
 
-```{r, comment = ""}
+```{r, comment = "", echo = TRUE}
 
 get_estimates(design, data) |>
   kable(digits = 2)
@@ -406,7 +406,7 @@ get_estimates(design, data) |>
 
 ## Simulate design
 
-```{r, comment = "", warning = FALSE}
+```{r, comment = "", warning = FALSE, echo = TRUE}
 
 simulate_design(design, sims = 3) |>
   kable(digits = 2)
@@ -415,7 +415,7 @@ simulate_design(design, sims = 3) |>
 
 ## Diagnose design
 
-```{r, eval = FALSE, message = FALSE}
+```{r, eval = FALSE, message = FALSE, echo = TRUE}
 
 design |> 
   diagnose_design(sims = 100) 
@@ -433,7 +433,7 @@ design |>
 
 ## Redesign
 
-```{r, comment = "", message = FALSE}
+```{r, comment = "", message = FALSE, echo = TRUE}
 
 new_design <-
   
@@ -447,7 +447,7 @@ new_design <-
 
 ## Compare designs
 
-```{r, eval = FALSE}
+```{r, eval = FALSE, echo = TRUE}
 redesign(design, N = 50) %>%
   
   compare_diagnoses(design) 
