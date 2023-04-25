@@ -16,6 +16,7 @@ Macartan Humphreys and Jeremy Weinstein
 * <i class="fas fa-file-pdf"></i> <a href="{{'assets/pdf/projects/SLXC/200407_report.pdf' | relative_url}}"  rel="noopener noreferrer">Report</a> 
 * <i class="fas fa-file-pdf"></i> <a href="{{'assets/pdf/projects/SLXC/SLXC_instrument.pdf' | relative_url}}"  rel="noopener noreferrer">Instrument</a> 
 * <i class="fas fa-file-pdf"></i> <a href="{{'assets/pdf/projects/SLXC/SLXC_Codebook.pdf' | relative_url}}"  rel="noopener noreferrer">Location and Group Codebook</a> 
+* [Excombatant data](files/data/SLXC/SLXC.dta)
 
 
 Recognizing a window of opportunity between the ending of Sierra Leone’s war and the beginning of trials by the International Special Court for Sierra Leone, Columbia University’s Earth Institute provided expedited support for a data-gathering project to better understand the causes and consequences of Sierra Leone’s civil war, the internal dynamics of the fighting groups, and the best strategies available to the international community to respond to the security concerns raised by civil conflicts.
