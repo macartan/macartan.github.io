@@ -17,7 +17,6 @@ nav_order: 4
  	(notes: <a href="../assets/pdf/teaching/PED_2018_DAGs.pdf">DAGs</a>, 
  	<a href="../assets/pdf/teaching/PED_2018_DD.pdf">DD</a>, <a href="../assets/pdf/teaching/PED_2018_growth_notes.pdf">Growth</a>)</li>
  	<li>senior seminar on <a href="../assets/pdf/teaching/POLINQ_2018_syllabus.pdf">Discrimination and Political Inequality</a> (2018)</li>
-
  	<li>comparative politics field seminar (cp) 
  	<a href="../assets/pdf/teaching/CP_2013_syllabus.pdf">2013 syllabus </a> | 
  	<a href="../assets/pdf/teaching/CP_2014_Handbook.pdf">2014 CP handbook </a>| 
@@ -25,6 +24,8 @@ nav_order: 4
  	
  	<li>seminar on the study of development strategies (ssds) 
  	2010-11  |  2013-14  |  2015-16 | <a href="/teaching/ssds-2016"> 2015-16</a> | <a href="/teaching/ssds-2023"> 2023</a>
+
+ 	<li>development strategies (humboldt)   <a href="/teaching/ds-hu-2023"> 2023</a>
 
  	</li>
 
