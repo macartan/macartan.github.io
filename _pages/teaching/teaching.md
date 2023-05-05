@@ -7,6 +7,8 @@ nav: false
 nav_order: 4
 ---
 
+Columbia 2003 - 2023; Humboldt 2023-
+
 <strong>Comparative Politics and the Political Economy of Development</strong>
 <ul>
  	<li>political economy of development 
@@ -23,11 +25,9 @@ nav_order: 4
  	<a href="../assets/pdf/teaching/CP_2014_Handbook.pdf">2015 CP handbook</a> (<a href="../assets/pdf/teaching/CP_2014_Handbook.bib">bib</a>)</li>
  	
  	<li>seminar on the study of development strategies (ssds) 
- 	2010-11  |  2013-14  |  2015-16 | <a href="/teaching/ssds-2016"> 2015-16</a> | <a href="/teaching/ssds-2023"> 2023</a>
+ 	2010-11  |  2013-14  |  2015-16 | <a href="/teaching/ssds-2016"> 2015-16</a> | <a href="/teaching/ssds-2023"> 2023</a>  </li>
 
- 	<li>development strategies (humboldt)   <a href="/teaching/ds-hu-2023"> 2023</a>
-
- 	</li>
+ 	<li>development strategies (humboldt)   <a href="/teaching/ds-hu-2023"> 2023</a>	</li>
 
  	<li>political violence 
  	<a href="../assets/pdf/teaching/VIOLENCE_2011_syllabus.pdf">syllabus 2011 </a>| 
