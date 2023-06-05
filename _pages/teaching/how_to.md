@@ -20,10 +20,10 @@ nav_order: 4
 
 # Slides for trainings
 
-* <a href="{{'slides/202306_Bocconi.pdf' | relative_url}}"  rel="noopener noreferrer"> <i class="fa-solid fa-presentation"></i>The use of clues</a> 
+* <a href="{{'slides/202306_Boconni.html' | relative_url}}"  rel="noopener noreferrer"> <i class="fa-solid fa-presentation"></i>The use of clues (mediators in mixed methods inference)</a> 
 
 
-* <i class="fa-solid fa-presentation-screen"></i> <a href="{{'slides/202211_declaredesign_and_power.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Power analysis with declare design</a> 
+* <a href="{{'slides/202211_declaredesign_and_power.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Power analysis with declare design</a> 
 
 
 * <a href="{{'slides/201705_lectures_on_causal_inference.pdf' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Six lectures on causal inference</a> 
