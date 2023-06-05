@@ -20,6 +20,9 @@ nav_order: 4
 
 # Slides for trainings
 
+* <a href="{{'slides/202306_Bocconi.pdf' | relative_url}}"  rel="noopener noreferrer"> <i class="fa-solid fa-presentation"></i>The use of clues</a> 
+
+
 * <i class="fa-solid fa-presentation-screen"></i> <a href="{{'slides/202211_declaredesign_and_power.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Power analysis with declare design</a> 
 
 
