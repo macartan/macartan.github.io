@@ -17,7 +17,7 @@ social: false  # includes social icons at the bottom of the page
 
 
 
-I am a the director of the <a href="https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality">Institutions and Political Inequality group</a> at the <a href="https://wzb.eu/en">WZB Berlin Social Science Center and honrary professor of social sciences at Humboldt University.</a> 
+I am the director of the <a href="https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality">Institutions and Political Inequality group</a> at the <a href="https://wzb.eu/en">WZB Berlin Social Science Center/a> and honrary professor of social sciences at Humboldt University.
 
 More about me <a href="https://macartan.github.io/about/">here</a>
 
