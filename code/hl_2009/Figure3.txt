@@ -1,0 +1,65 @@
+
+# Code for simulations to produce Figure 3 in Humphreys and Laver 2009.
+# Written for R 2.9 
+#
+# Simulate the size of the winset for 3 players, dimensions 2, 3, 4 
+# and Minkowski exponents between 1 and 2.
+
+
+Y = function(steps, sims1, sims2, n , d){
+
+PDEFEAT<- 	matrix(-1,steps) 	# OUTPUT VECTOR -- PROB DDM DEFEATED BY AN ARBITRARY POINT			
+
+for(k in 1:steps){					
+	mink<- 1 + (k-1)/(steps-1)	# Minkowski exponent			
+	Z<-matrix(0,sims1)		# VECTOR TO STORE FREQUENCY OF DEFEATS FOR EACH POLITY in 1:SIMS1		
+	for(j in 1:sims1){				
+			x <- matrix(runif(n*d), nrow=n)		
+			DDM<-t(matrix(-1,d))			
+			for(s in 1:d){DDM[s]<-(median(x[,s]))}			
+			X<-rbind(x, DDM)			
+			mX <- as.matrix(dist(X,method="minkowski", p=mink))[n+1,]			
+			simx <- matrix(runif(sims2*d), nrow=sims2)			
+			output<-matrix(NA,sims2)			
+				for(i in 1:sims2){		
+				Y<-rbind(x, simx[i,])		
+				mY <- as.matrix(dist(Y,method="minkowski", p=mink))[n+1,]		
+				output[i]<-(sum(mX>mY))>(n/2)}		
+			Z[j]<-mean(output)}			
+					
+			PDEFEAT[k]<-mean(Z)				
+			}				
+	PDEFEAT}
+
+
+# GRAPH
+
+n<- 		3	 		# SIZE OF THE COMMITTEE
+d<- 		2	 		# NUMBER OF DIMENSIONS
+steps<- 	5	 		# NUMBER OF METRICS EXAMINED BETWEEN CITYBLOCK AND EUCLIDEAN	
+sims1<- 	1000	 		# NUMBER OF DEMOGRAPHIES DRAWN EACH TIME	
+sims2<- 	1000	 		# NUMBER OF POLICIES RIVAL TO SQ EXAMINED FOR EACH DEMOGRAPHY	
+
+
+k 	=1:steps
+mink 	<- 1 + (k-1)/(steps-1)
+
+D3 = Y(steps,sims1,sims2,n,2)
+D4 = Y(steps,sims1,sims2,n,3)
+D5 = Y(steps,sims1,sims2,n,4)
+
+pdf("fig3.pdf")
+plot(mink, D3, type = "o", xlab="Minkowski Exponent", ylab = "Measure of Points that Beat the DDM", pch=19)
+lines(mink, D4, type = "o", pch=19) 
+lines(mink, D5, type = "o", pch=19) 
+text(mink[3], D3[3]+.002, "d=2")
+text(mink[3], D4[3]+.002, "d=3")
+text(mink[3], D5[3]+.002, "d=4")
+dev.off()
+
+plot(mink, D3, type = "o", xlab="Minkowski Exponent", ylab = "Measure of Points that Beat the DDM", pch=19)
+lines(mink, D4, type = "o", pch=19) 
+lines(mink, D5, type = "o", pch=19) 
+text(mink[3], D3[3]+.002, "d=2")
+text(mink[3], D4[3]+.002, "d=3")
+text(mink[3], D5[3]+.002, "d=4")

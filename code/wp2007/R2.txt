@@ -1,0 +1,36 @@
+# Although not reported in the paper it is possible to generate estimates of the confidence interval around the R2.
+# This can be done by simulating betas and generating estimated R2s for each simulation. 
+#
+# Approximate estimates can also be produced using only information on the degrees of freedom for each model. 
+# An example of how this is done is given below.
+#
+# The (R) code below generates confidence intervals for the Adj R by exploiting the following relation between the the R2 and the ADJR2:
+# R2 = (p)/(n - 1) + ((n - p - 1)/( n - 1))ADJR2
+#
+# Note that the CI is constructed based on the *approximate* SE of Rsq: sersq <- sqrt((4*rsq*(1-rsq)^2*(n-k-1)^2)/((n^2-1)*(n+3)))
+# For more details See R documentation: CI.Rsq {psychometric}
+
+
+library(psychometric)
+
+
+DATA <-matrix(c(
+0.14,	0.36,	0.18,	0.13,	0.49,	0.18,	0.02,	0.13,	0.22,	0.43,	0.3,	0.38,
+134,	133,	138,	144,	142,	131,	132,	128,	143,	81,	126,	138,
+37,	40,	40,	40,	40,	39,	39,	40,	40,	29,	37, 	40
+
+),12)
+
+
+Y<-matrix(-1, nrow(DATA), 3)
+for(k in 1:nrow(DATA)){
+	R2<- (DATA[k,3])/(DATA[k,2] - 1) + ((DATA[k,2] - DATA[k,3]-1)/( DATA[k,2] - 1))*DATA[k,1]
+	T<- CI.Rsq(R2, DATA[k,2], DATA[k,3], level = 0.95)
+	Y[k,1] <- (T[1,3] - (DATA[k,3])/(DATA[k,2] - 1))/((DATA[k,2] - DATA[k,3]-1)/( DATA[k,2] - 1))
+	Y[k,2] <- (T[1,1] - (DATA[k,3])/(DATA[k,2] - 1))/((DATA[k,2] - DATA[k,3]-1)/( DATA[k,2] - 1))
+	Y[k,3] <- (T[1,4] - (DATA[k,3])/(DATA[k,2] - 1))/((DATA[k,2] - DATA[k,3]-1)/( DATA[k,2] - 1))
+	}
+Y
+
+
+

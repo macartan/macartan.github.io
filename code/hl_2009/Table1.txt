@@ -1,0 +1,140 @@
+
+# Code for simulations to produce Table 1 in Humphreys and Laver 2009.
+# Written for R 2.9 
+
+# Table 1
+
+
+library(MASS)
+
+# MAKE A VARIANCE COVARIANCE MATRIX 
+#################################################################
+vcv1 = function(dims, rho){
+	V=matrix(rho, dims, dims)
+	V[row(V)==col(V)] <- 1
+	V}
+
+vcv1(3,0)
+
+
+# THIS FUNCTION DRAWS A SET OF NORMALIZED IDEALS 
+# ROWS ARE PEOPLE< COLS DIMENSIONS
+#################################################################
+
+draw <- function(dims, n, vcv){
+	b1<-  t(mvrnorm(n, numeric(dims), vcv))
+	t(sapply(1:dims, function(i,b) b[i,] - median(b[i,]), b=b1))
+	}
+
+	#example
+	draw(4,3,vcv1(4,0))
+
+
+
+# valuation of a point
+#################################################################
+
+v <- function(x,point,n){
+	sapply(1:n, function(i) colSums(abs(x[,i] - point)))
+	}
+
+	#example
+	x= draw(4,3,vcv1(4,0))
+	x
+	v(x,  matrix(0,4), 3)
+
+
+# majority preference for a point
+#################################################################
+m <- function(x,point,n){
+	(sum((v(x,point,n) < colSums(abs(x)))) )>n/2	}
+
+
+
+# simulation for one preference profile against "small" moves
+#################################################################
+beatable <- function(x, sims, n, dims){
+	i=1
+	y=0
+	while (i<=sims){
+	y=y+m(x, matrix(runif(dims, -.001, .001)), n)	
+	i=i+1 + sims*y
+	}
+	y}	
+
+
+# simulation across preference profiles, returns probability of being unbeatable
+#################################################################
+share <- function(sims_pref, sims_points, n, dims, rho){
+	vcv = vcv1(dims, rho)
+	z<-matrix(-100, sims_pref)
+	for (i in 1:sims_pref){
+		x <- draw(dims, n, vcv)
+		z[i]=beatable(x, sims_points, n, dims)
+		}
+		1-mean(z)
+		}
+
+# Illustration
+#################################################################
+	sims=100
+	n=3
+	dims=2
+	point = t(t(runif(dims, -.01, .01)))
+	x=draw(dims,n,vcv1(dims, 0))
+	x
+	point
+	(v(x,point,n) - colSums(abs(x)))<0
+	m(x, point, n)
+	beatable(x, sims, n, dims)
+	share(100, 100, n, dims, 0)
+
+
+	n=5
+	dims=3
+	point = t(t(runif(dims, -.01, .01)))
+	x=draw(dims,n,vcv1(dims, 0))
+	x
+	point
+	(v(x,point,n) - colSums(abs(x)))<0
+	m(x, point, n)
+	beatable(x, sims, n, dims)
+	share(100, 100, n, dims, 0)
+
+
+#################################################################
+# RESULTS
+#################################################################
+
+
+s_pref   = 5000   		# The number of preference configurations to examine
+s_points = 5000  	# The number of deviations to examine for each
+
+N = seq(3,15,2)
+D = seq(2,6,1)
+
+OUTPUT=OUTPUT2=matrix(-1, 7, 5)
+
+r = 0
+
+for (i in 1:7){
+for (j in 1:5){
+OUTPUT[i, j] = share(s_pref, s_points, N[i], D[j], r)
+}
+}
+OUTPUT
+
+save(OUTPUT, file= "C:/Documents and Settings/Macartan/My Documents/My Dropbox/M/v/pp/CB/20091024_OUTPUT")
+
+r = .9
+
+for (i in 1:7){
+for (j in 1:5){
+OUTPUT2[i, j] = share(s_pref, s_points, N[i], D[j], r)
+}
+}
+OUTPUT2
+
+save(OUTPUT2, file= "C:/Documents and Settings/Macartan/My Documents/My Dropbox/M/v/pp/CB/20091024_OUTPUT2")
+
+
