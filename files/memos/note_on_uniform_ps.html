@@ -1923,17 +1923,18 @@ not.</p>
 <h1><span class="header-section-number">5</span> Coverage of confidence
 intervals</h1>
 <p>How does coverage look?</p>
-<p>Richard pointed to this pieces which highlights bad behavior of
-confidence intervals for small <span class="math inline">\(N\)</span>
-for estimating sample proportions <a href="https://www.jstor.org/stable/2685469?origin=crossref&amp;seq=6" class="uri">https://www.jstor.org/stable/2685469?origin=crossref&amp;seq=6</a>
-We are interested in differences in means which is a somewhat different
-problem and it seems that in general things are better behaved.</p>
-<p>Even still for small <span class="math inline">\(N\)</span> you see
-that coverage is always too high. For some intuition, if <span class="math inline">\(N=6\)</span> and three cases with <span class="math inline">\(X=0\)</span> and 3 with <span class="math inline">\(X=1\)</span> the only distribution of <span class="math inline">\(Y\)</span> that will produce a confidennce inteval
-that does not cover 0 is one in which there is a perfect correlation
-between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. This is most likely to happen with the
+<p>Richard pointed to this piece which highlights bad behavior of
+confidence intervals for small <span class="math inline">\(N\)</span> in
+cases where we are estimating sample proportions <a href="https://www.jstor.org/stable/2685469?origin=crossref&amp;seq=6" class="uri">https://www.jstor.org/stable/2685469?origin=crossref&amp;seq=6</a>
+We are interested here in differences in means which is a somewhat
+different problem and it seems that in general things are better
+behaved.</p>
+<p>Even still, for small <span class="math inline">\(N\)</span> you see
+that coverage is always too high. For some intuition, if <span class="math inline">\(N=6\)</span> and there are three cases with <span class="math inline">\(X=0\)</span> and 3 with <span class="math inline">\(X=1\)</span>, the only distribution of <span class="math inline">\(Y\)</span> that will produce a confidence interval
+that does <em>not</em> cover 0 is one in which there is a perfect
+correlation between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. This is most likely to happen when the
 probability that <span class="math inline">\(Y=1\)</span> is 0.5. But
-even then this occurs, and we get significant results, just <span class="math inline">\(2*.5^6\)</span> - 3% of time under the null. so
+even then, this occurs—and we get significant results—just <span class="math inline">\(2*.5^6\)</span> = 3% of time under the null. So
 coverage will never get as low as 95%.</p>
 <div id="simulated" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Simulated</h2>
@@ -1945,7 +1946,7 @@ design &lt;-
   declare_inquiry(ATE = 0) +
   declare_estimator(Y ~ X) 
 
-if(FALSE)
+if(run)
 design |&gt; redesign(N = c(10, 100), prob = seq(.04, .96, .02)) |&gt; 
   diagnose_design(sims = 20000) |&gt; 
   write_rds(&quot;saved/coverage2.rds&quot;)
