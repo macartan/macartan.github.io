@@ -1,6 +1,5 @@
 ---
 title: "IPI Data Task for Pre-doctoral Fellow Position"
-date: "9 Feb 2023"
 output:
   html_document:
     df_print: paged
@@ -20,7 +19,7 @@ overwrite_csv <- FALSE
 
 - Part A should take about 15-20 mins, Part B 35 - 40 minutes. If you run out of time you can describe the strategy that you would use to complete the tasks.
 
-- Ideal answers to Part B should include reproducible script that goes from the data import to the final output, or as many steps as possible so that someone else may recreate your answers. You are encouraged to include comments to your code if submitting work in R or Stata. We encourage you to use .Rmd or quorto if you are comfortable with these tools.
+- Ideal answers to Part B should include reproducible script that goes from the data import to the final output, or as many steps as possible so that someone else may recreate your answers. You are encouraged to include comments to your code if submitting work in R or Stata. We encourage you to use `.Rmd` or quorto if you are comfortable with these tools.
 
 
 # Part A: Causal inference
@@ -49,7 +48,7 @@ You are interested in the "effect of in-group membership" on offers: *how much m
 From this data:
 
 * what would be a reasonable estimate of the "in-group effect" on the size of offers made? Explain your answer in a line or two.   Don't rush this one.
-* How might you calculate uncertainty in your estimates? You do not have to calculate any quantities but rather describe in a line or two how you would go about calculating uncertainty.
+* How might you calculate uncertainty in your estimates? You do not have to calculate any quantities but rather describe in a line or two how you would go about calculating estimates of uncertainty.
 * Comment on the meaningfulness (strengths of weaknesses) of this analysis.
 
 
