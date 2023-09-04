@@ -3,5 +3,8 @@ github_users:
 
 github_repos:
   - macartan/CausalQueries
+  - integrated-inferences/guide
   - DeclareDesign/DeclareDesign
   - gerasy1987/hiddenmeta
+  - macartan/probra
+  - macartan/cj_euclid
