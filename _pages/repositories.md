@@ -6,7 +6,7 @@ description: Github repos
 nav: true
 nav_order: 3
 ---
-
+<!---
 ## GitHub users
 
 {% if site.data.repositories.github_users %}
@@ -16,7 +16,7 @@ nav_order: 3
   {% endfor %}
 </div>
 {% endif %}
-
+-->
 ---
 
 ## GitHub Repositories
