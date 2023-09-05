@@ -6,12 +6,12 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Macartan
 middle_name:
 last_name: Humphreys
-email: mh2245@columbia.edu
+email: macartan.humphreys@wzb.eu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Macartan Humphreys
 footer_text: >
   by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-keywords: political-science, macartan-humphreys, international-development, wzb, columbia  # add your own keywords or leave empty
+keywords: political-science, macartan-humphreys, international-development, wzb, humboldt, tcd  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: mh.png  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
