@@ -10,7 +10,7 @@ email: macartan.humphreys@wzb.eu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Macartan Humphreys
 footer_text: >
-  <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> + <a href="https://github.com/alshedivat/al-folio">al-folio</a>.
+  by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a>.
 keywords: political-science, macartan-humphreys, international-development, wzb, humboldt, tcd  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
