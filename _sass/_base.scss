@@ -3,52 +3,40 @@
  ******************************************************************************/
 @font-face {
     font-family: Dahrendorf;
-    src: url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf.woff2) format("woff2"),url(/themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf.woff) format("woff"),url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf.ttf) format("truetype")
+    src: url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf.woff2) format("woff2"),url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf.woff) format("woff"),url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf.ttf) format("truetype")
 }
 
 @font-face {
     font-family: Dahrendorf-Bold;
-    src: url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-Bold.woff2) format("woff2"),url(/themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-Bold.woff) format("woff"),url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-Bold.ttf) format("truetype")
+    src: url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-Bold.woff2) format("woff2"),url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-Bold.woff) format("woff"),url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-Bold.ttf) format("truetype")
 }
 
 @font-face {
     font-family: Dahrendorf-BoldItalic;
-    src: url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-BoldItalic.woff2) format("woff2"),url(/themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-BoldItalic.woff) format("woff"),url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-BoldItalic.ttf) format("truetype")
+    src: url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-BoldItalic.woff2) format("woff2"),url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-BoldItalic.woff) format("woff"),url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-BoldItalic.ttf) format("truetype")
 }
 
 @font-face {
     font-family: Dahrendorf-Italic;
-    src: url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf-Italic.woff2) format("woff2"),url(/themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf-Italic.woff) format("woff"),url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf-Italic.ttf) format("truetype")
+    src: url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf-Italic.woff2) format("woff2"),url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf-Italic.woff) format("woff"),url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf-Italic.ttf) format("truetype")
 }
 
 @font-face {
     font-family: Dahrendorf-Light;
-    src: url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-Light.woff2) format("woff2"),url(/themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-Light.woff) format("woff"),url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-Light.ttf) format("truetype")
+    src: url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-Light.woff2) format("woff2"),url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-Light.woff) format("woff"),url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-Light.ttf) format("truetype")
 }
 
 @font-face {
     font-family: Dahrendorf-LightItalic;
-    src: url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.woff2) format("woff2"),url(/themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.woff) format("woff"),url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.ttf) format("truetype")
+    src: url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.woff2) format("woff2"),url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.woff) format("woff"),url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.ttf) format("truetype")
 }
 
 // Typography
 
 p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
   color: var(--global-text-color);
+  font-family: Dahrendorf,MonitorProNormal,Roboto,"Helvetica Neue",Arial,Helvetica,sans-serif;
 }
-
-h1 {
-    font-size: 18px;
-    line-height: 21px;
-    font-family: Dahrendorf,MonitorProNormal,Roboto,"Helvetica Neue",Arial,Helvetica,sans-serif
-}
-
-h2 {
-    font-size: 18px;
-    line-height: 21px;
-    font-family: Dahrendorf,MonitorProNormal,Roboto,"Helvetica Neue",Arial,Helvetica,sans-serif
-}
-
 
 
 hr {
