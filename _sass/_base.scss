@@ -31,6 +31,11 @@
     src: url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.woff2) format("woff2"),url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.woff) format("woff"),url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.ttf) format("truetype")
 }
 
+.do-dahrendorf {
+    font-family: Dahrendorf, Arial, sans-serif;
+    font-weight: bold;
+  }
+  
 // Typography
 
 p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
