@@ -1,6 +1,41 @@
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
+@font-face {
+    font-family: Dahrendorf;
+    src: url(https://www.wzb.eu/themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf.woff2) format("woff2"),url(/themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf.woff) format("woff"),url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: Dahrendorf-Bold;
+    src: url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-Bold.woff2) format("woff2"),url(/themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-Bold.woff) format("woff"),url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-Bold.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: Dahrendorf-BoldItalic;
+    src: url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-BoldItalic.woff2) format("woff2"),url(/themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-BoldItalic.woff) format("woff"),url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/bold/Dahrendorf-BoldItalic.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: Dahrendorf-Italic;
+    src: url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf-Italic.woff2) format("woff2"),url(/themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf-Italic.woff) format("woff"),url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/normal/Dahrendorf-Italic.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: Dahrendorf-Light;
+    src: url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-Light.woff2) format("woff2"),url(/themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-Light.woff) format("woff"),url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-Light.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: Dahrendorf-LightItalic;
+    src: url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.woff2) format("woff2"),url(/themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.woff) format("woff"),url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.ttf) format("truetype")
+}
+
+h1 {
+    font-size: 18px;
+    line-height: 21px;
+    font-family: Dahrendorf,MonitorProNormal,Roboto,"Helvetica Neue",Arial,Helvetica,sans-serif
+}
 
 // Typography
 
