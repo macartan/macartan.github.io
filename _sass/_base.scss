@@ -31,17 +31,36 @@
     src: url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.woff2) format("woff2"),url(/themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.woff) format("woff"),url(https://www.wzb.eu//themes/custom/wzb_theme/fonts/dahrendorf/light/Dahrendorf-LightItalic.ttf) format("truetype")
 }
 
+// Typography
+
+p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
+  color: var(--global-text-color);
+}
+
 h1 {
     font-size: 18px;
     line-height: 21px;
     font-family: Dahrendorf,MonitorProNormal,Roboto,"Helvetica Neue",Arial,Helvetica,sans-serif
 }
 
-// Typography
-
-p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
-  color: var(--global-text-color);
+h2 {
+    font-size: 18px;
+    line-height: 21px;
+    font-family: Dahrendorf,MonitorProNormal,Roboto,"Helvetica Neue",Arial,Helvetica,sans-serif
 }
+
+h3 {
+    font-size: 15px;
+    line-height: 18px;
+    font-family: Dahrendorf-Bold,MonitorProSemiBold,Arial,Helvetica,sans-serif
+}
+
+p {
+    font-size: 15px;
+    line-height: 18px;
+    font-family: Dahrendorf,MonitorProNormal,Roboto,"Helvetica Neue",Arial,Helvetica,sans-serif
+}
+
 
 hr {
   border-top: 1px solid var(--global-divider-color);
