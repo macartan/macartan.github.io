@@ -28,7 +28,7 @@ Here is an approach.
 <ul>
  	<li>As you come across issues that you are not convinced by, write them down as points for discussion.</li>
  	<li>Also note when you are pleasantly surprised, when the author produced a convincing argument that you had not thought of.</li>
- 	<li>For a checklist of things to look out for as you read see here: <a href="https://web.archive.org/web/20190820161050/http:/www.macartan.nyc/teaching/discuss">checklist</a></li>
+ 	<li>For a checklist of things to look out for as you read see here: <a href="https://macartan.github.io/teaching/how-to-critique">checklist</a></li>
 </ul>
 </li>
 </ul>

@@ -15,6 +15,9 @@ Simple as that sounds, people do not do this, but doing it opens up many insight
 Alan and I develop these ideas in our book  <i class="fas fa-book"></i> <a href="https://macartan.github.io/integrated_inferences/"> Integrated inferences</a> (with Alan Jacobs, Cambridge University) and provide a package  [CausalQueries](https://github.com/macartan/CausalQueries) to implement these ideas. (See also our 
 [guide to our package for making, updating, and querying causal models](https://macartan.github.io/causalmodels/)).
 
+Legacy: See an earlier working paper with core ideas in the book:
+[Qualitative inferences from Causal Models]("2017_qualdag.pdf")
+
 ##  Pedagogical material
 
 *  [Six lectures on causal inference](https://macartan.github.io/slides/slides/six_lectures.pdf)

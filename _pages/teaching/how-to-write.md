@@ -79,7 +79,7 @@ You can loosen up in the conclusion a bit to describe possible implications of y
 
 <strong>2.1 Know your tools</strong>
 
-Microsoft Word is fine for lots of writing but for technical writing it is worth investing is learning <a href="https://web.archive.org/web/20190730143111/http:/www.latex-project.org/">LaTeX</a> -- a free system for preparing documents. For real transparency it is good to integrate your analysis with your writing. This can be done in various ways but the simplest might be <a href="https://web.archive.org/web/20190730143111/http:/rmarkdown.rstudio.com/">Rmarkdown</a>. Be prepared to learn these new tools.
+Microsoft Word is fine for lots of writing but for technical writing it is worth investing is learning <a href="http:/www.latex-project.org/">LaTeX</a> -- a free system for preparing documents. For real transparency it is good to integrate your analysis with your writing. This can be done in various ways but the simplest might be <a href="http:/rmarkdown.rstudio.com/">Rmarkdown</a>. Be prepared to learn these new tools.
 
 <strong>2.2 Style</strong>
 
@@ -111,7 +111,7 @@ Saying “we’ for a single authored piece can be a little weird. It works for 
 
 <strong>Math: </strong>
 
-Get math formatting right. In particular never start a sentence with math; always have math in italics. So not “x denotes commodities” but “We use <em>x</em> to denote commodities.” Use the equation editor in word or if you have a lot of math use <a href="https://web.archive.org/web/20190730143111/http:/www.latex-project.org/">LaTeX.</a>
+Get math formatting right. In particular never start a sentence with math; always have math in italics. So not “x denotes commodities” but “We use <em>x</em> to denote commodities.” Use the equation editor in word or if you have a lot of math use <a href="http:/www.latex-project.org/">LaTeX.</a>
 
 <strong>Hyperbole:</strong>
 
@@ -155,7 +155,7 @@ Get “its” and “it’s” right (hint: never use “it’s”; use “its�
  	<li>Tables and other output should NOT be presented as Stata output or other raw output.</li>
 </ul>
 <ul>
- 	<li>The standard approach is to make a table where each regression is a column. One option is to use Stata function "outreg2," which can produce very high quality Word (or LaTeX) regression output quite easily. Similar equivalents in R (eg <a href="https://web.archive.org/web/20190730143111/http:/cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf">http://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf</a>).</li>
+ 	<li>The standard approach is to make a table where each regression is a column. One option is to use Stata function "outreg2," which can produce very high quality Word (or LaTeX) regression output quite easily. Similar equivalents in R (eg <a href="http:/cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf">http://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf</a>).</li>
 </ul>
 <ul>
  	<li>Coefficients should be arranged in rows with comprehensible and consistent variable names</li>
