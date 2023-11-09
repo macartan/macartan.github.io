@@ -41,3 +41,5 @@ nav_order: 4
 * <a href="{{'files/memos/note_on_uniform_ps.html' | relative_url}}"  rel="noopener noreferrer"> Note on *p* values, July 2023</a> 
 
 * <a href="{{'slides/tcd_2023.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> My work</a> 
+
+* <a href="{{'slides/20231110_corona.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Corona work</a> 
