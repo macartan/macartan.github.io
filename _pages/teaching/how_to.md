@@ -36,7 +36,7 @@ nav_order: 4
 
 
 
-# Slides
+# Other bits, slides from talks
 
 * <a href="{{'files/memos/note_on_uniform_ps.html' | relative_url}}"  rel="noopener noreferrer"> Note on *p* values, July 2023</a> 
 
@@ -44,4 +44,4 @@ nav_order: 4
 
 * <a href="{{'slides/20231110_corona.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Corona work</a> 
 
-* <a href="{{'slides/20231130_slcahw.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Sierra Leone experiment</a> 
+* <a href="{{'slides/20231130_sl_cahw.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Sierra Leone study on recruitment and incentives</a> 
