@@ -711,7 +711,7 @@ been prominent in the public debate in support of calls for such interventions o
 @book{humphreysjacobs2023,
   title={Integrated Inferences: Causal Models for Qualitative and Mixed-Method Research},
   author={Humphreys, Macartan and Jacobs, Alan M},
-  year={forthcoming},
+  year={2023},
   url = {https://www.cambridge.org/core/books/integrated-inferences/45B07964AD4718A74CDE3E35A31F26FA},
   publisher={Cambridge University Press}, 
   abstract={Integrated Inferences develops a framework for using causal models and Bayesian updating for qualitative and mixed-methods research. By making, updating, and querying causal models, researchers are able to integrate information from different data sources while connecting theory and empirics in a far more systematic and transparent manner than standard qualitative and quantitative approaches allow. This book provides an introduction to fundamental principles of causal inference and Bayesian updating and shows how these tools can be used to implement and justify inferences using within-case (process tracing) evidence, correlational patterns across many cases, or a mix of the two. The authors also demonstrate how causal models can guide research design, informing choices about which cases, observations, and mixes of methods will be most useful for addressing any given question.},
@@ -1094,3 +1094,35 @@ on agent motivations when n $\geq$ 4.
   code = {https://macartan.github.io/code/2022_SHH_graphs.html}
 }
   
+  
+  
+@unpublished{hj2017,
+  title={Qualitative Inference from Causal Models},
+  author={Macartan Humphreys and Jacobs, Alan},
+  year={2017},
+  abbr = {WP},
+  bibtex_show={true},
+  abstract={Process tracing is a strategy for inferring within-case causal effects from observable implications of causal processes. Bayesian nets, developed by computer scientists and used now in many disciplines, provide a natural framework for describing such processes, characterizing causal estimands, and assessing the value added of additional information for understanding different causal estimands. We describe how these tools can be used by scholars of process tracing to justify inference strategies with reference to lower level theories and to assess the probative value of new within-case information.},
+  pdf={papers/2017_qualdag.pdf}
+}
+
+
+
+
+@unpublished{tietz2023,
+  title={Making, Updating, and Querying Causal Models using CausalQueries},
+  author={Till Tietz, and  Medina, Lily and  Syunyaev, Georgiy and  Humphreys, Macartan},
+  year={2023},
+  abbr = {WP},
+  bibtex_show={true},
+  abstract={The R package CausalQueries can be used to make, update, and query causal models.
+Users provide a causal statement of the form X -> M <- Y; M <-> Y which is interpreted
+as a structural causal model over a collection of binary variables. CausalQueries can then
+(1) identify the set of principal strata—causal types—required to characterize all possible
+types of causal relations between nodes consistent with the causal statement (2) determine
+a set of parameters needed to characterize distributions over these types (3) update beliefs
+over the distribution of causal types, using a stan model and (4) pose a wide range of
+causal queries of the model, using either the prior distribution, the posterior distribution,
+or a user-specified candidate vector of parameters},
+  pdf={papers/2024_CausalQueries.pdf}
+}
