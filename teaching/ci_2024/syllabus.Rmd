@@ -16,9 +16,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * This syllabus: [https://macartan.github.io/teaching/ci_2024/syllabus.pdf](https://macartan.github.io/teaching/ci_2024/syllabus.pdf)
 
-* Slides: [https://macartan.github.io/teaching/ci_2024/slides/ci_2024.html](https://macartan.github.io/teaching/ci_2024/slides/ci_2024.html)
+* Slides (in progress): [https://macartan.github.io/teaching/ci_2024/slides/ci_2024.html](https://macartan.github.io/teaching/ci_2024/slides/ci_2024.html)
 
-* Puzzles: [https://macartan.github.io/teaching/ci_2024/exercises.html](https://macartan.github.io/teaching/ci_2024/exercises.html)
+* Puzzles  (in progress): [https://macartan.github.io/teaching/ci_2024/exercises.html](https://macartan.github.io/teaching/ci_2024/exercises.html)
 
 
 # Times and locations 
