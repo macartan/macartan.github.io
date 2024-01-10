@@ -1,5 +1,6 @@
 ---
-title: 'Advanced topics in causal inference and experimental design'
+title: 'Causal inference and experimental design'
+date: HU | Spring 2024
 author: "Macartan Humphreys"
 output: 
   pdf_document:
@@ -10,6 +11,15 @@ urlcolor: red
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+# Class resources
+
+* This syllabus: [https://macartan.github.io/teaching/ci_2024/syllabus.pdf](https://macartan.github.io/teaching/ci_2024/syllabus.pdf)
+
+* Slides: [https://macartan.github.io/teaching/ci_2024/slides/ci_2024.html](https://macartan.github.io/teaching/ci_2024/slides/ci_2024.html)
+
+* Puzzles: [https://macartan.github.io/teaching/ci_2024/exercises.html](https://macartan.github.io/teaching/ci_2024/exercises.html)
+
 
 # Times and locations 
 
@@ -47,7 +57,7 @@ I will draw material especially from my two books, both open access:
 * [Integrated Inferences](https://macartan.github.io/integrated_inferences/)
 
 
-*{Hernan/Robins: What if](https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/01/hernanrobins_WhatIf_2jan24.pdf)
+* [Hernan/Robins: What if](https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/01/hernanrobins_WhatIf_2jan24.pdf)
 
 Recommended non open access readings include:
 
@@ -97,38 +107,7 @@ https://quarto.org/docs/get-started/hello/rstudio.html
 
 
 
-# Modules
-
-Here is the plan:
-
-Day 1: Intro
-
-* 1.1	Course outline, tools, 
-* 1.2	Introduction to Declare design
-
-Day 2: Causality
-
-* 2.1	Fundamental problems and basic solutions
-* 2.2	General inquiries and causal identification
-
-Day 3: Estimation and Inference
-
-* 3.1	Frequentist
-* 3.2	Bayesian 
-
-Day 4:
-
-* 4.1	Experimental Design
-* 4.2	Design evaluation
-
-Day 5: 
-
-* 5.1	Topics and techniques
-* 5.2	Open science
-
-
-
-# Reading
+# Modules and Readings
 
 
 
