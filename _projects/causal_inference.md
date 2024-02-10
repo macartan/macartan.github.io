@@ -20,7 +20,21 @@ Legacy: See an earlier working paper with core ideas in the book:
 
 ##  Pedagogical material
 
-*  [Six lectures on causal inference](https://macartan.github.io/slides/slides/six_lectures.pdf)
+*  [Lectures on causal inference](https://macartan.github.io/ci/ci_2024.html#/title-slide) | [exercises etc](https://macartan.github.io/ci/)
+
+
+    * [Intro](https://macartan.github.io/ci/1.1_intro.html)
+    * [Design declaration](https://macartan.github.io/ci/1.2_declaredesign.html)
+    * [Causality](https://macartan.github.io/ci/2.1_causality.html)
+    * [Estimands and Identification](https://macartan.github.io/ci/2.2_estimands.html)
+    * [Frequentists inference](https://macartan.github.io/ci/3.1_fisher.html)
+    * [Bayesian inference](https://macartan.github.io/ci/3.2_bayes.html)
+    * [Experimental design](https://macartan.github.io/ci/4.1_design.html)
+    * [Design evaluation](https://macartan.github.io/ci/4.2_evaluation.html)
+    * [Topics (Diff in Diff, RDD, IV, other)](https://macartan.github.io/ci/5.1_topics.html)
+    * [Workflows](https://macartan.github.io/ci/5.2_process.html)
+
+Other
 
 * <i class="fas  fa-presentation"></i> <a href="{{'slides/201807_Berlin_Summer_School.pdf' | relative_url}}"  rel="noopener noreferrer"> Of causes and postulates: Slides for the Berlin summer school in social sciences 2018</a> 
 
