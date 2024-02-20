@@ -18,6 +18,6 @@ nav_order: 4
 
 * <a href="{{'slides/2020312_humphreys_wfp.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i>Humanitarian evaluation and learning (WFP, 2023)</a> 
 
-* <a href="{{'slides/202402_fhk.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i>Intersectional discrimination</a> 
+* <a href="{{'../slides/202402_fhk.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i>Intersectional discrimination</a> 
 
 * [Intersectional discrimination](slides/202402_fhk.html)
