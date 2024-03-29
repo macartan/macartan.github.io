@@ -3,8 +3,7 @@ layout: about
 title: home
 permalink: /
 subtitle: > 
-  <a href='https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality'>WZB Berlin</a> • <a href='https://agnes.hu-berlin.de/lupo/rds;;jsessionid=B2F63EE0AB420046A6BC034C969178EC.angua-new_root?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfoPerson&publishSubDir=personal&keep=y&purge=y&personal.pid=32460/'>Humboldt University</a> • TCD
-
+  <a href='https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality'>WZB Berlin</a> • <a href='https://www.sowi.hu-berlin.de/de/lehrbereiche'>Humboldt University</a> • <a href='https://people.tcd.ie/Profile?Username=MAHUMPHR'>TCD</a>
 profile:
   align: left
   image: profile_pic.jpg
