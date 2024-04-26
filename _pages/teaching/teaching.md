@@ -86,5 +86,6 @@ Columbia 2003 - 2023; Humboldt 2023-
 
 
 *  [HU 2024: Causal Inference and Experimental Design](https://macartan.github.io/ci/)
+*  [EUI 2024: Declare Design](https://macartan.github.io/dd_bootcamp/)
 
 
