@@ -30,7 +30,7 @@ You've been given 2 datasets.
  Each observation in this dataset refers to an individual in a
  certain year in a specific country. 
 
-* [Dataset *B*](B_QOG.csv) ("B_QoG.xlsx") is a short version of 
+* [Dataset *B*](B_QOG.xlsx) ("B_QoG.xlsx") is a short version of 
  the Quality of Government (QoG) data. 
  Each observation in this dataset refers to a certain year in 
  a specific country. 
@@ -107,14 +107,14 @@ Display `summary_df`  as a table.
 
 The next questions use `summary_df`. If you did not create `summary_df` successfully you can access it [here](summary_df.csv). 
 
-## Compute correlations
+<!-- ## Compute correlations -->
 
-Compute the correlation across country-years between the percentage of 
-     respondents who are members of a labor union and the GDP per
-     capita. 
+<!-- Compute the correlation across country-years between the percentage of  -->
+<!--      respondents who are members of a labor union and the GDP per -->
+<!--      capita.  -->
 
 
-## Scatterplot 1
+## Scatterplot
 
 Please produce a scatterplot of the relationship between union membership and GDP per capita.
 Plot union membership on the X-axis, and GDP per capita on the Y-axis.
@@ -141,6 +141,6 @@ Run an OLS regression of union membership on year. Display your output.
 Please read this text and suggest improvements.
 
 <blockquote>
-  "One really has to say that in the last twelve month's (See Masters 2022) there have been  <span style="color: white;">no</span> <br> less protests about the conflict then any time before, this has lead some to wonder if empathy is dead and what affect that might have on future stability (see eg Masterson 2022 and Peters 2021, 2022.)"
+  "One really has to say that in the last twelve month's (See Masters 2022) there have been  <span style="color: white;">no</span> <br> less protests about the conflict then any time before, this has lead some to wonder what affect that might have on future stability (see eg Masterson 2022 and Peters 2021, 2022.)"
 </blockquote>
 
