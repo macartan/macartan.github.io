@@ -25,12 +25,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 You've been given 2 datasets.
  
-*  [Dataset *A*]("A_CSES.csv") ("A_CSES.csv") is a short version of 
+*  [Dataset *A*](A_CSES.csv) ("A_CSES.csv") is a short version of 
  the Comparative Study of Electoral Systems (CSES) survey wave 2. 
  Each observation in this dataset refers to an individual in a
  certain year in a specific country. 
 
-* [Dataset *B*]("B_QOG.csv") ("B_QoG.xlsx") is a short version of 
+* [Dataset *B*](B_QOG.csv) ("B_QoG.xlsx") is a short version of 
  the Quality of Government (QoG) data. 
  Each observation in this dataset refers to a certain year in 
  a specific country. 
@@ -87,7 +87,7 @@ Merge dataset *B* into dataset *A* using country and year to match
 #  Descriptive statistics 
 
  From this point onward, please continue your work only with the merged dataset 
-  `merged_df`. (We also provide this dataset [here]("merged.df") in case you have not merged properly)
+  `merged_df`. (We also provide this dataset [here](merged.df) in case you have not merged properly)
 
 ## Summary statistics
 
@@ -105,7 +105,7 @@ Display `summary_df`  as a table.
 
 #  Analysis 
 
-The next questions use `summary_df`. If you did not create `summary_df` successfully you can use the copy that we have sent you. 
+The next questions use `summary_df`. If you did not create `summary_df` successfully you can access it [here](summary_df.csv). 
 
 ## Compute correlations
 
