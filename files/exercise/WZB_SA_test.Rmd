@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #  Data management
 
-You've been given 2 datasets.
+You have been given 2 datasets.
  
 *  [Dataset *A*](A_CSES.csv) ("A_CSES.csv") is a short version of 
  the Comparative Study of Electoral Systems (CSES) survey wave 2. 
