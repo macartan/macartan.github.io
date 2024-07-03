@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Ideal answers  should include reproducible script that goes from the data import to the final output, or as many steps as possible so that someone else may recreate your answers. You are encouraged to include comments to your code if submitting work in R or Stata. 
 
-- We strongly encourage you to use `.Rmd` or quorto if you are comfortable with these tools and in any case to include  your answers to all questions in a _single_ document (this can be .html, .pdf, .doc, .R, .do, .xlsx, etc). 
+- We strongly encourage you to use `.Rmd` or quarto if you are comfortable with these tools and in any case to include  your answers to all questions in a _single_ document (this can be .html, .pdf, .doc, .R, .do, .xlsx, etc). 
 
 
 
@@ -100,7 +100,7 @@ Store this resulting country-year data as a data frame in   a new R object calle
 
 ## Display table
 
-Display `summary_df`  as a table.
+Display the first rows of `summary_df`  as a table.
 
 
 #  Analysis 
