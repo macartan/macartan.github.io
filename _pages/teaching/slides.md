@@ -6,15 +6,15 @@ nav: false
 nav_order: 4
 ---
 
-* <a href="{{'slides/tcd_2023.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Overview (TCD, 2023)</a> 
+* [Overview](,,.slides/tcd_2023.html) (TCD, 2023)
 
-* <a href="{{'slides/20231110_corona.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Corona work (WZB, 2023)</a> 
+* [Social science contributions to understanding Corona](../slides/20231110_corona.html) 
 
 * [Crises](../slides/2024_crises.html) (2024, FU)
 
-* <a href="{{'slides/20231130_sl_cahw.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Sierra Leone study on recruitment and incentives (EUI, 2023)</a> [RWI 2024](,,/slides/202410_RWI.html)
+* Sierra Leone study on recruitment and incentives [(EUI, 2023)](../slides/20231130_sl_cahw.html) [RWI 2024](../slides/202410_RWI.html)
 
-* <a href="{{'slides/2020312_humphreys_wfp.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i>Humanitarian evaluation and learning (WFP, 2023)</a> 
+* [Humanitarian evaluation and learning (WFP, 2023)](../slides/2020312_humphreys_wfp.html) 
 
 * [Intersectional discrimination](../slides/202402_fhk.html) (2024)
 
