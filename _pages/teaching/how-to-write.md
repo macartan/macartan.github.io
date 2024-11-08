@@ -12,7 +12,7 @@ number-sections: true
 * TOC
 {:toc}
 
-# Structure overview
+# 1. Structure overview
 
 Here is a standard structure for both a paper (sections) or  thesis (chapters).  This is a great structure especially for empirical papers.  You can of course deviate but only do so deliberately.  
 
@@ -24,7 +24,7 @@ Here is a standard structure for both a paper (sections) or  thesis (chapters). 
 6. **Conclusion**
 
 
-# Structure detail
+# 2. Chapter types, section types
 
 Here are further pointers on different types of chapters.
 
@@ -73,7 +73,7 @@ Introductions should include:
  
  Saying early on what your main findings or claims are is very important. Given the abstract, executive summary, and intro, the reader should have no doubt about where things are going by the time they get into it. Doing this lets readers evaluate your claims more quickly and more directly; it shouldn’t be a puzzle for the reader to figure out your conclusion, and your key points should not come as a surprise in the last pages.
 
-## Theory Chapters 1 (Original theory)
+## Formal theory chapters
 
 Here is a good structure for a formal theory (game theoretic) chapter:
 
@@ -92,22 +92,22 @@ description of your *strategy*. What are you looking for to find evidence in fav
 
 1. Describe hypotheses and estimands.
 2. Describe the population: what cases are you looking at and why.
-2. Describe data / measures. Describe sources, measures, and transformations. You might show descriptive statistics here.
-3. Describe analyses strategies. Provide justification and conditions required for valid inferences. Readers should be clear about how you will map from data you might see to inferences. This is as true for qualitative work as for quantitative work.
-
+3. Describe data / measures. Describe sources, measures, and transformations. You might show descriptive statistics here.
+4. Describe analyses strategies. Provide justification and conditions required for valid inferences. Readers should be clear about how you will map from data you might see to inferences. This is as true for qualitative work as for quantitative work.
 
 
 ## Case study chapters
 
-Be clear why you have a case study and what you want to do with it
+Be clear why you have a case study and what you want to do with it.
 
-a. Quick summary of why you have the case and what you hope to learn from it
-b. Justify case selection: why this case? How does it relate to other possible cases? Clarify whether it is typical or atypical, a "most likely" case or "least likely" and so on.
-c. Say what you are looking for in the case and what you will infer depending on what you find
-d. Describe sources
-e. General description of the case
-f. Specific findings relevant for theories
-g. Inferences
+* Quick summary of why you have the case and what you hope to learn from it 
+* Justify case selection: why this case? How does it relate to other possible cases? Clarify whether it is typical or atypical, a "most likely" case or "least likely" and so on. Your cases are probably not "ideal" cases so use the discussion of case selection as an opportunity to say what the likely implications of different features of a case are for inferences.
+* Say what you are looking for in the case and what you will infer depending on what you find
+* Describe sources
+* General description of the case
+* Specific findings relevant for theories
+* Inferences
+
 
 
 ## Conclusions
@@ -122,15 +122,35 @@ Common sections:
 * New agendas
 
 
-# Writing tools
+## Appendices
+
+Things that live in appendices:
+
+* Reconciliation reports describing deviations from analysis plans and analyses implemented. [More.](https://book.declaredesign.org/lifecycle/realization.html#reconciliation) 
+* Proofs of formal results
+* Robustness checks
+* Tabular analogues of figures in the main text
+
+If you have appendices:
+
+* Keep them short
+* Sections should be lettered not numbered: Appendix $A$, Appendix $B$...
+* Every section should be referenced in the main text
+
+
+# 3. Writing tools
 
 Microsoft Word is fine for lots of writing, but for technical writing it is worth investing in learning [LaTeX](http://www.latex-project.org/) — a free system for preparing documents. For real transparency, it is good to integrate your analysis with your writing. This can be done in various ways, but the simplest might be [quarto](https://quarto.org/) or [Rmarkdown](http://rmarkdown.rstudio.com/). Be prepared to learn these new tools.
 
-# Style
+# 4. Style
 
-Your aim in writing is to communicate your *findings* as faithfully as possible, not to communicate your *process* faithfully (of course, you have to be transparent about how you did your analysis). It’s normal to go in circles as you develop your thinking on a topic, but you do not have to bring the reader in the same circles. Instead, try to think about what presentational structure would make it easiest for readers to understand your work quickly. *Never* try to make things seem more complicated than they are.
+* Your aim in writing is to communicate your *findings* as faithfully as possible, not to communicate your *process* faithfully (of course, you have to be transparent about how you did your analysis). It’s normal to go in circles as you develop your thinking on a topic, but you do not have to bring the reader in the same circles. Instead, try to think about what presentational structure would make it easiest for readers to understand your work quickly. 
+* *Never* try to make things seem more complicated than they are.
+* Keep sentences short.
 
-Pointers on style:
+## Pointers on style:
+
+Please:
 
 - **Lots of signposting**: Readers should know why they are reading any given section and any given paragraph within a section. Start off sections with a brief statement of the purpose of the section and end with a quick recap. Organize paragraphs so that each paragraph serves a clear function and readers can tell from the first line what the function is. Many readers won't read a section if they don't know why they need to read it.
 
@@ -194,7 +214,7 @@ I estimate the effect of natural resources on conflict using qualitative and qua
 I first present general background about this case, I then explore whether there is evidence in support of each of mechanisms 1, 2, and 3.
 
 
-# Tables and Figures
+# 5. Tables and Figures
 
 ## Table or Figures?
 
@@ -222,16 +242,16 @@ I first present general background about this case, I then explore whether there
 * Bottom line: It’s often useful and legitimate to give the bottom line of a table at the bottom of the table: “Table shows that there is no evidence that democracy causes growth”
 
 
-# References
+# 6. References
 
 General pointers
 
 * The bibliography should contain an entry for every work cited---including websites---and should contain entries *only* for work cited.
-* There are *lots* of rules around correct  formatting in the text and at the end. Plus there are different sets of rules.
-* You should get this right but you shouldn't lose time.
+* There are *lots* of rules around correct  formatting in the text and at the end. Plus there are different sets of rules. You should outsource this work to a tool not lose time getting this right.
 * References in sentences either have the year in parentheses or the year and last name in parentheses. They should include page references when possible.
 * For references to specific claims include page numbers.
 * Only include references you have read. 
+* Check your biases: are you citing mostly friends, coethnics, men, seniors... are you giving credit where credit is due? 
 
 In markdown enter like this:
 
@@ -279,16 +299,18 @@ Other tools include Zotero, Endnote, Mendeley
 
 Principle is that you should spend a little time figuring out how to make this work and then not spend much time on it.
 
-# Footnotes
+# 7. Footnotes
+
 
 * Footnotes generally preferred to endnotes.
 * Use footnotes sparingly.
+* Citations generally do not go in footnotes but in the main text.
 * Put singly at the end of a sentence, after the period.`^[Like this]`
 * Put singly at the end of a sentence, after the period.^[Like this]
 * Not like^[No!] that, or like this^[No].
 
 
-# Writing processes
+# 8. Actually writing
 
 ## Aim
 
@@ -316,6 +338,7 @@ Aim should be to make the process easy.
 
 * Principle: Write from the inside out. Get your core results, write them up, then write deepening sections and design section, then intro and conclusion. Exception: write abstracts first.
 
+* Principle: Allocate chunks of time to tasks. Figure out what chunk length is best for you: 30 minutes? 3 hours? Protect the time and assign specific tasks for that chunk.
 
 ## Fine tuning
 
@@ -328,7 +351,3 @@ Aim should be to make the process easy.
 * Principle: Don't be afraid to cut.
 
     Most writing has flab. Near the end as you go through you can ask, for each paragraph: Is this paragraph adding content? Would the thesis be any weaker without it? If not then cut, not matter how lovely the writing/
-
-
-
-

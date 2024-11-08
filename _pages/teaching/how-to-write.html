@@ -358,7 +358,7 @@ display: none;
 <li>TOC {:toc}</li>
 </ul>
 <div id="structure-overview" class="section level1">
-<h1>Structure overview</h1>
+<h1>1. Structure overview</h1>
 <p>Here is a standard structure for both a paper (sections) or thesis
 (chapters). This is a great structure especially for empirical papers.
 You can of course deviate but only do so deliberately.</p>
@@ -377,8 +377,8 @@ core results often by (a) showing robustness (b) exploring mechanisms
 <li><strong>Conclusion</strong></li>
 </ol>
 </div>
-<div id="structure-detail" class="section level1">
-<h1>Structure detail</h1>
+<div id="chapter-types-section-types" class="section level1">
+<h1>2. Chapter types, section types</h1>
 <p>Here are further pointers on different types of chapters.</p>
 <div id="front-matter" class="section level2">
 <h2>Front Matter</h2>
@@ -449,8 +449,8 @@ more directly; it shouldn’t be a puzzle for the reader to figure out
 your conclusion, and your key points should not come as a surprise in
 the last pages.</p>
 </div>
-<div id="theory-chapters-1-original-theory" class="section level2">
-<h2>Theory Chapters 1 (Original theory)</h2>
+<div id="formal-theory-chapters" class="section level2">
+<h2>Formal theory chapters</h2>
 <p>Here is a good structure for a formal theory (game theoretic)
 chapter:</p>
 <ol style="list-style-type: decimal">
@@ -499,20 +499,23 @@ qualitative work as for quantitative work.</li>
 <div id="case-study-chapters" class="section level2">
 <h2>Case study chapters</h2>
 <p>Be clear why you have a case study and what you want to do with
-it</p>
-<ol style="list-style-type: lower-alpha">
+it.</p>
+<ul>
 <li>Quick summary of why you have the case and what you hope to learn
 from it</li>
 <li>Justify case selection: why this case? How does it relate to other
 possible cases? Clarify whether it is typical or atypical, a “most
-likely” case or “least likely” and so on.</li>
+likely” case or “least likely” and so on. Your cases are probably not
+“ideal” cases so use the discussion of case selection as an opportunity
+to say what the likely implications of different features of a case are
+for inferences.</li>
 <li>Say what you are looking for in the case and what you will infer
 depending on what you find</li>
 <li>Describe sources</li>
 <li>General description of the case</li>
 <li>Specific findings relevant for theories</li>
 <li>Inferences</li>
-</ol>
+</ul>
 </div>
 <div id="conclusions" class="section level2">
 <h2>Conclusions</h2>
@@ -529,9 +532,26 @@ that are not supported by your analyses.</p>
 <li>New agendas</li>
 </ul>
 </div>
+<div id="appendices" class="section level2">
+<h2>Appendices</h2>
+<p>Things that live in appendices:</p>
+<ul>
+<li>Reconciliation reports describing deviations from analysis plans and
+analyses implemented. <a href="https://book.declaredesign.org/lifecycle/realization.html#reconciliation">More.</a></li>
+<li>Proofs of formal results</li>
+<li>Robustness checks</li>
+<li>Tabular analogues of figures in the main text</li>
+</ul>
+<p>If you have appendices:</p>
+<ul>
+<li>Keep them short</li>
+<li>Sections should be lettered not numbered: Appendix <span class="math inline">\(A\)</span>, Appendix <span class="math inline">\(B\)</span>…</li>
+<li>Every section should be referenced in the main text</li>
+</ul>
+</div>
 </div>
 <div id="writing-tools" class="section level1">
-<h1>Writing tools</h1>
+<h1>3. Writing tools</h1>
 <p>Microsoft Word is fine for lots of writing, but for technical writing
 it is worth investing in learning <a href="http://www.latex-project.org/">LaTeX</a> — a free system for
 preparing documents. For real transparency, it is good to integrate your
@@ -540,16 +560,22 @@ simplest might be <a href="https://quarto.org/">quarto</a> or <a href="http://rm
 these new tools.</p>
 </div>
 <div id="style" class="section level1">
-<h1>Style</h1>
-<p>Your aim in writing is to communicate your <em>findings</em> as
+<h1>4. Style</h1>
+<ul>
+<li>Your aim in writing is to communicate your <em>findings</em> as
 faithfully as possible, not to communicate your <em>process</em>
 faithfully (of course, you have to be transparent about how you did your
 analysis). It’s normal to go in circles as you develop your thinking on
 a topic, but you do not have to bring the reader in the same circles.
 Instead, try to think about what presentational structure would make it
-easiest for readers to understand your work quickly. <em>Never</em> try
-to make things seem more complicated than they are.</p>
-<p>Pointers on style:</p>
+easiest for readers to understand your work quickly.</li>
+<li><em>Never</em> try to make things seem more complicated than they
+are.</li>
+<li>Keep sentences short.</li>
+</ul>
+<div id="pointers-on-style" class="section level2">
+<h2>Pointers on style:</h2>
+<p>Please:</p>
 <ul>
 <li><p><strong>Lots of signposting</strong>: Readers should know why
 they are reading any given section and any given paragraph within a
@@ -624,6 +650,7 @@ means.</li>
 <li>Get “fewer” and “less” right.</li>
 </ul></li>
 </ul>
+</div>
 <div id="signposting-examples" class="section level2">
 <h2>Signposting examples</h2>
 <p><strong>1. Introduction</strong> I show that natural resource
@@ -642,7 +669,7 @@ support of each of mechanisms 1, 2, and 3.</p>
 </div>
 </div>
 <div id="tables-and-figures" class="section level1">
-<h1>Tables and Figures</h1>
+<h1>5. Tables and Figures</h1>
 <div id="table-or-figures" class="section level2">
 <h2>Table or Figures?</h2>
 <ul>
@@ -678,20 +705,22 @@ no evidence that democracy causes growth”</p></li>
 </div>
 </div>
 <div id="references" class="section level1">
-<h1>References</h1>
+<h1>6. References</h1>
 <p>General pointers</p>
 <ul>
 <li>The bibliography should contain an entry for every work
 cited—including websites—and should contain entries <em>only</em> for
 work cited.</li>
 <li>There are <em>lots</em> of rules around correct formatting in the
-text and at the end. Plus there are different sets of rules.</li>
-<li>You should get this right but you shouldn’t lose time.</li>
+text and at the end. Plus there are different sets of rules. You should
+outsource this work to a tool not lose time getting this right.</li>
 <li>References in sentences either have the year in parentheses or the
 year and last name in parentheses. They should include page references
 when possible.</li>
 <li>For references to specific claims include page numbers.</li>
 <li>Only include references you have read.</li>
+<li>Check your biases: are you citing mostly friends, coethnics, men,
+seniors… are you giving credit where credit is due?</li>
 </ul>
 <p>In markdown enter like this:</p>
 <ul>
@@ -732,18 +761,20 @@ make this work and then not spend much time on it.</p>
 </div>
 </div>
 <div id="footnotes" class="section level1">
-<h1>Footnotes</h1>
+<h1>7. Footnotes</h1>
 <ul>
 <li>Footnotes generally preferred to endnotes.</li>
 <li>Use footnotes sparingly.</li>
+<li>Citations generally do not go in footnotes but in the main
+text.</li>
 <li>Put singly at the end of a sentence, after the
 period.<code>^[Like this]</code></li>
 <li>Put singly at the end of a sentence, after the period.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
 <li>Not like<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> that, or like this<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</li>
 </ul>
 </div>
-<div id="writing-processes" class="section level1">
-<h1>Writing processes</h1>
+<div id="actually-writing" class="section level1">
+<h1>8. Actually writing</h1>
 <div id="aim" class="section level2">
 <h2>Aim</h2>
 <p>Nearly everyone finds writing hard and many find <em>some</em> parts
@@ -785,6 +816,9 @@ instead on getting the substance down</li>
 <li><p>Principle: Write from the inside out. Get your core results,
 write them up, then write deepening sections and design section, then
 intro and conclusion. Exception: write abstracts first.</p></li>
+<li><p>Principle: Allocate chunks of time to tasks. Figure out what
+chunk length is best for you: 30 minutes? 3 hours? Protect the time and
+assign specific tasks for that chunk.</p></li>
 </ul>
 </div>
 <div id="fine-tuning" class="section level2">
