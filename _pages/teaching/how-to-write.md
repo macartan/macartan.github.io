@@ -195,7 +195,12 @@ Please:
   - “Question begging” is a technical term; use it if you know what it means.
   - Get "fewer" and "less" right.
 
-
+- **Preferred**
+ - First, second, not firstly, secondly
+ - Cut any word that looks anything like aforementioned
+ 
+- **UK or US?**
+ - US
 
 
 ## Signposting examples
@@ -204,10 +209,10 @@ Please:
 I show that natural resource abundance causes conflict. In section 2 I provide the logic. In section 3 I describe my strategy. Sections 4 and 5 give results and section 6 discusses implications.
 
 **2. Theory**
-Three theories predict an adverse effect of natural resource abundance. I describe each in turn, I then discuss strategies to distinguish between these accounts.
+Three theories predict an adverse effect of natural resource abundance. I describe each in turn and present strategies to distinguish between them.
 
 **3. Strategy**
-I estimate the effect of natural resources on conflict using qualitative and quantitative strategies. I describe each in turn.
+I estimate the effects of natural resources on conflict using qualitative and quantitative strategies. I describe each in turn.
 ...
 
 **5.1 Sierra Leone Case study**
@@ -350,4 +355,4 @@ Aim should be to make the process easy.
     
 * Principle: Don't be afraid to cut.
 
-    Most writing has flab. Near the end as you go through you can ask, for each paragraph: Is this paragraph adding content? Would the thesis be any weaker without it? If not then cut, not matter how lovely the writing/
+    * Most writing has flab. Near the end as you go through you can ask, for each paragraph: Is this paragraph adding content? Would the piece be any weaker without it? If, not then cut, no matter how lovely the writing.
