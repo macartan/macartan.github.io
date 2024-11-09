@@ -14,13 +14,13 @@ number-sections: true
 
 # 1. Structure overview
 
-Here is a standard structure for both a paper (sections) or  thesis (chapters).  This is a great structure especially for empirical papers.  You can of course deviate but only do so deliberately.  
+Here is a standard structure for both a paper (sections) or  thesis (chapters).  This is a great structure especially for empirical papers.  You can deviate but only do so deliberately.  
 
 1. **Introduction**: in which you get your readers on board 
 2. **Theory**: in which you help readers see how your question relates to and can go beyond existing knowledge 
 3. **Strategy**: in which you tell readers how you will answer the question, what data and answer strategies you will use
-4. **Main results**: this is the heart of the paper / thesis
-5. **Discussion / deepening**: in which you go beyond the core results often by (a) showing robustness (b) exploring mechanisms (c) examining heterogeneity (d) examining cases
+4. **Main results**: this is the heart of the piece
+5. **Discussion / deepening**: in which you go beyond the heart, for instance by (a) showing robustness (b) exploring mechanisms (c) examining heterogeneity (d) examining cases
 6. **Conclusion**
 
 
@@ -51,13 +51,14 @@ It's not uncommon to dedicate a thesis (or dissertation, but not a paper) to som
 
 ### Abstract
 
-You can have a short abstract (< quarter page) *and* a longer executive summary (two pages). 
+In a thesis you can have a short abstract (< quarter page) *and* a longer executive summary (two pages). 
+In a paper, just an abstract.
 
-Abstracts should give 
+Abstracts should giveL 
 
-1. brief description of question and motivation
-2. overview of strategy
-3. very short summary of main findings. 
+1. a brief description of question and motivation
+2. an overview of strategy
+3. a very short summary of main findings 
 
 People often use an abstract to report what they *did*, but the most important purpose is to report what you *found*. Remember, findings can be positive and negative — if you find that the data simply does not support some intuitively plausible or commonly believed proposition, that is big news; don’t bury that.
 
@@ -71,18 +72,18 @@ Introductions should include:
  * a clarification of contributions (why what you did matters or how it is innovative)
  * (possibly) a roadmap
  
- Saying early on what your main findings or claims are is very important. Given the abstract, executive summary, and intro, the reader should have no doubt about where things are going by the time they get into it. Doing this lets readers evaluate your claims more quickly and more directly; it shouldn’t be a puzzle for the reader to figure out your conclusion, and your key points should not come as a surprise in the last pages.
+Saying early on what your main findings or claims are is very important. Given the abstract, executive summary, and intro, the reader should have no doubt about where things are going by the time they get into it. Doing this lets readers evaluate your claims more quickly and more directly; it shouldn’t be a puzzle for the reader to figure out your conclusion, and your key points should not come as a surprise in the last pages.
+
 
 ## Formal theory chapters
 
 Here is a good structure for a formal theory (game theoretic) chapter:
 
-1. Motivate the model. What question will the theory answer. Why do we care? What do we already know.
+1. Motivate the model. What question will the theory answer. Why do we care? What do we already know?
 2. Describe the model formally. This requires a full description of (a) the players – how many are they? What are their roles?, (b) the strategies – what choices do they have?, (c) the preferences. Additionally, this may require a description of the sequence of moves and the information available to all players.
-3. The game description should normally include all parameters of interest, including any for which you plan to take comparative statics.
-4. Provide key results in the form of formal propositions. For example, Proposition 1: “Under the following conditions (e.g., all groups are of size …) the following strategies (…) form an equilibrium.” Primary propositions often describe a particular equilibrium, describe the uniqueness or non-uniqueness of equilibria, or describe properties of equilibria.
-5. Give formal statements of propositions on comparative statics (e.g., Y is higher when X is high).
-6. End the chapter by turning these comparative statics claims into empirical hypotheses.
+3. The game description should normally include all parameters of interest, including any for which you plan to take comparative statics. Make things easy for readers by putting these in a table. 
+4. Provide key results in the form of formal propositions. For example, Proposition 1: “Under the following conditions (e.g., all groups are of size …) the following strategies (…) form an equilibrium.” Primary propositions often establish or describe a particular solution (equilibrium). Later proposition might describe the uniqueness or non-uniqueness of solutions, or describe properties of solutions.
+5. End the chapter by describing empirical propositions (that might be tested) that are motivated by the theoretical propositions.
 
 
 ## Empirical strategy chapters
@@ -93,7 +94,7 @@ description of your *strategy*. What are you looking for to find evidence in fav
 1. Describe hypotheses and estimands.
 2. Describe the population: what cases are you looking at and why.
 3. Describe data / measures. Describe sources, measures, and transformations. You might show descriptive statistics here.
-4. Describe analyses strategies. Provide justification and conditions required for valid inferences. Readers should be clear about how you will map from data you might see to inferences. This is as true for qualitative work as for quantitative work.
+4. Describe analysis strategies. Provide justification and conditions required for valid inferences. Readers should be clear about how you will map from data you might see to inferences. This is as true for qualitative work as for quantitative work.
 
 
 ## Case study chapters
@@ -162,8 +163,9 @@ Please:
 
 
 
-- **Keep writing tight**: Remove flab at the beginning of sentences: “In order to” “I am now going to talk about” “I would argue that”; “It should therefore come as no surprise that” (if you must, try “Unsurprisingly”); "I do not necessarily mean ...").
- Remove unoriginal flower: “much ink has been spilled,” “hardly a day goes past.”
+- **Keep writing tight**: Remove flab at the beginning of sentences: “In order to” “I am now going to talk about” “I would argue that”; “It should therefore come as no surprise that” (if you must, try “Unsurprisingly”).
+
+- **Remove unoriginal flower**: “much ink has been spilled,” “hardly a day goes past.”
 
 - **Formality**: Keep the writing formal. No contractions in formal writing (it’s, that’s, should've, etc).
 
@@ -171,12 +173,11 @@ Please:
 
 - **Use the present tense when describing things being done in the text**: "I describe my strategy in Chapter 2 and my findings in Chapter 3." Not "I will describe my strategy in Chapter 2 and my findings in Chapter 3." And not "I described my strategy in Chapter 2 and my findings in Chapter 3." Past tense is of course fine for past events: "I *use* information from interviews *conducted* in . . ."
 
-- **Math**: Get math formatting right. In particular, never start a sentence with math; always have math in italics. So, not “x denotes commodities” but “We use *x* to denote commodities.” Use the equation editor in Word or, if you have a lot of math, use [LaTeX](http://www.latex-project.org/).
+- **Math**: Get math formatting right. In particular, never start a sentence with math; always have math in italics. So, not “x denotes commodities” but “We use *x* to denote commodities.” Use the equation editor in Word or, if you have a lot of math, use [LaTeX](http://www.latex-project.org/). Be sure to italicize properly: $f(x) = \mathbb{E}[x]$.
 
-- **Hyperbole**: Avoid superlatives: vast, massive, extraordinary.
+- **Hyperbole**: Avoid superlatives: vast, massive, extraordinary. Use adjectives sparingly.
 
-
-
+- **Emphasis**: I quite like italics and bolding but if you write well you generally shouldn't need them. Never EVER use capitalization for emphasis.
 
 - **Modesty**: 
 
@@ -196,11 +197,11 @@ Please:
   - Get "fewer" and "less" right.
 
 - **Preferred**
- - First, second, not firstly, secondly
- - Cut any word that looks anything like aforementioned
+   - First, second, not firstly, secondly
+   - Cut any word that looks anything like aforementioned
  
 - **UK or US?**
- - US
+   - US
 
 
 ## Signposting examples
@@ -221,26 +222,23 @@ I first present general background about this case, I then explore whether there
 
 # 5. Tables and Figures
 
-## Table or Figures?
+* Use figures rather than tables when possible. 
 
-* When possible use figures rather than tables. 
+* Tables and figures should generally be self-explanatory: readers shouldn't have to search through the text to figure out what the table or figure is trying to communicate.
 
 * Tables and figures should usually be in the main body of the text, not at the end.
 
-* Tables and figures should be numbered and captioned/titled, in most cases. You can do automatic numbering word using “captions”, and in Latex using `\caption{}`
+* Tables and figures should be numbered and captioned/titled, in most cases. You can do automatic numbering in Word using “captions”, and in Latex using `\label{}` and in markdown with `{#label}`
 
-* Tables and other output should NOT be presented as Stata output or other raw output. There are many tools to produce nice output without a lot of work (`outreg2` in Stata, `texreg`, `stargazer` in `R`, but many more)
-
-
-## Tables and Figures
+* Tables and other output should not be presented as Stata output or other raw output. There are many tools to produce nice output without a lot of work (`outreg2` in Stata, `texreg`, `stargazer` in `R`, but many more)
 
 * Coefficients should be arranged in rows with comprehensible and consistent variable names
 
 * Standard errors should be shown in parentheses (or you should note what measure of uncertainty you are displaying if it is not standard errors)
 
-* Include descriptive statistics like number of observations (N) and R-squared should be included.
+* Include descriptive statistics such as number of observations (N) and R-squared if available.
 
-* Make sure to say what the dependent variables is
+* Make sure to say what the dependent variables is in the Table, if relevant.  
 
 * Precision: numbers should normally reported to two significant digits. e.g.  0.12 not 0.000121313245
 
@@ -323,7 +321,7 @@ Nearly everyone finds writing hard and many find *some* parts of writing impossi
 
 Aim should be to make the process easy. 
 
-* Principle: Know **what** you want to say before you start writing
+* Principle: Know **what** you want to say before you start writing:
 
     * **Chapter abstracts**: write these first; these help you get clear on the point/purpose of every chapter
     * Use outlines: every paragraph should be making a point. An outline can have the main point of each paragraph in a single line.
@@ -338,8 +336,8 @@ Aim should be to make the process easy.
    * Some parts take a long time to write. If you are stuck switch to easier bits and sleep on the harder bits. But be sure to return to them.
 
 * Principle: Write a bad draft and then improve.
+    * Some people follow the measure twice cut once principle and get the writing right first time. I find it much easier to get a draft down and then get to improving it. 
     * Don't spend a lot of time early on getting your style right; focus instead on getting the substance down
-    * Work in layers---try to get a full draft 
 
 * Principle: Write from the inside out. Get your core results, write them up, then write deepening sections and design section, then intro and conclusion. Exception: write abstracts first.
 
@@ -347,11 +345,11 @@ Aim should be to make the process easy.
 
 ## Fine tuning
 
-* Principle: use advice from friends and colleagues well
+* Principle: seek advice from friends and colleagues and use it well.
 
-    * Ask others to read your work and be clear whether you want feedback on substance or style
-    * No point getting help with fine editing if content is likely to change
-    * Feedback that seems wildly irrelevant to you can also be informative as it shows what parts of your argument people have a hard time following
+    * Ask others to read your work and be clear whether you want feedback on substance or style.
+    * No point getting help with fine editing if content is likely to change.
+    * Feedback that seems wildly irrelevant to you can also be informative as it shows what parts of your argument people have a hard time following.
     
 * Principle: Don't be afraid to cut.
 
