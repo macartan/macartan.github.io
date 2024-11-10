@@ -14,6 +14,8 @@ number-sections: true
 
 # 1. Structure overview
 
+A good text has to have a simple and transparent structure.
+
 Here is a standard structure for both a paper (sections) or  thesis (chapters).  This is a great structure especially for empirical papers.  You can deviate but only do so deliberately.  
 
 1. **Introduction**: in which you get your readers on board 
