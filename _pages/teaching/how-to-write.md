@@ -56,7 +56,7 @@ It's not uncommon to dedicate a thesis (or dissertation, but not a paper) to som
 In a thesis you can have a short abstract (< quarter page) *and* a longer executive summary (two pages). 
 In a paper, just an abstract.
 
-Abstracts should giveL 
+Abstracts should give: 
 
 1. a brief description of question and motivation
 2. an overview of strategy
@@ -137,7 +137,7 @@ Things that live in appendices:
 If you have appendices:
 
 * Keep them short
-* Sections should be lettered not numbered: Appendix $A$, Appendix $B$...
+* Sections should be lettered not numbered: Appendix *A*, Appendix *B*...
 * Every section should be referenced in the main text
 
 
@@ -175,7 +175,7 @@ Please:
 
 - **Use the present tense when describing things being done in the text**: "I describe my strategy in Chapter 2 and my findings in Chapter 3." Not "I will describe my strategy in Chapter 2 and my findings in Chapter 3." And not "I described my strategy in Chapter 2 and my findings in Chapter 3." Past tense is of course fine for past events: "I *use* information from interviews *conducted* in . . ."
 
-- **Math**: Get math formatting right. In particular, never start a sentence with math; always have math in italics. So, not “x denotes commodities” but “We use *x* to denote commodities.” Use the equation editor in Word or, if you have a lot of math, use [LaTeX](http://www.latex-project.org/). Be sure to italicize properly: $f(x) = \mathbb{E}[x]$.
+- **Math**: Get math formatting right. Here is a good [guide](https://web.cs.ucdavis.edu/~amenta/w10/writingman.pdf).  In particular, never start a sentence with math; always have math in italics. So, not “x denotes commodities” but “We use *x* to denote commodities.” Use the equation editor in Word or, if you have a lot of math, use [LaTeX](http://www.latex-project.org/). Be sure to italicize and punctuate properly: \[f(x) = \mathbb{E}[x].\]
 
 - **Hyperbole**: Avoid superlatives: vast, massive, extraordinary. Use adjectives sparingly.
 
