@@ -12,6 +12,8 @@ number-sections: true
 * TOC
 {:toc}
 
+This is a guide  for students writing seminar papers or theses. 
+
 # 1. Structure overview
 
 A good text has to have a simple and transparent structure.
@@ -193,10 +195,11 @@ Please:
 - **Common errors**:
   - The past tense of lead is led, not lead.
   - Get “affect” and “effect” right.
+  - Get “lose” and “loose” right.
   - Get “advise” and “advice” right.
   - Get “its” and “it’s” right (hint: never use “it’s”; use “its” and “it is”).
-  - “Question begging” is a technical term; use it if you know what it means.
   - Get "fewer" and "less" right.
+  - “Question begging” is a technical term; use it if you know what it means.
 
 - **Preferred**
    - First, second, not firstly, secondly
@@ -205,8 +208,13 @@ Please:
 - **UK or US?**
    - US
 
+- **More guidance**:
+  * [Strunk and White](https://www.amazon.com/Elements-Style-Fourth-William-Strunk/dp/020530902X)'s classic
+  * [Dreyer](https://www.penguinrandomhouse.com/books/232363/dreyers-english-by-benjamin-dreyer/)'s guide
 
 ## Signposting examples
+
+Here are five examples of signposting:
 
 **1. Introduction**
 I show that natural resource abundance causes conflict. In section 2 I provide the logic. In section 3 I describe my strategy. Sections 4 and 5 give results and section 6 discusses implications.
@@ -218,7 +226,7 @@ Three theories predict an adverse effect of natural resource abundance. I descri
 I estimate the effects of natural resources on conflict using qualitative and quantitative strategies. I describe each in turn.
 ...
 
-**5.1 Sierra Leone Case study**
+**4.1 Sierra Leone Case study**
 I first present general background about this case, I then explore whether there is evidence in support of each of mechanisms 1, 2, and 3.
 
 
