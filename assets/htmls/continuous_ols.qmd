@@ -1,0 +1,74 @@
+---
+title: "Continuous treatments and regression estimands"
+format: 
+  html:
+    embed-resources: true
+bibliography: bib.bib
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+theme_set(theme_bw())
+```
+
+There's an easy but false intuition that if you randomly assign a continuous treatment, a regression of the outcome on the treatment will get you the average treatment effect. 
+
+If by the average treatment effect you mean something like "the change in $Y$ induced by changing $X$ from the bottom to the top of its range," or "the  change in $Y$ induced by small changes in $X$, averaged across all levels of $X$" then regression might disappoint. That's not what it aims for.
+
+In the below example the average effect (under both above definitions) is +1. But regression returns an estimate of -1. 
+
+So wildly different.
+
+```{r, echo = FALSE, message = FALSE}
+
+f <- function(x) (sin(x) - sin(min(x)))/(sin(max(x)) - sin(min(x)))
+
+data.frame(x = seq(0,1, length = 100), y = f(seq(-.51109, 6.9, length = 100)))|>
+  ggplot(aes(x,y)) + geom_point() + 
+  geom_smooth(method = "lm", fill = "white") + 
+  xlab("X (continuous treatment, randomly assigned)") + ylab("Y (outcome | X)")
+```
+
+
+
+
+# OLS estimands
+
+@yitzhaki1996using describes the estimand that *is* targeted, which can in fact be interpreted as a weighted average of local average  effects. But the weights aren't obviously substantively relevant weights. In the case, as above, where $X$ is uniformly assigned, the estimand puts a lot more weight on effects close to the middle of the $X$ range.
+
+Below is an implementation of the version of the estimand provided in @angrist1999empirical   (equation (34), p 1312), which is good when $X$ values are evenly spaced (though not necessarily uniform) -- for example $X$ is the number of years of schooling received by students. 
+ 
+```{r}
+# weights function
+W <- function(x)
+  sapply(unique(x) |> sort(), function(S)
+    ((mean(x[x >= S]) - mean(x[x < S])) * (mean(x >= S) * (1 - (
+      mean(x >= S)
+    )))))
+
+# estimand: assuming data at all values in integer range
+ols_estimand <- function(x, f) {
+  xs <- unique(x) |> sort()
+  ds <- ((f(xs) - f(lag(xs))) / (xs - lag(xs)))[-1]
+  ws <- W(x)[-1]/sum(W(x)[-1])
+  list(df = data.frame(local_effects=ds, weights = ws), 
+       estimand = weighted.mean(ds, ws))
+}
+
+```
+
+In this illustration with a cubic function we see much more weight on regions with small local effects.
+
+```{r}
+# Illustration
+f <- function(x) x ^ 3
+x <- -5:5
+y <- f(x)
+
+ols_estimand(x, f)$df |> ggplot(aes(local_effects,  weights)) + geom_point()
+```
+
+```{r}
+c(estimand = ols_estimand(x, f)$estimand, estimate = (lm(y ~ x) |> coef())[2])
+
+```
