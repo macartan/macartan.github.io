@@ -11,7 +11,7 @@ library(tidyverse)
 theme_set(theme_bw())
 ```
 
-There's an easy but false intuition that if you randomly assign a continuous treatment, a regression of the outcome on the treatment will get you the average treatment effect. 
+There's an easy but false intuition that if you randomly assign a continuous treatment, a regression of the outcome on the treatment will get you an estimate of some type of  average treatment effect. 
 
 If by the average treatment effect you mean something like "the change in $Y$ induced by changing $X$ from the bottom to the top of its range," or "the  change in $Y$ induced by small changes in $X$, averaged across all levels of $X$" then regression might disappoint. That's not what it aims for.
 
@@ -34,9 +34,9 @@ data.frame(x = seq(0,1, length = 100), y = f(seq(-.51109, 6.9, length = 100)))|>
 
 # OLS estimands
 
-@yitzhaki1996using describes the estimand that *is* targeted, which can in fact be interpreted as a weighted average of local average  effects. But the weights aren't obviously substantively relevant weights. In the case, as above, where $X$ is uniformly assigned, the estimand puts a lot more weight on effects close to the middle of the $X$ range.
+@yitzhaki1996using describes the estimand that *is* targeted, which can indeed be interpreted as a weighted average of local average  effects. But the weights aren't obviously substantively relevant weights. In the case in which $X$ is uniformly assigned (as above), the estimand puts a lot more weight on effects close to the middle of the $X$ range.
 
-Below is an implementation of the version of the estimand provided in @angrist1999empirical   (equation (34), p 1312), which is good when $X$ values are evenly spaced (though not necessarily uniform) -- for example $X$ is the number of years of schooling received by students. 
+Below is an implementation of the version of the estimand provided in @angrist1999empirical (equation (34), p 1312), which is good when $X$ values are evenly spaced (though not necessarily uniform); for example if $X$ is the number of years of schooling received by students. 
  
 ```{r}
 # weights function
