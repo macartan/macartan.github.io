@@ -6,10 +6,9 @@ format:
 bibliography: bib.bib
 ---
 
-```{r, include = FALSE}
-library(tidyverse)
-theme_set(theme_bw())
-```
+
+
+
 
 There's an easy but false intuition that if you randomly assign a continuous treatment, a simple regression of the outcome on the treatment will get you an estimate of some type of  average treatment effect. 
 
@@ -19,15 +18,15 @@ In the below example the average effect (under both above definitions) is +1. Bu
 
 So, wildly different.
 
-```{r, echo = FALSE, message = FALSE}
 
-f <- function(x) (sin(x) - sin(min(x)))/(sin(max(x)) - sin(min(x)))
 
-data.frame(x = seq(0,1, length = 100), y = f(seq(-.51109, 6.9, length = 100)))|>
-  ggplot(aes(x,y)) + geom_point() + 
-  geom_smooth(method = "lm", fill = "white") + 
-  xlab("X (continuous treatment, randomly assigned)") + ylab("Y (outcome | X)")
-```
+::: {.cell}
+::: {.cell-output-display}
+![](continuous_ols_files/figure-html/unnamed-chunk-2-1.png){width=672}
+:::
+:::
+
+
 
 
 
@@ -38,7 +37,11 @@ data.frame(x = seq(0,1, length = 100), y = f(seq(-.51109, 6.9, length = 100)))|>
 
 Below is an implementation of the version of the estimand provided in @angrist1999empirical (equation (34), p 1312), which is good when $X$ values are evenly spaced (though not necessarily uniform); for example if $X$ is the number of years of schooling received by students. 
  
-```{r}
+
+
+::: {.cell}
+
+```{.r .cell-code}
 # weights function
 W <- function(x)
   sapply(unique(x) |> sort(), function(S)
@@ -54,12 +57,18 @@ ols_estimand <- function(x, f) {
   list(df = data.frame(local_effects=ds, weights = ws), 
        estimand = weighted.mean(ds, ws))
 }
-
 ```
+:::
+
+
 
 In this illustration with a cubic function we see much more weight on regions with small local effects.
 
-```{r}
+
+
+::: {.cell}
+
+```{.r .cell-code}
 # Illustration
 f <- function(x) x ^ 3
 x <- -5:5
@@ -68,7 +77,24 @@ y <- f(x)
 ols_estimand(x, f)$df |> ggplot(aes(local_effects,  weights)) + geom_point()
 ```
 
-```{r}
+::: {.cell-output-display}
+![](continuous_ols_files/figure-html/unnamed-chunk-4-1.png){width=672}
+:::
+:::
+
+::: {.cell}
+
+```{.r .cell-code}
 c(estimand = ols_estimand(x, f)$estimand, estimate = (lm(y ~ x) |> coef())[2])
+```
+
+::: {.cell-output .cell-output-stdout}
 
 ```
+  estimand estimate.x 
+      17.8       17.8 
+```
+
+
+:::
+:::
