@@ -34,7 +34,7 @@ data.frame(x = seq(0,1, length = 100), y = f(seq(-.51109, 6.9, length = 100)))|>
 
 # OLS estimands
 
-@yitzhaki1996using describes the estimand that *is* targeted by linear regression. It can indeed be interpreted as a weighted average of local average  effects. But the weights aren't obviously substantively relevant weights. In the case in which $X$ is uniformly assigned (as above), the estimand puts a lot more weight on effects close to the middle of the $X$ range.
+@yitzhaki1996using describes the estimand that *is* targeted by the regression of $Y$ on $X$. It can indeed be interpreted as a weighted average of local average  effects. But the weights aren't obviously substantively relevant weights. In the case in which $X$ is uniformly assigned (as above), the estimand puts a lot more weight on effects close to the middle of the $X$ range.
 
 Below is an implementation of the version of the estimand provided in @angrist1999empirical (equation (34), p 1312), which is good when $X$ values are evenly spaced (though not necessarily uniform); for example if $X$ is the number of years of schooling received by students. 
  
