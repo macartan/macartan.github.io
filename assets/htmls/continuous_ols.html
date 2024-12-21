@@ -3273,8 +3273,8 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<section id="ols-estimands" class="level1">
-<h1>OLS estimands</h1>
+<section id="estimands" class="level1">
+<h1>Estimands</h1>
 <p><span class="citation" data-cites="yitzhaki1996using">Yitzhaki (<a href="#ref-yitzhaki1996using" role="doc-biblioref">1996</a>)</span> describes the estimand that <em>is</em> targeted by the regression of <span class="math inline">\(Y\)</span> on <span class="math inline">\(X\)</span>. It can indeed be interpreted as a weighted average of local average effects. But the weights aren’t obviously substantively relevant weights. In the case in which <span class="math inline">\(X\)</span> is uniformly assigned (as above), the estimand puts a lot more weight on effects close to the middle of the <span class="math inline">\(X\)</span> range.</p>
 <p>Below is an implementation of the version of the estimand provided in <span class="citation" data-cites="angrist1999empirical">Angrist and Krueger (<a href="#ref-angrist1999empirical" role="doc-biblioref">1999</a>)</span> (equation (34), p 1312), which is good when <span class="math inline">\(X\)</span> values are evenly spaced (though not necessarily uniform); for example if <span class="math inline">\(X\)</span> is the number of years of schooling received by students.</p>
 <div class="cell">
@@ -3286,7 +3286,7 @@ window.Quarto = {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    )))))</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># estimand: assuming data at all values in integer range</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ols_estimand <span class="ot">&lt;-</span> <span class="cf">function</span>(x, f) {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>yonx_estimand <span class="ot">&lt;-</span> <span class="cf">function</span>(x, f) {</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  xs <span class="ot">&lt;-</span> <span class="fu">unique</span>(x) <span class="sc">|&gt;</span> <span class="fu">sort</span>()</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  ds <span class="ot">&lt;-</span> ((<span class="fu">f</span>(xs) <span class="sc">-</span> <span class="fu">f</span>(<span class="fu">lag</span>(xs))) <span class="sc">/</span> (xs <span class="sc">-</span> <span class="fu">lag</span>(xs)))[<span class="sc">-</span><span class="dv">1</span>]</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  ws <span class="ot">&lt;-</span> <span class="fu">W</span>(x)[<span class="sc">-</span><span class="dv">1</span>]<span class="sc">/</span><span class="fu">sum</span>(<span class="fu">W</span>(x)[<span class="sc">-</span><span class="dv">1</span>])</span>
@@ -3294,14 +3294,14 @@ window.Quarto = {
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>       <span class="at">estimand =</span> <span class="fu">weighted.mean</span>(ds, ws))</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>In this illustration with a cubic function we see much more weight on regions with small local effects.</p>
+<p>The example above is obviously an evil example but the issue arises more generally. In the below illustration there is a monotonic cubic function and we see much more weight on regions with small local effects.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Illustration</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) x <span class="sc">^</span> <span class="dv">3</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">5</span><span class="sc">:</span><span class="dv">5</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">f</span>(x)</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ols_estimand</span>(x, f)<span class="sc">$</span>df <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(local_effects,  weights)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">yonx_estimand</span>(x, f)<span class="sc">$</span>df <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(local_effects,  weights)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -3311,7 +3311,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">estimand =</span> <span class="fu">ols_estimand</span>(x, f)<span class="sc">$</span>estimand, <span class="at">estimate =</span> (<span class="fu">lm</span>(y <span class="sc">~</span> x) <span class="sc">|&gt;</span> <span class="fu">coef</span>())[<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">estimand =</span> <span class="fu">yonx_estimand</span>(x, f)<span class="sc">$</span>estimand, <span class="at">estimate =</span> (<span class="fu">lm</span>(y <span class="sc">~</span> x) <span class="sc">|&gt;</span> <span class="fu">coef</span>())[<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  estimand estimate.x 
       17.8       17.8 </code></pre>

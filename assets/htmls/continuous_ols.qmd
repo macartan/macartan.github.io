@@ -32,7 +32,7 @@ data.frame(x = seq(0,1, length = 100), y = f(seq(-.51109, 6.9, length = 100)))|>
 
 
 
-# OLS estimands
+# Estimands
 
 @yitzhaki1996using describes the estimand that *is* targeted by the regression of $Y$ on $X$. It can indeed be interpreted as a weighted average of local average  effects. But the weights aren't obviously substantively relevant weights. In the case in which $X$ is uniformly assigned (as above), the estimand puts a lot more weight on effects close to the middle of the $X$ range.
 
@@ -47,7 +47,7 @@ W <- function(x)
     )))))
 
 # estimand: assuming data at all values in integer range
-ols_estimand <- function(x, f) {
+yonx_estimand <- function(x, f) {
   xs <- unique(x) |> sort()
   ds <- ((f(xs) - f(lag(xs))) / (xs - lag(xs)))[-1]
   ws <- W(x)[-1]/sum(W(x)[-1])
@@ -57,7 +57,7 @@ ols_estimand <- function(x, f) {
 
 ```
 
-In this illustration with a cubic function we see much more weight on regions with small local effects.
+The example above is obviously an evil example but the issue arises more generally. In the below illustration there is a monotonic  cubic function and we see much more weight on regions with small local effects.
 
 ```{r}
 # Illustration
@@ -65,10 +65,10 @@ f <- function(x) x ^ 3
 x <- -5:5
 y <- f(x)
 
-ols_estimand(x, f)$df |> ggplot(aes(local_effects,  weights)) + geom_point()
+yonx_estimand(x, f)$df |> ggplot(aes(local_effects,  weights)) + geom_point()
 ```
 
 ```{r}
-c(estimand = ols_estimand(x, f)$estimand, estimate = (lm(y ~ x) |> coef())[2])
+c(estimand = yonx_estimand(x, f)$estimand, estimate = (lm(y ~ x) |> coef())[2])
 
 ```
