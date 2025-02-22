@@ -19,11 +19,15 @@ jobs:
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.0.2'
-        bundler-cache: false
+        ruby-version: '3.1.4'
+        bundler-cache: true
     - name: Install deps
       run: |
         npm install -g mermaid.cli
+    - name: Install Jekyll and Dependencies
+      run: |
+        bundle install --jobs 4 --retry 3 --path vendor/bundle
+        bundle exec gem list jekyll  # Verify Jekyll is installed
     - name: Setup deploy options
       id: setup
       run: |
