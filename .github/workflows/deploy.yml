@@ -15,12 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.0.2'
+        ruby-version: '3.1.4'
         bundler-cache: true
+    - name: Remove old gems
+      run: rm -rf vendor/bundle  # Clears any conflicting dependencies
+    - name: Install Bundler
+      run: gem install bundler -v 2.4.22  # Ensures compatibility with default gems        
     - name: Install deps
       run: |
         npm install -g mermaid.cli
