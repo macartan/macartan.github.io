@@ -34,8 +34,8 @@ Recent work has appeared in the *American Political Science Review*, *Journal of
 ### Appointments and Affiliations
 
 - **Director**, [Institutions and Political Inequality Research Group](https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality), [WZB Berlin Social Science Center](https://www.wzb.eu/en)  
-- **Honorary Professor**, [Humboldt University Berlin](https://agnes.hu-berlin.de/lupo/rds;;jsessionid=B2F63EE0AB420046A6BC034C969178EC.angua-new_root?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfoPerson&publishSubDir=personal&keep=y&purge=y&personal.pid=32460)  
-- **Honorary Professor**, Trinity College Dublin  
+- **Honorary Professor**, [Humboldt University Berlin](https://agnes.hu-berlin.de/lupo/rds?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfoPerson&publishSubDir=personal&keep=y&purge=y&personal.pid=32460)  
+- **Honorary Professor**, [Trinity College Dublin](https://people.tcd.ie/Profile?Username=MAHUMPHR)  
 - Secretary of the [European Political Science Society](http://epssnet.org) and associate editor of the [American Political Science Review](https://apsanet.org/publications/journals/american-political-science-review/about-the-editors/)
 - Former **Trudeau Fellow**,  **Harvard Academy Scholar**, and Professor, Columbia University (2002-2023).
 
