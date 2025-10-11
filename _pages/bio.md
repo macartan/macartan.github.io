@@ -11,28 +11,26 @@ nav_order: 8
 
 **Contact:** [macartan.humphreys@wzb.eu](mailto:macartan.humphreys@wzb.eu)
 
-::: {.callout-note title="Short Bio"}
+### Short Bio
+
 Macartan Humphreys works on the political economy of development, with research on post-conflict recovery, ethnic politics, political authority, leadership, and democratic development, often employing field experiments in post-conflict and developing regions.  
 He is the author or coauthor of books on ethnic politics, natural resource management, game theory and politics, and research design.  
 A former Trudeau Fellow, Harvard Academy Scholar, and  Executive Director of the Evidence in Governance and Politics (EGAP) network, he is Secretary of the European Political Science Society and an Associate Editor of the *American Political Science Review*.  
 He directs the Institutions and Political Inequality group at the WZB Berlin Social Science Center and holds honorary professorships at Humboldt University and Trinity College Dublin.
-:::
 
 ---
 
-### Longer Bio
+### More information
 
 **Substantive interests:**  
-I work on the political economy of development, with ongoing research on political inequality, post-conflict development, ethnic politics, political authority and leadership, and democratic development—currently with a focus on field experiments to study democratic decision-making in post-conflict and developing areas.   
-Central questions include understandingu nder what conditions can marginalized populations have their voices heard in local or national politics? or to what extent is political inequality driven by institutional features or by more fundamental economic structures?  
-I have worked in Chad, Ghana, Haiti, Indonesia, Liberia, Mali, Nigeria, São Tomé and Príncipe, Sierra Leone, Senegal, Uganda, and elsewhere.  
+I work on the political economy of development, with ongoing research on political inequality, post-conflict development, ethnic politics, political authority and leadership, and democratic development—currently with a focus on field experiments to study democratic decision-making in post-conflict and developing areas. Central questions include understanding under what conditions can marginalized populations have their voices heard in local or national politics? or to what extent is political inequality driven by institutional features or by more fundamental economic structures? I have worked in Chad, Ghana, Haiti, Indonesia, Liberia, Mali, Nigeria, São Tomé and Príncipe, Sierra Leone, Senegal, Uganda, and elsewhere.  
  
-Recent work has appeared in the *American Political Science Review*, *Journal of Development Economics*, *Science Advances*, *Games and Economic Behavior*, and elsewhere. I have written or coauthored books on ethnic politics, natural resource management, and game theory and politics.  
-
 **Methodological interests:**  
-I am deeply interested in understanding when and how knowledge **cumulates**—that is, when individual findings can be trusted and how we can generalize from particular cases to broader populations and processes. This challenge lies at the heart of social science.  
-Current approaches to inference often fail to address these issues adequately, yet understanding cumulation is essential if our work is to have lasting impact.   My work with [Alan Jacobs](https://macartan.github.io/integrated_inferences/) and the [Metaketa initiative](https://egap.org/our-work/the-metaketa-initiative/) with Thad Dunning and others at [EGAP](https://www.egap.org/) both aim to address these challenges.  
-See additional projects on cumulation [here](https://macartan.github.io/projects/cumulation/).
+I am deeply interested in understanding when and how knowledge **cumulates**—that is, when individual findings can be trusted and how we can generalize from particular cases to broader populations and processes. This challenge lies at the heart of social science.   Current approaches to inference often fail to address these issues adequately, yet understanding cumulation is essential if our work is to have lasting impact.   My work with [Alan Jacobs](https://macartan.github.io/integrated_inferences/) and the [Metaketa initiative](https://egap.org/our-work/the-metaketa-initiative/) with Thad Dunning and others at [EGAP](https://www.egap.org/) both aim to address these challenges.   See additional projects on cumulation [here](https://macartan.github.io/projects/cumulation/).
+
+**Outlets:**  
+Recent work has appeared in the *American Political Science Review*, *Journal of Politics*, *Science Advances*, *PNAS*, *Journal of Development Economics*, *Games and Economic Behavior*, and elsewhere. I have written or coauthored books on ethnic politics, natural resource management, game theory and politics, and research design.  
+
 
 ---
 
