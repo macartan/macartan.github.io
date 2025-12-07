@@ -15,7 +15,7 @@ The distinction matters because different goals have implications for how you sh
 |------------------------|---------------------------|--------------------------------|-----|
 | [Priming experiments](#priming-experiments) | Estimate effect of prime on behavior/attitudes (typical) | Use prime as diagnostic to infer knowledge/beliefs (rarer) | Confusing the effect of the prime with the effect of the thing being primed. For example thinking you are finding the effects of exposure to violence by reminding people about past exposure.  |
 | [List experiments](#list-experiments) | Estimate effect of list length on response patterns (rare) | Infer prevalence of sensitive beliefs/behaviors (typical) |
-| [Conjoints](#conjoints) | Estimate effect of feature on choices, given a distribution of other fixed features (rare) | Make inferences about preferences, classification rules, or ideal points (typical) | Confusing the (controlled) effects of changing question wording with the (total) effects of the thing itself. For example thinking you are finding the effects of regime type on willingness to fight. |
+| [Conjoints](#conjoints) | Estimate effect of feature on choices, given a distribution of other fixed features (rare?) | Make inferences about preferences, classification rules, or ideal points (typical?) | Confusing the (controlled) effects of changing question wording with the (total) effects of the thing itself. For example thinking you are finding the effects of regime type on willingness to fight. |
 
 
 # Concepts
