@@ -123,4 +123,6 @@ That's fine but Risk 2 above remains: the effect you are getting is the effect o
 
 ---
 
-This note follows a discussion [here](https://bsky.app/profile/did:plc:tztooghb3nivibyba7vabcgn/post/3m743o2qf7225) with various nice contributions from [`@dtoshkov.bsky.social`](https://bsky.app/profile/dtoshkov.bsky.social), [`@astrezh.bsky.social`](https://bsky.app/profile/astrezh.bsky.social), [`@dandekadt.bsky.social`](https://bsky.app/profile/dandekadt.bsky.social), and others.
+This note follows a discussion [here](https://bsky.app/profile/did:plc:tztooghb3nivibyba7vabcgn/post/3m743o2qf7225) with various nice contributions from [`@dtoshkov.bsky.social`](https://bsky.app/profile/dtoshkov.bsky.social), [`@astrezh.bsky.social`](https://bsky.app/profile/astrezh.bsky.social),
+[`@robertovalli.bsky.social`](https://bsky.app/profile/robertovalli.bsky.social),
+[`@dandekadt.bsky.social`](https://bsky.app/profile/dandekadt.bsky.social), and others.
