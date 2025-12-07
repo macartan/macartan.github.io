@@ -7,16 +7,20 @@ format:
     number-sections: true
 ---
 
-Some notes to clarify concepts around:
+Survey experiments can be used for either **causal inference** (estimating treatment effects) or **descriptive inference** (measuring properties/preferences). But it can be sometimes confusing which of these is the goal is in any given experiment, in part because very similar designs can be used for either purpose, and in part because survey experimentalists often describe estimands as effects of one kind or another, even if the ultimate inferential target is not an effect. 
 
-* Measurement v inference / causal estimands v descriptive estimands / identification
-* What survey experiments are doing, when they are being used for causal inference and when for descriptive inference
+The distinction matters because different goals have implications for how you should set things up and  how you should interpret results.
+
+| Survey Experiment Type | Causal Inference Use Case | Descriptive Inference Use Case |  Traps |
+|------------------------|---------------------------|--------------------------------|-----|
+| [Priming experiments](#priming-experiments) | Estimate effect of prime on behavior/attitudes (typical) | Use prime as diagnostic to infer knowledge/beliefs (rarer) | Confusing the effect of the prime with the effect of the thing being primed. For example thinking you are finding the effects of exposure to violence by reminding people about past exposure.  |
+| [List experiments](#list-experiments) | Estimate effect of list length on response patterns (rare) | Infer prevalence of sensitive beliefs/behaviors (typical) |
+| [Conjoints](#conjoints) | Estimate effect of feature on choices, given a distribution of other fixed features (rare) | Make inferences about preferences, classification rules, or ideal points (typical) | Confusing the (controlled) effects of changing question wording with the (total) effects of the thing itself. For example thinking you are finding the effects of regime type on willingness to fight. |
+
 
 # Concepts
 
-Is there much analytic value in the distinction between causal estimands and descriptive estimands and between measurement and inference?
-
-I think so. Knowing what you are doing has implications for how you can or should be doing it, so well worth thinking through the logic behind the distinctions.
+Let's first get clear on the distinction between causal estimands and descriptive estimands and between measurement and inference. (For a bit more, see  [Ch 14](https://book.declaredesign.org/library/) in  our research design book.) 
 
 ## Inference or measurement?
 
@@ -28,17 +32,15 @@ Clarity that you are doing inference rather than measurement in turn helps clari
 
 ## Causal or descriptive estimands?
 
-The distinction between causal and descriptive estimands is more difficult but still important. A key idea for many people thinking in terms of the counterfactual model of causation is that the causal effect is defined as the difference between two 'potential outcomes' [[slides](https://macartan.github.io/ci/2.1_causality.html#/causal-claims-the-estimand-and-the-rub)];  that is, of two things that don't in fact exist, things that "could have" happened. When we talk about description however we are usually talking about describing properties that things *actually have*, like knowledge, beliefs, values. So: do we think there is an actual thing there to be measured; that can in principle be measured?
+A key difference between causal and descriptive estimands is that we think that descriptive estimands are, in principle, measurable: they exist, though may be very hard to measure; causal estimands however involve counterfactual quantities and cannot be measured,
 
-Why does this matter for people who think about causality like this? Because it means that if you are interested in causal estimands then you *have* to do inference. If you are interested in descriptive estimands you may or may not have to do inference. You may be able to measure, but you may have to do inference.
+This idea builds on a key idea for many people thinking in terms of the counterfactual model of causation is that the causal effect is defined as the difference between two 'potential outcomes' [[slides](https://macartan.github.io/ci/2.1_causality.html#/causal-claims-the-estimand-and-the-rub)];  that is, of two things that don't in fact exist, things that "could have" happened. When we talk about description however we are usually talking about describing properties that we think things *actually have* , like knowledge, beliefs, values.
+
+Why does this matter? Because it means that if you are interested in causal estimands, then you *have* to do inference. If you are interested in descriptive estimands you may or may not have to do inference. You may be able to measure, but you may have to do inference.
 
 This matters  because if your interest is description, maybe you can get away without doing inference. Worth checking. Maybe you can ask everyone in your sample if they like coffee and also if they like tea. You don't have to randomly ask half if they like coffee and half if they like tea and infer the the values for the full sample based on the 'effect' of the question on the answer! Maybe you will find doing it as an experiment rather than a measurement exercise does not add value; or that the possible gains on some fronts, such as reporting biases, don't make up for the cost of having to do inference.
 
-The distinction between descriptive and causal estimands is not always so sharp though. You might question whether all kinds of quantities we might want to describe, preferences, loyalties, and so on *really* exist and can be described in this sense, even in principle. And you might think that some seemingly describable features are themselves causal quantities in disguise. For example you might think of preferences as a summary of the effects of options on choices. So you might think of a quantity such as "being a racist" both as a property that someone has and as a summary of how they react as a function of features of people they encounter.
-
-We discuss this a bit [here](https://book.declaredesign.org/library/experimental-descriptive.html). As an analogy, we might think of immunity to a disease as a property that someone has, and want to figure out how many have this immunity. We might even be able to measure features that indicate the property (e.g. sickle cell disease for immunity to malaria). In that case we might want to think of this as a descriptive exercise, and even measure the property in a person. But we might also think of immunity as fundamentally about causal relations: that is, we are really asking about how a person would behave in different conditions.
-
-[A bit more formally one might imagine a world in which $X \rightarrow Y  \leftarrow A$ (all binary nodes) and functional equation $f : Y = XA$. Then $X$ causes $Y$ if and only if $A$ is present. One way of thinking of the problem is to learn about the causal relations captured by $f$, the other is to learn about $A$ --- the value of a node that captures a property that implies a reaction given a background model.]
+The distinction between descriptive and causal estimands is not always so sharp though. You might question whether all kinds of quantities we might want to describe, preferences, loyalties, and so on *really* exist and can be described in this sense, even in principle. And you might think that some seemingly describable features are themselves causal quantities in disguise. For example you might think of preferences as a summary of the effects of options on choices. So you might think of a quantity such as "being a racist" both as a property that someone has and as a summary of how they react as a function of features of people they encounter. But which way you think about it can have implications for your design.^[We discuss this a bit [here](https://book.declaredesign.org/library/experimental-descriptive.html). As an analogy, we might think of immunity to a disease as a property that someone has, and want to figure out how many have this immunity. We might even be able to measure features that indicate the property (e.g. sickle cell disease for immunity to malaria). In that case we might want to think of this as a descriptive exercise, and even measure the property in a person. But we might also think of immunity as fundamentally about causal relations: that is, we are really asking about how a person would behave in different conditions. A bit more formally one might imagine a world in which $X \rightarrow Y  \leftarrow A$ (all binary nodes) and functional equation $f : Y = XA$. Then $X$ causes $Y$ if and only if $A$ is present. One way of thinking of the problem is to learn about the causal relations captured by $f$, the other is to learn about $A$ --- the value of a node that captures a property that implies a reaction given a background model.]
 
 ## Identification
 
@@ -48,18 +50,17 @@ Let's now use these ideas to think through different uses of survey experiments.
 
 # Survey experiments
 
-The term survey experiments is used to cover a large class of experiments. There is a distinction (see e.g. Cyrus Samii's [post](https://cyrussamii.com/?p=4168) or   [our research design book, Ch 14](https://book.declaredesign.org/library/)) between those that are much like any experiment, aiming to estimate a causal effect of a treatment by manipulating that treatment, and those that specifically use a manipulation, often of survey wording or procedures, to makes it possible measure -- or at least make inferences about -- a descriptive estimand. 
+The term survey experiments is used to cover a large class of experiments. There is a distinction (see e.g. Cyrus Samii's [post](https://cyrussamii.com/?p=4168)) between those that are much like any experiment, aiming to estimate a causal effect of a treatment by manipulating that treatment, and those that specifically use a manipulation, often of survey wording or procedures, to make it possible measure -- or at least make inferences about -- a descriptive estimand.  
 
-This distinction is based on purpose, and sometimes it is not too clear what the purpose is. 
+This distinction is based on purpose, and sometimes it is not too clear what the purpose is. Below two ideal cases. 
 
-**Example of a survey experiment for causal inference**
-Information experiments are typically used for causal inference, not descriptive inference, whether or not they are delivered through a survey.  In some cases survey delivered information experiments are almost indistinguishable from field experiments --- for instance if information is delivered in a way similar to treatments of interest and if outcomes are measured outside of the survey, for instance through measures of subsequent behaviors. The key difficulty with embedding an information in a survey is with respect to external validity---whether the effects of information delivered in this way is similar to effects of information delivered in the wild, and so lots of good work in this vein tries to address that head on.
+| **Example of a survey experiment for causal inference** | **Example of a survey experiment for descriptive inference** |
+|----------------------------------------------------------|-------------------------------------------------------------|
+| Information experiments are typically used for causal inference, not descriptive inference, whether or not they are delivered through a survey.  In some cases survey delivered information experiments are almost indistinguishable from field experiments --- for instance if information is delivered in a way similar to treatments of interest and if outcomes are measured outside of the survey, for instance through measures of subsequent behaviors. The key difficulty with embedding an information in a survey is with respect to external validity---whether the effects of information delivered in this way is similar to effects of information delivered in the wild, and so lots of good work in this vein tries to address that head on. | Randomized response surveys in which people are randomly assigned to answer either a sensitive question or a non-sensitive question are typically used for descriptive inference. The goal is to estimate the prevalence of some property of subjects, such as whether people have engaged in illegal behavior. The randomization makes it possible to make inferences about the prevalence of the sensitive behavior while protecting individual privacy. Here the randomization is a tool to make measurement possible, not the focus of interest itself. There is a causal effect of the question on the answer, but the purpose is to make descriptive inferences about something else. | 
 
-**Example of a survey experiment for descriptive inference**. Randomized response surveys in which people are randomly assigned to answer either a sensitive question or a non-sensitive question are typically used for descriptive inference. The goal is to estimate the prevalence of some property of subjects, such as whether people have engaged in illegal behavior. The randomization makes it possible to make inferences about the prevalence of the sensitive behavior while protecting individual privacy. Here the randomization is a tool to make measurement possible, not the focus of interest itself. There is a causal effect of the question on the answer, but the purpose is to make descriptive inferences about something else. 
+Sometimes people use the term "survey experiment" specifically for experiments in surveys that aim at descriptive inference. It is complicated though by the fact that for some designs, the goal is not obvious and we need more clarity over whether we are in fact interested in description of effect estimation.
 
-Sometimes people use the term specifically when focusing on those that aim at descriptive inference. It is complicated though by the fact that for some designs the goal is not obvious and we need more clarity over whether we are in fact interested in description of effect estimation.
-
-The rest illustrates these differences for common types of survey experiment.
+The next secitons illustrate these differences for common types of survey experiment.
 
 
 ## Priming experiments
@@ -107,9 +108,9 @@ An example: say a bank uses a rule to decide whether to give loans or not. You w
 
 Two gains from recognizing that the goal is descriptive inference:
 
-1.  you might figure out that a more effective strategy would be to figure out the rule from archival sources, such as regulations or instructions to staff. Maybe it is measurable, in which case measure it.
+* Risk 1.  You might figure out that a more effective strategy would be to figure out the rule from archival sources, such as regulations or instructions to staff. Maybe it is measurable, in which case measure it.
 
-2.  You might fall into the trap of thinking the relation between feature values and outcomes corresponds to the causal effects of changing the feature (or confuse the direct/controlled effect within the experimental regime with the average effect). This is a little trickier, but to think through a simple example: Say in truth we have $X_1 \rightarrow X_2 \rightarrow Y$, and $X_1$ affects $Y$ via $X_2$ but not conditional on $X_2$. Then a conjoint might pick up that $X_1$ is not part of the classification rule for $Y$ and $X_2$ is. But it would be wrong to infer from this that actually changing $X_1$ will not affect classifications (since it might via changes in $X_2$).
+* Risk 2.  You might fall into the trap of thinking the relation between feature values and outcomes corresponds to the causal effects of changing the feature (or confuse the direct/controlled effect within the experimental regime with the average effect). This is a little trickier, but to think through a simple example: Say in truth we have $X_1 \rightarrow X_2 \rightarrow Y$, and $X_1$ affects $Y$ via $X_2$ but not conditional on $X_2$. Then a conjoint might pick up that $X_1$ is not part of the classification rule for $Y$ and $X_2$ is. But it would be wrong to infer from this that actually changing $X_1$ will not affect classifications (since it might via changes in $X_2$).
 
 For another example, in [this study](https://www.cambridge.org/core/journals/political-analysis/article/trading-liberties-estimating-covid19-policy-preferences-from-conjoint-data/71AB21F181572AF9C745E67B9DA796CD), together with colleagues we use a conjoint to measure policy preferences. We combine the conjoint results with a choice model to estimate ideal points. Although we use the language of effects a bunch we are interested in trying to measure something but are resorting to to using the conjoint to make inferences.
 
@@ -123,8 +124,3 @@ This is the sort of setting discussed in [Bansak et al](https://www.cambridge.or
 
 That's fine but Risk 2 above remains: the effect you are getting is the effect of the attribute on the list, not the average (total) effect of the attribute itself on the outcomes. For example you might find that a powerful candidate does well *given* different values of corruption (even for different distributions of corruption), but this does not give you the effect of power itself, since, after all, power corrupts.
 
----
-
-This note follows a discussion [here](https://bsky.app/profile/did:plc:tztooghb3nivibyba7vabcgn/post/3m743o2qf7225) with various nice contributions from [`@dtoshkov.bsky.social`](https://bsky.app/profile/dtoshkov.bsky.social), [`@astrezh.bsky.social`](https://bsky.app/profile/astrezh.bsky.social),
-[`@robertovalli.bsky.social`](https://bsky.app/profile/robertovalli.bsky.social),
-[`@dandekadt.bsky.social`](https://bsky.app/profile/dandekadt.bsky.social), and others.
