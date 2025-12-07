@@ -48,17 +48,19 @@ Let's now use these ideas to think through different uses of survey experiments.
 
 # Survey experiments
 
-The term survey experiments is used to cover a large class of experiments. I think it's useful to distinguish between survey experiments "proper", that exploit question wording to help estimate some descriptive estimand, and experiments that just happen to be delivered via surveys. This is the distinction in Cyrus Samii's [post](https://cyrussamii.com/?p=4168).  The distinction isn't universal though;  I think when people complain about survey experiments they are commonly focusing on the former. The latter set really are just stndard experiments though delivered in quite special conditions.
+The term survey experiments is used to cover a large class of experiments. There is a distinction (see e.g. Cyrus Samii's [post](https://cyrussamii.com/?p=4168) or   [our research design book, Ch 14](https://book.declaredesign.org/library/)) between those that are much like any experiment, aiming to estimate a causal effect of a treatment by manipulating that treatment, and those that specifically use a manipulation, often of survey wording or procedures, to makes it possible measure -- or at least make inferences about -- a descriptive estimand. 
 
-Let's think through different types of survey experiment.
+This distinction is based on purpose, and sometimes it is not too clear what the purpose is. 
 
-## Information experiments
+**Example of a survey experiment for causal inference**
+Information experiments are typically used for causal inference, not descriptive inference, whether or not they are delivered through a survey.  In some cases survey delivered information experiments are almost indistinguishable from field experiments --- for instance if information is delivered in a way similar to treatments of interest and if outcomes are measured outside of the survey, for instance through measures of subsequent behaviors. The key difficulty with embedding an information in a survey is with respect to external validity---whether the effects of information delivered in this way is similar to effects of information delivered in the wild, and so lots of good work in this vein tries to address that head on.
 
-Information experiments are typically used for causal inference, not descriptive inference, whether or not they are delivered through a survey. 
+**Example of a survey experiment for descriptive inference**. Randomized response surveys in which people are randomly assigned to answer either a sensitive question or a non-sensitive question are typically used for descriptive inference. The goal is to estimate the prevalence of some property of subjects, such as whether people have engaged in illegal behavior. The randomization makes it possible to make inferences about the prevalence of the sensitive behavior while protecting individual privacy. Here the randomization is a tool to make measurement possible, not the focus of interest itself. There is a causal effect of the question on the answer, but the purpose is to make descriptive inferences about something else. 
 
-In some cases these are almost indistinguishable from field experiments --- for instance if information is delivered in a way similar to treatments of interest and if outcomes are measured outside of the survey, for instance through measures of subsequent behaviors.
+Sometimes people use the term specifically when focusing on those that aim at descriptive inference. It is complicated though by the fact that for some designs the goal is not obvious and we need more clarity over whether we are in fact interested in description of effect estimation.
 
-The key difficulties are with respect to external validity---whether the effects of information delivered in this way is similar to effects of information delivered in the wild.
+The rest illustrates these differences for common types of survey experiment.
+
 
 ## Priming experiments
 
