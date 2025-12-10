@@ -24,7 +24,7 @@ The distinction matters because different goals have implications for how you sh
 |:-----------------------|:--------------------------|:-------------------------------|:--------|
 | [Priming experiments](#priming-experiments) | Estimate effect of prime on behavior/attitudes (typical) | Use prime as diagnostic to infer knowledge/beliefs (rarer) | Confusing the effect of the prime with the effect of the thing being primed. For example thinking you are finding the effects of exposure to violence by reminding people about past exposure.  |
 | [Conjoints](#conjoints) | Estimate effect of feature on choices, given a distribution of other fixed features (rare?) | Make inferences about preferences, classification rules, or ideal points (typical?) | Confusing the (controlled) effects of changing question wording with the (total) effects of intervening on the thing itself. For example thinking you are finding the effects of regime type on willingness to go to war. |
-| [List experiments](#list-experiments) | Estimate effect of list length on response patterns (rare) | Infer prevalence of sensitive beliefs/behaviors (typical) | Using an experiment for a descriptive quantity might mean accepting too much error in order to  reduce bias.
+| [List experiments](#list-experiments) | Estimate effect of list length or content on response patterns (rare) | Infer prevalence of sensitive beliefs/behaviors (typical) | Using an experiment for a descriptive quantity might mean accepting too much error in order to  reduce bias.
 
 : Summary of different uses for survey experiments {#tbl-survey-experiments}
 
@@ -139,11 +139,11 @@ List experiments might also be done for either reason, but the typical use is fo
 
 ### A list experiment conducted for descriptive inference.
 
-You are interested in whether people think there is corruption (K) or not. In principle this is measurable, but it is hard to measure. You vary whether there is a long list or short list (X) and infer from the effects on the count answers (Y) whether people think there is corruption or not. You are primarily interested in K; there is no independent interest here in how list length affects answer except for its role for descriptive inference.
+You are interested in whether people think there is corruption ($K$) or not. In principle this is measurable, but it is hard to measure. You vary whether there is a long list or short list ($X$) and infer from the effects on the count answers ($Y$) whether people think there is corruption or not. You are primarily interested in $K$; there is no independent interest here in how list length affects answer except for its role for descriptive inference.
 
 ### A list experiment conducted for causal inference.
 
-I think this is not so common but you could imagine being interested in the effect of a long versus short list on whether people exhibit social desirability bias. Here you are interested in the effect of the length itself.
+I think this is not so common but you could imagine being interested in the effect of a long versus short list on whether people exhibit social desirability bias. Here you are interested in the effect of the length itself, or of the mention of the word itself.
 
 
 There is a good literature comparing experimental and direct approaches for asking sensitive questions. The fact that the estimand is the same in both cases highlights that the focus is typically descriptive. The gain from using an experiment is (hopefully) unbiasedness that comes from providing protection to subjects that require plausible deniability. But the fact that it is an experiment itself implies a cost: you get error from the need to do inference (as well as from complexity; @kuhn2022misreporting) and so [need to determine whether the added error is worth it](https://book.declaredesign.org/library/experimental-descriptive.html#fig-ch17num2).   
