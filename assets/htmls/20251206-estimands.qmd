@@ -13,7 +13,7 @@ format:
 
 Survey experiments can be used for either **causal inference** (estimating treatment effects) or **descriptive inference** (measuring properties/preferences). But it can sometimes be confusing which of these is the goal in any given experiment. This likely arises in part because very similar designs can be used for either purpose, and in part because survey experimentalists often describe estimands as effects of one kind or another, even if the ultimate inferential target is not an effect. 
 
-The distinction matters because different goals have implications for how you should set things up and  how you should interpret results.  
+The distinction matters because different goals have implications for how you should set things up and  how you should interpret results.  If you are using it for descriptive inference, there might be simpler and less noisy strategies available. If you are using if for causal inference make sure you are clear on what is being manipulated, it mightn't be what you think is being manipulated.
 
 @tbl-survey-experiments summarizes different uses for different types of design, highlighting:
 
