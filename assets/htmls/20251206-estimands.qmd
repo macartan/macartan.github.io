@@ -65,9 +65,9 @@ Let's now use these ideas to think through different uses of survey experiments.
 
 The term 'survey experiment' is used to cover a large class of experiments. Some are much like any experiment, aiming to estimate a causal effect of a treatment by manipulating that treatment; others use a manipulation, often of survey wording or procedures, to make it possible to measure -- or at least make inferences about -- a descriptive estimand.  See e.g. Cyrus Samii's [post](https://cyrussamii.com/?p=4168) which makes this distinction, or discussions in @blair2023research.
 
-Sometimes people use the term "survey experiment" specifically for experiments in surveys that aim at descriptive inference. It is complicated though by the fact that for some designs, the goal is not obvious and we need more clarity over whether we are in fact interested in description or in effect estimation.
+Sometimes people use the term "survey experiment" specifically for experiments in surveys that use changes in wording or survey protocols to aid descriptive inference. Otherwise just say something clunky like "an experiment embedded in a survey" or "delivered through a survey."
 
-This distinction is based on purpose, and sometimes it is not too clear what the purpose is. 
+It is complicated though by the fact that for some designs, it is not obvious  whether we are in fact interested in description or in effect estimation. 
 
 To fix ideas @tbl-ideals describes two ideal cases. 
 
