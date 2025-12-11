@@ -2328,6 +2328,7 @@ window.Quarto = {
   <li><a href="#a-list-experiment-conducted-for-causal-inference." id="toc-a-list-experiment-conducted-for-causal-inference." class="nav-link" data-scroll-target="#a-list-experiment-conducted-for-causal-inference."><span class="header-section-number">2.3.2</span> A list experiment conducted for causal inference.</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">3</span> Conclusion</a></li>
   </ul>
 </nav>
 </div>
@@ -2364,8 +2365,8 @@ window.Quarto = {
 </header>
 
 
-<p>Survey experiments can be used for either <strong>causal inference</strong> (estimating treatment effects) or <strong>descriptive inference</strong> (measuring properties/preferences). But it can sometimes be confusing which of these is the goal in any given experiment. This likely arises in part because very similar designs can be used for either purpose, and in part because survey experimentalists often describe estimands as effects of one kind or another, even if the ultimate inferential target is not an effect.</p>
-<p>The distinction matters because different goals have implications for how you should set things up and how you should interpret results. If you are using a survey experiment for descriptive inference, there might be simpler and less noisy strategies available. If you are using it for causal inference, make sure you are clear on what is being manipulated: it mightn’t be what you think is being manipulated.</p>
+<p>Survey experiments can be used for either <strong>causal inference</strong> (estimating treatment effects) or <strong>descriptive inference</strong> (measuring properties/preferences). But it can sometimes be confusing which of these two worthy goals is the goal in any given experiment. The confusion likely arises in part because very similar designs can be used for either purpose, and in part because survey experimentalists often describe estimands as effects of one kind or another, even if the ultimate inferential target is not an effect.</p>
+<p>The distinction matters because different goals have implications for how you should set things up and how you should interpret results. If you are using a survey experiment for descriptive inference, there might be simpler and less noisy strategies available. If you are using it for causal inference, you need to be sure you are clear on what is being manipulated: it mightn’t be what you think is being manipulated.</p>
 <p><a href="#tbl-survey-experiments" class="quarto-xref">Table 1</a> summarizes different uses for different types of design, highlighting:</p>
 <ul>
 <li>how the same design might have distinct purposes</li>
@@ -2410,7 +2411,6 @@ Table 1: Summary of different uses for survey experiments
 </div>
 </figure>
 </div>
-<p>So, know your estimand (for more on <em>that</em>, see <span class="citation" data-cites="lundberg2021your">Lundberg, Johnson, and Stewart (<a href="#ref-lundberg2021your" role="doc-biblioref">2021</a>)</span>).</p>
 <p>The rest of this note just unpacks these ideas, many of which are developed also in <span class="citation" data-cites="blair2023research">Blair, Coppock, and Humphreys (<a href="#ref-blair2023research" role="doc-biblioref">2023</a>)</span> (see for example the discussion of the <a href="https://book.declaredesign.org/library/experimental-descriptive.html#sec-ch17s3">Conjoint design</a>).</p>
 <section id="concepts" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Concepts</h1>
@@ -2419,7 +2419,7 @@ Table 1: Summary of different uses for survey experiments
 <h2 data-number="1.1" class="anchored" data-anchor-id="inference-or-measurement"><span class="header-section-number">1.1</span> Inference or measurement?</h2>
 <p>There’s a useful distinction often made between measurement and inference. Measurement is about directly observing a quantity that exists in the world; inference is about estimating a quantity that is at least partly unobserved. So you measure your pulse to make inferences about the state of your heart.</p>
 <p>You can have causal inference or descriptive inference, so the measurement / inference distinction is not itself about causality.</p>
-<p>Clarity that you are doing inference rather than measurement in turn helps clarify the need for estimates of uncertainty. If you have data from a sample and you are interested in the sample average, and your quantity is measurable, then just measure; no need for standard errors or similar. If you have sample data and you are interested in the <em>population</em> average, and your quantity is measurable, then do inference, and also report your standard errors.</p>
+<p>Recognizing that you are doing inference rather than measurement in turn helps clarify the need for estimates of uncertainty. If you have data from a sample and you are interested in the sample average, and your quantity is measurable, then just measure; no need for standard errors or similar. If you have sample data and you are interested in the <em>population</em> average, and your quantity is measurable, then do inference, and also report your standard errors.</p>
 </section>
 <section id="causal-or-descriptive-estimands" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="causal-or-descriptive-estimands"><span class="header-section-number">1.2</span> Causal or descriptive estimands?</h2>
@@ -2438,7 +2438,7 @@ Table 1: Summary of different uses for survey experiments
 <h1 data-number="2"><span class="header-section-number">2</span> Survey experiments</h1>
 <p>The term ‘survey experiment’ is used to cover a large class of experiments. Some are much like any experiment, aiming to estimate a causal effect of a treatment by manipulating that treatment; others use a manipulation, often of survey wording or procedures, to make it possible to measure – or at least make inferences about – a descriptive estimand. See e.g. Cyrus Samii’s <a href="https://cyrussamii.com/?p=4168">post</a> which makes this distinction, or discussions in <span class="citation" data-cites="blair2023research">Blair, Coppock, and Humphreys (<a href="#ref-blair2023research" role="doc-biblioref">2023</a>)</span>.</p>
 <p>Sometimes people use the term “survey experiment” specifically for experiments in surveys that use changes in wording or survey protocols to aid descriptive inference. Otherwise just say something clunky like “an experiment embedded in a survey” or “delivered through a survey.”</p>
-<p>It is complicated though by the fact that for some designs, it is not obvious whether we are in fact interested in description or in effect estimation.</p>
+<p>In practice though, it is not obvious whether an experiment is conducted to aid descriptive inference or causal inference.</p>
 <p>To fix ideas <a href="#tbl-ideals" class="quarto-xref">Table 2</a> describes two ideal cases.</p>
 <div id="tbl-ideals" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -2467,7 +2467,7 @@ Table 2: Ideal types, experiment types used clearly for causal inference and fo
 </div>
 </figure>
 </div>
-<p>In other cases however the purpose is not always so clear. The next sections illustrate these differences for common types of survey experiment.</p>
+<p>I think these two cases show a sharp difference between the two goals. In other cases however the purpose is not always so clear. The next sections illustrate these differences for common types of survey experiment.</p>
 <section id="priming-experiments" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="priming-experiments"><span class="header-section-number">2.1</span> Priming experiments</h2>
 <p>Priming experiments can be used for making inferences about both descriptive and causal estimands.</p>
@@ -2480,7 +2480,7 @@ Table 2: Ideal types, experiment types used clearly for causal inference and fo
 <section id="a-priming-experiment-conducted-for-causal-inference." class="level3" data-number="2.1.2">
 <h3 data-number="2.1.2" class="anchored" data-anchor-id="a-priming-experiment-conducted-for-causal-inference."><span class="header-section-number">2.1.2</span> A priming experiment conducted for causal inference.</h3>
 <p>But I might well be interested in a priming experiment specifically to make causal inferences. I am interested in whether being reminded of corruption by a politician makes you more likely to support the opposing party. I am interested in this because I think politicians or the media do this before elections and I am interested in understanding these effects. If the focus is on the effect of the prime itself this is a standard causal estimand inferred using an experiment, that may or may not just happen to be delivered using a survey.</p>
-<p>That makes lots of sense in principle. In practice I think sometimes we see people can trip up and mix up the effect of the prime (e.g. from reminded that there is corruption) with the effect of the thing being primed (e.g. the effect of corruption itself), or not be clear on whether in fact new information is being provided or not.</p>
+<p>That makes lots of sense in principle. In practice I think sometimes we see people can trip up and mix up the effect of the prime (e.g. from being reminded that there is corruption) with the effect of the thing being primed (e.g. the effect of corruption itself), or not be clear on whether in fact new information is being provided or not.</p>
 </section>
 </section>
 <section id="conjoints" class="level2" data-number="2.2">
@@ -2514,11 +2514,15 @@ Table 2: Ideal types, experiment types used clearly for causal inference and fo
 </section>
 <section id="a-list-experiment-conducted-for-causal-inference." class="level3" data-number="2.3.2">
 <h3 data-number="2.3.2" class="anchored" data-anchor-id="a-list-experiment-conducted-for-causal-inference."><span class="header-section-number">2.3.2</span> A list experiment conducted for causal inference.</h3>
-<p>I think this is not so common but you could imagine being interested in the effect of a long versus short list on whether people exhibit social desirability bias. Here you are interested in the effect of the length itself, or of the mention of the word itself.</p>
+<p>I think this is not so common but you could imagine being interested in the effect of a long versus short list on whether people exhibit social desirability bias. Here you are interested in the effect of the length itself, or of the mention of the word itself. <span class="citation" data-cites="blair2012statistical">Blair and Imai (<a href="#ref-blair2012statistical" role="doc-biblioref">2012</a>)</span> when describing conditions for valid inference of the descriptive estimand describe a “no design effects” condition that rules out various causal effects. One could in principle be interested in just these (and estimate well if you independently have knowledge of the descriptive estimand)!</p>
 <p>There is a good literature comparing experimental and direct approaches for asking sensitive questions. The fact that the estimand is the same in both cases highlights that the focus is typically descriptive. The gain from using an experiment is (hopefully) unbiasedness that comes from providing protection to subjects that require plausible deniability. But the fact that it is an experiment itself implies a cost: you get error from the need to do inference (as well as from complexity; <span class="citation" data-cites="kuhn2022misreporting">Kuhn and Vivyan (<a href="#ref-kuhn2022misreporting" role="doc-biblioref">2022</a>)</span>) and so <a href="https://book.declaredesign.org/library/experimental-descriptive.html#fig-ch17num2">need to determine whether the added error is worth it</a>.</p>
+</section>
+</section>
+</section>
+<section id="conclusion" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Conclusion</h1>
+<p>Evergreen advice <span class="citation" data-cites="lundberg2021your">(<a href="#ref-lundberg2021your" role="doc-biblioref">Lundberg, Johnson, and Stewart 2021</a>)</span>, but especially important when using a survey experiment: be sure to know your estimand.</p>
 
-</section>
-</section>
 </section>
 
 
@@ -2528,6 +2532,9 @@ Bansak, Kirk, Jens Hainmueller, Daniel J Hopkins, and Teppei Yamamoto. 2023. <sp
 </div>
 <div id="ref-blair2023research" class="csl-entry" role="listitem">
 Blair, Graeme, Alexander Coppock, and Macartan Humphreys. 2023. <em>Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign</em>. Princeton University Press.
+</div>
+<div id="ref-blair2012statistical" class="csl-entry" role="listitem">
+Blair, Graeme, and Kosuke Imai. 2012. <span>“Statistical Analysis of List Experiments.”</span> <em>Political Analysis</em> 20 (1): 47–77.
 </div>
 <div id="ref-de2022improving" class="csl-entry" role="listitem">
 De la Cuesta, Brandon, Naoki Egami, and Kosuke Imai. 2022. <span>“Improving the External Validity of Conjoint Analysis: The Essential Role of Profile Distribution.”</span> <em>Political Analysis</em> 30 (1): 19–45. <a href="https://doi.org/10.1017/pan.2020.40">https://doi.org/10.1017/pan.2020.40</a>.

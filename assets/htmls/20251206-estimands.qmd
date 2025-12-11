@@ -11,9 +11,9 @@ format:
     linkcolor: darkorange
 ---
 
-Survey experiments can be used for either **causal inference** (estimating treatment effects) or **descriptive inference** (measuring properties/preferences). But it can sometimes be confusing which of these is the goal in any given experiment. This likely arises in part because very similar designs can be used for either purpose, and in part because survey experimentalists often describe estimands as effects of one kind or another, even if the ultimate inferential target is not an effect. 
+Survey experiments can be used for either **causal inference** (estimating treatment effects) or **descriptive inference** (measuring properties/preferences). But it can sometimes be confusing which of these two worthy goals is the goal in any given experiment. The confusion likely arises in part because very similar designs can be used for either purpose, and in part because survey experimentalists often describe estimands as effects of one kind or another, even if the ultimate inferential target is not an effect. 
 
-The distinction matters because different goals have implications for how you should set things up and  how you should interpret results.  If you are using a survey experiment for descriptive inference, there might be simpler and less noisy strategies available. If you are using it for causal inference, make sure you are clear on what is being manipulated: it mightn't be what you think is being manipulated.
+The distinction matters because different goals have implications for how you should set things up and  how you should interpret results.  If you are using a survey experiment for descriptive inference, there might be simpler and less noisy strategies available. If you are using it for causal inference, you need to be sure you are clear on what is being manipulated: it mightn't be what you think is being manipulated.
 
 @tbl-survey-experiments summarizes different uses for different types of design, highlighting:
 
@@ -29,7 +29,6 @@ The distinction matters because different goals have implications for how you sh
 : Summary of different uses for survey experiments {#tbl-survey-experiments}
 
 
-So, know your estimand (for more on *that*, see @lundberg2021your).
 
 The rest of this note just unpacks these ideas, many of which are developed also in @blair2023research (see for example the discussion of the  [Conjoint design](https://book.declaredesign.org/library/experimental-descriptive.html#sec-ch17s3)).
 
@@ -43,7 +42,7 @@ There's a useful distinction often made between measurement and inference. Measu
 
 You can have causal inference or descriptive inference, so the measurement / inference distinction is not itself about causality.
 
-Clarity that you are doing inference rather than measurement in turn helps clarify the need for estimates of uncertainty. If you have data from a sample and you are interested in the sample average, and your quantity is measurable, then just measure; no need for standard errors or similar. If you have sample data and you are interested in the *population* average, and your quantity is measurable, then do inference, and also report your standard errors.
+Recognizing that you are doing inference rather than measurement in turn helps clarify the need for estimates of uncertainty. If you have data from a sample and you are interested in the sample average, and your quantity is measurable, then just measure; no need for standard errors or similar. If you have sample data and you are interested in the *population* average, and your quantity is measurable, then do inference, and also report your standard errors.
 
 ## Causal or descriptive estimands?
 
@@ -67,7 +66,7 @@ The term 'survey experiment' is used to cover a large class of experiments. Some
 
 Sometimes people use the term "survey experiment" specifically for experiments in surveys that use changes in wording or survey protocols to aid descriptive inference. Otherwise just say something clunky like "an experiment embedded in a survey" or "delivered through a survey."
 
-It is complicated though by the fact that for some designs, it is not obvious  whether we are in fact interested in description or in effect estimation. 
+In practice though, it is not obvious  whether an experiment is conducted to aid descriptive inference or causal inference. 
 
 To fix ideas @tbl-ideals describes two ideal cases. 
 
@@ -79,7 +78,7 @@ To fix ideas @tbl-ideals describes two ideal cases.
 : Ideal types, experiment types used clearly for causal inference and for descriptive inference  {#tbl-ideals}
 
 
-In other cases however the purpose is not always so clear. The next sections illustrate these differences for common types of survey experiment.
+I think these two cases show a  sharp difference between the two goals. In other cases however the purpose is not always so clear. The next sections illustrate these differences for common types of survey experiment.
 
 
 ## Priming experiments
@@ -98,7 +97,7 @@ One implication of this is that I would be unhappy with this study if I found no
 
 But I might well be interested in a priming experiment specifically to make causal inferences. I am interested in whether being reminded of corruption by a politician makes you more likely to support the opposing party. I am interested in this because I think politicians or the media do this before elections and I am interested in understanding these effects.  If the focus is on the effect of the prime itself this is a standard causal estimand inferred using an experiment, that may or may not just happen to be delivered using a survey.
 
-That makes lots of sense in principle. In practice I think sometimes we see people can trip up and mix up the effect of the prime (e.g. from reminded that there is corruption) with the effect of the thing being primed (e.g. the effect of corruption itself), or not be clear on whether in fact new information is being provided or not. 
+That makes lots of sense in principle. In practice I think sometimes we see people can trip up and mix up the effect of the prime (e.g. from being reminded that there is corruption) with the effect of the thing being primed (e.g. the effect of corruption itself), or not be clear on whether in fact new information is being provided or not. 
 
 
 ## Conjoints
@@ -141,8 +140,11 @@ You are interested in whether people think there is corruption ($K$) or not. In 
 
 ### A list experiment conducted for causal inference.
 
-I think this is not so common but you could imagine being interested in the effect of a long versus short list on whether people exhibit social desirability bias. Here you are interested in the effect of the length itself, or of the mention of the word itself.
+I think this is not so common but you could imagine being interested in the effect of a long versus short list on whether people exhibit social desirability bias. Here you are interested in the effect of the length itself, or of the mention of the word itself. @blair2012statistical when describing conditions for valid inference of the descriptive estimand describe a "no design effects" condition that rules out various causal effects. One could in principle be interested in just these (and estimate well if you independently have knowledge of the descriptive estimand)!
 
 
 There is a good literature comparing experimental and direct approaches for asking sensitive questions. The fact that the estimand is the same in both cases highlights that the focus is typically descriptive. The gain from using an experiment is (hopefully) unbiasedness that comes from providing protection to subjects that require plausible deniability. But the fact that it is an experiment itself implies a cost: you get error from the need to do inference (as well as from complexity; @kuhn2022misreporting) and so [need to determine whether the added error is worth it](https://book.declaredesign.org/library/experimental-descriptive.html#fig-ch17num2).   
 
+# Conclusion
+
+Evergreen advice [@lundberg2021your], but especially important when using a survey experiment: be sure to know your estimand. 
