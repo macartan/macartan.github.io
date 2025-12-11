@@ -73,12 +73,12 @@ To fix ideas @tbl-ideals describes two ideal cases.
 
 | **Example of a survey experiment for causal inference** | **Example of a survey experiment for descriptive inference** |
 |:---------------------------------------------------------|:------------------------------------------------------------|
-| Information experiments are typically used for causal inference, not descriptive inference, whether or not they are delivered through a survey.  In some cases survey delivered information experiments are almost indistinguishable from field experiments --- for instance if information is delivered in a way similar to treatments of interest and if outcomes are measured outside of the survey, for instance through measures of subsequent behaviors. The key difficulty with embedding an information experiment in a survey is with respect to external validity---whether the effects of information delivered in this way are similar to effects of information delivered in the wild, and so lots of good work in this vein tries to address that head on. | Randomized response surveys in which people are randomly assigned to answer either a sensitive question or a non-sensitive question are typically used for descriptive inference. The goal is to estimate the prevalence of some property of subjects, such as whether people have engaged in illegal behavior. The randomization makes it possible to make inferences about the prevalence of the sensitive behavior while protecting individual privacy. Here the randomization is a tool to make measurement possible, not the focus of interest itself. There is a causal effect of the question on the answer, but the purpose is to make descriptive inferences about something else. | 
+| Information experiments are typically used for causal inference, not descriptive inference, whether or not they are delivered through a survey.  In some cases survey-delivered information experiments are almost indistinguishable from field experiments --- for instance if information is delivered in a way similar to treatments of interest and if outcomes are measured outside of the survey, through measures of subsequent behaviors. The key difficulty with embedding an information experiment in a survey is with respect to external validity---whether the effects of information delivered in this way are similar to effects of information delivered in the wild, and so lots of good work in this vein tries to address that head-on. | Randomized response surveys, in which people are randomly assigned to answer either a sensitive question or a non-sensitive question are typically used for descriptive inference [@blair2015design]. The goal is to estimate the prevalence of some property of subjects, such as whether people have engaged in illegal behavior. The randomization makes it possible to make inferences about the prevalence of the sensitive behavior while protecting individual privacy. Here the randomization is a tool to make measurement possible, not the focus of interest itself. There is a causal effect of the procedure on the answer, but the purpose is to make descriptive inferences about something else. | 
 
 : Ideal types, experiment types used clearly for causal inference and for descriptive inference  {#tbl-ideals}
 
 
-I think these two cases show a  sharp difference between the two goals. In other cases however the purpose is not always so clear. The next sections illustrate these differences for common types of survey experiment.
+I think these two cases show a  sharp difference between the two goals. The purpose is not always so clear, however. The next sections illustrate  different purposes for common types of survey experiment.
 
 
 ## Priming experiments
@@ -103,7 +103,7 @@ That makes lots of sense in principle. In practice I think sometimes we see peop
 ## Conjoints
 
 @de2022improving describe conjoints as "a factorial survey experiment that is designed to measure multidimensional preferences".
-Note the emphasis on measurement. I think the remit of conjoints is a little broader though. For example they might also be used to study how people make classifications or understand concepts. But they might also be used when the estimand is causal.
+Note the emphasis on measurement. Arguably, the remit of conjoints for descriptive inference is a little broader. For example they might also be used to study how people make classifications or understand concepts. But, arguably, conjoints might sometimes also be used when the estimand is causal.
 
 ### Conjoints for descriptive inference.
 
@@ -121,7 +121,7 @@ For another example, in @hartmann2024trading, we use a conjoint to measure polic
 
 ### Conjoints for causal inference
 
-Even still, conjoints can be used also when the primary target is a causal estimand. Say you really are interested in whether the presence of a given feature on a list of features makes it more likely that an outcome will be selected from the list.
+Even still, conjoints can also be used when the primary target is a causal estimand. Say you really are interested in whether the presence of a given feature on a list of features makes it more likely that an outcome will be selected from the list.
 
 You might have an application where people are electing candidates and know nothing about the candidates other than what they get in a flyer. You want to know how features of the flyer affect the choice. Then you are pretty close to the conjoint. You are interested in the effect of the feature on behavior. You have to worry about external validity (is there too much control and all that) but these are common worries for any experiment.
 

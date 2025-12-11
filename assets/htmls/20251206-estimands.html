@@ -2459,15 +2459,15 @@ Table 2: Ideal types, experiment types used clearly for causal inference and fo
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Information experiments are typically used for causal inference, not descriptive inference, whether or not they are delivered through a survey. In some cases survey delivered information experiments are almost indistinguishable from field experiments — for instance if information is delivered in a way similar to treatments of interest and if outcomes are measured outside of the survey, for instance through measures of subsequent behaviors. The key difficulty with embedding an information experiment in a survey is with respect to external validity—whether the effects of information delivered in this way are similar to effects of information delivered in the wild, and so lots of good work in this vein tries to address that head on.</td>
-<td style="text-align: left;">Randomized response surveys in which people are randomly assigned to answer either a sensitive question or a non-sensitive question are typically used for descriptive inference. The goal is to estimate the prevalence of some property of subjects, such as whether people have engaged in illegal behavior. The randomization makes it possible to make inferences about the prevalence of the sensitive behavior while protecting individual privacy. Here the randomization is a tool to make measurement possible, not the focus of interest itself. There is a causal effect of the question on the answer, but the purpose is to make descriptive inferences about something else.</td>
+<td style="text-align: left;">Information experiments are typically used for causal inference, not descriptive inference, whether or not they are delivered through a survey. In some cases survey-delivered information experiments are almost indistinguishable from field experiments — for instance if information is delivered in a way similar to treatments of interest and if outcomes are measured outside of the survey, through measures of subsequent behaviors. The key difficulty with embedding an information experiment in a survey is with respect to external validity—whether the effects of information delivered in this way are similar to effects of information delivered in the wild, and so lots of good work in this vein tries to address that head-on.</td>
+<td style="text-align: left;">Randomized response surveys, in which people are randomly assigned to answer either a sensitive question or a non-sensitive question are typically used for descriptive inference <span class="citation" data-cites="blair2015design">(<a href="#ref-blair2015design" role="doc-biblioref">Blair, Imai, and Zhou 2015</a>)</span>. The goal is to estimate the prevalence of some property of subjects, such as whether people have engaged in illegal behavior. The randomization makes it possible to make inferences about the prevalence of the sensitive behavior while protecting individual privacy. Here the randomization is a tool to make measurement possible, not the focus of interest itself. There is a causal effect of the procedure on the answer, but the purpose is to make descriptive inferences about something else.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>I think these two cases show a sharp difference between the two goals. In other cases however the purpose is not always so clear. The next sections illustrate these differences for common types of survey experiment.</p>
+<p>I think these two cases show a sharp difference between the two goals. The purpose is not always so clear, however. The next sections illustrate different purposes for common types of survey experiment.</p>
 <section id="priming-experiments" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="priming-experiments"><span class="header-section-number">2.1</span> Priming experiments</h2>
 <p>Priming experiments can be used for making inferences about both descriptive and causal estimands.</p>
@@ -2485,7 +2485,7 @@ Table 2: Ideal types, experiment types used clearly for causal inference and fo
 </section>
 <section id="conjoints" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="conjoints"><span class="header-section-number">2.2</span> Conjoints</h2>
-<p><span class="citation" data-cites="de2022improving">De la Cuesta, Egami, and Imai (<a href="#ref-de2022improving" role="doc-biblioref">2022</a>)</span> describe conjoints as “a factorial survey experiment that is designed to measure multidimensional preferences”. Note the emphasis on measurement. I think the remit of conjoints is a little broader though. For example they might also be used to study how people make classifications or understand concepts. But they might also be used when the estimand is causal.</p>
+<p><span class="citation" data-cites="de2022improving">De la Cuesta, Egami, and Imai (<a href="#ref-de2022improving" role="doc-biblioref">2022</a>)</span> describe conjoints as “a factorial survey experiment that is designed to measure multidimensional preferences”. Note the emphasis on measurement. Arguably, the remit of conjoints for descriptive inference is a little broader. For example they might also be used to study how people make classifications or understand concepts. But, arguably, conjoints might sometimes also be used when the estimand is causal.</p>
 <section id="conjoints-for-descriptive-inference." class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="conjoints-for-descriptive-inference."><span class="header-section-number">2.2.1</span> Conjoints for descriptive inference.</h3>
 <p>In the many cases in which the goal is to measure preferences, interpretations, or classification rules, conjoint experiments may be best thought of as focused on descriptive inference and using causal inference to make those descriptive inferences.</p>
@@ -2499,7 +2499,7 @@ Table 2: Ideal types, experiment types used clearly for causal inference and fo
 </section>
 <section id="conjoints-for-causal-inference" class="level3" data-number="2.2.2">
 <h3 data-number="2.2.2" class="anchored" data-anchor-id="conjoints-for-causal-inference"><span class="header-section-number">2.2.2</span> Conjoints for causal inference</h3>
-<p>Even still, conjoints can be used also when the primary target is a causal estimand. Say you really are interested in whether the presence of a given feature on a list of features makes it more likely that an outcome will be selected from the list.</p>
+<p>Even still, conjoints can also be used when the primary target is a causal estimand. Say you really are interested in whether the presence of a given feature on a list of features makes it more likely that an outcome will be selected from the list.</p>
 <p>You might have an application where people are electing candidates and know nothing about the candidates other than what they get in a flyer. You want to know how features of the flyer affect the choice. Then you are pretty close to the conjoint. You are interested in the effect of the feature on behavior. You have to worry about external validity (is there too much control and all that) but these are common worries for any experiment.</p>
 <p>This is the sort of setting discussed in <span class="citation" data-cites="bansak2023using">Bansak et al. (<a href="#ref-bansak2023using" role="doc-biblioref">2023</a>)</span>.</p>
 <p>The risk above remains: the effect you are getting is the effect of the attribute on the list, not the average (total) effect of the attribute itself on the outcomes. For example you might find that a powerful candidate does well <em>given</em> different values of corruption (even for different distributions of corruption), but this does not give you the effect of power itself, since, after all, power corrupts.</p>
@@ -2535,6 +2535,9 @@ Blair, Graeme, Alexander Coppock, and Macartan Humphreys. 2023. <em>Research Des
 </div>
 <div id="ref-blair2012statistical" class="csl-entry" role="listitem">
 Blair, Graeme, and Kosuke Imai. 2012. <span>“Statistical Analysis of List Experiments.”</span> <em>Political Analysis</em> 20 (1): 47–77.
+</div>
+<div id="ref-blair2015design" class="csl-entry" role="listitem">
+Blair, Graeme, Kosuke Imai, and Yang-Yang Zhou. 2015. <span>“Design and Analysis of the Randomized Response Technique.”</span> <em>Journal of the American Statistical Association</em> 110 (511): 1304–19.
 </div>
 <div id="ref-de2022improving" class="csl-entry" role="listitem">
 De la Cuesta, Brandon, Naoki Egami, and Kosuke Imai. 2022. <span>“Improving the External Validity of Conjoint Analysis: The Essential Role of Profile Distribution.”</span> <em>Political Analysis</em> 30 (1): 19–45. <a href="https://doi.org/10.1017/pan.2020.40">https://doi.org/10.1017/pan.2020.40</a>.
