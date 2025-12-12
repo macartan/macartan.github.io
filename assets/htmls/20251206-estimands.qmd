@@ -23,12 +23,12 @@ The distinction matters because different goals have implications for how you sh
 | Survey Experiment Type | Causal Inference Use Case | Descriptive Inference Use Case |  Traps |
 |:-----------------------|:--------------------------|:-------------------------------|:--------|
 | [Priming experiments](#priming-experiments) | Estimate effect of prime on behavior/attitudes (typical) | Use prime as diagnostic to infer knowledge/beliefs (rarer) | Confusing the effect of the prime with the effect of the thing being primed. For example thinking you are finding the effects of exposure to violence by reminding people about past exposure.  |
-| [Conjoints](#conjoints) | Estimate effect of feature on choices, given a distribution of other fixed features (rare?) | Make inferences about preferences, classification rules, or ideal points (typical?) | Confusing the effects of a controlled change in question wording with the effects of intervening on the thing itself. For example thinking you are finding the effects of regime type on willingness to go to war or a candidate's gender on their vote share. |
 | [List experiments](#list-experiments) | Estimate effect of list length or content on response patterns (rare) | Infer prevalence of sensitive beliefs/behaviors (typical) | Using an experiment for a descriptive quantity might mean accepting too much error in order to  reduce bias.
+| [Conjoints](#conjoints) | Estimate effect of feature on choices, given a distribution of other fixed features (rare?) | Make inferences about preferences, classification rules, or ideal points (typical?) | Confusing the effects of a controlled change in question wording with the effects of intervening on the thing itself. For example thinking you are finding the effects of regime type on willingness to go to war or a candidate's gender on their vote share. |
 
 : Summary of different uses for survey experiments {#tbl-survey-experiments}
 
-I use question marks in the last row because I am confused on what some of these are trying to do. 
+I use question marks in the last row because I am confused on what some of these are trying to do (see examples below). 
 
 The rest of this note just unpacks these ideas, many of which are developed also in @blair2023research (see for example the discussion of the  [Conjoint design](https://book.declaredesign.org/library/experimental-descriptive.html#sec-ch17s3)).
 
