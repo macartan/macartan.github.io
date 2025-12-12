@@ -2539,7 +2539,7 @@ Table 2: Ideal types, experiment types used clearly for causal inference and fo
 </section>
 <section id="appendix-a-tale-of-two-estimands" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Appendix: A Tale of Two Estimands</h1>
-<p>Imagine a setting in which we have an actual election with a set of candidates who are defined by a finite set of attributes, and a conjoint experiment that closely parallels the setting. In particular the same set of attributes is randomized and presented to the same voters, and voters react to the attributes in the survey in the same way as they do to the attributes of candidates in the election.</p>
+<p>Imagine a setting in which we have an actual election with a set of candidates who are defined by a finite set of attributes, and we also have a conjoint experiment that closely parallels the setting. In particular the same set of attributes is randomized and presented to the same voters, and voters react to the attributes in the survey in the same way as they do to the attributes of candidates in the election. The aim is to make inferences for an “election matching the specifications of the conjoint” <span class="citation" data-cites="bansak2023using">(<a href="#ref-bansak2023using" role="doc-biblioref">Bansak et al. 2023</a>)</span>.</p>
 <p>The question is whether the AMCE of an attribute (for example, gender) in the survey corresponds to the ATE of that attribute in the election.</p>
 <p>This discussion provides a negative answer to the question even under very strong assumptions.</p>
 <p>The key idea is that these estimands diverge because the AMCE does not depend on causal relations between attributes, but the ATE does. The issue is not about the joint distribution of attributes, but about the <em>underlying causal structure</em> relating attributes to one another and to voter utilities.</p>
@@ -2582,13 +2582,13 @@ Y\big((X_1, X_2), (X_1&#39;, X_2&#39;)\big)
 <h2 data-number="4.4" class="anchored" data-anchor-id="parallelism-assumptions"><span class="header-section-number">4.4</span> Parallelism assumptions</h2>
 <p>We will want to compare the AMCE and the ATE.</p>
 <ul>
-<li>The AMCE captures a particular weighting of the effects of attribute values <em>as presented in a description</em> om expressed preferences, holding all other attributes fixed. The weighting depends on a stipulated joint distribution of attributes.</li>
+<li>The AMCE captures a particular weighting of the effects of attribute values <em>as presented in a description</em> on expressed preferences, holding all other attributes fixed. The weighting depends on a stipulated joint distribution of attributes.</li>
 <li>The ATE of interest is the average effect in an election of <em>changing an attribute</em> on the share of votes received by a candidate, including all downstream causal effects of that change.</li>
 </ul>
 <p>I formalize these below.</p>
 <p>The question is whether these two quantities coincide. I will give more formal definitions of these, but to make things simple I will make the following (very strong) assumptions:</p>
 <ol type="1">
-<li>There is a finite and known set of candidate attributes capturing everything relevant about candidates in an election. More specifically there are two candidates with two binary attributes each, both observed (this helps clarify tat the issue is not the same as the important concern raised elsewhere by Scott Abramson and Morgan Gillespie).</li>
+<li>There is a finite and known set of candidate attributes capturing everything relevant about candidates in an election. More specifically there are two candidates with two binary attributes each, both observed (this helps clarify that the issue is not the same as the important concern raised elsewhere by Scott Abramson and Morgan Gillespie).</li>
 <li>The distribution of <em>possible</em> candidate attributes in the election is known and can be recreated in the experiment.</li>
 <li>Candidate attributes are drawn independently for the two candidates from a common distribution, both in the election and in the experiment.</li>
 <li>Survey respondents are fully representative of voters.</li>
@@ -2600,7 +2600,7 @@ Y\big((X_1, X_2), (X_1&#39;, X_2&#39;)\big)
 <p>Thus, we imagine a conjoint that mimics the election extremely well, except that attributes are randomized in the conjoint experiment but arise endogenously in the election.</p>
 <p>For simplicity I will also assume:</p>
 <ul>
-<li><p>All voters have identical preferences (this simplifies the estimand and makes it clearer wheat variation is doing work)</p></li>
+<li><p>All voters have identical preferences (this simplifies the estimand and makes it clearer what variation is doing work)</p></li>
 <li><p>We know not only the joint distribution of attributes and the average effects of all attributes on each other, but also the underlying response functions giving rise to these average effects (this simplifies calculations of the ATE):</p>
 <ul>
 <li><p><strong>World 1:</strong><br>
@@ -2642,13 +2642,13 @@ Y\big((0, x_2(0)), (x_1&#39;, x_2&#39;)\big)
 \, p(x_1&#39;, x_2&#39;)\right].
 \]</span></p>
 <p>where the expectation is taken over responses of <span class="math inline">\(X_2\)</span> to <span class="math inline">\(X_1\)</span>—that is, across candidates, not across voters. In the case of a single candidate of interest there is no need for this expectation.</p>
-<p>There is no expectation across voters in either expression because I have simplified thins by assuming all voters are identical.</p>
+<p>There is no expectation across voters in either expression because I have simplified things by assuming all voters are identical.</p>
 </section>
 <section id="calculation-of-the-amce-for-x_1" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="calculation-of-the-amce-for-x_1"><span class="header-section-number">4.6</span> Calculation of the AMCE for <span class="math inline">\(X_1\)</span></h2>
-<p>We imagine identical voters, two candidates (A and B), two attributes, and two levels per attribute. The ACME is computed by comparing changes in <span class="math inline">\(X_1\)</span> for candidate A, holding <span class="math inline">\(X_2\)</span> fixed, across all possible profiles of candidate B.</p>
+<p>We imagine identical voters, two candidates (A and B), two attributes, and two levels per attribute. The AMCE is computed by comparing changes in <span class="math inline">\(X_1\)</span> for candidate A, holding <span class="math inline">\(X_2\)</span> fixed, across all possible profiles of candidate B.</p>
 <p>Table A1 reports the relevant comparisons and differences (assuming a <span class="math inline">\(0.5\)</span> probability of winning under indifference).</p>
-<p><strong>Table A1: ACME comparisons for <span class="math inline">\(X_1\)</span></strong></p>
+<p><strong>Table A1: AMCE comparisons for <span class="math inline">\(X_1\)</span></strong></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 9%">
@@ -2728,7 +2728,7 @@ Y\big((0, x_2(0)), (x_1&#39;, x_2&#39;)\big)
 <p>As Table A1 shows, all comparisons yield zero, so</p>
 <p><span class="math display">\[
 \text{AMCE}_{X_1} = 0.
-\]</span> The <span class="math inline">\(p\)</span> weighs don’t matter for this calculation.</p>
+\]</span> The <span class="math inline">\(p\)</span> weights don’t matter for this calculation.</p>
 <p>A similar calculation (not shown) yields</p>
 <p><span class="math display">\[
 \text{AMCE}_{X_2} = 0.5.
@@ -2741,10 +2741,10 @@ Y\big((0, x_2(0)), (x_1&#39;, x_2&#39;)\big)
 <p><strong>Table A2: ATE comparisons for <span class="math inline">\(X_1\)</span> in World 1</strong></p>
 <table class="caption-top table">
 <colgroup>
+<col style="width: 11%">
 <col style="width: 9%">
-<col style="width: 8%">
-<col style="width: 71%">
-<col style="width: 9%">
+<col style="width: 67%">
+<col style="width: 11%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2837,10 +2837,10 @@ Y\big((0, x_2(0)), (x_1&#39;, x_2&#39;)\big)
 <p><strong>Table A3: ATE comparisons for <span class="math inline">\(X_1\)</span> in World 2</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 8%">
-<col style="width: 71%">
-<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 10%">
+<col style="width: 65%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2860,7 +2860,7 @@ Y\big((0, x_2(0)), (x_1&#39;, x_2&#39;)\big)
 <tr class="even">
 <td></td>
 <td></td>
-<td>.5 (Pr(U(1,0) &gt; U(0,0)) - Pr(U(0,0) &gt; U(0,0)) ) +</td>
+<td>.5 (Pr(U(1,0) &gt; U(0,0)) - Pr(U(0,0) &gt; U(0,0)) )</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -2872,7 +2872,7 @@ Y\big((0, x_2(0)), (x_1&#39;, x_2&#39;)\big)
 <tr class="even">
 <td></td>
 <td></td>
-<td>.5 (Pr(U(1,0) &gt; U(0,1)) - Pr(U(0,0) &gt; U(0,1)) ) +</td>
+<td>.5 (Pr(U(1,0) &gt; U(0,1)) - Pr(U(0,0) &gt; U(0,1)) )</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -2884,7 +2884,7 @@ Y\big((0, x_2(0)), (x_1&#39;, x_2&#39;)\big)
 <tr class="even">
 <td></td>
 <td></td>
-<td>.5 (Pr(U(1,0) &gt; U(1,0)) - Pr(U(0,0) &gt; U(1,0)) ) +</td>
+<td>.5 (Pr(U(1,0) &gt; U(1,0)) - Pr(U(0,0) &gt; U(1,0)) )</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -2896,7 +2896,7 @@ Y\big((0, x_2(0)), (x_1&#39;, x_2&#39;)\big)
 <tr class="even">
 <td></td>
 <td></td>
-<td>.5 (Pr(U(1,0) &gt; U(1,1)) - Pr(U(0,0) &gt; U(1,1)) ) +</td>
+<td>.5 (Pr(U(1,0) &gt; U(1,1)) - Pr(U(0,0) &gt; U(1,1)) )</td>
 <td></td>
 </tr>
 </tbody>
@@ -2914,7 +2914,7 @@ Y\big((0, x_2(0)), (x_1&#39;, x_2&#39;)\big)
 <ul>
 <li>all relevant attributes are mutually exogenous</li>
 <li>the attribute change of interest occurs after all other attributes are fixed</li>
-<li>interest is confined to an intervention on the ballot–keeping other candidates fixed–rather than a real-world intervention on candidates (and voters repond only to the ballot).</li>
+<li>interest is confined to an intervention on the ballot–keeping other candidates fixed–rather than a real-world intervention on candidates (and voters respond only to the ballot).</li>
 </ul>
 
 </section>

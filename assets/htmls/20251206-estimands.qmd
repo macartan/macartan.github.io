@@ -158,9 +158,9 @@ Evergreen advice [@lundberg2021your], but especially important when using a surv
 
 # Appendix: A Tale of Two Estimands
 
-Imagine a setting in which we have an actual election with a set of candidates who are defined by a finite set of attributes, and a conjoint experiment that closely parallels the setting. In particular the same set of attributes is randomized and presented to the same voters, and voters react to the attributes in the survey in the same way as they do to the attributes of candidates in the election. 
+Imagine a setting in which we have an actual election with a set of candidates who are defined by a finite set of attributes, and we also have a conjoint experiment that closely parallels the setting. In particular the same set of attributes is randomized and presented to the same voters, and voters react to the attributes in the survey in the same way as they do to the attributes of candidates in the election. The aim is to make inferences for an "election matching the specifications of the conjoint" [@bansak2023using].
 
-The question is whether the AMCE of an attribute (for example, gender) in the survey corresponds to the ATE of that attribute in the election.
+The question is whether the AMCE of an attribute (for example, gender) in the survey corresponds to the ATE of that attribute in the election. 
 
 This discussion provides a negative answer to the question even under very strong assumptions.
 
@@ -218,27 +218,27 @@ is determined solely by which profile has the larger value of $X_2$. Ties are br
 
 We will want to compare the AMCE and the ATE.
 
-* The AMCE captures a particular weighting of the effects of attribute values *as presented in a description* om expressed preferences, holding all other attributes fixed. The weighting depends on a stipulated joint distribution of attributes. 
+* The AMCE captures a particular weighting of the effects of attribute values *as presented in a description* on expressed preferences, holding all other attributes fixed. The weighting depends on a stipulated joint distribution of attributes. 
 * The ATE of interest is  the average effect in an election of *changing an attribute* on the share of votes received by a candidate, including all downstream causal effects of that change.
 
 I formalize these below.
 
 The question is whether these two quantities coincide. I will give more formal definitions of these, but to make things simple I will  make the following (very strong) assumptions:
 
-1. There is a finite and known set of candidate attributes capturing everything relevant about candidates in an election. More specifically there are two candidates with two binary attributes each, both observed (this helps clarify tat the issue is not the same as the important concern raised  elsewhere by Scott Abramson and Morgan Gillespie).
+1. There is a finite and known set of candidate attributes capturing everything relevant about candidates in an election. More specifically there are two candidates with two binary attributes each, both observed (this helps clarify that the issue is not the same as the important concern raised  elsewhere by Scott Abramson and Morgan Gillespie).
 2. The distribution of *possible* candidate attributes in the election is known and can be recreated in the experiment.
 3. Candidate attributes are drawn independently for the two candidates from a common distribution, both in the election and in the experiment.
 4. Survey respondents are fully representative of voters.
 5. Voters behave identically in the survey and in the election, responding only to attributes.
-7. The ATE is defined with respect to a distribution of *possible rival candidates*, not a particular realized rival (this is to move the estimand closer to an AMCE type estimand, but it might be already far from what researchers think they are shooting at).
-8. Intervening on one candidate’s attributes does not affect the attributes of the rival candidate (the problems raised here would be more significant absent this assumption).
+6. The ATE is defined with respect to a distribution of *possible rival candidates*, not a particular realized rival (this is to move the estimand closer to an AMCE type estimand, but it might be already far from what researchers think they are shooting at).
+7. Intervening on one candidate's attributes does not affect the attributes of the rival candidate (the problems raised here would be more significant absent this assumption).
 8. Intervening on a candidate's attributes does not affect whether they appear in an election, or whether voters vote.
 
 Thus, we imagine a conjoint that mimics the election extremely well, except that attributes are randomized in the conjoint experiment but arise endogenously in the election.
 
 For simplicity I will also assume:
 
-* All voters have identical preferences (this simplifies the estimand and makes it clearer wheat variation is doing work)
+* All voters have identical preferences (this simplifies the estimand and makes it clearer what variation is doing work)
 * We know not only the joint distribution of attributes and the average effects of all attributes on each other, but also the underlying response functions giving rise to these average effects (this simplifies calculations of the ATE):
 
   - **World 1:**  
@@ -284,15 +284,15 @@ $$
 
 where the expectation is taken over responses of $X_2$ to $X_1$---that is, across candidates, not across voters. In the case of a single candidate of interest there is no need for this expectation. 
 
-There is no expectation  across voters in either expression because I have simplified thins by assuming all voters are identical. 
+There is no expectation  across voters in either expression because I have simplified things by assuming all voters are identical. 
 
 ## Calculation of the AMCE for $X_1$
 
-We imagine identical voters, two candidates (A and B), two attributes, and two levels per attribute. The ACME is computed by comparing changes in $X_1$ for candidate A, holding $X_2$ fixed, across all possible profiles of candidate B.
+We imagine identical voters, two candidates (A and B), two attributes, and two levels per attribute. The AMCE is computed by comparing changes in $X_1$ for candidate A, holding $X_2$ fixed, across all possible profiles of candidate B.
 
 Table A1 reports the relevant comparisons and differences (assuming a $0.5$ probability of winning under indifference).
 
-**Table A1: ACME comparisons for $X_1$**
+**Table A1: AMCE comparisons for $X_1$**
 
 | $X_2$ (A) | B     | $p$   | Comparison                                                                 | Difference        |
 |-----------|-------|-------|----------------------------------------------------------------------------|-------------------|
@@ -310,7 +310,7 @@ As Table A1 shows, all comparisons yield zero, so
 $$
 \text{AMCE}_{X_1} = 0.
 $$
-The $p$ weighs don't matter for this calculation.
+The $p$ weights don't matter for this calculation.
 
 A similar calculation (not shown) yields
 
@@ -327,7 +327,7 @@ In World 1, changing $X_1$ may induce changes in $X_2$. Taking the distribution 
 **Table A2: ATE comparisons for $X_1$ in World 1**
 
 | B     | p    | Comparison                                        | Diff  |
-|-------|------|---------------------------------------------------|-------|
+|-------|------|-----------------------------------------|-------|
 | (0,0) | 0.4  | .6 (Pr(U(1,1) > U(0,0)) - Pr(U(0,0) > U(0,0)) ) + |  .3   |
 |       |      | .2 (Pr(U(1,1) > U(0,0)) - Pr(U(0,1) > U(0,0)) ) + |       |
 |       |      | .2 (Pr(U(1,0) > U(0,0)) - Pr(U(0,0) > U(0,0)) )   |       |
@@ -350,15 +350,15 @@ In World 2, changing $X_1$ does not affect $X_2$. Table A3 reports the resulting
 **Table A3: ATE comparisons for $X_1$ in World 2**
 
 | B     | p    | Comparison                                        | Diff  |
-|-------|------|---------------------------------------------------|-------|
+|-------|------|--------------------------------------|-------|
 | (0,0) | 0.4  | .5 (Pr(U(1,1) > U(0,0)) - Pr(U(0,1) > U(0,0)) ) + |  0    |
-|       |      | .5 (Pr(U(1,0) > U(0,0)) - Pr(U(0,0) > U(0,0)) ) + |       |
+|       |      | .5 (Pr(U(1,0) > U(0,0)) - Pr(U(0,0) > U(0,0)) )   |       |
 | (0,1) | 0.1  | .5 (Pr(U(1,1) > U(0,1)) - Pr(U(0,1) > U(0,1)) ) + |  0    |
-|       |      | .5 (Pr(U(1,0) > U(0,1)) - Pr(U(0,0) > U(0,1)) ) + |       |
+|       |      | .5 (Pr(U(1,0) > U(0,1)) - Pr(U(0,0) > U(0,1)) )   |       |
 | (1,0) | 0.1  | .5 (Pr(U(1,1) > U(1,0)) - Pr(U(0,1) > U(1,0)) ) + |  0    |
-|       |      | .5 (Pr(U(1,0) > U(1,0)) - Pr(U(0,0) > U(1,0)) ) + |       |
+|       |      | .5 (Pr(U(1,0) > U(1,0)) - Pr(U(0,0) > U(1,0)) )   |       |
 | (1,1) | 0.4  | .5 (Pr(U(1,1) > U(1,1)) - Pr(U(0,1) > U(1,1)) ) + |  0    |
-|       |      | .5 (Pr(U(1,0) > U(1,1)) - Pr(U(0,0) > U(1,1)) ) + |       |
+|       |      | .5 (Pr(U(1,0) > U(1,1)) - Pr(U(0,0) > U(1,1)) )   |       |
 
 Hence,
 
@@ -376,4 +376,4 @@ There may be conditions  under which the AMCEs correspond to the ATEs, but they 
 
 - all relevant attributes are mutually exogenous
 - the attribute change of interest occurs after all other attributes are fixed
-- interest is  confined to an intervention on the ballot--keeping other candidates fixed--rather than a real-world intervention on candidates (and voters repond only to the ballot).
+- interest is  confined to an intervention on the ballot--keeping other candidates fixed--rather than a real-world intervention on candidates (and voters respond only to the ballot).
