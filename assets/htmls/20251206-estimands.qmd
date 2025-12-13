@@ -30,7 +30,11 @@ The distinction matters because different goals have implications for how you sh
 
 I use question marks in the last row because I am confused on what some of these are trying to do (see examples below). 
 
+So the evergreen advice [@lundberg2021your], but especially important when using a survey experiment: be sure to know your estimand. 
+
 The rest of this note just unpacks these ideas, many of which are developed also in @blair2023research (see for example the discussion of the  [Conjoint design](https://book.declaredesign.org/library/experimental-descriptive.html#sec-ch17s3)).
+
+The next section clarifies concepts, the following section walks through different survey types, the final section clarifies the difficulties of making inferences about effects estimates in a conjoint survey experiment to effects of actual attributes on actual vote shares, even when experiment design closely mimics the features of target elections.
 
 # Concepts
 
@@ -102,8 +106,7 @@ That makes lots of sense in principle. In practice I think sometimes we see peop
 
 ## Conjoints
 
-@de2022improving describe conjoints as "a factorial survey experiment that is designed to measure multidimensional preferences".
-Note the emphasis on measurement. Arguably, the remit of conjoints for descriptive inference is a little broader. For example they might also be used to study how people make classifications or understand concepts. But, arguably, conjoints might sometimes also be used when the estimand is causal.
+@de2022improving describe conjoints as "a factorial survey experiment that is designed to measure multidimensional preferences". Note the emphasis on measurement. In a similar way, @bansak2023using describes the (AMCE) estimand as a "*summary* of voters’ multidimensional preferences" (emphasis added). Arguably, the remit of conjoints for descriptive inference is a little broader. For example they might also be used to study how people make classifications or understand concepts. But, arguably, conjoints might sometimes also be used when the estimand really is causal.
 
 ### Conjoints for descriptive inference.
 
@@ -150,17 +153,15 @@ I think this is not so common but you could imagine being interested in the effe
 
 There is a good literature comparing experimental and direct approaches for asking sensitive questions. The fact that the estimand is the same in both cases highlights that the focus is typically descriptive. The gain from using an experiment is (hopefully) unbiasedness that comes from providing protection to subjects that require plausible deniability. But the fact that it is an experiment itself implies a cost: you get error from the need to do inference (as well as from complexity; @kuhn2022misreporting) and so [need to determine whether the added error is worth it](https://book.declaredesign.org/library/experimental-descriptive.html#fig-ch17num2).   
 
-# Conclusion
-
-Evergreen advice [@lundberg2021your], but especially important when using a survey experiment: be sure to know your estimand. 
 
 
 
-# Appendix: A Tale of Two Estimands
+# Mapping from estimates from survey experiments to real world estimands
 
-Imagine a setting in which we have an actual election with a set of candidates who are defined by a finite set of attributes, and we also have a conjoint experiment that closely parallels the setting. In particular the same set of attributes is randomized and presented to the same voters, and voters react to the attributes in the survey in the same way as they do to the attributes of candidates in the election. The aim is to make inferences for an "election matching the specifications of the conjoint" [@bansak2023using].
+Imagine a setting in which we have an actual election with a set of candidates who are defined by a finite set of attributes, and we also have a conjoint experiment that closely parallels the setting. In particular the same set of attributes is randomized and presented to the same voters, and voters react to the attributes in the survey in the same way as they do to the attributes of candidates in the election. 
 
-The question is whether the AMCE of an attribute (for example, gender) in the survey corresponds to the ATE of that attribute in the election. 
+
+The question is whether the AMCE of an attribute (for example, gender) in the survey corresponds to the ATE of that attribute in the election. (To avoid confusion, @bansak2023using are interested in a settings with the "election matching the specifications of the conjoint" but they do not have an external estimand in mind -- that is, they are not attempting to map to the effect of a real candidate's actual attributes on actual vote shares.) 
 
 This discussion provides a negative answer to the question even under very strong assumptions.
 
@@ -229,10 +230,10 @@ The question is whether these two quantities coincide. I will give more formal d
 2. The distribution of *possible* candidate attributes in the election is known and can be recreated in the experiment.
 3. Candidate attributes are drawn independently for the two candidates from a common distribution, both in the election and in the experiment.
 4. Survey respondents are fully representative of voters.
-5. Voters behave identically in the survey and in the election, responding only to attributes.
+5. Voters behave identically in the survey and in the election, responding only to attributes. In particular they also make choices between candidates (regardless of the attributes of candidates).
 6. The ATE is defined with respect to a distribution of *possible rival candidates*, not a particular realized rival (this is to move the estimand closer to an AMCE type estimand, but it might be already far from what researchers think they are shooting at).
 7. Intervening on one candidate's attributes does not affect the attributes of the rival candidate (the problems raised here would be more significant absent this assumption).
-8. Intervening on a candidate's attributes does not affect whether they appear in an election, or whether voters vote.
+8. Intervening on a candidate's attributes does not affect whether they appear in an election.
 
 Thus, we imagine a conjoint that mimics the election extremely well, except that attributes are randomized in the conjoint experiment but arise endogenously in the election.
 
@@ -286,7 +287,9 @@ where the expectation is taken over responses of $X_2$ to $X_1$---that is, acros
 
 There is no expectation  across voters in either expression because I have simplified things by assuming all voters are identical. 
 
-## Calculation of the AMCE for $X_1$
+## Calculations
+
+### Calculation of the AMCE for $X_1$
 
 We imagine identical voters, two candidates (A and B), two attributes, and two levels per attribute. The AMCE is computed by comparing changes in $X_1$ for candidate A, holding $X_2$ fixed, across all possible profiles of candidate B.
 
@@ -320,7 +323,7 @@ $$
 
 This arises because, depending on the other candidate's attribute, a change in  $X_2$ either takes you from a loss to a toss up or from a toss up to a win.
 
-## ATE of $X_1$: World 1
+### ATE of $X_1$: World 1
 
 In World 1, changing $X_1$ may induce changes in $X_2$. Taking the distribution of profiles for candidate B as given, Table A2 reports the expected effect of changing $X_1$ for candidate A.
 
@@ -343,7 +346,7 @@ In World 1, changing $X_1$ may induce changes in $X_2$. Taking the distribution 
 
 So: 0.3, again independent of weights. This is the effect of $X_1$ on $X_2$ times the effect of $X_2$ on $Y$.
 
-## ATE of $X_1$: World 2
+### ATE of $X_1$: World 2
 
 In World 2, changing $X_1$ does not affect $X_2$. Table A3 reports the resulting comparisons.
 
@@ -377,3 +380,4 @@ There may be conditions  under which the AMCEs correspond to the ATEs, but they 
 - all relevant attributes are mutually exogenous
 - the attribute change of interest occurs after all other attributes are fixed
 - interest is  confined to an intervention on the ballot--keeping other candidates fixed--rather than a real-world intervention on candidates (and voters respond only to the ballot).
+
