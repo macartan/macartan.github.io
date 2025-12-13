@@ -9,7 +9,10 @@ format:
     toc: true
     number-sections: true
     linkcolor: darkorange
+abstract: I clarify some distinctions between descriptive and causal inference, walk through different types of survey experiment, noting how some of them might be being used for either purpose, and highlight some inferential traps that researchers using or reading experimental results could fall into. In particular I highlight  difficulties of making inferences from estimated effects in a conjoint survey experiment to (expected) effects of actual attributes on actual vote shares in an election, even when the experimental design closely mimics the features of target elections.    
 ---
+
+# Overview
 
 Survey experiments can be used for either **causal inference** (estimating treatment effects) or **descriptive inference** (measuring properties/preferences). But it can sometimes be confusing which of these two worthy goals is the goal in any given experiment. The confusion likely arises in part because very similar designs can be used for either purpose, and in part because survey experimentalists often describe estimands as effects of one kind or another, even if the ultimate inferential target is not an effect. 
 
@@ -30,11 +33,11 @@ The distinction matters because different goals have implications for how you sh
 
 I use question marks in the last row because I am confused on what some of these are trying to do (see examples below). 
 
-So the evergreen advice [@lundberg2021your], but especially important when using a survey experiment: be sure to know your estimand. 
+**So the evergreen advice [@lundberg2021your] to *know your estimand!* seems especially important when using a survey experiment.** 
 
 The rest of this note just unpacks these ideas, many of which are developed also in @blair2023research (see for example the discussion of the  [Conjoint design](https://book.declaredesign.org/library/experimental-descriptive.html#sec-ch17s3)).
 
-The next section clarifies concepts, the following section walks through different survey types, the final section clarifies the difficulties of making inferences about effects estimates in a conjoint survey experiment to effects of actual attributes on actual vote shares, even when experiment design closely mimics the features of target elections.
+The next section clarifies concepts, the following section walks through different survey types, the final section clarifies the difficulties of making inferences from estimated effects in a conjoint survey experiment to (expected) effects of actual attributes on actual vote shares in an election, even when the experimental design closely mimics the features of target elections.
 
 # Concepts
 
@@ -44,7 +47,8 @@ Let's first get clear on the distinction between causal estimands and descriptiv
 
 There's a useful distinction often made between measurement and inference. Measurement is about directly observing a quantity that exists in the world; inference is about estimating a quantity that is at least partly unobserved. So you measure your pulse to make inferences about the state of your heart.
 
-You can have causal inference or descriptive inference, so the measurement / inference distinction is not itself about causality.
+You can have causal inference or descriptive inference, so the measurement / inference distinction is not itself about causality. In the same way,  *identification* --- roughly whether you can nail the quantity of interest if you have enough data --- is a problem for inference, but it is not a concern unique to experiments [[slides](https://macartan.github.io/ci/2.2_estimands.html#/identification-1)]. You can have identification problems for causal estimands or descriptive estimands. And of course it bears repeating: even if a quantity is not identified, you can still learn about it!
+
 
 Recognizing that you are doing inference rather than measurement in turn helps clarify the need for estimates of uncertainty. If you have data from a sample and you are interested in the sample average, and your quantity is measurable, then just measure; no need for standard errors or similar. If you have sample data and you are interested in the *population* average, and your quantity is measurable, then do inference, and also report your standard errors.
 
@@ -57,10 +61,6 @@ This idea builds on a key idea from the  counterfactual model of causation: the 
 Why does this matter? Because it means that if you are interested in causal estimands, then you *have* to do inference. If you are interested in descriptive estimands you may or may not have to do inference. You may be able to measure, but you may have to do inference. That matters  because if your interest is description, maybe you can get away without doing inference. Worth checking. Maybe you can ask everyone in your sample if they like coffee and also if they like tea. You don't have to randomly ask half if they like coffee and half if they like tea and infer the  values for the full sample based on the 'effect' of the question on the answer! Maybe you will find doing it as an experiment rather than a measurement exercise does not add value; or that the possible gains on some fronts, such as reporting biases, don't make up for the cost of having to do inference.
 
 The distinction between descriptive and causal estimands is not always so sharp though. You might question whether all kinds of quantities we might want to describe, preferences, loyalties, and so on *really* exist and can be described in this sense, even in principle. And you might think that some seemingly describable features are themselves causal quantities in disguise. For example you might think of preferences as a summary of the effects of options on choices. So you might think of a quantity such as "being a racist" both as a property that someone has and as a summary of how they react as a function of features of people they encounter. But which way you think about it can have implications for your design.^[We discuss this a bit [here](https://book.declaredesign.org/library/experimental-descriptive.html). As an analogy, we might think of immunity to a disease as a property that someone has, and want to figure out how many have this immunity. We might even be able to measure features that indicate the property (e.g. sickle cell disease for immunity to malaria). In that case we might want to think of this as a descriptive exercise, and even measure the property in a person. But we might also think of immunity as fundamentally about causal relations: that is, we are really asking about how a person would behave in different conditions. A bit more formally one might imagine a world in which $X \rightarrow Y  \leftarrow A$ (all binary nodes) and functional equation $f : Y = XA$. Then $X$ causes $Y$ if and only if $A$ is present. One way of thinking of the problem is to learn about the causal relations captured by $f$, the other is to learn about $A$ --- the value of a node that captures a property that implies a reaction given a background model.]
-
-## Identification
-
-Last, *identification* --- roughly whether you can nail the quantity of interest if you have enough data --- is a problem for inference, but it is not a concern unique to experiments [[slides](https://macartan.github.io/ci/2.2_estimands.html#/identification-1)]. You can have identification problems for causal estimands or descriptive estimands. And of course it bears repeating: even if a quantity is not identified, you can still learn about it!
 
 Let's now use these ideas to think through different uses of survey experiments.
 
@@ -124,7 +124,7 @@ Two implications from recognizing that the goal here is in fact descriptive infe
 * Risk.  You might fall into the trap of thinking the relation between feature values and outcomes corresponds to the causal effects of changing the feature (or confuse the direct/controlled effect within the experimental regime with the average effect). This is a little trickier, but to think through a simple example: Say in truth we have $X_1 \rightarrow X_2 \rightarrow Y$, and $X_1$ affects $Y$ via $X_2$ but not conditional on $X_2$. Then a conjoint might pick up that $X_1$ is not part of the classification rule for $Y$ and $X_2$ is. But it would be wrong to infer from this that actually changing $X_1$ will not affect classifications (since it might via changes in $X_2$). The problem here is confusing "how the rule determines outcomes given features" with "the effect of changing features, given the rule."
 
 
-I think when @schwarz2022have talk about learning about discrimination they are focused on uncovering preferences in this way; but the language of describing "the average effect of *being* a woman" (emphasis added), seems to suggest an interest in the effect of the attribute itself. 
+I think when @schwarz2022have talk about learning about discrimination they are focused on uncovering preferences in this way; but the language of describing "the average effect of *being* a woman" (emphasis added), could be misread to suggest an interest in the effect of the attribute itself, that is an effect of an intervention on a candidate. 
 
 ### Conjoints for causal inference
 
@@ -136,7 +136,7 @@ You might have an application where people are electing candidates and know noth
 The risk above remains: the effect you are getting is the effect of the attribute on the list, not the average (total) effect of the attribute itself on the outcomes. For example you might find that a powerful candidate does well *given* different values of corruption (even for different distributions of corruption), but this does not give you the effect of power itself, since, after all, power corrupts.
 
 
-I think this is close to the sort of setting  @bansak2023using have in mind (though, maybe not: they do use the language  of "the effect of a change in an attribute on a candidate’s or party’s expected vote share" which could be confused for the effect of an intervention on the attribute itself rather than an intervention on a listed feature within a list of features).
+I think this is close to the sort of setting  @bansak2023using have in mind (though, note this means interpreting their language  of "the effect of a change in an attribute on a candidate’s or party’s expected vote share" as meaning -- as they clarify elsewhere --- the effect of a listed feature within a controlled list of features and not the effect of an intervention on a single feature of a candidate while allowing (or preventing) other endogenous changes).
 
 ## List experiments
 
@@ -231,7 +231,7 @@ The question is whether these two quantities coincide. I will give more formal d
 3. Candidate attributes are drawn independently for the two candidates from a common distribution, both in the election and in the experiment.
 4. Survey respondents are fully representative of voters.
 5. Voters behave identically in the survey and in the election, responding only to attributes. In particular they also make choices between candidates (regardless of the attributes of candidates).
-6. The ATE is defined with respect to a distribution of *possible rival candidates*, not a particular realized rival (this is to move the estimand closer to an AMCE type estimand, but it might be already far from what researchers think they are shooting at).
+6. The ATE is defined with respect to a distribution of *possible rival candidates*, not a particular realized rival (this is to move the estimand closer to an AMCE-type estimand, but it might be already far from what researchers think they are shooting at).
 7. Intervening on one candidate's attributes does not affect the attributes of the rival candidate (the problems raised here would be more significant absent this assumption).
 8. Intervening on a candidate's attributes does not affect whether they appear in an election.
 
