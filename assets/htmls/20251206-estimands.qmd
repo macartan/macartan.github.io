@@ -277,7 +277,7 @@ Y\big((0, x_2), (x_1', x_2')\big)
 \, p(x_2, x_1', x_2').
 $$
 
-where $p(x_2, x_1', x_2')$ is the joint distribution of attributes for $A$ and $B$ (other than $x_1$) conditional on $x_1$. Note that writing this distribution without including $x_1$ presupposes mutual orthogonality.
+where $p(x_2, x_1', x_2')$ is the joint distribution of attributes for $A$ and $B$ (other than $x_1$).
 
 The ATE is
 
