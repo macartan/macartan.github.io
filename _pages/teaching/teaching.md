@@ -9,14 +9,24 @@ nav_order: 4
 
 Recent teaching:
 
-```mermaid
-flowchart LR
-  A[Causal Inference and Experimental Design]
-  A --- B
-  B[Qualitative and Mixed Methods short course]
-  click A "https://macartan.github.io/ci/" _blank
-  click B "https://integrated-inferences.github.io/short-course/" _blank
-```
+<div class="row mb-4">
+  <div class="col-md-6 mb-3 mb-md-0">
+    <a href="https://macartan.github.io/ci/" target="_blank" rel="noopener" class="card h-100 text-dark text-decoration-none border shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Causal Inference and Experimental Design</h5>
+        <p class="card-text small text-muted mb-0">→ Course site</p>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-6">
+    <a href="https://integrated-inferences.github.io/short-course/" target="_blank" rel="noopener" class="card h-100 text-dark text-decoration-none border shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Qualitative and Mixed Methods short course</h5>
+        <p class="card-text small text-muted mb-0">→ Course site</p>
+      </div>
+    </a>
+  </div>
+</div>
 
 ---
 

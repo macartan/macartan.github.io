@@ -321,7 +321,6 @@ enable_project_categories:  true   # enables categorization of projects into
                                    # multiple categories
 enable_medium_zoom:         true   # enables image zoom feature (as on medium.com)
 enable_progressbar:         true   # enables a horizontal progress bar linked to the vertical scroll position
-enable_mermaid:             true   # enables Mermaid diagrams in markdown (flowcharts, etc.)
 
 # -----------------------------------------------------------------------------
 # Library versions
@@ -354,5 +353,3 @@ mdb:
 medium_zoom:
   version: "1.0.6"
   integrity: "sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM="
-mermaid:
-  version: "11.0.0"
