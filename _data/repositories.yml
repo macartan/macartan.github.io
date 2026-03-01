@@ -2,8 +2,7 @@ github_users:
   - macartan
 
 github_repos:
-  - macartan/CausalQueries
-  - integrated-inferences/guide
+  - integrated-inferences/CausalQueries
   - DeclareDesign/DeclareDesign
   - gerasy1987/hiddenmeta
   - macartan/probra
