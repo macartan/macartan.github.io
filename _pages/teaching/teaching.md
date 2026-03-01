@@ -7,9 +7,16 @@ nav: false
 nav_order: 4
 ---
 
+Recent teaching:
 
-* [Causal Inference and Experimental Design](https://macartan.github.io/ci/)
-* [Qualitative and Mixeds Methods short course](https://integrated-inferences.github.io/short-course/)
+```mermaid
+flowchart LR
+  A[Causal Inference and Experimental Design]
+  A --- B
+  B[Qualitative and Mixed Methods short course]
+  click A "https://macartan.github.io/ci/" _blank
+  click B "https://integrated-inferences.github.io/short-course/" _blank
+```
 
 ---
 

@@ -1,0 +1,22 @@
+{% if site.enable_mermaid %}
+  <!-- Mermaid.js for diagrams in markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.min.js" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var blocks = document.querySelectorAll('pre code.language-mermaid');
+      if (blocks.length === 0) return;
+      mermaid.initialize({ startOnLoad: false, theme: 'default' });
+      blocks.forEach(function (block, i) {
+        var pre = block.parentElement;
+        var id = 'mermaid-' + i;
+        var div = document.createElement('div');
+        div.id = id;
+        div.className = 'mermaid';
+        div.textContent = block.textContent;
+        pre.parentElement.insertBefore(div, pre);
+        pre.style.display = 'none';
+      });
+      mermaid.run({ querySelector: '.mermaid', suppressErrors: true });
+    });
+  </script>
+{% endif %}
