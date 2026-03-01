@@ -34,6 +34,9 @@
             {%- if site.mastodon_username -%}
             <a rel="me" href="https://{{ site.mastodon_username  }}" title="Mastodon"><i class="fab fa-mastodon"></i></a>
             {% endif %}
+            {%- if site.bluesky_username -%}
+            <a href="https://bsky.app/profile/{{ site.bluesky_username }}" title="Bluesky" target="_blank" rel="noopener noreferrer"><svg class="svg-inline--fa" style="height:1em;vertical-align:-0.125em;width:1em" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="currentColor" d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3zM288 227.1c26 0 51.4 7.2 73.4 20.6 19.1 11.5 35.6 27.2 48.2 45.8 12.5-18.6 29.1-34.3 48.2-45.8 22-13.4 47.4-20.6 73.4-20.6s51.4 7.2 73.4 20.6c19.1 11.5 35.6 27.2 48.2 45.8 12.5-18.6 29.1-34.3 48.2-45.8 22-13.4 47.4-20.6 73.4-20.6s51.4 7.2 73.4 20.6c19.1 11.5 35.6 27.2 48.2 45.8 12.5-18.6 29.1-34.3 48.2-45.8 22-13.4 47.4-20.6 73.4-20.6v-45.8c-30.5 0-59.1 8.5-83.5 23.2-22.2 13.1-41.3 31.2-56.1 52.8-14.8-21.6-33.9-39.7-56.1-52.8-24.4-14.7-53-23.2-83.5-23.2v45.8c26 0 51.4 7.2 73.4 20.6 19.1 11.5 35.6 27.2 48.2 45.8 12.5-18.6 29.1-34.3 48.2-45.8 22-13.4 47.4-20.6 73.4-20.6s51.4 7.2 73.4 20.6c19.1 11.5 35.6 27.2 48.2 45.8 12.5-18.6 29.1-34.3 48.2-45.8 22-13.4 47.4-20.6 73.4-20.6z"/></svg></a>
+            {% endif %}
             {%- if site.medium_username -%}
             <a href="https://medium.com/@{{ site.medium_username }}" title="Medium"><i class="fab fa-medium"></i></a>
             {% endif %}
