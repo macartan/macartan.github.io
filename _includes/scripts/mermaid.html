@@ -1,9 +1,22 @@
 {% if site.enable_mermaid %}
   <!-- Mermaid.js for diagrams in markdown -->
   <style>
-    .mermaid-wrapper { max-width: 100%; overflow-x: auto; overflow-y: visible; margin: 1rem 0; }
-    .mermaid-wrapper .mermaid { display: flex; justify-content: center; }
-    .mermaid-wrapper .mermaid svg { max-width: 100%; height: auto; }
+    .mermaid-wrapper {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: auto;
+      overflow-y: visible;
+      margin: 1rem 0;
+    }
+    .mermaid-wrapper .mermaid {
+      min-width: 0;
+    }
+    .mermaid-wrapper .mermaid svg {
+      max-width: 100% !important;
+      width: 100% !important;
+      height: auto !important;
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.min.js" crossorigin="anonymous"></script>
   <script>
@@ -29,6 +42,12 @@
         pre.style.display = 'none';
       });
       mermaid.run({ querySelector: '.mermaid', suppressErrors: true });
+      setTimeout(function () {
+        document.querySelectorAll('.mermaid-wrapper svg').forEach(function (svg) {
+          svg.removeAttribute('width');
+          svg.removeAttribute('height');
+        });
+      }, 100);
     });
   </script>
 {% endif %}
