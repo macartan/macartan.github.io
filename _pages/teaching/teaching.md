@@ -7,6 +7,12 @@ nav: false
 nav_order: 4
 ---
 
+
+* [Causal Inference and Experimental Design](https://macartan.github.io/ci/)
+* [Qualitative and Mixeds Methods short course](https://integrated-inferences.github.io/short-course/)
+
+---
+
 Columbia 2003 - 2023; Humboldt 2023-
 
 <strong>Comparative Politics and the Political Economy of Development</strong>
@@ -85,7 +91,6 @@ Columbia 2003 - 2023; Humboldt 2023-
 </ul>
 
 
-*  [HU 2024: Causal Inference and Experimental Design](https://macartan.github.io/ci/)
 *  [EUI 2024: Declare Design](https://macartan.github.io/dd_bootcamp/)
 *  [HU 2024: Writing seminar](https://macartan.github.io/writing_seminar/)
 

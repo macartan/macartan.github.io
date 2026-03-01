@@ -68,7 +68,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 github_username: macartan # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username:  # your Twitter handle
-bluesky_username:  # your Bluesky handle (e.g. macartan.bsky.social)
+bluesky_username:  macartan.bsky.social  # your Bluesky handle (
 linkedin_username: macartan-humphreys-36107a28a # from URL: linkedin.com/in/macartan-humphreys-36107a28a
 scholar_userid: NGNhTDoAAAAJ # your Google Scholar ID
 mastodon_username: # sciences.social/@macartan # your mastodon instance+username in the format  instance.tld/@username
