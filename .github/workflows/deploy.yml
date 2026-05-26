@@ -26,6 +26,7 @@ jobs:
         npm install -g mermaid.cli
     - name: Install Jekyll and Dependencies
       run: |
+        bundle lock --add-platform x86_64-linux
         bundle install --jobs 4 --retry 3
         bundle exec gem list jekyll  # Verify Jekyll is installed
     - name: Setup deploy options
