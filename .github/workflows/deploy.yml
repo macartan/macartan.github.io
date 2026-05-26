@@ -10,6 +10,9 @@ on:
       - master
       - main
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -23,6 +26,17 @@ jobs:
     - name: Pin Bundler to match Gemfile.lock
       run: |
         gem install bundler -v 2.3.24
+    - name: Ensure Gemfile.lock includes Linux platform
+      run: |
+        gem install bundler -v 2.3.24
+        bundle _2.3.24_ lock --add-platform x86_64-linux
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        if ! git diff --quiet -- Gemfile.lock; then
+          git add Gemfile.lock
+          git commit -m "Regenerate Gemfile.lock for GitHub Actions (add linux platform)"
+          git push origin ${{ github.ref_name }}
+        fi
     - name: Install deps
       run: |
         npm install -g mermaid.cli
