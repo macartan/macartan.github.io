@@ -20,13 +20,16 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3.1.4'
+    - name: Pin Bundler to match Gemfile.lock
+      run: |
+        gem install bundler -v 2.3.24
     - name: Install deps
       run: |
         npm install -g mermaid.cli
     - name: Install Jekyll and Dependencies
       run: |
-        bundle install --jobs 4 --retry 3
-        bundle exec gem list jekyll  # Verify Jekyll is installed
+        bundle _2.3.24_ install --jobs 4 --retry 3
+        bundle _2.3.24_ exec gem list jekyll  # Verify Jekyll is installed
     - name: Setup deploy options
       id: setup
       run: |
