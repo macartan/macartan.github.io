@@ -12,7 +12,7 @@ nav_order: 4
 
 * [Crises](../slides/2024_crises.html) (2024, FU)
 
-* Sierra Leone study on recruitment and incentives [(EUI, 2023)](../slides/20231130_sl_cahw.html); [RWI 2024](../slides/202410_RWI.html); [2026](../slides/CAHW.html)
+* Sierra Leone study on recruitment and incentives [EUI, 2023](../slides/20231130_sl_cahw.html); [RWI 2024](../slides/202410_RWI.html); [2026](../slides/CAHW.html)
 
 * [Humanitarian evaluation and learning (WFP, 2023)](../slides/2020312_humphreys_wfp.html) 
 
