@@ -8,11 +8,15 @@ nav_order: 4
 
 * [Replication](../slides/epss_2026.html) (EPSS, 2026)
 
+* [Experimental design](https://egap.github.io/learningdays-resources/abidjan_2026/index.html) (EGAP learning days, Abidjan, 2026)
+
 * [Human shields](../slides/humanshields_2026.html) (EUI, NYU-AD, 2026)
 
 * [Polmeth keynote](../slides/polmeth_europe_2026.html) (TCD, 2026)
 
 * [Lebanon CDD](../slides/lebanon_2026.html) (ISMT, 2026)
+
+* [Experimental design and causal inference](https://macartan.github.io/ci/) (Humboldt, 2026)
 
 * [TIME keynote](../slides/2025_TIME_keynote.html) (TCD, 2025)
 
