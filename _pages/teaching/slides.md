@@ -6,7 +6,7 @@ nav: false
 nav_order: 4
 ---
 
-* [Replication](../slides/epss_2026.html) (EPSS, 2026)
+* [Replication](../slides/replication_2026.html) (EPSS, 2026)
 
 * [Experimental design](https://egap.github.io/learningdays-resources/abidjan_2026/index.html) (EGAP learning days, Abidjan, 2026)
 
@@ -18,6 +18,8 @@ nav_order: 4
 
 * [Experimental design and causal inference](https://macartan.github.io/ci/) (Humboldt, 2026)
 
+* [Causal models for qualitative inference and mixed methods](https://integrated-inferences.github.io/short-course/) (GESIS 2026)
+
 * [TIME keynote](../slides/2025_TIME_keynote.html) (TCD, 2025)
 
 * [School sorting](../slides/2025_sorting.html) (Bocconi, 2025)
@@ -28,7 +30,7 @@ nav_order: 4
 
 * [Intersectional discrimination](../slides/202402_fhk.html) (2024)
 
-* [Humanitarian evaluation and learning (WFP, 2023)](../slides/2020312_humphreys_wfp.html)
+* [Humanitarian evaluation and learning ](../slides/2020312_humphreys_wfp.html) (WFP, 2023)
 
 * Sierra Leone study on recruitment and incentives [EUI, 2023](../slides/20231130_sl_cahw.html); [RWI 2024](../slides/202410_RWI.html); [Basil 2026](../slides/CAHW.html)
 
