@@ -1,12 +1,12 @@
 ---
 layout: page
-permalink: /teaching/review-my-paper
+permalink: /teaching/skills/review-my-paper
 title: review-my-paper
 nav: false
 nav_order: 4
 name: review-my-paper
 description: >-
-  Review a paper (usually Macartan's own) for substance, literature, facts,
+  Review your own paper for substance, literature, facts,
   claims vs analysis, code, and language. Produces big / middle / small points
   plus a punch list. Use when asked to review my paper, critique a manuscript,
   referee a draft, pre-submit review, internal review, or similar. Default is
@@ -28,6 +28,10 @@ Source for the critique stance: [How to critique](https://macartan.github.io/tea
 **Never upload data to an AI without permission.** Do not attach, paste, or send respondent-level files, extracts, identifiers, or raw tables to any model API. If code and data are on this machine and permission is given to *run locally*, run locally. In the conversation, report **aggregates only** (coefficients, CIs, *N*, grouped percentages). Do not print `head(df)`, dump data frames, or include IDs, names, or other individual records.
 
 If either permission is missing, say so and stop that part of the work. Review the text you are allowed to see; skip data/code execution.
+
+## Output
+
+* Review memo with overview comments and to do list
 
 ---
 
@@ -101,7 +105,7 @@ These are expected every time the files are available. Do them; do not only reco
 - Language pass against `write-like-mac` (findings first, signposting, sober claims, US English, no empty intensifiers, verified citations).
 - Produce the review in the output format below, including a punch list.
 
-### Human should do (do not fake these)
+### Human should do
 
 - Grant permissions for manuscript and data.
 - Choose journal and revision appetite.
@@ -110,7 +114,7 @@ These are expected every time the files are available. Do them; do not only reco
 - Confirm that flagged literature actually belongs (AI will over-include).
 - Ethical or fieldwork judgments that are not in the text.
 - Final call on identification: whether you believe the design.
-- Anything that would require uploading files or data you have not authorized.
+- Anything that would require uploading files or data that has  not been authorized.
 
 In the review, keep a short **For the human** list: items the AI cannot settle.
 
@@ -137,7 +141,7 @@ Do all of these. If a check cannot be done, say why (no bibliography, no code, n
 - Every cited work exists. Authors, year, title, venue match.
 - URLs/DOIs work where given. Add a note if a cited working paper has a stable published version.
 - In-text citations match the bibliography (year, author count, missing entries, orphans).
-- Do not invent citations. If a source cannot be verified, flag it.
+- Do not invent citations. If a source cannot be verified, flag it. If a project includes a lib/ folder check whether cite is in there and add if not (and if possible)
 
 ### 2. Literature connections
 
@@ -171,7 +175,7 @@ Permission gate applies.
 
 ### 6. Language (`write-like-mac`)
 
-Read `write-like-mac` and apply it. This is a self-review default.
+Read `write-like-mac` (https://macartan.github.io/teaching/skills/write-like-mac) and apply it. This is a self-review default.
 
 Flag (with a fix when cheap):
 
@@ -280,8 +284,6 @@ Use this while reading to **choose themes**. Do not paste it into the review. Fr
 - Write a discussant talk (three clever asides). This is a review with a punch list.
 - Ask for a different research question.
 - Confuse "I would have written a different paper" with a defect in this one.
-- Pad with optional citations, especially the reviewer's own.
-- Report every checklist item. Select.
 - Soften a fatal problem because appetite is light. Label it; park the rewrite if asked.
 - Rewrite the paper in the review. Point, then punch-list the fix.
 - Pretend a literature or fact check was done if it was not.
