@@ -17,6 +17,7 @@ description: >-
   analysis files.
 ---
 
+
 # analysis-skill
 
 Save this page and point your AI at it (for example, if you use Cursor, put it under `~/.cursor/skills/analysis-skill/SKILL.md`).
@@ -37,7 +38,7 @@ If a `replicateEverything` skill or `AI.md` is available, read it before promisi
 | Quarto YAML | HTML options |
 | Section order | Notebook spine |
 | Item anatomy | One table/figure unit |
-| Code style | Readable code, packages, helpers |
+| Code style | Readable code, packages, helpers, hand-run tests |
 | Data (hard) | Privacy and Stata NA quirks |
 | Later conversion | Locked deposit only |
 
@@ -49,11 +50,11 @@ A human can skim **Section order** and **Item anatomy**. An agent should follow 
 
 | File | When |
 |------|------|
-| `<stem>_analysis.qmd` | Always. One notebook for the paper. |
-| `<stem>_data_prep.qmd` | When cleaning is substantial (multiple sources, long recodes). The analysis file still has a data section that runs or sources prep. |
+| `analysis.qmd` | Always. One notebook for the paper. Project identity is the **folder name**, not a stem inside this file. |
+| `data_prep.qmd` | When cleaning is substantial (multiple sources, long recodes). The analysis file still has a data section that runs or sources prep. |
 | `outputs/` | Tables, figures, and other objects **produced when code is rerun** (e.g. `tab_<n>_<handle>.tex`, `fig_<n>_<handle>.png`, analysis objects). Save rerun products here. |
 | `assets/` | Things that mostly **do not** change when code is rerun: `bib.bib`, static images for paper compilation, other stable inputs. Do **not** put regenerated table/figure files here. |
-| `outputs/<stem>_analysis.Rdata` | Always at the end: tables/figures as named objects (in `outputs/`, not `assets/`) |
+| `outputs/analysis.Rdata` | Always at the end: tables/figures as named objects (in `outputs/`, not `assets/`) |
 
 Do not write `replication.yml` unless the user asks for a locked deposit.
 
@@ -65,11 +66,11 @@ Use HTML with `toc`, `code-fold`, `code-tools`, and `embed-resources`.
 
 1. Housekeeping (`pacman`, switches, labels, seed, paths)
 2. Helper functions (mechanics only; specifications stay at the item)
-3. Data (`make_prep_*`; separate `*_data_prep.qmd` if substantial)
+3. Data (`make_prep_*`; separate `data_prep.qmd` if substantial)
 4. Paper tables/figures — one subsection per item
 5. Appendix — own section; each item a subsection
 6. Additional analyses — only if clearly relevant; parallel outcomes together
-7. Export — write regenerated tables/figures and `<stem>_analysis.Rdata` to `outputs/` (not `assets/`)
+7. Export — write regenerated tables/figures and `outputs/analysis.Rdata` to `outputs/` (not `assets/`)
 
 ## Item anatomy
 
@@ -92,8 +93,8 @@ Readable by humans first.
 - Comment clearly
 - Use functions for efficiency, but avoid deep wrapping of functions in functions
 - Expose code where key decisions are made (for example the analytic model)
-- Provide entry points where humans can run single lines to verify analyses, especially if batch-processed
 - Separate `make_*` from `format_*`
+- **Hand-run and tests.** Aim so a user can run the notebook up to some point, then execute a particular analysis interactively (not always possible; aim for it). Prefer entry points that are one-liners—especially for batch helpers. When you introduce a function, put a small test or demo call immediately after it (commented out is fine) so readers can see it in action—for example, after `implement_analyses`, generate a tiny dataset and run `implement_analyses(temp_df)`.
 - Clustered OLS: current CRAN `estimatr` with `lm_robust(..., clusters = cluster_id, se_type = "stata")` (`"stata"` is faster than default HC2)
 - HTML model tables: prefer `texreg::htmlreg(..., doctype = FALSE)` (works well with `lm_robust`); wrap with `knitr::asis_output()`
 - LaTeX table/figure files for the paper: `texreg::texreg()` (and figure writes) into `outputs/`, not `assets/`

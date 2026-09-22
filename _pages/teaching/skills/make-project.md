@@ -9,12 +9,13 @@ description: >-
   Ask first, then give feedback and propose options to set up or clean a
   research project folder against Macartan's standard layout (AI-safe root with
   memos; GitHub stub with paper.qmd, analysis.qmd, presentation.qmd; optional
-  Overleaf stub; outputs/ for rerun products vs assets/ for stable inputs; data
-  kept outside the AI workspace). Do not create or restructure folders until
-  the user approves. Use when asked to make_project, make-project, set up a
-  project folder, scaffold a paper repo, or check whether a project matches
-  the standard.
+  Overleaf stub with figs_tabs/; outputs/ for rerun products vs assets/ for
+  stable inputs; data kept outside the AI workspace). Do not create or
+  restructure folders until the user approves. Use when asked to make_project,
+  make-project, set up a project folder, scaffold a paper repo, or check
+  whether a project matches the standard.
 ---
+
 
 # make-project
 
@@ -53,9 +54,9 @@ If the user already answered intent and path in the same message, do not re-ask 
 |---------|------------|
 | Posture | Ask first; propose; wait |
 | Mode | Make vs check (as advice modes) |
-| Project stem | Naming key used across stubs |
+| Project stem | Naming key for folders / `.Rproj` (not inside `analysis.qmd`) |
 | Structure | Canonical tree (gh + Overleaf) |
-| File roles | Memos and stub files; **outputs vs assets**; Overleaf sync flow |
+| File roles | Memos and stub files; **outputs vs assets**; Overleaf `figs_tabs/` |
 | Security | Data and confidential material |
 | Layout rules | Deep trees; one current copy; **archive + here::** |
 | Make (propose) | What a setup option may include |
@@ -76,18 +77,17 @@ Clarify make vs check up front (ask if unclear).
 
 ## Project stem
 
-The **project stem** is a short, filesystem-safe identifier for the project. Use it consistently in folder and file names.
+The **project stem** is a short, filesystem-safe identifier for the project. Use it consistently in **folder and `.Rproj` names**. Project identity for analysis is the **folder name**; the working notebook is always `analysis.qmd` (no stem inside that filename).
 
 Example: a TikTok project has stem `tiktok` (same as the project name in that case).
 
-Typical uses:
-
 | Use | Pattern |
 |-----|---------|
+| Project / folder name | Often equals the stem (e.g. `tiktok`) |
 | GitHub stub folder | `project_stub_gh` or `<stem>` / repo name |
 | Overleaf stub folder | `project_stub_overleaf` or `<stem>_overleaf` |
 | RStudio project | `<stem>.Rproj` |
-| Analysis naming (analysis-skill) | `<stem>_analysis.qmd` when stem-prefixed names are used |
+| Analysis file | Always `analysis.qmd` (not `<stem>_analysis.qmd`) |
 
 Ask for the stem early if it is not obvious from the folder name. Prefer one stem everywhere rather than mixing nicknames.
 
@@ -111,7 +111,7 @@ project_name/                         # AI-accessible project root (often = stem
 │   ├── assets/                       # stable inputs: bib.bib, images/, fixed compile inputs
 │   ├── outputs/                      # tables, figures, objects produced when code is rerun
 │   ├── saved/                        # intermediate saved rds or similar (optional companion to outputs/)
-│   ├── overlay/                      # optional; may be present
+│   ├── overlay/                      # optional; role TBD — ask before inventing contents
 │   ├── <stem>.Rproj
 │   ├── paper.qmd
 │   ├── analysis.qmd                  # aligned with analysis-skill
@@ -120,8 +120,9 @@ project_name/                         # AI-accessible project root (often = stem
 └── project_stub_overleaf/            # Overleaf / TeX coauthoring stub (optional)
     ├── paper.tex
     ├── appendix.tex
-    └── assets/
-        └── bib.bib                   # plus synced figures/tables and other compile inputs
+    ├── assets/                       # stable inputs synced from gh assets/ (e.g. bib)
+    │   └── bib.bib
+    └── figs_tabs/                    # figures/tables synced from gh outputs/
 ```
 
 The GitHub stub folder may use the repo name instead of the literal `project_stub_gh`. The Overleaf stub may use `<stem>_overleaf` instead of `project_stub_overleaf`. Internal layout matters more than the literal folder name; keep stem-based naming consistent when you choose a variant.
@@ -156,7 +157,7 @@ The GitHub stub folder may use the repo name instead of the literal `project_stu
 | `lib/` | Cited papers / readings as used |
 | `code/` | Extra scripts outside the main `analysis.qmd` spine |
 | `archive/` | Older versions only |
-| `overlay/` | Optional |
+| `overlay/` | Optional; role not defined — ask the user before inventing contents |
 
 ### Overleaf stub (`project_stub_overleaf/`)
 
@@ -164,14 +165,15 @@ The GitHub stub folder may use the repo name instead of the literal `project_stu
 |------|------|
 | `paper.tex` | Main TeX manuscript |
 | `appendix.tex` | Appendix |
-| `assets/` | **Compiled sync location** for Overleaf: receives copies from gh `outputs/` (rerun products) **and** gh `assets/` (stable inputs such as `bib.bib`). TeX `\includegraphics` / `\input` paths point here. |
+| `assets/` | Stable inputs for TeX (e.g. `bib.bib`), synced from gh `assets/` |
+| `figs_tabs/` | Figures and tables for TeX, synced from gh `outputs/`. TeX paths for regenerated products point here. |
 
 **Flow (do not invert):**
 
 1. Analysis writes regenerated tables/figures to gh `outputs/`.
 2. Stable inputs live in gh `assets/`.
-3. Overleaf `assets/` is fed by syncing **both** gh `outputs/` and gh `assets/` into that single TeX-facing folder.
-4. Overleaf `assets/` is **not** the primary place analysis writes; it is a destination for compile/sync.
+3. Sync gh `outputs/` → Overleaf `figs_tabs/`; sync needed gh `assets/` (e.g. bib) → Overleaf `assets/`.
+4. Overleaf `figs_tabs/` and `assets/` are **not** where analysis writes; they are compile/sync destinations.
 
 ### `outputs/` vs `assets/` in the GitHub stub (do not blur)
 
@@ -180,7 +182,7 @@ The GitHub stub folder may use the repo name instead of the literal `project_stu
 | `outputs/` | Tables, figures, analysis objects written by code | Yes — regenerate here |
 | `assets/` | Bib, static images, stable compile inputs | Mostly no |
 
-Same distinction as in analysis-skill. Overleaf’s `assets/` is a different role: a merged sync sink for TeX, not the analysis write target.
+Same distinction as in analysis-skill. On Overleaf, regenerated products land in `figs_tabs/`; stable inputs in `assets/`.
 
 ---
 
@@ -219,7 +221,7 @@ After questions, propose—do not create yet—something like:
 2. `memos/` with the four starter files (thin placeholders only).
 3. GitHub stub folders, including clear `outputs/` vs `assets/`.
 4. Thin stubs: `<stem>.Rproj`, `paper.qmd`, `analysis.qmd` (pointer or spine from analysis-skill), `presentation.qmd`, `README.md` with a **Data** path placeholder outside the tree.
-5. Optional: Overleaf stub (`paper.tex`, `appendix.tex`, `assets/bib.bib`) and whether to include `overlay/` and `saved/`.
+5. Optional: Overleaf stub (`paper.tex`, `appendix.tex`, `assets/bib.bib`, `figs_tabs/`) and whether to include `overlay/` (only if the user knows what it is for) and `saved/`.
 6. Path convention: prefer `here::` for R/Quarto roots so later archives do not break relative paths.
 
 Present as **options** when more than one layout is reasonable (e.g. stub folder name, whether to add Overleaf, whether to migrate an existing mess). **Create files only after the user approves** an option.
@@ -235,12 +237,12 @@ Inspect against the standard. Return findings and cleanup options. Restructure o
 ### Checklist
 
 - [ ] AI-accessible root vs data location; README records external data path
-- [ ] Project stem clear and used consistently (`.Rproj`, stub names if stem-based)
+- [ ] Project stem clear and used consistently (`.Rproj`, stub names if stem-based); analysis file is plain `analysis.qmd`
 - [ ] No apparent confidential/microdata/secrets in the AI tree (if suspected: alert)
 - [ ] `memos/` with `onboarding.md`, `notes_for_coauthors.md`, `to_do.md` (and `review.md` if a review exists)
 - [ ] Stub has `paper.qmd`, `analysis.qmd`, `presentation.qmd`, `<stem>.Rproj`, `README`
 - [ ] `outputs/` used for rerun products; `assets/` for stable inputs (flag swaps or dumps in the wrong place)
-- [ ] If Overleaf stub present: `paper.tex`, `appendix.tex`, `assets/`; TeX pulls from Overleaf `assets/`; that folder is sync-fed from gh `outputs/` + gh `assets/`, not the analysis write target
+- [ ] If Overleaf stub present: `paper.tex`, `appendix.tex`, `assets/`, `figs_tabs/`; TeX figs/tabs from `figs_tabs/`; sync from gh `outputs/` → `figs_tabs/` and gh `assets/` → Overleaf `assets/`; neither is the analysis write target
 - [ ] Expected folders present as needed: `archive/`, `lib/`, `code/`, `assets/`, `outputs/`, `saved/`
 - [ ] Deep rather than flat; one current copy of each key document; dated archives
 - [ ] Paths robust under archive/move (favor `here::`); no broken relative roots after past moves
@@ -278,7 +280,7 @@ Wait for the user to choose an option before applying file-system changes.
 - Create, move, or delete project folders/files before the user approves
 - Place or request data inside the AI-accessible project root
 - Put regenerated tables/figures in gh `assets/` (use gh `outputs/`)
-- Treat Overleaf `assets/` as the analysis write target (it is a sync/compile sink)
+- Treat Overleaf `figs_tabs/` or `assets/` as the analysis write target (they are sync/compile sinks)
 - Create multiple live versions of the same paper or analysis file
 - Invent substantive paper content when scaffolding
 - Quietly ignore suspected confidential material—alert the user

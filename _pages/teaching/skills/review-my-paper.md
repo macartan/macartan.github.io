@@ -13,6 +13,7 @@ description: >-
   self-review before journal submission, not a public referee report.
 ---
 
+
 # review-my-paper
 
 Internal review of a manuscript. Default: Macartan's own papers, before sending to a journal or coauthors. The output is a usable review plus a punch list, not a free-form essay.

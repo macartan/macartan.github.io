@@ -11,9 +11,10 @@ description: >-
   for important or hard ideas is critical; never obscure. Scholarly text: sober
   modest claims. Recommendation letters: can be more effusive.
   Use when writing papers, memos, reports, documentation,
-  or when the user asks to write like Mac or write-like-mac. If used for in papers
+  or when the user asks to write like Mac or write-like-mac. If used in papers,
   use red or other highlighting / track changes if edits go beyond 3 - 4 words.
 ---
+
 
 Distilled from [How to write](https://macartan.github.io/teaching/how-to-write). Prefer later edits the user adds to this file over this baseline.
 
