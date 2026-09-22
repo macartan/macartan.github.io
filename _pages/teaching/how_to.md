@@ -6,7 +6,7 @@ nav: false
 nav_order: 4
 ---
 
-# How tos
+# how tos
 
 * <a href="/teaching/how-to-critique">How to critique: A checklist for discussants and reviewers</a>
 * <a href="/teaching/how-to-read">How to read</a>
@@ -23,12 +23,14 @@ Save a skill page and point your AI at it (for example, if you use Cursor, put i
 * <a href="/teaching/skills/make-project">make-project</a> — ask first; feedback and options to set up or clean a project folder (<a href="https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/skills/make-project.md" download="SKILL.md">download</a>)
 
 
-# Graduate school
+# advice on applying to graduate school
 
 * <a href="/teaching/applying-for-a-phd">Informal advice for prospective students</a>
 
 
-# Slides and notes for trainings
+# various slides and notes for trainings
+
+* more slides [here](https://macartan.github.io/teaching/slides)
 
 * <a href="{{'slides/202306_Bocconi.html' | relative_url}}"  rel="noopener noreferrer"> <i class="fa-solid fa-presentation"></i>The use of clues (mediators in mixed methods inference)</a> 
 
