@@ -15,7 +15,7 @@ nav_order: 4
 
 # AI skills
 
-Cursor Agent skills. Click to read on the site. To install, download the markdown and save as `~/.cursor/skills/write-like-mac/SKILL.md` (folder name = skill name). Extra YAML on those files (`layout`, `permalink`) is for this site; Cursor ignores it.
+Save a skill page and point your AI at it (for example, if you use Cursor, put it under `~/.cursor/skills/<name>/SKILL.md`).
 
 * <a href="/teaching/write-like-mac">Write like Mac</a> — prose style (<a href="https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/write-like-mac.md" download="SKILL.md">download</a>)
 * <a href="/teaching/review-my-paper">Review my paper</a> — internal review with a punch list (<a href="https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/review-my-paper.md" download="SKILL.md">download</a>)
