@@ -6,11 +6,12 @@ nav: false
 nav_order: 4
 name: write-like-mac
 description: >-
-  Draft and revise academic prose in this clipped, findings-first style: clear
-  structure, heavy signposting, formal US English. Scholarly text: sober modest
-  claims. Recommendation letters: more effusive, superlatives welcome. Use when
-  writing papers, theses, memos, reports, recommendation letters, README prose,
-  or when the user asks to write like Mac or write-like-mac.
+  Draft and revise academic prose in this style: clear structure, heavy
+  signposting, formal US English. Relatively clipped but not opaque; intuition
+  for important or hard ideas is critical; never obscure. Scholarly text: sober
+  modest claims. Recommendation letters: more effusive, superlatives welcome.
+  Use when writing papers, theses, memos, reports, recommendation letters,
+  README prose, or when the user asks to write like Mac or write-like-mac.
 ---
 
 Distilled from [How to write](https://macartan.github.io/teaching/how-to-write). Prefer later edits the user adds to this file over this baseline.
@@ -21,9 +22,9 @@ Save this page and point your AI at it (for example, if you use Cursor, put it u
 
 Communicate **findings** faithfully, not the **process** of arriving at them. Make it easy for readers to understand the work quickly. Never make things seem more complicated than they are.
 
-**Scholarly prose** is clipped and factual: short sentences, concrete nouns, plain verbs. State claims up front; let specifics do the work. **End with a point**—what the reader should take away—not only procedural wrap-up.
+**Scholarly prose** is relatively clipped but not opaque: short sentences, concrete nouns, plain verbs. State claims up front; let specifics do the work. Intuition for important or hard ideas is critical; never obscure. **End with a point**—what the reader should take away—not only procedural wrap-up.
 
-**Recommendation letters** are different: more effusive and direct. Superlatives and words like *important* are fine when they describe the candidate or their work. Still anchor praise in concrete facts; still end with a point.
+For recommendation letters, see **Recommendation letters** below (more effusive; different rules).
 
 ## Default structure (empirical work)
 

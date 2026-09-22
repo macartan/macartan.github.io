@@ -19,7 +19,9 @@ description: >-
 
 Save this page and point your AI at it (for example, if you use Cursor, put it under `~/.cursor/skills/analysis-skill/SKILL.md`).
 
-Author a **single self-contained `analysis.qmd`** that is the working analysis for a paper. Do **not** create a `replicateEverything` repo, a parallel `replication.yml`, or a one-file-per-table layout on day one.
+Author a **single self-contained `analysis.qmd`** that is the working analysis for a paper.
+
+Do **not** create a `replicateEverything` repo, a parallel `replication.yml`, or a one-file-per-table layout on day one. Brief background: `analysis.qmd` is the day-one working analysis. [replicateEverything](https://replicate-anything.github.io/replicateEverything/articles/contributing-principles.html) is a later packaging standard for replication repos (locked code, `replication.yml`, study layout). Do not jump to that structure prematurely.
 
 Write the qmd so a **later** helper can extract a locked version into `code/`, `outputs/`, and `replication.yml`. Identifiability lives in the qmd (chunk labels, object names, `rep:` markers). Yaml is for a frozen deposit, not a moving draft.
 
@@ -33,7 +35,7 @@ If a `replicateEverything` skill or `AI.md` is available, read it before promisi
 | Quarto YAML | HTML options |
 | Section order | Notebook spine |
 | Item anatomy | One table/figure unit |
-| Code style | Packages and helpers |
+| Code style | Readable code, packages, helpers |
 | Data (hard) | Privacy and Stata NA quirks |
 | Later conversion | Locked deposit only |
 
@@ -82,7 +84,13 @@ Naming: `tab_<n>_<handle>` / `fig_<n>_<handle>` in paper order.
 
 ## Code style
 
-- Comment the code; separate `make_*` from `format_*`
+Readable by humans first.
+
+- Comment clearly
+- Use functions for efficiency, but avoid deep wrapping of functions in functions
+- Expose code where key decisions are made (for example the analytic model)
+- Provide entry points where humans can run single lines to verify analyses, especially if batch-processed
+- Separate `make_*` from `format_*`
 - Clustered OLS: current CRAN `estimatr` with `lm_robust(..., clusters = cluster_id, se_type = "stata")` (`"stata"` is faster than default HC2)
 - HTML model tables: prefer `texreg::htmlreg(..., doctype = FALSE)` (works well with `lm_robust`); wrap with `knitr::asis_output()`
 - LaTeX assets: `texreg::texreg()`
