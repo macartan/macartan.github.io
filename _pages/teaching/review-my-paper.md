@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /teaching/review-my-paper
-title: Review my paper
+title: review-my-paper
 nav: false
 nav_order: 4
 name: review-my-paper
@@ -13,9 +13,11 @@ description: >-
   self-review before journal submission, not a public referee report.
 ---
 
-# Review my paper
+# review-my-paper
 
 Internal review of a manuscript. Default: Macartan's own papers, before sending to a journal or coauthors. The output is a usable review plus a punch list, not a free-form essay.
+
+Save this page and point your AI at it (for example, if you use Cursor, put it under `~/.cursor/skills/review-my-paper/SKILL.md`).
 
 Source for the critique stance: [How to critique](https://macartan.github.io/teaching/how-to-critique). Language bar: `write-like-mac`.
 

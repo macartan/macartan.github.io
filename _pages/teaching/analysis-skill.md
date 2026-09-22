@@ -1,0 +1,100 @@
+---
+layout: page
+permalink: /teaching/analysis-skill
+title: analysis-skill
+nav: false
+nav_order: 4
+name: analysis-skill
+description: >-
+  Write a self-contained Quarto analysis.qmd (HTML, toc, code folding) with
+  housekeeping, helpers, data prep, one subsection per table/figure, appendix
+  then extras, and export of objects plus LaTeX-ready assets. Structure chunks
+  so a locked draft can later become a replicateEverything study repo. Use when
+  creating or rewriting analysis.qmd, data_prep.qmd, paper-replication notebooks,
+  or when the user mentions analysis-skill, structure_analysis, make_*/format_*,
+  or replicateEverything-compatible analysis files.
+---
+
+# analysis-skill
+
+Save this page and point your AI at it (for example, if you use Cursor, put it under `~/.cursor/skills/analysis-skill/SKILL.md`).
+
+Author a **single self-contained `analysis.qmd`** that is the working analysis for a paper. Do **not** create a `replicateEverything` repo, a parallel `replication.yml`, or a one-file-per-table layout on day one.
+
+Write the qmd so a **later** helper can extract a locked version into `code/`, `outputs/`, and `replication.yml`. Identifiability lives in the qmd (chunk labels, object names, `rep:` markers). Yaml is for a frozen deposit, not a moving draft.
+
+If a `replicateEverything` skill or `AI.md` is available, read it before promising deposit-repo details. This skill governs the **authoring** layout only.
+
+## Map of this file
+
+| Section | Use it for |
+|---------|------------|
+| Output files | What to create (and what not to) |
+| Quarto YAML | HTML options |
+| Section order | Notebook spine |
+| Item anatomy | One table/figure unit |
+| Code style | Packages and helpers |
+| Data (hard) | Privacy and Stata NA quirks |
+| Later conversion | Locked deposit only |
+
+A human can skim **Section order** and **Item anatomy**. An agent should follow the full spine end to end.
+
+---
+
+## Output files
+
+| File | When |
+|------|------|
+| `<stem>_analysis.qmd` | Always. One notebook for the paper. |
+| `<stem>_data_prep.qmd` | When cleaning is substantial (multiple sources, long recodes). The analysis file still has a data section that runs or sources prep. |
+| `assets/` | When the paper is LaTeX: `tab_<n>_<handle>.tex`, `fig_<n>_<handle>.png` |
+| `<stem>_analysis.Rdata` | Always at the end: tables/figures as named objects |
+
+Do not write `replication.yml` unless the user asks for a locked deposit.
+
+## Quarto YAML
+
+Use HTML with `toc`, `code-fold`, `code-tools`, and `embed-resources`.
+
+## Section order
+
+1. Housekeeping (`pacman`, switches, labels, seed, paths)
+2. Helper functions (mechanics only; specifications stay at the item)
+3. Data (`make_prep_*`; separate `*_data_prep.qmd` if substantial)
+4. Paper tables/figures — one subsection per item
+5. Appendix — own section; each item a subsection
+6. Additional analyses — only if clearly relevant; parallel outcomes together
+7. Export — `assets/` and `<stem>_analysis.Rdata`
+
+## Item anatomy
+
+Each item has:
+
+1. An HTML `<!-- rep: -->` comment (`id`, `type`, optional `parents` / `paper` / `label` / `description`)
+2. A `make-<id>` chunk that creates `<id>_df` (or models)
+3. A `format-<id>` chunk that creates display object `<id>`
+
+Do not use a displayed `rep` code fence.
+
+Omit `parents` on roots. Never write `parents: []`.
+
+Naming: `tab_<n>_<handle>` / `fig_<n>_<handle>` in paper order.
+
+## Code style
+
+- Comment the code; separate `make_*` from `format_*`
+- Clustered OLS: current CRAN `estimatr` with `lm_robust(..., clusters = cluster_id, se_type = "stata")` (`"stata"` is faster than default HC2)
+- HTML model tables: prefer `texreg::htmlreg(..., doctype = FALSE)` (works well with `lm_robust`); wrap with `knitr::asis_output()`
+- LaTeX assets: `texreg::texreg()`
+- Do not use `modelsummary` for these tables
+- Compatible with replicateEverything later; do not ship `run_replication()` in the analysis file
+
+## Data (hard)
+
+Never print or upload respondent-level rows or IDs. Aggregates only.
+
+Treat Stata `x != k` as true when `x` is NA.
+
+## Later conversion
+
+Harvest `rep` markers and `make-*` / `format-*` chunks into `replication.yml` and `code/<id>.R` only after the analysis is locked. Deposit-repo mapping (later, locked drafts only) may live in a companion `reference.md` next to this skill when present.

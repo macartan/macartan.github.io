@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /teaching/write-like-mac
-title: Write like Mac
+title: write-like-mac
 nav: false
 nav_order: 4
 name: write-like-mac
@@ -13,7 +13,9 @@ description: >-
   or when the user asks to write like Mac or write-like-mac.
 ---
 
-Distilled from [How to write](/teaching/how-to-write). Prefer later edits the user adds to this file over this baseline.
+Distilled from [How to write](https://macartan.github.io/teaching/how-to-write). Prefer later edits the user adds to this file over this baseline.
+
+Save this page and point your AI at it (for example, if you use Cursor, put it under `~/.cursor/skills/write-like-mac/SKILL.md`).
 
 ## Core aim
 

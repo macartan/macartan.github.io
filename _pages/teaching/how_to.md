@@ -13,12 +13,13 @@ nav_order: 4
 * <a href="/teaching/how-to-write">How to write</a>
 
 
-# AI skills
+# ai skills
 
 Save a skill page and point your AI at it (for example, if you use Cursor, put it under `~/.cursor/skills/<name>/SKILL.md`).
 
-* <a href="/teaching/write-like-mac">Write like Mac</a> — prose style (<a href="https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/write-like-mac.md" download="SKILL.md">download</a>)
-* <a href="/teaching/review-my-paper">Review my paper</a> — internal review with a punch list (<a href="https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/review-my-paper.md" download="SKILL.md">download</a>)
+* <a href="/teaching/write-like-mac">write-like-mac</a> — prose style (<a href="https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/write-like-mac.md" download="SKILL.md">download</a>)
+* <a href="/teaching/review-my-paper">review-my-paper</a> — internal review with a punch list (<a href="https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/review-my-paper.md" download="SKILL.md">download</a>)
+* <a href="/teaching/analysis-skill">analysis-skill</a> — self-contained Quarto analysis notebooks (<a href="https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/analysis-skill.md" download="SKILL.md">download</a>)
 
 
 # Graduate school
