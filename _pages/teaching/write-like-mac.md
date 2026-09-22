@@ -94,9 +94,14 @@ Good: *Two comparisons can each produce an apparent gain. They are easy to confu
 
 ## Math (Markdown / Quarto / Rmd)
 
-- Inline: `$x$`. Display (single line): `$$y = \beta x + \varepsilon$$`
+- Inline: `$x$`. Display (single line):
+
+$$
+y = \beta x + \varepsilon
+$$
+
 - Multiline / aligned: `\begin{align}...\end{align}` or `$$\begin{aligned}...\end{aligned}$$`
-- Introduce symbols in prose: *We use $x$ to denote…*
+- Introduce symbols in prose: *We use* $x$ *to denote…*
 - Probability operator: `\Pr(` not bare `Pr(` in math mode
 
 ## References and links
@@ -146,7 +151,7 @@ Example phrases (adapt; do not copy blindly):
 
 When the reader must follow an algorithm on numbers, walk the arithmetic. Do not only report the result.
 
-- Show the calculation: $\delta_+=\min(1-0.2,0.6)=0.6$, not only $\delta_+=0.6$
+- Show the calculation: $\delta_{+}=\min(1-0.2,0.6)=0.6$, not only $\delta_{+}=0.6$
 - Name both branches (plus and minus)
 - Say who is assigned, and to what
 - Keep the updated state explicit after each step
