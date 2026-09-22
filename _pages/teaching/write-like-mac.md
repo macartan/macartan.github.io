@@ -6,12 +6,13 @@ nav: false
 nav_order: 4
 name: write-like-mac
 description: >-
-  Draft and revise academic prose in this style: clear structure, heavy
+  Draft and revise academic prose in this style: clear structure, clear
   signposting, formal US English. Relatively clipped but not opaque; intuition
   for important or hard ideas is critical; never obscure. Scholarly text: sober
-  modest claims. Recommendation letters: more effusive, superlatives welcome.
-  Use when writing papers, theses, memos, reports, recommendation letters,
-  README prose, or when the user asks to write like Mac or write-like-mac.
+  modest claims. Recommendation letters: can be more effusive.
+  Use when writing papers, memos, reports, documentation, 
+  or when the user asks to write like Mac or write-like-mac. If used for in papers
+  use red or other highlighting / track changes if edits go beyond 3 - 4 words. 
 ---
 
 Distilled from [How to write](https://macartan.github.io/teaching/how-to-write). Prefer later edits the user adds to this file over this baseline.
@@ -20,9 +21,9 @@ Save this page and point your AI at it (for example, if you use Cursor, put it u
 
 ## Core aim
 
-Communicate **findings** faithfully, not the **process** of arriving at them. Make it easy for readers to understand the work quickly. Never make things seem more complicated than they are.
+Communicate **findings** faithfully, clarify **method** but do not focus on **process** of arriving at conclusions. Make it easy for readers to understand the work quickly. Never make things seem more complicated than they need be.
 
-**Scholarly prose** is relatively clipped but not opaque: short sentences, concrete nouns, plain verbs. State claims up front; let specifics do the work. Intuition for important or hard ideas is critical; never obscure. **End with a point**—what the reader should take away—not only procedural wrap-up.
+**Scholarly prose** is relatively clipped but not opaque: short sentences, concrete nouns, plain verbs. State claims up front; let specifics do the work. Intuition for important or hard ideas is critical; never obscure. **End with a point**—what the reader should take away—not only procedural wrap-up. 
 
 For recommendation letters, see **Recommendation letters** below (more effusive; different rules).
 
@@ -35,7 +36,7 @@ For recommendation letters, see **Recommendation letters** below (more effusive;
 5. **Discussion** — robustness, mechanisms, heterogeneity, cases
 6. **Conclusion** — recap, caveats, implications, new agendas
 
-For single-authored work, **I** is fine; **we** only when it implicates the reader or discipline (*we see from this figure…*). Prefer *I argue* over *this paper argues*.
+Voice: For single-authored work, **I** is fine; **we** only when it implicates the reader or discipline (*we see from this figure…*). Prefer *I argue* over *this paper argues*.
 
 ## Findings first
 
@@ -46,7 +47,7 @@ For single-authored work, **I** is fine; **we** only when it implicates the read
 
 ## Signposting
 
-Social science writing is not literary writing. Signpost heavily.
+Social science writing is not literary writing. Signpost heavily. Assume readers will not read linearly.
 
 - Open each section with its purpose; close with a brief recap when useful
 - **One core idea per paragraph.** The first line signals that idea; split if there are two
@@ -62,7 +63,7 @@ Understated and precise. Let substance carry weight.
 - Ban *important* / *importantly* as empty intensifiers (also *crucial*, *critical*, *key* when they add no content)
 - Avoid *proves*, *demonstrates conclusively*, *necessarily*, *always*, *transformative*, *groundbreaking*, *novel* unless strictly warranted
 - Prefer concrete nouns and verbs over stacked modifiers
-- Hedge when appropriate: *may*, *can*, *suggests*, *is consistent with*, *under these conditions*
+- Err on the side of modesty when that is all that is warrented: *may*, *can*, *suggests*, *is consistent with*, *under these conditions*
 - Report null and negative results plainly
 
 When editing scholarly text, strip empty intensifiers and replace with specifics. Do **not** apply these sobriety rules to recommendation letters.
@@ -91,11 +92,17 @@ When editing scholarly text, strip empty intensifiers and replace with specifics
 Bad: *Two comparisons can each produce an apparent gain, and they are easy to confuse.*
 Good: *Two comparisons can each produce an apparent gain. They are easy to confuse.*
 
-**Emphasis:** italics sparingly; never ALL CAPS. Do not call an empirical claim *my theory*. Failure to reject the null is not proof of no effect.
+* **Emphasis:** italics sparingly; never ALL CAPS. 
+
+* Do not call an empirical claim *my theory*. 
+
+* **Inferences** Failure to reject the null is not proof of no effect.
 
 ## Math (Markdown / Quarto / Rmd)
 
-- Inline: `$x$`. Display (single line):
+- Inline: `$x$` is $x$. 
+
+- Display (single line) `$$y = \beta x + \varepsilon$$` is:
 
 $$
 y = \beta x + \varepsilon
@@ -107,9 +114,13 @@ $$
 
 ## References and links
 
-- Verify every citation before using it; do not invent sources
-- Include a URL when one exists (prefer DOI or other stable links)
-- If a source cannot be verified, flag it for the user rather than citing it
+
+- Verify every citation in text
+- If lib/ filder exists and access available, save cited papers in lib file
+- Make sure .bib files include a URL when one exists (prefer DOI or other stable links)
+- If a cited source cannot be verified, flag it for the user
+- Specific citations should have pages or sections indicated; verify when possible and flag when not
+
 
 ## By section
 
@@ -127,40 +138,23 @@ $$
 
 **Abstracts.** Problem or context → what you show → implication or scope.
 
-**Essays and commentary.** Shorter paragraphs; one idea each; metaphor sparingly; close with a call to action for the field.
+## Other document types
+
+**Essays and commentary.** Shorter paragraphs; one idea each; metaphor sparingly; close with focus on what can be done.
 
 **Short memos.** Clipped factual tone: claim first, evidence second. Enumerate stakes (*I see two gains.*). End with a point for the decision, not only next steps.
 
-## Recommendation letters
-
-Letters are more effusive than scholarly text: warm, forceful advocacy grounded in specifics.
-
-- Strong support in the first sentence (*I write in strong support of…*, *I recommend in the strongest terms*)
-- Superlatives are welcome when fair; *important* / *crucial* / *key* are fine for the candidate or their work
-- Pair praise with evidence (papers, designs, fieldwork, collegial behavior)
-- Cover fit: benefit to the candidate and, when relevant, to the home unit
-- Structure: opening → candidate → project/research → fit (enumerate stakes) → close with recommendation, offer of more information, and a substantive final point
-- Fellowship/postdoc letters are often one page; faculty job letters are longer, with named papers and pipeline
-
-Example phrases (adapt; do not copy blindly):
-
-- *We were excited to hire him as about the only candidate I have ever encountered who did deep ethnographic field work and advanced formal theory and was skilled in network analysis.*
-- *It has been wonderful having him in our group and we would re-hire him in a flash.*
-- *I have no doubt he will be an inspiring teacher and a fabulous colleague.*
+**Documentation.** Such as for packages, projects: Clear, emphasize intuition. Not overly terse. Plenty of cross references between sections, pointers to further reading and related documents. Boxes and similar to highlight bid / central ideas.
 
 ## Hand-holding quantitative walks
 
 When the reader must follow an algorithm on numbers, walk the arithmetic. Do not only report the result.
 
 - Show the calculation: $\delta_{+}=\min(1-0.2,0.6)=0.6$, not only $\delta_{+}=0.6$
-- Name both branches (plus and minus)
-- Say who is assigned, and to what
 - Keep the updated state explicit after each step
 - Give probabilities as a computed ratio, then the fraction
 - One step per stretch of prose; finish the pair before the next
-- Captions may restate the assignment consequence of each $\delta$
 
-When editing a numerical walk-through, keep that structure. Tighten grammar only; do not collapse a worked example into a one-line result.
 
 ## Phrases that fit
 
@@ -177,7 +171,7 @@ Use when natural, not as filler:
 - *We highlight three.* / *First,… Second,… Third,…*
 - *In practice, however, a common strategy is…*
 
-Subsection titles can be claims (*Misunderstood selection.*), not only labels.
+Subsection titles can be claims, not only labels.
 
 ## Phrases to avoid (scholarly prose)
 
@@ -189,13 +183,6 @@ Subsection titles can be claims (*Misunderstood selection.*), not only labels.
 - Vague *implications for policy and practice* without saying what follows
 - Author notes in the manuscript; comma-*and* second clauses
 
-## Drafting process
-
-1. Clarify claim, audience, and genre before polishing style
-2. Draft inside out: core results → strategy → intro and conclusion
-3. Write a bad draft, then tighten
-4. Cut flab and de-duplicate
-5. Keep author notes out of the manuscript
 
 ## Output checklist
 
@@ -214,10 +201,5 @@ Subsection titles can be claims (*Misunderstood selection.*), not only labels.
 
 - [ ] Claims calibrated; no empty intensifiers; sober tone
 - [ ] Math uses `$` / `$$`
-- [ ] Quantitative walks show arithmetic, both branches, assignment, and updated state
 - [ ] References verified; URLs where available
 
-**Recommendation letters only**
-
-- [ ] Warm, effusive advocacy backed by specifics
-- [ ] Enthusiastic recommendation plus a substantive closing point
