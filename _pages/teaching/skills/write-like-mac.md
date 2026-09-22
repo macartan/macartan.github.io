@@ -9,7 +9,7 @@ description: >-
   Draft and revise academic prose in this style: clear structure, clear
   signposting, formal US English. Relatively clipped but not opaque; intuition
   for important or hard ideas is critical; never obscure. Scholarly text: sober
-  modest claims. Recommendation letters: can be more effusive.
+  modest claims. 
   Use when writing papers, memos, reports, documentation,
   or when the user asks to write like Mac or write-like-mac. If used in papers,
   use red or other highlighting / track changes if edits go beyond 3 - 4 words.
@@ -26,7 +26,6 @@ Communicate **findings** faithfully, clarify **method** but do not focus on **pr
 
 **Scholarly prose** is relatively clipped but not opaque: short sentences, concrete nouns, plain verbs. State claims up front; let specifics do the work. Intuition for important or hard ideas is critical; never obscure. **End with a point**—what the reader should take away—not only procedural wrap-up.
 
-For recommendation letters, see **Recommendation letters** below (more effusive; different rules).
 
 ## Default structure (empirical work)
 
@@ -166,7 +165,7 @@ Prefer figures over tables when the same claim can be shown visually. Keep displ
 **Figures**
 
 - Prefer **ggplot2** where possible
-- Maximize the **information-to-ink** ratio: cut chartjunk; let the data dominate
+- Maximize the **information-to-ink** ratio: cut chartjunk; let the data dominate; theme_bw() default
 - Prefer **confidence intervals** (or other clear uncertainty displays) over point estimates alone
 - Prefer **facets** when comparing subgroups, outcomes, or specifications side by side would help
 - Self-explanatory: a reader should grasp the claim without hunting through the text
@@ -191,22 +190,6 @@ Prefer figures over tables when the same claim can be shown visually. Keep displ
 
 **Documentation.** Such as for packages, projects: Clear, emphasize intuition. Not overly terse. Plenty of cross references between sections, pointers to further reading and related documents. Boxes and similar to highlight big / central ideas.
 
-## Recommendation letters
-
-Letters can be more effusive than scholarly text: warm, forceful advocacy grounded in specifics.
-
-- Clarify strength of support in the first sentence (*I write in strong support of…*, *I recommend in the strongest terms*)
-- Superlatives are welcome when fair; *important* / *crucial* / *key* are fine for the candidate or their work
-- Check praise is backed by evidence (papers, designs, fieldwork, collegial behavior)
-- Cover fit: benefit to the candidate and, when relevant, to the home unit
-- Structure: opening → candidate → project/research → fit (enumerate stakes) → close with recommendation, offer of more information, and a substantive final point
-- Fellowship/postdoc letters are often one page; faculty job letters are longer, with named papers and pipeline
-
-Example phrases (adapt; do not copy blindly):
-
-- *We were excited to hire him as about the only candidate I have ever encountered who did deep ethnographic field work and advanced formal theory and was skilled in network analysis.*
-- *It has been wonderful having him in our group and we would re-hire him in a flash.*
-- *I have no doubt he will be an inspiring teacher and a fabulous colleague.*
 
 ## Hand-holding quantitative walks
 
@@ -262,7 +245,3 @@ Use when natural, not as filler:
 - [ ] Tables and figures self-explanatory; figures preferred where apt
 - [ ] References verified; URLs where available
 
-**Recommendation letters only**
-
-- [ ] Warm, effusive advocacy backed by specifics
-- [ ] Enthusiastic recommendation plus a substantive closing point
