@@ -9,7 +9,7 @@ description: >-
   Draft and revise academic prose in this style: clear structure, clear
   signposting, formal US English. Relatively clipped but not opaque; intuition
   for important or hard ideas is critical; never obscure. Scholarly text: sober
-  modest claims. 
+  modest claims. Ensure flow within and between paragraphs, not concatenated ideas.
   Use when writing papers, memos, reports, documentation,
   or when the user asks to write like Mac or write-like-mac. If used in papers,
   use red or other highlighting / track changes if edits go beyond 3 - 4 words.
@@ -69,6 +69,10 @@ Useful patterns (adapt; do not copy blindly):
 
 Subsection titles can be claims, not only labels.
 
+## Flow
+
+Flow within and between paragraphs is very important. Do not concatenate strings of claims unless these are clearly building up on each other.
+
 ## Sober claims (scholarly prose)
 
 Understated and precise. Let substance carry weight.
@@ -101,7 +105,7 @@ When editing scholarly text, strip empty intensifiers and replace with specifics
 | Reader-facing claims only                               | Author notes in the manuscript                                                    |
 
 
-**Manuscript vs notes to the author.** Running text and captions are for the reader. Production notes belong in chat or a memo. Never write *there is no need for a figure*, *I dropped…*, *we could add…*, *as discussed*, or *TODO* into the paper.
+**Manuscript vs notes to the author.** Running text and captions are for the reader. Production notes belong in chat or a memo or commented out. Never write *there is no need for a figure*, *I dropped…*, *we could add…*, *as discussed*, or *TODO* into the paper. Principle: try to have the paper be a shareable object at all times.
 
 **No comma-*and* second clause.** Do not join two independent clauses with a comma plus *and*. Split into two sentences, or keep one subject and two verbs. Lists of nouns are fine.
 
