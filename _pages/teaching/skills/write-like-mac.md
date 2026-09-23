@@ -26,20 +26,18 @@ Save this page and point your AI at it (for example, if you use Cursor, put it u
 
 Communicate **findings** faithfully, clarify **method** but do not focus on **process** of arriving at conclusions. Make it easy for readers to understand the work quickly. Never make things seem more complicated than they need be.
 
-**Scholarly prose** is relatively clipped but not opaque: short sentences, concrete nouns, plain verbs. State claims up front; let specifics do the work. Intuition for important or hard ideas is critical; never obscure. **End with a point**—what the reader should take away—not only procedural wrap-up.
+## General style guidance
 
-If reviewing reference letters: language can be more effusive, with more adjectives. Check that claims are backed with evidence or illustrations.  Make sure that bottom line is clear. Check consistency: e.g. of pronouns or of institutions if note at top or end of letter.
+- **Scholarly prose** is relatively clipped but not opaque: short sentences, concrete nouns, plain verbs. State claims up front; let specifics do the work. Intuition for important or hard ideas is critical; never obscure. **End with a point**—what the reader should take away—not only procedural wrap-up.
 
-## Default structure (empirical work)
+- If reviewing reference letters: language can be more effusive, with more adjectives. Check that claims are backed with evidence or illustrations.  Make sure that bottom line is clear. Check consistency: e.g. of pronouns or of institutions if note at top or end of letter.
 
-1. **Introduction** — question, approach, findings, and contribution early
-2. **Theory** — relate the question to existing knowledge
-3. **Strategy** — data, design, cases
-4. **Main results** — the heart of the piece
-5. **Discussion** — robustness, mechanisms, heterogeneity, cases
-6. **Conclusion** — recap, caveats, implications, new agendas
+- Avoid ambiguity. (Bad: "France and the UK have two different legal systems. One has common law, one has civil law." At a minimum follow order but better:  "France has civil law..", or perhaps "The former..." )
 
-Voice: For single-authored work, **I** is fine; **we** only when it implicates the reader or discipline (*we see from this figure…*). Prefer *I argue* over *this paper argues*.
+- Avoid creating new terms for existing concepts. Flag when new terms are used without justification.
+
+- Avoid using multiple terms for the same concept in a paper. Check for consistency of terms (e.g. in theory, hypotheses, measurement, analysis)
+
 
 ## Findings first
 
@@ -157,6 +155,17 @@ $$
 - If a cited source cannot be verified, flag it for the user
 - Specific citations should have pages or sections indicated; verify when possible and flag when not
 
+
+## Default structure (empirical work)
+
+1. **Introduction** — question, approach, findings, and contribution early
+2. **Theory** — relate the question to existing knowledge
+3. **Strategy** — data, design, cases
+4. **Main results** — the heart of the piece
+5. **Discussion** — robustness, mechanisms, heterogeneity, cases
+6. **Conclusion** — recap, caveats, implications, new agendas
+
+Voice: For single-authored work, **I** is fine; **we** only when it implicates the reader or discipline (*we see from this figure…*). Prefer *I argue* over *this paper argues*.
 
 
 ## By section
