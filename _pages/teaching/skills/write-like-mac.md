@@ -18,6 +18,8 @@ description: >-
 
 Distilled from [How to write](https://macartan.github.io/teaching/how-to-write). Prefer later edits the user adds to this file over this baseline.
 
+The skill is intended primarily to assess writing and spot problems with writing. It can also be used for drafting but any original/first cut text should be reviewed. Use for reports or tecnnical documents; discourage for papers or letters of recommendations. For these offer to structure a new text with sections and pointers but not prose.
+
 Save this page and point your AI at it (for example, if you use Cursor, put it under `~/.cursor/skills/write-like-mac/SKILL.md`).
 
 ## Core aim
@@ -26,6 +28,7 @@ Communicate **findings** faithfully, clarify **method** but do not focus on **pr
 
 **Scholarly prose** is relatively clipped but not opaque: short sentences, concrete nouns, plain verbs. State claims up front; let specifics do the work. Intuition for important or hard ideas is critical; never obscure. **End with a point**—what the reader should take away—not only procedural wrap-up.
 
+If reviewing reference letters: language can be more effusive, with more adjectives. Check that claims are backed with evidence or illustrations.  Make sure that bottom line is clear. Check consistency: e.g. of pronouns or of institutions if note at top or end of letter.
 
 ## Default structure (empirical work)
 
@@ -44,6 +47,8 @@ Voice: For single-authored work, **I** is fine; **we** only when it implicates t
 - Do not build suspense and reveal conclusions only at the end
 - Every section must justify itself on first contact; readers may not read linearly
 - Abstracts emphasize what was **found**, not only what was **done** (nulls are findings)
+
+
 
 ## Signposting
 
@@ -79,33 +84,35 @@ When editing scholarly text, strip empty intensifiers and replace with specifics
 
 ## Style rules
 
-| Do | Avoid |
-|----|--------|
-| Short sentences, tight prose | Flab, flower (*much ink has been spilled*) |
-| Formal register; no contractions | *it's*, *that's*, *should've* |
-| Present tense for what the text does | *I will describe…* / *I described…* for structure |
-| Past tense for past events | |
-| Modest claims; substance not hype | Superlatives in papers; exaggeration |
-| Concrete nouns and verbs | Empty *important*, *crucial*, *key*, *critical* |
+
+| Do                                                      | Avoid                                                                             |
+| ------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Short sentences, tight prose                            | Flab, flower (*much ink has been spilled*)                                        |
+| Formal register; no contractions                        | *it's*, *that's*, *should've*                                                     |
+| Present tense for what the text does                    | *I will describe…* / *I described…* for structure                                 |
+| Past tense for past events                              |                                                                                   |
+| Modest claims; substance not hype                       | Superlatives in papers; exaggeration                                              |
+| Concrete nouns and verbs                                | Empty *important*, *crucial*, *key*, *critical*                                   |
 | Correct *affect*/*effect*, *fewer*/*less*, *its*/*it's* | *Prove* for empirical claims; *no detectable effect* when you mean *not detected* |
-| US spelling | UK spellings unless requested |
-| Italics for math symbols in prose | Starting a sentence with math |
-| First, second (not firstly, secondly) | *aforementioned*; repeated points across paragraphs |
-| `$…$` / `$$…$$` for math | `\(` `\)` `\[` `\]` except multiline align |
-| Reader-facing claims only | Author notes in the manuscript |
+| US spelling                                             | UK spellings unless requested                                                     |
+| Italics for math symbols in prose                       | Starting a sentence with math                                                     |
+| First, second (not firstly, secondly)                   | *aforementioned*; repeated points across paragraphs                               |
+| `$…$` / `$$…$$` for math                                | `\(` `\)` `\[` `\]` except multiline align                                        |
+| Reader-facing claims only                               | Author notes in the manuscript                                                    |
+
 
 **Manuscript vs notes to the author.** Running text and captions are for the reader. Production notes belong in chat or a memo. Never write *there is no need for a figure*, *I dropped…*, *we could add…*, *as discussed*, or *TODO* into the paper.
 
 **No comma-*and* second clause.** Do not join two independent clauses with a comma plus *and*. Split into two sentences, or keep one subject and two verbs. Lists of nouns are fine.
 
-Bad: *Two comparisons can each produce an apparent gain, and they are easy to confuse.*
-Good: *Two comparisons can each produce an apparent gain. They are easy to confuse.*
+Bad: *Two comparisons are at play, and they are easy to confuse.*
+Good: *There are two separate comparisons.* or  *Two comparisons are at play. Make sure not to confuse them*  
 
-* **Emphasis:** italics sparingly; never ALL CAPS.
+- **Emphasis:** italics sparingly; never ALL CAPS.
+- Do not call an empirical claim *my theory*.
+- **Inferences.** Failure to reject the null is not proof of no effect.
 
-* Do not call an empirical claim *my theory*.
 
-* **Inferences.** Failure to reject the null is not proof of no effect.
 
 ## Small style points
 
@@ -114,16 +121,18 @@ Common slip-ups to catch when drafting or editing:
 - Past tense of *lead* is *led*, not *lead*
 - *lose* / *loose*; *advise* / *advice*; *its* / *it's* (prefer *its* and *it is*; never *it's* in formal prose)
 - *fewer* for countables, *less* for mass
+- *expertise* not *expertize* 
 - *Question begging* is a technical term; use it only if you mean it
 - Cut hyperbolic adjectives (*vast*, *massive*, *extraordinary*) unless the claim is literal
 - Prefer *Unsurprisingly* over *It should therefore come as no surprise that*
 - Do not write *no measurable / detectable effect* when you only mean that you have not detected one
 - *Necessary* / *necessarily* is a strong claim; reserve it for when you mean it
 
+
+
 ## Math (Markdown / Quarto / Rmd)
 
 - Inline: `$x$` is $x$.
-
 - Display (single line) `$$y = \beta x + \varepsilon$$` is:
 
 $$
@@ -134,6 +143,8 @@ $$
 - Introduce symbols in prose: *We use* $x$ *to denote…*
 - Probability operator: `\Pr(` not bare `Pr(` in math mode
 
+
+
 ## References and links
 
 - Verify every citation in text
@@ -141,6 +152,8 @@ $$
 - Make sure .bib files include a URL when one exists (prefer DOI or other stable links)
 - If a cited source cannot be verified, flag it for the user
 - Specific citations should have pages or sections indicated; verify when possible and flag when not
+
+
 
 ## By section
 
@@ -182,6 +195,8 @@ Prefer figures over tables when the same claim can be shown visually. Keep displ
 - About two significant digits (e.g. 0.12, not 0.000121313245)
 - A bottom-line sentence in or under the caption is often useful: *Table shows no evidence that…*
 
+
+
 ## Other document types
 
 **Essays and commentary.** Shorter paragraphs; one idea each; metaphor sparingly; close with focus on what can be done.
@@ -189,7 +204,6 @@ Prefer figures over tables when the same claim can be shown visually. Keep displ
 **Short memos.** Clipped factual tone: claim first, evidence second. Enumerate stakes (*I see two gains.*). End with a point for the decision, not only next steps.
 
 **Documentation.** Such as for packages, projects: Clear, emphasize intuition. Not overly terse. Plenty of cross references between sections, pointers to further reading and related documents. Boxes and similar to highlight big / central ideas.
-
 
 ## Hand-holding quantitative walks
 
@@ -199,6 +213,8 @@ When the reader must follow an algorithm on numbers, walk the arithmetic. Do not
 - Keep the updated state explicit after each step
 - Give probabilities as a computed ratio, then the fraction
 - One step per stretch of prose; finish the pair before the next
+
+
 
 ## Phrases that fit
 
@@ -215,6 +231,8 @@ Use when natural, not as filler:
 - *We highlight three.* / *First,… Second,… Third,…*
 - *In practice, however, a common strategy is…*
 
+
+
 ## Phrases to avoid (scholarly prose)
 
 - Empty *important* / *importantly* / *crucially* / *it is worth noting that*
@@ -224,6 +242,8 @@ Use when natural, not as filler:
 - *Interestingly,* / *A growing body of literature*
 - Vague *implications for policy and practice* without saying what follows
 - Author notes in the manuscript; comma-*and* second clauses
+
+
 
 ## Output checklist
 
@@ -244,4 +264,3 @@ Use when natural, not as filler:
 - [ ] Math uses `$` / `$$`
 - [ ] Tables and figures self-explanatory; figures preferred where apt
 - [ ] References verified; URLs where available
-
