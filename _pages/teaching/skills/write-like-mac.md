@@ -6,31 +6,29 @@ nav: false
 nav_order: 4
 name: write-like-mac
 description: >-
-  Draft and revise academic prose in this style: clear structure, clear
-  signposting, formal US English. Relatively clipped but not opaque; intuition
-  for important or hard ideas is critical; never obscure. Scholarly text: sober
-  modest claims. Ensure flow within and between paragraphs, not concatenated ideas.
-  Use when writing papers, memos, reports, documentation,
-  or when the user asks to write like Mac or write-like-mac. If used in papers,
-  use red or other highlighting / track changes if edits go beyond 3 - 4 words.
+  Assess and revise prose for clarity, structure, signposting, flow, and calibrated
+  claims in Mac's style. Also draft reports and technical documentation. For
+  academic papers and recommendation letters, default to outlines and substantive
+  guidance rather than original prose. Use when the user asks to write like Mac
+  or invokes write-like-mac.
 ---
 
 
 Distilled from [How to write](https://macartan.github.io/teaching/how-to-write). Prefer later edits the user adds to this file over this baseline.
 
-The skill is intended primarily to assess writing and spot problems with writing. It can also be used for drafting but any original/first cut text should be reviewed. Use for reports or tecnnical documents; discourage for papers or letters of recommendations. For these offer to structure a new text with sections and pointers but not prose.
-
-Save this page and point your AI at it (for example, if you use Cursor, put it under `~/.cursor/skills/write-like-mac/SKILL.md`).
+Use this skill primarily to assess and revise writing. It may also draft reports and technical documentation, but treat original drafts as provisional and tell the user that they require review. For papers and recommendation letters, offer an outline with sections and substantive pointers rather than drafting prose, unless the user explicitly requests otherwise.
 
 ## Core aim
 
 Communicate **findings** faithfully, clarify **method** but do not focus on **process** of arriving at conclusions. Make it easy for readers to understand the work quickly. Never make things seem more complicated than they need be.
 
+When editing a paper, use tracked changes or colored highlighting for changes longer than three or four words when the format supports it. Otherwise, provide a clearly marked change log or describe the substantive edits separately.
+
 ## General style guidance
 
 - **Scholarly prose** is relatively clipped but not opaque: short sentences, concrete nouns, plain verbs. State claims up front; let specifics do the work. Intuition for important or hard ideas is critical; never obscure. **End with a point**—what the reader should take away—not only procedural wrap-up.
 
-- If reviewing reference letters: language can be more effusive, with more adjectives. Check that claims are backed with evidence or illustrations.  Make sure that bottom line is clear. Check consistency: e.g. of pronouns or of institutions if note at top or end of letter.
+- When reviewing a recommendation letter or helping structure one, language can be more effusive, with more adjectives. Check that claims are backed by evidence or illustrations. Make sure that the bottom line is clear. Check consistency, including pronouns and institution names. Do not draft original letter prose by default.
 
 - Avoid ambiguity. (Bad: "France and the UK have two different legal systems. One has common law, one has civil law." At a minimum follow order but better:  "France has civil law..", or perhaps "The former..." )
 
@@ -82,7 +80,7 @@ Understated and precise. Let substance carry weight.
 - Err on the side of modesty when that is all that is warranted: *may*, *can*, *suggests*, *is consistent with*, *under these conditions*
 - Report null and negative results plainly
 
-When editing scholarly text, strip empty intensifiers and replace with specifics. Do **not** apply these sobriety rules to recommendation letters.
+When editing scholarly text, strip empty intensifiers and replace with specifics (if available; with track changes). Soften these sobriety rules to recommendation letters.
 
 ## Style rules
 
@@ -237,7 +235,7 @@ Use when natural, not as filler:
 - *In the remainder of the [paper/section], I…*
 - *The utility of this result depends on the plausibility of…*
 - *Observe that…* / *Note that…* / *It follows that…*
-- *This is distinct from… though that's part of it.*
+- *This is distinct from… though that is part of it.*
 - *Less well understood is…* / *This leaves open…*
 - *The key feature here is not X but rather Y.*
 - *Put differently: can…?*
