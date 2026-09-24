@@ -16,13 +16,15 @@ description: >-
 
 Distilled from [How to write](https://macartan.github.io/teaching/how-to-write). Prefer later edits the user adds to this file over this baseline.
 
+This file combines correctness checks with Mac's house style. Treat explicit user, venue, genre, and project conventions as controlling. Apply the house preferences below by default, but do not present them as universal grammar rules or rewrite clear prose merely to enforce them.
+
 Use this skill primarily to assess and revise writing. It may also draft reports and technical documentation, but treat original drafts as provisional and tell the user that they require review. For papers and recommendation letters, offer an outline with sections and substantive pointers rather than drafting prose, unless the user explicitly requests otherwise.
 
 ## Core aim
 
 Communicate **findings** faithfully, clarify **method** but do not focus on **process** of arriving at conclusions. Make it easy for readers to understand the work quickly. Never make things seem more complicated than they need be.
 
-When editing a paper, use tracked changes or colored highlighting for changes longer than three or four words when the format supports it. Otherwise, provide a clearly marked change log or describe the substantive edits separately.
+When editing a paper, preserve the author's meaning and voice. Use tracked changes or colored highlighting for substantial changes when the format supports it and the user wants visible markup. Otherwise, use a patch, change log, or separate description of substantive edits.
 
 ## General style guidance
 
@@ -88,13 +90,13 @@ When editing scholarly text, strip empty intensifiers and replace with specifics
 | Do                                                      | Avoid                                                                             |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | Short sentences, tight prose                            | Flab, flower (*much ink has been spilled*)                                        |
-| Formal register; no contractions                        | *it's*, *that's*, *should've*                                                     |
+| Formal register; house default is no contractions       | Casual contractions unless the chosen voice uses them                            |
 | Present tense for what the text does                    | *I will describe…* / *I described…* for structure                                 |
 | Past tense for past events                              |                                                                                   |
 | Modest claims; substance not hype                       | Superlatives in papers; exaggeration                                              |
 | Concrete nouns and verbs                                | Empty *important*, *crucial*, *key*, *critical*                                   |
 | Correct *affect*/*effect*, *fewer*/*less*, *its*/*it's* | *Prove* for empirical claims; *no detectable effect* when you mean *not detected* |
-| US spelling                                             | UK spellings unless requested                                                     |
+| US spelling as the house default                        | Mixing spelling systems within one document                                      |
 | Italics for math symbols in prose                       | Starting a sentence with math                                                     |
 | First, second (not firstly, secondly)                   | *aforementioned*; repeated points across paragraphs                               |
 | `$…$` / `$$…$$` for math                                | `\(` `\)` `\[` `\]` except multiline align                                        |
@@ -103,7 +105,7 @@ When editing scholarly text, strip empty intensifiers and replace with specifics
 
 **Manuscript vs notes to the author.** Running text and captions are for the reader. Production notes belong in chat or a memo or commented out. Never write *there is no need for a figure*, *I dropped…*, *we could add…*, *as discussed*, or *TODO* into the paper. Principle: try to have the paper be a shareable object at all times.
 
-**No comma-*and* second clause.** Do not join two independent clauses with a comma plus *and*. Split into two sentences, or keep one subject and two verbs. Lists of nouns are fine.
+**Comma-*and* clauses (house preference).** Prefer splitting independent clauses when that makes the sentence shorter or prevents two distinct ideas from being buried together. A clear, grammatical compound sentence is acceptable; do not split it mechanically.
 
 Bad: *Two comparisons are at play, and they are easy to confuse.*
 Good: *There are two separate comparisons.* or  *Two comparisons are at play. Make sure not to confuse them*  
@@ -148,7 +150,7 @@ $$
 ## References and links
 
 - Verify every citation in text
-- If lib/ folder exists and access available, save cited papers in lib file
+- If a `lib/` folder exists, note useful lawful holdings that are absent. Do not download or save papers unless the user asks and licensing and repository policy permit it.
 - Make sure .bib files include a URL when one exists (prefer DOI or other stable links)
 - If a cited source cannot be verified, flag it for the user
 - Specific citations should have pages or sections indicated; verify when possible and flag when not
@@ -163,7 +165,7 @@ $$
 5. **Discussion** — robustness, mechanisms, heterogeneity, cases
 6. **Conclusion** — recap, caveats, implications, new agendas
 
-Voice: For single-authored work, **I** is fine; **we** only when it implicates the reader or discipline (*we see from this figure…*). Prefer *I argue* over *this paper argues*.
+Voice (house default): For single-authored work, **I** is fine; **we** only when it implicates the reader or discipline (*we see from this figure…*). Prefer *I argue* over *this paper argues*, unless venue or author convention differs.
 
 
 ## By section
@@ -184,12 +186,12 @@ Voice: For single-authored work, **I** is fine; **we** only when it implicates t
 
 ## Tables and figures
 
-Prefer figures over tables when the same claim can be shown visually. Keep displays in the main body when they carry the argument; do not park them at the end by default.
+Prefer figures over tables when visual form materially improves comprehension. Use a table when readers need exact values or the figure would obscure them. Keep displays in the main body when they carry the argument; do not park them at the end by default.
 
 **Figures**
 
-- Prefer **ggplot2** where possible
-- Maximize the **information-to-ink** ratio: cut chartjunk; let the data dominate; theme_bw() default
+- Prefer **ggplot2** where it fits the existing workflow
+- Maximize the **information-to-ink** ratio: cut chartjunk and let the data dominate; `theme_bw()` is the house starting point, not a requirement
 - Prefer **confidence intervals** (or other clear uncertainty displays) over point estimates alone
 - Prefer **facets** when comparing subgroups, outcomes, or specifications side by side would help
 - Self-explanatory: a reader should grasp the claim without hunting through the text
@@ -202,9 +204,9 @@ Prefer figures over tables when the same claim can be shown visually. Keep displ
 - Coefficients in rows with clear, consistent variable names
 - Standard errors in parentheses (or say what uncertainty measure you show)
 - State the dependent variable when relevant
-- Report *N* and *R²* (or analogues) when available
-- About two significant digits (e.g. 0.12, not 0.000121313245)
-- A bottom-line sentence in or under the caption is often useful: *Table shows no evidence that…*
+- Report *N* and fit statistics when they help readers assess the analysis; do not add an irrelevant *R²* merely to complete a template
+- Use consistent precision appropriate to the estimand and uncertainty; about two significant digits is often a useful default, not a rule for every quantity
+- A bottom-line sentence in or under the caption can help when it remains accurate out of context. Otherwise describe what is shown and leave interpretation to the text.
 
 
 
@@ -252,7 +254,7 @@ Use when natural, not as filler:
 - *It is well known that…* → cite or show
 - *Interestingly,* / *A growing body of literature*
 - Vague *implications for policy and practice* without saying what follows
-- Author notes in the manuscript; comma-*and* second clauses
+- Author notes in the manuscript; overloaded compound sentences
 
 
 
@@ -263,8 +265,8 @@ Use when natural, not as filler:
 - [ ] Main claim visible without reading to the end
 - [ ] Section and paragraph signposting present
 - [ ] One core idea per paragraph; no repetition or empty phrases
-- [ ] No contractions; formal but plain language
-- [ ] No comma-*and* second clause
+- [ ] Contractions match the chosen register; formal scholarly prose uses the house default of none
+- [ ] Compound sentences are clear; split comma-*and* clauses when doing so improves focus
 - [ ] Structure matches genre
 - [ ] Closing point present
 - [ ] No author notes in the manuscript

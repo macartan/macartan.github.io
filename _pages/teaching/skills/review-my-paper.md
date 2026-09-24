@@ -28,7 +28,9 @@ Source for the critique stance: [How to critique](https://macartan.github.io/tea
 
 **Never upload data to an AI without permission.** Do not attach, paste, or send respondent-level files, extracts, identifiers, or raw tables to any model API. If code and data are on this machine and permission is given to *run locally*, run locally. In the conversation, report **aggregates only** (coefficients, CIs, *N*, grouped percentages). Do not print `head(df)`, dump data frames, or include IDs, names, or other individual records.
 
-If either permission is missing, say so and stop that part of the work. Review the text you are allowed to see; skip data/code execution.
+Store data outside folders the AI can browse as project material. Analysis code may read an external path when local use is authorized. Classify access as follows: public/non-sensitive material may be handled normally; sensitive but locally authorized material gets minimum-necessary access and aggregate-only output; restricted or unauthorized material is not inspected; credentials and direct identifiers are never exposed. Local reading is distinct from external transmission.
+
+If either permission is missing, say so and stop that part of the work. Review the text you are allowed to see; skip unauthorized data/code execution.
 
 ## Output
 
@@ -55,7 +57,7 @@ A human can skip to **Output** to see the deliverable, or **Who does what** to a
 
 ## Start here
 
-Do not begin the review until these are answered. If the user already stated them, do not re-ask.
+Ask for these when they are not already answered. Manuscript permission is required. Journal and revision appetite improve calibration but do not block a general review: if either is unspecified, proceed under a general scholarly standard, state that choice, and avoid journal-specific claims.
 
 Ask:
 
@@ -67,7 +69,7 @@ Also confirm, if not already clear:
 - Permission to read the manuscript in this session.
 - Permission to run code locally on data (yes / no / not available).
 
-**Journal** sets the bar (identification, contribution, length, audience). **Revision appetite** caps advice: if light, do not propose a new design, a new question, or a rewrite of the theory. Flag fatal problems either way; do not hide them. If the appetite is light, mark big structural fixes as *park for later* rather than smuggling them in as copy-edits.
+**Journal** sets the bar (identification, contribution, length, audience). **Revision appetite** prioritizes advice rather than suppressing material problems: if light, do not make a new design, question, or theory rewrite the main recommendation. Flag fatal problems either way. Mark large structural fixes as *park for later* rather than smuggling them in as copy-edits.
 
 Then work. Do not wait for extra preferences.
 
@@ -99,7 +101,7 @@ These are expected every time the files are available. Do them; do not only reco
 
 - Extract the paper's claims (main, secondary, policy, novelty).
 - Check every reference (existence, authors, year, title, venue, DOI/URL). Flag working papers that now have a published version, broken links, and citations that do not support the sentence they sit in.
-- Search for prominent missing literature on the same question, treatment, or estimand.
+- Search for prominent missing literature on the same question, treatment, or estimand within a stated, proportionate search scope. Do not imply that any search establishes completeness.
 - Check factual claims (institutional facts, dates, magnitudes attributed to others, what cited papers actually found).
 - Map each major empirical or theoretical claim to the analysis that is supposed to justify it. Flag gaps, overclaiming, and underclaiming.
 - If code is available: read it. If data may be used locally: run what is needed for verification; compare paper numbers to output; review sample construction, identification in the code, clustering/SEs, and obvious pipeline errors.
@@ -114,7 +116,7 @@ These are expected every time the files are available. Do them; do not only reco
 - Decide which big points to act on; the punch list is advice.
 - Confirm that flagged literature actually belongs (AI will over-include).
 - Ethical or fieldwork judgments that are not in the text.
-- Final call on identification: whether you believe the design.
+- Make the final substantive judgment about whether the design's assumptions are credible. The AI should still identify assumptions, diagnostics, and threats rather than deferring the analysis wholesale.
 - Anything that would require uploading files or data that has  not been authorized.
 
 In the review, keep a short **For the human** list: items the AI cannot settle.
@@ -123,7 +125,7 @@ In the review, keep a short **For the human** list: items the AI cannot settle.
 
 ## Workflow
 
-1. **Permissions and the two questions.** Stop if manuscript permission is missing.
+1. **Permissions and calibration questions.** Stop if manuscript permission is missing. If journal or revision appetite is unspecified, state the general standard and continue.
 2. **Read the whole paper once** for the question, approach, findings, and contribution. Write the one-paragraph summary before listing faults.
 3. **Run the required checks** below. Work from claims, not from a line-by-line edit of the prose.
 4. **Select themes.** A useful review has a few big points, not twenty. Use the working checklist to choose themes; do not dump the checklist into the review.
@@ -142,13 +144,13 @@ Do all of these. If a check cannot be done, say why (no bibliography, no code, n
 - Every cited work exists. Authors, year, title, venue match.
 - URLs/DOIs work where given. Add a note if a cited working paper has a stable published version.
 - In-text citations match the bibliography (year, author count, missing entries, orphans).
-- Do not invent citations. If a source cannot be verified, flag it. If a project includes a lib/ folder check whether cite is in there and add if not (and if possible)
+- Do not invent citations. If a source cannot be verified, flag it. Report the coverage of the reference check. If a project includes a `lib/` folder, note lawful missing holdings when useful; do not download papers or mutate the library unless the user asks and repository policy permits it.
 
 ### 2. Literature connections
 
 - The sentence the citation supports is actually what that work claims.
 - Positioning is accurate: not "first" if it is not; not a straw man of prior work.
-- Prominent work on the same treatment, outcome, or estimand is not missing.
+- Search proportionately for prominent work on the same treatment, outcome, or estimand. State databases or sources, search terms or boundaries, and the date when the result matters; describe findings as candidates rather than a complete literature census.
 - Theory is consistent with findings the paper itself cites.
 - Connections can be wrong in either direction: over-claiming novelty, or citing a paper as support when it cuts against the claim.
 
@@ -162,7 +164,7 @@ Do all of these. If a check cannot be done, say why (no bibliography, no code, n
 
 - List the paper's claims (abstract, intro, results, conclusion, policy).
 - For each: what result, table, figure, or derivation is supposed to bear it?
-- Flag: claim with no result; result that does not imply the claim; wrong estimand; mechanisms asserted not tested; policy implications that do not follow; "no effect" from a noisy null; robustness that does not address the actual threat.
+- Flag: claim with no result; result that does not imply the claim; wrong estimand; mechanisms asserted not tested; policy implications that do not follow; "no effect" from a noisy null; robustness that does not address the actual threat. Assess null claims using interval width and substantively relevant effect sizes; use power, minimum detectable effects, or equivalence tests only when appropriate and available.
 - Ask whether the empirical model matches the theory, and whether rival interpretations are admitted.
 
 ### 5. Code and data (when available)
@@ -188,6 +190,8 @@ Flag (with a fix when cheap):
 - Tables/figures that are not self-explanatory.
 
 Do not turn the review into a style essay. Language issues are usually **small** unless they hide the contribution or overclaim the result. Overclaiming is a **big** point.
+
+Review is read-only by default. Do not edit the manuscript, bibliography, code, `lib/`, or project structure unless the user also asks for changes.
 
 ---
 
@@ -279,7 +283,7 @@ Use this while reading to **choose themes**. Do not paste it into the review. Fr
 
 ## Do not
 
-- Start without journal, revision appetite, and manuscript permission.
+- Start without manuscript permission. If journal or revision appetite is unspecified, do not pretend to apply a journal-specific bar.
 - Upload manuscript or data without permission.
 - Dump microdata or identifiers into the chat.
 - Write a discussant talk (three clever asides). This is a review with a punch list.

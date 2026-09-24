@@ -29,7 +29,7 @@ Save this page and point your AI at it (for example, if you use Cursor, put it u
 
 This skill is **mostly feedback and options**, not silent scaffolding.
 
-1. **Ask questions before doing anything.** Gather intent before inspecting or changing files.
+1. Gather missing intent before proposing changes. Read-only inspection is fine when the user has supplied a path and asked for a check.
 2. Prefer **findings → options → approval** over creating or moving folders.
 3. **Do not** jump straight into creating directories, rewriting trees, or mass moves.
 4. **Wait for explicit user approval** before any file-system changes (mkdir, move, delete, overwrite).
@@ -55,10 +55,10 @@ If the user already answered intent and path in the same message, do not re-ask 
 | Posture | Ask first; propose; wait |
 | Mode | Make vs check (as advice modes) |
 | Project stem | Naming key for folders / `.Rproj` (not inside `analysis.qmd`) |
-| Structure | Canonical tree (gh + Overleaf) |
+| Structure | House-default tree (gh + Overleaf) |
 | File roles | Memos and stub files; **outputs vs assets**; Overleaf `figs_tabs/` |
 | Security | Data and confidential material |
-| Layout rules | Deep trees; one current copy; **archive + here::** |
+| Layout rules | Coherent grouping; one current copy; **Git, archive + here::** |
 | Make (propose) | What a setup option may include |
 | Check (report) | Checklist and report format |
 
@@ -95,7 +95,7 @@ Ask for the stem early if it is not obvious from the folder name. Prefer one ste
 
 ## Structure
 
-Canonical layout. Names are filesystem-safe. Human-readable titles noted where they differ.
+House layout. Treat this as a default, not a universal requirement: preserve a coherent existing structure when changing it would add churn without a concrete benefit. Names are filesystem-safe. Human-readable titles are noted where they differ.
 
 ```text
 project_name/                         # AI-accessible project root (often = stem)
@@ -111,7 +111,6 @@ project_name/                         # AI-accessible project root (often = stem
 │   ├── assets/                       # stable inputs: bib.bib, images/, fixed compile inputs
 │   ├── outputs/                      # tables, figures, objects produced when code is rerun
 │   ├── saved/                        # intermediate saved rds or similar (optional companion to outputs/)
-│   ├── overlay/                      # optional; role TBD — ask before inventing contents
 │   ├── <stem>.Rproj
 │   ├── paper.qmd
 │   ├── analysis.qmd                  # aligned with analysis-skill
@@ -127,7 +126,7 @@ project_name/                         # AI-accessible project root (often = stem
 
 The GitHub stub folder may use the repo name instead of the literal `project_stub_gh`. The Overleaf stub may use `<stem>_overleaf` instead of `project_stub_overleaf`. Internal layout matters more than the literal folder name; keep stem-based naming consistent when you choose a variant.
 
-**Not in this tree:** respondent-level data, credentials, restricted IRB materials, or other confidential files. Record their path in `README.md`.
+**Not in this tree:** respondent-level data, credentials, restricted IRB materials, or other confidential files. Document how authorized users configure the data path. Do not put a sensitive absolute path, username, credential, or restricted server detail in a public README; use a redacted locator, environment variable, or ignored local configuration where appropriate.
 
 ---
 
@@ -150,14 +149,13 @@ The GitHub stub folder may use the repo name instead of the literal `project_stu
 | `analysis.qmd` | Working analysis; follow [analysis-skill](https://macartan.github.io/teaching/skills/analysis-skill) |
 | `presentation.qmd` | Revealjs presentation |
 | `<stem>.Rproj` | RStudio / Posit project file |
-| `README.md` | How to open the project; **path to data outside** this tree |
+| `README.md` | How to open the project; safe instructions for configuring the data path outside this tree |
 | `outputs/` | **Rerun products:** tables, figures, and other objects produced when code is rerun. Analysis writes here. |
 | `assets/` | **Stable inputs:** `bib.bib`, static images for compilation, other files that mostly do **not** change on rerun. Not for regenerated `tab_*.tex` / `fig_*.png`. |
 | `saved/` | Intermediate `.rds` (or similar) when useful alongside `outputs/` |
 | `lib/` | Cited papers / readings as used |
 | `code/` | Extra scripts outside the main `analysis.qmd` spine |
-| `archive/` | Older versions only |
-| `overlay/` | Optional; role not defined — ask the user before inventing contents |
+| `archive/` | Meaningful snapshots: submissions, shared/received versions, or other identified states |
 
 ### Overleaf stub (`project_stub_overleaf/`)
 
@@ -188,27 +186,28 @@ Same distinction as in analysis-skill. On Overleaf, regenerated products land in
 
 ## Security and confidentiality
 
-1. **Data and sensitive material must not be available to the AI.** Keep them elsewhere; put the path in `README.md`.
-2. Do not copy microdata, identifiers, credentials, or restricted documents into the AI-accessible root or into chat.
-3. If confidential material may already be in the workspace, **alert the user** and do not dig into those files unless explicitly authorized for a local, non-uploading task.
-4. Never upload project data or manuscripts to an external model without permission.
+1. Store respondent-level and sensitive data outside folders the AI can browse as project material. Analysis code may read an external path when the user authorizes local processing.
+2. Classify access: public/non-sensitive material may be handled normally; sensitive but locally authorized material gets minimum-necessary access and aggregate-only output; restricted or unauthorized material is not inspected; credentials and direct identifiers are never exposed.
+3. Do not copy microdata, identifiers, credentials, or restricted documents into the AI-accessible root or into chat.
+4. If confidential material may already be in the workspace, **alert the user** and do not inspect it unless explicitly authorized for the local task.
+5. Local reading is distinct from external transmission. Never upload project data or manuscripts to an external service without permission.
 
 ---
 
 ## Layout rules
 
-- **Deep rather than wide.** Few files per folder; nested by job.
+- Group files by job, but add nesting only when it improves navigation or access control. Avoid both crowded roots and needless directory depth.
 - **Only one current copy** of each key document. No `paper_final.qmd` beside `paper.qmd`.
-- **Archive** older versions as `YYYYMMDD_name.xxx` under `archive/`.
-- Live file = plain name; history only in `archive/`.
+- Use Git for routine source history. Use `archive/` for meaningful snapshots such as submissions, externally shared versions, received files, or states that must remain easy to identify outside Git.
+- Live file = plain name. Name archived snapshots `YYYYMMDD_name.xxx` or with another unambiguous version label.
 
 ### Archiving and paths (`here::`)
 
-When moving a live file into `archive/` (or relocating folders), **paths must still work from the new location**.
+When relocating live folders, paths must still work. An archived snapshot need not remain executable unless reproducibility of that snapshot is an explicit requirement.
 
 - Prefer the R [**here**](https://here.r-lib.org/) package: resolve project-root-relative paths with `here::here(...)` (and Quarto/R scripts that call `here`) so roots stay valid after moves.
 - Avoid hard-coded absolute paths and fragile `../` chains that break when a file’s depth changes.
-- After an archive or restructure, check that data paths in `README.md`, analysis housekeeping, and any TeX `\input` / figure paths still resolve.
+- After a restructure—and after archiving when the snapshot is meant to run—check that configured data paths, analysis housekeeping, and any TeX `\input` / figure paths still resolve.
 - When proposing archive/cleanup options, call out path risk and favor `here::`-based roots in the recommended fix.
 
 ---
@@ -218,10 +217,10 @@ When moving a live file into `archive/` (or relocating folders), **paths must st
 After questions, propose—do not create yet—something like:
 
 1. AI-accessible root name, **project stem**, and parent path; confirmation that data stay outside.
-2. `memos/` with the four starter files (thin placeholders only).
+2. `memos/` with the starter files that have an immediate role; do not create empty placeholders merely to complete the tree.
 3. GitHub stub folders, including clear `outputs/` vs `assets/`.
 4. Thin stubs: `<stem>.Rproj`, `paper.qmd`, `analysis.qmd` (pointer or spine from analysis-skill), `presentation.qmd`, `README.md` with a **Data** path placeholder outside the tree.
-5. Optional: Overleaf stub (`paper.tex`, `appendix.tex`, `assets/bib.bib`, `figs_tabs/`) and whether to include `overlay/` (only if the user knows what it is for) and `saved/`.
+5. Optional: Overleaf stub (`paper.tex`, `appendix.tex`, `assets/bib.bib`, `figs_tabs/`) and `saved/` when needed. Add other folders only when their role is defined.
 6. Path convention: prefer `here::` for R/Quarto roots so later archives do not break relative paths.
 
 Present as **options** when more than one layout is reasonable (e.g. stub folder name, whether to add Overleaf, whether to migrate an existing mess). **Create files only after the user approves** an option.
@@ -236,7 +235,7 @@ Inspect against the standard. Return findings and cleanup options. Restructure o
 
 ### Checklist
 
-- [ ] AI-accessible root vs data location; README records external data path
+- [ ] AI-accessible root vs data location; README safely explains external data-path configuration without exposing credentials or sensitive infrastructure details
 - [ ] Project stem clear and used consistently (`.Rproj`, stub names if stem-based); analysis file is plain `analysis.qmd`
 - [ ] No apparent confidential/microdata/secrets in the AI tree (if suspected: alert)
 - [ ] `memos/` with `onboarding.md`, `notes_for_coauthors.md`, `to_do.md` (and `review.md` if a review exists)
@@ -244,7 +243,8 @@ Inspect against the standard. Return findings and cleanup options. Restructure o
 - [ ] `outputs/` used for rerun products; `assets/` for stable inputs (flag swaps or dumps in the wrong place)
 - [ ] If Overleaf stub present: `paper.tex`, `appendix.tex`, `assets/`, `figs_tabs/`; TeX figs/tabs from `figs_tabs/`; sync from gh `outputs/` → `figs_tabs/` and gh `assets/` → Overleaf `assets/`; neither is the analysis write target
 - [ ] Expected folders present as needed: `archive/`, `lib/`, `code/`, `assets/`, `outputs/`, `saved/`
-- [ ] Deep rather than flat; one current copy of each key document; dated archives
+- [ ] Files grouped coherently without needless depth; one current copy of each key document; meaningful snapshots archived; routine history in Git
+- [ ] `.gitignore`, package environment, generated-output/versioning policy, and access instructions fit the project
 - [ ] Paths robust under archive/move (favor `here::`); no broken relative roots after past moves
 - [ ] `analysis.qmd` compatible with analysis-skill (or gaps noted)
 
@@ -284,4 +284,4 @@ Wait for the user to choose an option before applying file-system changes.
 - Create multiple live versions of the same paper or analysis file
 - Invent substantive paper content when scaffolding
 - Quietly ignore suspected confidential material—alert the user
-- Archive or move files in ways that break relative paths without fixing roots (`here::`)
+- Archive an executable snapshot or move live files in ways that break required paths without fixing roots (`here::`)
