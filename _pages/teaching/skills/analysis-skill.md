@@ -42,7 +42,8 @@ If a `replicateEverything` skill or `AI.md` is available, read it before promisi
 | Data (hard) | Privacy and Stata NA quirks |
 | Later conversion | Locked deposit only |
 
-A human can skim **Section order** and **Item anatomy**. An agent should follow the full spine end to end.
+A human can be able to skim **Section order** and **Item anatomy** of this skill. 
+An agent should read the full skil end to end.
 
 ---
 
@@ -56,22 +57,50 @@ A human can skim **Section order** and **Item anatomy**. An agent should follow 
 | `assets/` | Things that mostly **do not** change when code is rerun: `bib.bib`, static images for paper compilation, other stable inputs. Do **not** put regenerated table/figure files here. |
 | `outputs/analysis.RData` | At the end, save the final table and figure objects together here so they can all be loaded with one command. Give every saved object a clear name. |
 
-Do not write `replication.yml` unless the user asks for a locked deposit.
+If  paper is written straight in tex rather than .qmd then also output a key_numbers.tex for use in \input{outputs/key_numbers.tex defining quantities that can be used directly
+
+Do not write `replication.yml` for replicateEverything unless the user requests explicitly.
+
+## Paths
+
+Quarto compiles a qmd from the folder that contains it. 
+Set data and output paths relative to that folder. 
+Do not use tryCatch, knitr::current_input, or other logic to discover the project root.
 
 ## Quarto YAML
 
-Use HTML with `toc`, `code-fold`, `code-tools`, and `embed-resources`. Here, **self-contained** means that the rendered HTML embeds its resources. Before embedding, check that the render does not incorporate confidential data, unintended local files, or oversized artifacts.
+Use HTML with `toc`, `code-fold`, `code-tools`, and `embed-resources`. 
+Rendered HTML should embed its resources. 
+Before embedding, check that the render does not incorporate confidential data, unintended local files, or oversized artifacts.
+
+## Git files size
+
+Check that objects created by analysis.qmd or similar are minimal in size. Always <100 mb. .gitignore any larger files.
+
 
 ## Section order
 
+0. explicit toc -- a table with a list of tables figures that are generated together with labels and link to relevant section 
 1. Housekeeping (`pacman`, switches, labels, seed, paths)
 2. Helper functions (mechanics only; specifications stay at the item)
-3. Data (`make_prep_*`; separate `data_prep.qmd` if substantial)
+3. Data (`make_prep_*`; separate `data_prep.qmd` if substantial): Note ALL data gets loaded at the top, not on the fly
 4. Paper tables/figures — one subsection per item
 5. Appendix — own section; each item a subsection
 6. Additional analyses — only if clearly relevant; parallel outcomes together
 7. Export — write regenerated tables/figures and the documented named bundle or individual serialized objects to `outputs/` (not `assets/`)
 
+## Principle
+
+After running housekeeping / helpers / data all subsequent modules shold be runnable in any order; objects should not get redefined creating path dependency
+
+## tidy
+
+Use tidyverse functions where possible; ggplot2 for plotting; pipes with R native |>
+Create few intermediary objects
+
+## we know where we are
+Avoid creating directories and extensive use of catch: assume we know what folders we are working from and have 
+basic structures set up. Ask if not.
 ## Item anatomy
 
 Each item has:
@@ -88,15 +117,26 @@ Naming: `tab_<n>_<handle>` / `fig_<n>_<handle>` in paper order.
 
 ## Code style
 
-Readable by humans first.
+Readable by humans first:
 
-- Comment clearly
+- Comment clearly and often
+- Organize chunks by function
 - Use functions for efficiency, but avoid deep wrapping of functions in functions
-- Expose code where key decisions are made (for example the analytic model)
+- *Expose* code where key decisions are made (for example the analytic model); use icons to draw attention to key decision points ([!])
+- Fold code chunks (never echo = FALSE). However at key decision points highlight key lines witj non executable code display. e.g.
+
+  ```
+  main_results <- lm_robust(...)
+  ```
 - Separate `make_*` from `format_*`
-- **Hand-run and tests.** Aim so a user can run the notebook up to some point, then execute a particular analysis interactively (not always possible; aim for it). Prefer entry points that are one-liners—especially for batch helpers. When you introduce a function, put a small test or demo call immediately after it (commented out is fine) so readers can see it in action—for example, after `implement_analyses`, generate a tiny dataset and run `implement_analyses(temp_df)`.
+- **Hand-run and tests.** Aim so a user can run the notebook up to a given point, then execute a particular analysis interactively (not always possible; aim for it). Prefer entry points that are one-liners—especially for batch helpers. When you introduce a function, put a small test or demo call immediately after it (commented out is fine) so readers can see it in action—for example, after `implement_analyses`, generate a tiny dataset and run `implement_analyses(temp_df)`.
+
+
+
+General:
+
 - `pacman::p_load()` is an acceptable house default: it loads installed packages and installs missing ones. Because installation mutates an incomplete environment, record package versions or use a lockfile when exact reproducibility matters; do not silently install packages in a locked or offline workflow.
-- Choose standard errors from the design. For clustered OLS, `estimatr::lm_robust(..., clusters = cluster_id, se_type = "stata")` is a house default when that finite-sample correction is appropriate. State the clustering level and correction, and do not choose an estimator merely because it is faster.
+- Check standard errors match the design. For clustered OLS, `estimatr::lm_robust(..., clusters = cluster_id, se_type = "stata")` is a house default when that finite-sample correction is appropriate. State the clustering level and correction, and do not choose an estimator merely because it is faster.
 - HTML model tables: house default `texreg::htmlreg(..., doctype = FALSE)` (works well with `lm_robust`), wrapped with `knitr::asis_output()`.
 - LaTeX table/figure files for the paper: house default `texreg::texreg()` (and figure writes) into `outputs/`, not `assets/`.
 - Keep the project's established table package when it produces correct, stable output. Do not introduce `modelsummary` by default in this house layout, but do not rewrite working tables solely to remove it.
@@ -112,6 +152,10 @@ At the end, save the final table and figure objects together in `outputs/analysi
 
 Before handoff, render in a clean session when feasible, confirm that expected outputs were regenerated, and report any analysis that could not run because inputs or packages were unavailable.
 
-## Later conversion
+## Acknowledgements
+
+If a model is editing and not simply reviewing text then top of anlaysis.qmd (or other) should indicate that: code edited by LLM (model)
+
+## Later conversion for replicateEverthing
 
 Harvest `rep` markers and `make-*` / `format-*` chunks into `replication.yml` and `code/<id>.R` only after the analysis is locked. Deposit-repo mapping (later, locked drafts only) may live in a companion `reference.md` next to this skill when present.

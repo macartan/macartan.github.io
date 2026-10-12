@@ -22,7 +22,9 @@ Use this skill primarily to assess and revise writing. It may also draft reports
 
 ## Core aim
 
-Communicate **findings** faithfully, clarify **method** but do not focus on **process** of arriving at conclusions. Make it easy for readers to understand the work quickly. Never make things seem more complicated than they need be.
+Communicate **findings** faithfully, clarify **method** but: remove scaffolding,  do not focus on **process** of arriving at conclusions. Remove scaffolidng particular do not have notes to coauthors except if commented; do not have text positioning statements relative to past drafts; e.g. no need for "not" clarificatory statements unless readers would have thought otherwise.
+
+Make it easy for readers to understand the work quickly.  Never make things seem more complicated than they need be.
 
 When editing a paper, preserve the author's meaning and voice. Use tracked changes or colored highlighting for substantial changes when the format supports it and the user wants visible markup. Otherwise, use a patch, change log, or separate description of substantive edits.
 
@@ -106,7 +108,11 @@ When editing scholarly text, strip empty intensifiers and replace with specifics
 **Manuscript vs notes to the author.** Running text and captions are for the reader. Production notes belong in chat or a memo or commented out. Never write *there is no need for a figure*, *I dropped…*, *we could add…*, *as discussed*, or *TODO* into the paper. Principle: try to have the paper be a shareable object at all times.
 
 **Comma-*and* clauses (house preference).** Prefer splitting independent clauses when that makes the sentence shorter or prevents two distinct ideas from being buried together. A clear, grammatical compound sentence is acceptable; do not split it mechanically.
+example:
+not: "The contribution is real, and it is not the contribution the introduction claims" 
+rather: "The real contribution is different to what the introduction claims"
 
+example:
 Bad: *Two comparisons are at play, and they are easy to confuse.*
 Good: *There are two separate comparisons.* or  *Two comparisons are at play. Make sure not to confuse them*  
 
@@ -114,9 +120,24 @@ Good: *There are two separate comparisons.* or  *Two comparisons are at play. Ma
 - Do not call an empirical claim *my theory*.
 - **Inferences.** Failure to reject the null is not proof of no effect.
 
+## that
+
+don't skip 'that' if it creates ambiguity or makes things too terse:
+
+Bad: The body still argues the result the abstract has already given up -
+Better: "The body still claims a result that the abstract has now dropped"-
+
+## Avoid effect-first constructions; esepcially with negation
+
+Bad: The decline in Y was not the effect X was designed to produce.
+Better: X was not designed to produce a decline in Y
+
+## Passive voice
+
+Avoid the passive voice. Agents first please.
 
 
-## Small style points
+## Other small style points
 
 Common slip-ups to catch when drafting or editing:
 
@@ -183,6 +204,16 @@ Voice (house default): For single-authored work, **I** is fine; **we** only when
 **Abstracts.** Problem or context → what you show → implication or scope.
 
 **Appendix.** Put material that supports the main text without belonging in it: reconciliation reports (deviations from analysis plans), proofs of formal results, robustness checks, and tabular analogues of figures shown in the main text. Keep appendices short. Letter sections (*Appendix A*, *Appendix B*), do not number them. Every appendix section should be referenced from the main text. Prefer figures in the main text; tables that only back those figures can live in the appendix.
+
+## Appendix
+
+Appendix should have its own table of contents
+Make sure that tables and figures are well placed in subsections and don't bunch
+Order should largely track the order of the paper
+A PAP reconciliation section makes sense as a last item in an appendix: A PAP reconciliation section can usefully have two tables
+ 1. a list of all the preregitered objects and a column saying where these are reported and a columns saying if the analysis has changed
+ 2. a list of objects in the paper and an indication of where they were re-registered or are novel
+ in cases in which anlaysis differs from planned, with good reason, report the planned analysis here if possible
 
 ## Tables and figures
 

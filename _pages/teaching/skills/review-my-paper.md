@@ -176,6 +176,9 @@ Permission gate applies.
 - Pipeline: merges, filters, unit of analysis, silent row loss. Do not print microdata.
 - If code exists but data may not be used, review the code and say which claims were not re-executed.
 
+Consistency of analysis and paper is extremely important: if the paper says clustered standard errors and there is no clustering we nned to reconcile: consult the uers; same for weights, fixed effects, model choice; inconsistencies require input and a decision.
+
+
 ### 6. Language (`write-like-mac`)
 
 Read `write-like-mac` (https://macartan.github.io/teaching/skills/write-like-mac) and apply it. This is a self-review default.
