@@ -25,7 +25,7 @@ jobs:
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.1.4'
+        ruby-version: '3.1'
     - name: Pin Bundler to match Gemfile.lock
       run: |
         gem install bundler -v 2.3.24
