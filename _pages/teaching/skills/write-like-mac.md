@@ -1,22 +1,22 @@
 ---
 layout: page
-permalink: /teaching/skills/write-like-mac
-title: write-like-mac
+permalink: /teaching/skills/writing
+title: writing-skill
 nav: false
 nav_order: 4
-name: write-like-mac
+name: writing-skill
 description: >-
   Assess and revise prose for clarity, structure, signposting, flow, and calibrated
-  claims in Mac's style. Also draft reports and technical documentation. For
+  claims. Also draft reports and technical documentation. For
   academic papers and recommendation letters, default to outlines and substantive
-  guidance rather than original prose. Use when the user asks to write like Mac
-  or invokes write-like-mac.
+  guidance rather than original prose. Use when the user asks to using writing skill 
+  (or write-like-mac).
 ---
 
 
 Distilled from [How to write](https://macartan.github.io/teaching/how-to-write). Prefer later edits the user adds to this file over this baseline.
 
-This file combines correctness checks with Mac's house style. Treat explicit user, venue, genre, and project conventions as controlling. Apply the house preferences below by default, but do not present them as universal grammar rules or rewrite clear prose merely to enforce them.
+This file combines correctness checks with house style. Apply the house preferences below by default, but do not present them as universal grammar rules or rewrite clear prose merely to enforce them.
 
 Use this skill primarily to assess and revise writing. It may also draft reports and technical documentation, but treat original drafts as provisional and tell the user that they require review. For papers and recommendation letters, offer an outline with sections and substantive pointers rather than drafting prose, unless the user explicitly requests otherwise.
 
@@ -41,7 +41,7 @@ When editing a paper, preserve the author's meaning and voice. Use tracked chang
 - Avoid using multiple terms for the same concept in a paper. Check for consistency of terms (e.g. in theory, hypotheses, measurement, analysis)
 
 
-## Findings first
+### Findings first
 
 - State main claims early (abstract, intro, section openers)
 - Do not build suspense and reveal conclusions only at the end
@@ -50,7 +50,7 @@ When editing a paper, preserve the author's meaning and voice. Use tracked chang
 
 
 
-## Signposting
+### Signposting
 
 Social science writing is not literary writing. Signpost heavily. Assume readers will not read linearly.
 
@@ -69,11 +69,11 @@ Useful patterns (adapt; do not copy blindly):
 
 Subsection titles can be claims, not only labels.
 
-## Flow
+### Flow
 
 Flow within and between paragraphs is very important. Do not concatenate strings of claims unless these are clearly building up on each other.
 
-## Sober claims (scholarly prose)
+### Sober claims (scholarly prose)
 
 Understated and precise. Let substance carry weight.
 
@@ -86,7 +86,7 @@ Understated and precise. Let substance carry weight.
 
 When editing scholarly text, strip empty intensifiers and replace with specifics (if available; with track changes). Soften these sobriety rules to recommendation letters.
 
-## Style rules
+### Style rules
 
 
 | Do                                                      | Avoid                                                                             |
@@ -120,24 +120,62 @@ Good: *There are two separate comparisons.* or  *Two comparisons are at play. Ma
 - Do not call an empirical claim *my theory*.
 - **Inferences.** Failure to reject the null is not proof of no effect.
 
-## that
+### that
 
 don't skip 'that' if it creates ambiguity or makes things too terse:
 
 Bad: The body still argues the result the abstract has already given up -
 Better: "The body still claims a result that the abstract has now dropped"-
 
-## Avoid effect-first constructions; esepcially with negation
+### Avoid effect-first constructions; especially with negation
 
 Bad: The decline in Y was not the effect X was designed to produce.
 Better: X was not designed to produce a decline in Y
 
-## Passive voice
+### Avoid passive voice
 
 Avoid the passive voice. Agents first please.
 
 
-## Other small style points
+### Hand-holding quantitative walk throughs
+
+When the reader must follow an algorithm on numbers, walk the arithmetic. Do not only report the result.
+
+- Show the calculation: $\delta_{+}=\min(1-0.2,0.6)=0.6$, not only $\delta_{+}=0.6$
+- Keep the updated state explicit after each step
+- Give probabilities as a computed ratio, then the fraction
+- One step per stretch of prose; finish the pair before the next
+
+
+### Examples of crisp phrasing
+
+Use when natural, not as filler:
+
+- *Several take-aways follow.* / *Three implications follow.*
+- *In the remainder of the [paper/section], I…*
+- *The utility of this result depends on the plausibility of…*
+- *Observe that…* / *Note that…* / *It follows that…*
+- *This is distinct from… though that is part of it.*
+- *Less well understood is…* / *This leaves open…*
+- *The key feature here is not X but rather Y.*
+- *Put differently: can…?*
+- *We highlight three.* / *First,… Second,… Third,…*
+- *In practice, however, a common strategy is…*
+
+
+
+### Examples of flabby phrasing to avoid (scholarly prose)
+
+- Empty *important* / *importantly* / *crucially* / *it is worth noting that*
+- *As mentioned above* / *It goes without saying* / *In this context* (when empty)
+- *This paper contributes to the literature by…* → *I show / I establish / We describe*
+- *It is well known that…* → cite or show
+- *Interestingly,* / *A growing body of literature*
+- Vague *implications for policy and practice* without saying what follows
+- Author notes in the manuscript; overloaded compound sentences
+
+
+### Other small style points
 
 Common slip-ups to catch when drafting or editing:
 
@@ -153,32 +191,12 @@ Common slip-ups to catch when drafting or editing:
 
 
 
-## Math (Markdown / Quarto / Rmd)
 
-- Inline: `$x$` is $x$.
-- Display (single line) `$$y = \beta x + \varepsilon$$` is:
+## Structure check
 
-$$
-y = \beta x + \varepsilon
-$$
+### Default structure (empirical work)
 
-- Multiline / aligned: `\begin{align}...\end{align}` or `$$\begin{aligned}...\end{aligned}$$`
-- Introduce symbols in prose: *We use* $x$ *to denote…*
-- Probability operator: `\Pr(` not bare `Pr(` in math mode
-
-
-
-## References and links
-
-- Verify every citation in text
-- If a `lib/` folder exists, note useful lawful holdings that are absent. Do not download or save papers unless the user asks and licensing and repository policy permit it.
-- Make sure .bib files include a URL when one exists (prefer DOI or other stable links)
-- If a cited source cannot be verified, flag it for the user
-- Specific citations should have pages or sections indicated; verify when possible and flag when not
-
-
-## Default structure (empirical work)
-
+0. Abstract
 1. **Introduction** — question, approach, findings, and contribution early
 2. **Theory** — relate the question to existing knowledge
 3. **Strategy** — data, design, cases
@@ -189,7 +207,9 @@ $$
 Voice (house default): For single-authored work, **I** is fine; **we** only when it implicates the reader or discipline (*we see from this figure…*). Prefer *I argue* over *this paper argues*, unless venue or author convention differs.
 
 
-## By section
+### By section
+
+**Abstract.** Should be absolutely clear what the paper achieves: the question, the strategy (data strategy, answer strategy), the findings. 
 
 **Introduction.** Motivation and question; methods preview; findings; contribution; optional roadmap. Open on a concrete problem or stakes, not a literature review. End with a roadmap when useful.
 
@@ -201,21 +221,32 @@ Voice (house default): For single-authored work, **I** is fine; **we** only when
 
 **Conclusion.** Recap, caveats, implications, gaps. Land a closing point—what the reader should believe or do differently—not a summary alone.
 
-**Abstracts.** Problem or context → what you show → implication or scope.
-
 **Appendix.** Put material that supports the main text without belonging in it: reconciliation reports (deviations from analysis plans), proofs of formal results, robustness checks, and tabular analogues of figures shown in the main text. Keep appendices short. Letter sections (*Appendix A*, *Appendix B*), do not number them. Every appendix section should be referenced from the main text. Prefer figures in the main text; tables that only back those figures can live in the appendix.
 
-## Appendix
+### Appendix
 
-Appendix should have its own table of contents
-Make sure that tables and figures are well placed in subsections and don't bunch
-Order should largely track the order of the paper
-A PAP reconciliation section makes sense as a last item in an appendix: A PAP reconciliation section can usefully have two tables
+* Appendix should have its own table of contents
+* Make sure that tables and figures are well placed in subsections and don't bunch
+* Order should largely track the order of the paper
+* A PAP reconciliation section makes sense as a last item in an appendix: A PAP reconciliation section can usefully have two tables
  1. a list of all the preregitered objects and a column saying where these are reported and a columns saying if the analysis has changed
  2. a list of objects in the paper and an indication of where they were re-registered or are novel
  in cases in which anlaysis differs from planned, with good reason, report the planned analysis here if possible
 
-## Tables and figures
+## Checks
+
+
+### References and links check
+
+- Verify every link in text
+- Verify every citation in text
+- If a `lib/` folder exists, note useful (lawful) holdings that are absent. Do not download or save papers unless the user asks and licensing and repository policy permit it.
+- Make sure .bib files include a URL when one exists (prefer DOI or other stable links)
+- If a cited source cannot be verified, flag it for the user
+- Specific citations should have pages or sections indicated; verify when possible and flag when not
+
+
+### Tables and figures check
 
 Prefer figures over tables when visual form materially improves comprehension. Use a table when readers need exact values or the figure would obscure them. Keep displays in the main body when they carry the argument; do not park them at the end by default.
 
@@ -240,56 +271,34 @@ Prefer figures over tables when visual form materially improves comprehension. U
 - A bottom-line sentence in or under the caption can help when it remains accurate out of context. Otherwise describe what is shown and leave interpretation to the text.
 
 
+### Math formatting check (Markdown / Quarto / Rmd)
 
-## Other document types
+- Inline use `$` : `$x$` is $x$.
+- Display (single line)  use  `$$`:  `$$y = \beta x + \varepsilon$$` is:
 
-**Essays and commentary.** Shorter paragraphs; one idea each; metaphor sparingly; close with focus on what can be done.
+$$
+y = \beta x + \varepsilon
+$$
 
-**Short memos.** Clipped factual tone: claim first, evidence second. Enumerate stakes (*I see two gains.*). End with a point for the decision, not only next steps.
+- Multiline / aligned: `\begin{align}...\end{align}` or `$$\begin{aligned}...\end{aligned}$$`
+- Introduce symbols in prose: *We use* $x$ *to denote…*
+- Probability operator: `\Pr(` not bare `Pr(` in math mode
 
-**Documentation.** Such as for packages, projects: Clear, emphasize intuition. Not overly terse. Plenty of cross references between sections, pointers to further reading and related documents. Boxes and similar to highlight big / central ideas.
+Also:
 
-## Hand-holding quantitative walks
+- check that all terms are defined before use, subscripts and superscripts used consistently, no overloading of any symbols
 
-When the reader must follow an algorithm on numbers, walk the arithmetic. Do not only report the result.
+# Other document types
 
-- Show the calculation: $\delta_{+}=\min(1-0.2,0.6)=0.6$, not only $\delta_{+}=0.6$
-- Keep the updated state explicit after each step
-- Give probabilities as a computed ratio, then the fraction
-- One step per stretch of prose; finish the pair before the next
+* **Essays and commentary.** Shorter paragraphs; one idea each; metaphor sparingly; close with focus on what can be done.
 
+* **Short memos.** Clipped factual tone: claim first, evidence second. Enumerate stakes (*I see two gains.*). End with a point for the decision, not only next steps.
 
-
-## Phrases that fit
-
-Use when natural, not as filler:
-
-- *Several take-aways follow.* / *Three implications follow.*
-- *In the remainder of the [paper/section], I…*
-- *The utility of this result depends on the plausibility of…*
-- *Observe that…* / *Note that…* / *It follows that…*
-- *This is distinct from… though that is part of it.*
-- *Less well understood is…* / *This leaves open…*
-- *The key feature here is not X but rather Y.*
-- *Put differently: can…?*
-- *We highlight three.* / *First,… Second,… Third,…*
-- *In practice, however, a common strategy is…*
+* **Documentation.** Such as for packages, projects: Clear, emphasize intuition. Not overly terse. Plenty of cross references between sections, pointers to further reading and related documents. Boxes and similar to highlight big / central ideas.
 
 
 
-## Phrases to avoid (scholarly prose)
-
-- Empty *important* / *importantly* / *crucially* / *it is worth noting that*
-- *As mentioned above* / *It goes without saying* / *In this context* (when empty)
-- *This paper contributes to the literature by…* → *I show / I establish / We describe*
-- *It is well known that…* → cite or show
-- *Interestingly,* / *A growing body of literature*
-- Vague *implications for policy and practice* without saying what follows
-- Author notes in the manuscript; overloaded compound sentences
-
-
-
-## Output checklist
+# Output checklist
 
 **All genres**
 
