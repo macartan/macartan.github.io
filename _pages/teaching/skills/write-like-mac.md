@@ -22,23 +22,12 @@ Use this skill primarily to assess and revise writing. It may also draft reports
 
 ## Core aim
 
-Communicate **findings** faithfully, clarify **method** but: remove scaffolding,  do not focus on **process** of arriving at conclusions. Remove scaffolidng particular do not have notes to coauthors except if commented; do not have text positioning statements relative to past drafts; e.g. no need for "not" clarificatory statements unless readers would have thought otherwise.
+Communicate **findings** faithfully, clarify **method** but: remove scaffolding,  do not focus on **process** of arriving at conclusions. 
+Do not have notes to coauthors or to seld in-line: either include as comments or save in `memos/`; do not have text positioning statements relative to past drafts; e.g. no need for "not" clarificatory statements unless readers would have thought otherwise. Do not make promises about future analyses of plans. Text should be self contained.
 
 Make it easy for readers to understand the work quickly.  Never make things seem more complicated than they need be.
 
-When editing a paper, preserve the author's meaning and voice. Use tracked changes or colored highlighting for substantial changes when the format supports it and the user wants visible markup. Otherwise, use a patch, change log, or separate description of substantive edits.
-
-## General style guidance
-
-- **Scholarly prose** is relatively clipped but not opaque: short sentences, concrete nouns, plain verbs. State claims up front; let specifics do the work. Intuition for important or hard ideas is critical; never obscure. **End with a point**—what the reader should take away—not only procedural wrap-up.
-
-- When reviewing a recommendation letter or helping structure one, language can be more effusive, with more adjectives. Check that claims are backed by evidence or illustrations. Make sure that the bottom line is clear. Check consistency, including pronouns and institution names. Do not draft original letter prose by default.
-
-- Avoid ambiguity. (Bad: "France and the UK have two different legal systems. One has common law, one has civil law." At a minimum follow order but better:  "France has civil law..", or perhaps "The former..." )
-
-- Avoid creating new terms for existing concepts. Flag when new terms are used without justification.
-
-- Avoid using multiple terms for the same concept in a paper. Check for consistency of terms (e.g. in theory, hypotheses, measurement, analysis)
+When editing a paper, always use tracked changes or colored highlighting for substantial changes when the format supports (not needed for spelling / grammar fixes). Otherwise, use a patch, change log (`news.md`), or separate description of substantive edits. 
 
 
 ### Findings first
@@ -48,6 +37,18 @@ When editing a paper, preserve the author's meaning and voice. Use tracked chang
 - Every section must justify itself on first contact; readers may not read linearly
 - Abstracts emphasize what was **found**, not only what was **done** (nulls are findings)
 
+
+## General style guidance
+
+- **Scholarly prose** is relatively clipped but not opaque: short sentences, concrete nouns, plain verbs. State claims up front; let specifics do the work. Intuition for important or hard ideas is critical; never obscure. **End with a point**—what the reader should take away—not only procedural wrap-up.
+
+- When reviewing a recommendation letter, language can be more effusive, with more adjectives. Check that claims are backed by evidence or illustrations. Make sure that the bottom line is clear. Check consistency, including pronouns and institution names. Do not draft original letter prose by default.
+
+- Avoid ambiguity. (Bad: "France and the UK have two different legal systems. One has common law, one has civil law." At a minimum follow order but better:  "France has civil law..", or perhaps "The former..." )
+
+- Avoid creating new terms for existing concepts. Flag when new terms are used without justification.
+
+- Avoid using multiple terms for the same concept in a paper. Check for consistency of terms (e.g. in theory, hypotheses, measurement, analysis)
 
 
 ### Signposting
