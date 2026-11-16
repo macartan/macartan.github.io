@@ -5,110 +5,39 @@ title: teaching
 description: classes, workshops, and teaching materials
 nav: false
 nav_order: 4
+section_boxes: stack
 ---
 
 Recent teaching:
 
-<div class="row mb-4">
-  <div class="col-md-6 mb-3 mb-md-0">
-    <a href="https://macartan.github.io/ci/" target="_blank" rel="noopener" class="card h-100 text-dark text-decoration-none border shadow-sm">
-      <div class="card-body">
-        <h5 class="card-title">Causal Inference and Experimental Design</h5>
-        <p class="card-text small text-muted mb-0">→ Course site</p>
-      </div>
-    </a>
-  </div>
-  <div class="col-md-6">
-    <a href="https://integrated-inferences.github.io/short-course/" target="_blank" rel="noopener" class="card h-100 text-dark text-decoration-none border shadow-sm">
-      <div class="card-body">
-        <h5 class="card-title">Qualitative and Mixed Methods short course</h5>
-        <p class="card-text small text-muted mb-0">→ Course site</p>
-      </div>
-    </a>
-  </div>
-</div>
+* [Causal Inference and Experimental Design](https://macartan.github.io/ci/)
+* [Qualitative and Mixed Methods short course](https://integrated-inferences.github.io/short-course/)
 
 ---
 
 Columbia 2003 - 2023; Humboldt 2023-
 
-<strong>Comparative Politics and the Political Economy of Development</strong>
-<ul>
- 	<li>political economy of development 
- 	<a href="../assets/pdf/PED_2004_syllabus.doc">2004</a> | 
- 	<a href="../assets/pdf/teaching/PED_2010_syllabus.pdf">2009</a> | 
- 	<a href="../assets/pdf/teaching/PED_2010_syllabus.pdf">2010</a> | 
- 	<a href="../assets/pdf/teaching/PED_2018_syllabus.pdf">2018 Syllabus</a> 
- 	(notes: <a href="../assets/pdf/teaching/PED_2018_DAGs.pdf">DAGs</a>, 
- 	<a href="../assets/pdf/teaching/PED_2018_DD.pdf">DD</a>, <a href="../assets/pdf/teaching/PED_2018_growth_notes.pdf">Growth</a>)</li>
- 	<li>senior seminar on <a href="../assets/pdf/teaching/POLINQ_2018_syllabus.pdf">Discrimination and Political Inequality</a> (2018)</li>
- 	<li>comparative politics field seminar (cp) 
- 	<a href="../assets/pdf/teaching/CP_2013_syllabus.pdf">2013 syllabus </a> | 
- 	<a href="../assets/pdf/teaching/CP_2014_Handbook.pdf">2014 CP handbook </a>| 
- 	<a href="../assets/pdf/teaching/CP_2014_Handbook.pdf">2015 CP handbook</a> (<a href="../assets/pdf/teaching/CP_2014_Handbook.bib">bib</a>)</li>
- 	
- 	<li>seminar on the study of development strategies (ssds) 
- 	2010-11  |  2013-14  |  2015-16 | <a href="/teaching/ssds-2016"> 2015-16</a> | <a href="/teaching/ssds-2023"> 2023</a>  </li>
+### Development and related
 
- 	<li>development strategies (humboldt)   <a href="/teaching/ds-hu-2023"> 2023</a>	</li>
+* political economy of development [2004](../assets/pdf/PED_2004_syllabus.doc) | [2009](../assets/pdf/teaching/PED_2010_syllabus.pdf) | [2010](../assets/pdf/teaching/PED_2010_syllabus.pdf) | [2018 Syllabus](../assets/pdf/teaching/PED_2018_syllabus.pdf) (notes: [DAGs](../assets/pdf/teaching/PED_2018_DAGs.pdf), [DD](../assets/pdf/teaching/PED_2018_DD.pdf), [Growth](../assets/pdf/teaching/PED_2018_growth_notes.pdf))
+* senior seminar on [Discrimination and Political Inequality](../assets/pdf/teaching/POLINQ_2018_syllabus.pdf) (2018)
+* comparative politics field seminar (cp) [2013 syllabus](../assets/pdf/teaching/CP_2013_syllabus.pdf) | [2014 CP handbook](../assets/pdf/teaching/CP_2014_Handbook.pdf) | [2015 CP handbook](../assets/pdf/teaching/CP_2014_Handbook.pdf) ([bib](../assets/pdf/teaching/CP_2014_Handbook.bib))
+* seminar on the study of development strategies (ssds) 2010-11 | 2013-14 | 2015-16 | [2015-16](/teaching/ssds-2016) | [2023](/teaching/ssds-2023)
+* development strategies (humboldt) [2023](/teaching/ds-hu-2023)
+* political violence [syllabus 2011](../assets/pdf/teaching/VIOLENCE_2011_syllabus.pdf) | [2010](../assets/pdf/teaching/VIOLENCE_2010_syllabus.pdf)
+* ethnic politics [syllabus 2008](../assets/pdf/teaching/ETH_2008_syllabus.pdf)
+* african civil wars in comparative perspective [syllabus 2005](../assets/pdf/teaching/CW_2005_syllabus.pdf) | [annex](../assets/pdf/teaching/CW_2005_syllabus_b.pdf)
+* african politics [syllabus 2004](../assets/pdf/teaching/AF_syllabus_2004.pdf) | [notes](../assets/pdf/teaching/AF_notes_2004.pdf)
 
- 	<li>political violence 
- 	<a href="../assets/pdf/teaching/VIOLENCE_2011_syllabus.pdf">syllabus 2011 </a>| 
- 	<a href="../assets/pdf/teaching/VIOLENCE_2010_syllabus.pdf">2010 </a></li>
+### Game theory
 
- 	<li>ethnic politics <a href="../assets/pdf/teaching/ETH_2008_syllabus.pdf">syllabus 2008</a></li>
+* w3952 formal theory and political philosophy (cp) [syllabus 2014](../assets/pdf/teaching/Phil_2014_Syllabus.pdf) | [tex](../assets/pdf/teaching/Phil_2014_tex.tex) | [bib](../assets/pdf/teaching/Phil_2014_bib.bib)
+* w4209 game theory and political theory [(2008)](../assets/pdf/teaching/GTPT_2008_syllabus.pdf) | [(2009)](../assets/pdf/teaching/GTPT_2009_syllabus.pdf) | [syllabus 2011](../assets/pdf/teaching/GTPT_2011_syllabus.pdf) | [(2010)](../assets/pdf/teaching/GTPT_2010_syllabus.pdf)
+* w4210 doing game theory [2003](../assets/pdf/teaching/GT_2003_syllabus.pdf) | [2004](../assets/pdf/teaching/GT_2004_syllabus.pdf) | [syllabus 2005](../assets/pdf/teaching/GT_2005_syllabus.pdf) | [notes](../assets/pdf/teaching/GT_2005_notes.pdf)
 
- 	<li>african civil wars in comparative perspective 
- 	<a href="../assets/pdf/teaching/CW_2005_syllabus.pdf">syllabus 2005</a> | 
- 	<a href="../assets/pdf/teaching/CW_2005_syllabus_b.pdf"> annex </a></li>
- 	
- 	<li>african politics 
- 	<a href="../assets/pdf/teaching/AF_syllabus_2004.pdf">syllabus 2004</a> | 
- 	<a href="../assets/pdf/teaching/AF_notes_2004.pdf">notes</a>
- 	</li>
+### Research seminars
 
-</ul>
-
-<strong>Game Theory</strong>
-<ul>
- 	<li>w3952 formal theory and political philosophy (cp) 
- 	<a href="../assets/pdf/teaching/Phil_2014_Syllabus.pdf"> syllabus 2014 </a>
- 	<a href="../assets/pdf/teaching/Phil_2014_tex.tex"> tex</a>|
- 	<a href="../assets/pdf/teaching/Phil_2014_bib.bib"> bib</a>
- 	</li>
- 	
- 	<li>w4209 game theory and political theory 
- 	<a href="../assets/pdf/teaching/GTPT_2008_syllabus.pdf"> (2008) </a> |
- 	<a href="../assets/pdf/teaching/GTPT_2009_syllabus.pdf"> (2009) </a> | 
- 	<a href="../assets/pdf/teaching/GTPT_2011_syllabus.pdf"> syllabus 2011 </a> | 
- 	<a href="../assets/pdf/teaching/GTPT_2010_syllabus.pdf">  (2010) </a>  
- 	</li>
- 	
- 	<li>w4210 doing game theory 
- 	<a href="../assets/pdf/teaching/GT_2003_syllabus.pdf">2003</a> |
- 	<a href="../assets/pdf/teaching/GT_2004_syllabus.pdf">2004</a> | 
- 	<a href="../assets/pdf/teaching/GT_2005_syllabus.pdf">syllabus 2005</a> | 
- 	<a href="../assets/pdf/teaching/GT_2005_notes.pdf">notes </a> 
- 	</li>
-</ul>
-
-<strong>Research seminars</strong>
-<ul>
-
- 	<li>Syllabus from senior honors thesis seminar 
- 	<a href="../assets/pdf/teaching/HON_2014_syllabus.pdf"> 2014-15</a>   
- 	<a href="../assets/pdf/teaching/HON_2014-15_flyer.pdf"> flyer </a>   | 
- 	<a href="../assets/pdf/teaching/HON_2014_syllabus.pdf"> 2015-16 </a>  | 
- 	<a href="../assets/pdf/teaching/HON_2016_syllabus.pdf"> 2016-17 </a>  | 
- 	<a href="/teaching/honors-seminar-21-22">(2021-22)</a></li>
-
- 	<li>Syllabus from dissertation seminar 
- 	<a href="../assets/pdf/teaching/DISS_2007_syllabus.pdf">2007</a></li>
-
-</ul>
-
-
-*  [EUI 2024: Declare Design](https://macartan.github.io/dd_bootcamp/)
-*  [HU 2024: Writing seminar](https://macartan.github.io/writing_seminar/)
-
-
+* Syllabus from senior honors thesis seminar [2014-15](../assets/pdf/teaching/HON_2014_syllabus.pdf) | [flyer](../assets/pdf/teaching/HON_2014-15_flyer.pdf) | [2015-16](../assets/pdf/teaching/HON_2014_syllabus.pdf) | [2016-17](../assets/pdf/teaching/HON_2016_syllabus.pdf) | [(2021-22)](/teaching/honors-seminar-21-22)
+* Syllabus from dissertation seminar [2007](../assets/pdf/teaching/DISS_2007_syllabus.pdf)
+* [EUI 2024: Declare Design](https://macartan.github.io/dd_bootcamp/)
+* [HU 2024: Writing seminar](https://macartan.github.io/writing_seminar/)

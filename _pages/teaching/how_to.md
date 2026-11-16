@@ -4,48 +4,35 @@ permalink: /teaching/resources
 title: Teaching resources
 nav: false
 nav_order: 4
+section_boxes: grid
 ---
 
-# how tos
+### How tos
 
-* <a href="/teaching/how-to-critique">How to critique: A checklist for discussants and reviewers</a>
-* <a href="/teaching/how-to-read">How to read</a>
-* <a href="/teaching/how-to-write">How to write</a>
+* [How to critique: A checklist for discussants and reviewers](/teaching/how-to-critique)
+* [How to read](/teaching/how-to-read)
+* [How to write](/teaching/how-to-write)
+* How to respond to reviewers ([pdf](/assets/pdf/teaching/responses/response.pdf) | [text](/assets/pdf/teaching/responses/response.tex))
 
-
-# ai skills
+### AI skills
 
 Save a skill page and point your AI at it (for example, if you use Cursor, put it under `~/.cursor/skills/<name>/SKILL.md`).
 
-* <a href="/teaching/skills/write-like-mac">write-like-mac</a> — prose style (<a href="https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/skills/write-like-mac.md" download="SKILL.md">download</a>)
-* <a href="/teaching/skills/review-my-paper">review-my-paper</a> — internal review with a punch list (<a href="https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/skills/review-my-paper.md" download="SKILL.md">download</a>)
-* <a href="/teaching/skills/analysis-skill">analysis-skill</a> — self-contained Quarto analysis notebooks (<a href="https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/skills/analysis-skill.md" download="SKILL.md">download</a>)
-* <a href="/teaching/skills/make-project">make-project</a> — ask first; feedback and options to set up or clean a project folder (<a href="https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/skills/make-project.md" download="SKILL.md">download</a>)
+* [write-like-mac](/teaching/skills/write-like-mac) — prose style ([download](https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/skills/write-like-mac.md))
+* [review-my-paper](/teaching/skills/review-my-paper) — internal review with a punch list ([download](https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/skills/review-my-paper.md))
+* [analysis-skill](/teaching/skills/analysis-skill) — self-contained Quarto analysis notebooks ([download](https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/skills/analysis-skill.md))
+* [make-project](/teaching/skills/make-project) — ask first; feedback and options to set up or clean a project folder ([download](https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/skills/make-project.md))
 
+### Advice on applying to graduate school
 
-# advice on applying to graduate school
+* [Informal advice for prospective students](/teaching/applying-for-a-phd)
 
-* <a href="/teaching/applying-for-a-phd">Informal advice for prospective students</a>
-
-
-# various slides and notes for trainings
+### Slides and notes
 
 * more slides [here](https://macartan.github.io/teaching/slides)
-
-* <a href="{{'slides/202306_Bocconi.html' | relative_url}}"  rel="noopener noreferrer"> <i class="fa-solid fa-presentation"></i>The use of clues (mediators in mixed methods inference)</a> 
-
-
-* <a href="{{'slides/202211_declaredesign_and_power.html' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Power analysis with declare design</a> 
-
-
-* <a href="{{'slides/201705_lectures_on_causal_inference.pdf' | relative_url}}" rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i> Six lectures on causal inference</a> 
-
-
-* <a href="{{'slides/202105_causalqueries.pdf' | relative_url}}"  rel="noopener noreferrer"> <i class="fa-solid fa-presentation-screen"></i>Lecture on using `CausalQueries` for inferences from causal models</a> 
-
-
-* <a href="{{'slides/201807_Berlin_Summer_School.pdf' | relative_url}}"  rel="noopener noreferrer"> <i class="fa-solid fa-presentation"></i>Of causes and postulates: Slides for the Berlin summer school in social sciences 2018</a> 
-
-
-* <a href="{{'files/memos/note_on_uniform_ps.html' | relative_url}}"  rel="noopener noreferrer"> Note on *p* values, July 2023</a> 
-
+* [The use of clues (mediators in mixed methods inference)](/slides/202306_Bocconi.html)
+* [Power analysis with declare design](/slides/202211_declaredesign_and_power.html)
+* [Six lectures on causal inference](/slides/201705_lectures_on_causal_inference.pdf)
+* [Lecture on using `CausalQueries` for inferences from causal models](/slides/202105_causalqueries.pdf)
+* [Of causes and postulates: Slides for the Berlin summer school in social sciences 2018](/slides/201807_Berlin_Summer_School.pdf)
+* [Note on *p* values, July 2023](/files/memos/note_on_uniform_ps.html)

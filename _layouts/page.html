@@ -9,8 +9,71 @@ layout: default
             <p class="post-description">{{ page.description }}</p>
           </header>
 
-          <article>
+          <article{% if page.section_boxes %} data-section-boxes="{{ page.section_boxes }}"{% endif %}>
             {{ content }}
           </article>
+          {% if page.section_boxes %}
+          <script>
+            (function () {
+              var article = document.querySelector("article[data-section-boxes]");
+              if (!article) return;
+              var mode = article.getAttribute("data-section-boxes");
+              var headings = Array.prototype.slice.call(article.querySelectorAll("h3"));
+              var boxes = headings.map(function (heading) {
+                var box = document.createElement("div");
+                box.className = "box";
+                heading.parentNode.insertBefore(box, heading);
+                var node = heading;
+                while (node && !(node.nodeType === 1 && ((node.tagName === "H3" && node !== heading) || node.tagName === "HR"))) {
+                  var next = node.nextSibling;
+                  box.appendChild(node);
+                  node = next;
+                }
+                return box;
+              });
+              if (boxes.length) {
+                var row = document.createElement("div");
+                row.className = "box-row";
+                boxes[0].parentNode.insertBefore(row, boxes[0]);
+                if (mode === "stack" && boxes.length > 1) {
+                  row.appendChild(boxes[0]);
+                  var stack = document.createElement("div");
+                  stack.className = "box-stack";
+                  boxes.slice(1).forEach(function (box) { stack.appendChild(box); });
+                  row.appendChild(stack);
+                } else {
+                  boxes.forEach(function (box) { row.appendChild(box); });
+                }
+              }
+              Array.prototype.slice.call(article.children).forEach(function (child) {
+                if (child.tagName !== "UL") return;
+                var cards = document.createElement("div");
+                cards.className = "box-row";
+                Array.prototype.slice.call(child.children).forEach(function (item) {
+                  var link = item.querySelector("a");
+                  if (!link) return;
+                  var card = document.createElement("a");
+                  card.className = "box box-link";
+                  card.href = link.href;
+                  if (link.target) card.target = link.target;
+                  if (link.rel) card.rel = link.rel;
+                  var title = document.createElement("h3");
+                  title.textContent = link.textContent;
+                  var note = document.createElement("p");
+                  note.textContent = "→ Course site";
+                  card.appendChild(title);
+                  card.appendChild(note);
+                  cards.appendChild(card);
+                });
+                child.parentNode.replaceChild(cards, child);
+              });
+              Array.prototype.slice.call(article.querySelectorAll("a")).forEach(function (link) {
+                if (link.textContent.trim() === "download" && /\.md(\?|$)/.test(link.getAttribute("href") || "")) {
+                  link.setAttribute("download", "SKILL.md");
+                }
+              });
+            })();
+          </script>
+          {% endif %}
 
         </div>
