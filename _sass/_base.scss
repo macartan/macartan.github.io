@@ -144,14 +144,61 @@ blockquote {
   border-radius: 0.25rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   padding: 1.25rem;
+  text-align: left;
+  hyphens: manual;
+  -webkit-hyphens: manual;
 
   h3 {
     font-size: 1.25rem;
     margin-top: 0;
     margin-bottom: 0.75rem;
+    text-align: left;
+    hyphens: manual;
   }
 
-  > :last-child {
+  p, li, td, span {
+    text-align: left;
+    hyphens: manual;
+    -webkit-hyphens: manual;
+  }
+
+  ul, ol {
+    margin: 0.25rem 0 0;
+    padding-left: 1.25rem;
+    list-style-position: outside;
+  }
+
+  li {
+    display: list-item;
+    margin: 0 0 0.55rem;
+  }
+
+  // Kramdown turns "a | b | c" into a one-row table. Keep that text in the list item.
+  table, tbody, tr {
+    display: inline;
+    width: auto;
+    margin: 0;
+    border: 0;
+  }
+
+  td {
+    display: inline;
+    width: auto;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+  }
+
+  td + td::before {
+    content: " | ";
+  }
+
+  a.keep-together {
+    white-space: nowrap;
+  }
+
+  > :last-child,
+  li:last-child {
     margin-bottom: 0;
   }
 }

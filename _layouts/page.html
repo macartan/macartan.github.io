@@ -68,8 +68,12 @@ layout: default
                 child.parentNode.replaceChild(cards, child);
               });
               Array.prototype.slice.call(article.querySelectorAll("a")).forEach(function (link) {
-                if (link.textContent.trim() === "download" && /\.md(\?|$)/.test(link.getAttribute("href") || "")) {
+                var label = link.textContent.trim();
+                if (label === "download" && /\.md(\?|$)/.test(link.getAttribute("href") || "")) {
                   link.setAttribute("download", "SKILL.md");
+                }
+                if (label.length > 0 && label.length <= 22) {
+                  link.classList.add("keep-together");
                 }
               });
             })();
