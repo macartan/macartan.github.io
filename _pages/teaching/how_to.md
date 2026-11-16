@@ -18,7 +18,7 @@ section_boxes: grid
 
 Save a skill page and point your AI at it (for example, if you use Cursor, put it under `~/.cursor/skills/<name>/SKILL.md`).
 
-* [write-like-mac](/teaching/skills/write-like-mac) — prose style ([download](https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/skills/write-like-mac.md))
+* [writing](/teaching/skills/writing-skill) — prose style ([download](https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/skills/writing-skill.md))
 * [review-my-paper](/teaching/skills/review-my-paper) — internal review with a punch list ([download](https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/skills/review-my-paper.md))
 * [analysis-skill](/teaching/skills/analysis-skill) — self-contained Quarto analysis notebooks ([download](https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/skills/analysis-skill.md))
 * [make-project](/teaching/skills/make-project) — ask first; feedback and options to set up or clean a project folder ([download](https://raw.githubusercontent.com/macartan/macartan.github.io/master/_pages/teaching/skills/make-project.md))
