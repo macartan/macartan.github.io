@@ -254,6 +254,15 @@ a.box.box-link {
   margin-right: 1rem;
 }
 
+// Markers drawn outside the line box land on a floated portrait.
+// Keep them in the text column beside the image.
+.profile.float-left + .clearfix,
+.profile.float-right + .clearfix {
+  ul, ol {
+    list-style-position: inside;
+  }
+}
+
 @media (min-width: 576px) {
   .profile {
     width: 30%;
