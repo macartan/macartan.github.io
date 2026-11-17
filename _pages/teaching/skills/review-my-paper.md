@@ -20,7 +20,7 @@ Internal review of a manuscript. Default: Macartan's own papers, before sending 
 
 Save this page and point your AI at it (for example, if you use Cursor, put it under `~/.cursor/skills/review-my-paper/SKILL.md`).
 
-Source for the critique stance: [How to critique](https://macartan.github.io/teaching/how-to-critique). Language bar: `write-like-mac`.
+Source for the critique stance: [How to critique](https://macartan.github.io/teaching/how-to-critique). Language bar: `writing-skill`.
 
 ## Warnings (do these first)
 
@@ -105,7 +105,7 @@ These are expected every time the files are available. Do them; do not only reco
 - Check factual claims (institutional facts, dates, magnitudes attributed to others, what cited papers actually found).
 - Map each major empirical or theoretical claim to the analysis that is supposed to justify it. Flag gaps, overclaiming, and underclaiming.
 - If code is available: read it. If data may be used locally: run what is needed for verification; compare paper numbers to output; review sample construction, identification in the code, clustering/SEs, and obvious pipeline errors.
-- Language pass against `write-like-mac` (findings first, signposting, sober claims, US English, no empty intensifiers, verified citations).
+- Language pass against `writing-skill` (findings first, signposting, sober claims, US English, no empty intensifiers, verified citations).
 - Produce the review in the output format below, including a punch list.
 
 ### Human should do
@@ -179,9 +179,9 @@ Permission gate applies.
 Consistency of analysis and paper is extremely important: if the paper says clustered standard errors and there is no clustering we nned to reconcile: consult the uers; same for weights, fixed effects, model choice; inconsistencies require input and a decision.
 
 
-### 6. Language (`write-like-mac`)
+### 6. Language (`writing-skill`)
 
-Read `write-like-mac` (https://macartan.github.io/teaching/skills/write-like-mac) and apply it. This is a self-review default.
+Read `writing-skill` (https://macartan.github.io/teaching/skills/writing-skill) and apply it. This is a self-review default.
 
 Flag (with a fix when cheap):
 

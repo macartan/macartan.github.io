@@ -23,7 +23,7 @@ Save this page and point your AI at it (for example, if you use Cursor, put it u
 
 **What.** Help set up or clean a research project folder that is safe for an AI to access, with memos for onboarding, a GitHub stub for analysis and writing, and optionally an Overleaf stub for TeX coauthoring.
 
-**When.** Starting or auditing a paper/project folder. Related: [analysis-skill](/teaching/skills/analysis-skill) for `analysis.qmd`; [write-like-mac](/teaching/skills/write-like-mac) for prose; [review-my-paper](/teaching/skills/review-my-paper) for manuscript review (findings can go in `memos/review.md` once a review exists).
+**When.** Starting or auditing a paper/project folder. Related: [analysis-skill](/teaching/skills/analysis-skill) for `analysis.qmd`; [writing-skill](/teaching/skills/writing-skill) for prose; [review-my-paper](/teaching/skills/review-my-paper) for manuscript review (findings can go in `memos/review.md` once a review exists).
 
 ## Posture (read first)
 

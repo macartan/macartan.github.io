@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /teaching/skills/writing
+permalink: /teaching/skills/writing-skill
 title: writing-skill
 nav: false
 nav_order: 4
