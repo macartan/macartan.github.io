@@ -3,7 +3,7 @@ layout: page
 title: projects
 permalink: /projects/
 nav: true
-nav_order: 2
+nav_order: 4
 display_categories: [field projects, methods, theory]
 horizontal: false
 ---

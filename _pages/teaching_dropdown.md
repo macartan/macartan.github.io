@@ -2,7 +2,7 @@
 layout: page
 title: teaching
 nav: true
-nav_order: 5
+nav_order: 3
 dropdown: true
 children: 
     - title: classes
@@ -11,9 +11,6 @@ children:
       permalink: /teaching/resources
     - title: slides
       permalink: /teaching/slides
-    - title: applying for a PhD
-      permalink: /teaching/applying-for-a-phd
-    - title: divider
 ---
 
 
