@@ -10,7 +10,7 @@ profile:
   address: 
 
 news: false  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
@@ -18,6 +18,5 @@ social: true  # includes social icons at the bottom of the page
 
 I am the director of the <a href="https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality">Institutions and Political Inequality group</a> at the <a href="https://wzb.eu/en">WZB Berlin Social Science Center</a> and honorary professor in political science and economics at Trinity College Dublin and honorary professor of social sciences at Humboldt University Berlin.
 
-More about me <a href="https://macartan.github.io/about/">here</a>
-
-All writing, by topic, <a href="https://macartan.github.io/writing/by_topic">here</a>
+* More about me <a href="https://macartan.github.io/about/">here</a>
+* All writing, by topic, <a href="https://macartan.github.io/writing/by_topic">here</a>
