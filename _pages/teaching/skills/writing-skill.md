@@ -30,13 +30,6 @@ Make it easy for readers to understand the work quickly.  Never make things seem
 When editing a paper, always use tracked changes or colored highlighting for substantial changes when the format supports (not needed for spelling / grammar fixes). Otherwise, use a patch, change log (`news.md`), or separate description of substantive edits. 
 
 
-### Findings first
-
-- State main claims early (abstract, intro, section openers)
-- Do not build suspense and reveal conclusions only at the end
-- Every section must justify itself on first contact; readers may not read linearly
-- Abstracts emphasize what was **found**, not only what was **done** (nulls are findings)
-
 
 ## General style guidance
 
@@ -52,6 +45,13 @@ When editing a paper, always use tracked changes or colored highlighting for sub
 
 
 ### Signposting
+
+Put findings first
+
+- State main claims early (abstract, intro, section openers)
+- Do not build suspense and reveal conclusions only at the end
+- Every section must justify itself on first contact; readers may not read linearly
+- Abstracts emphasize what was **found**, not only what was **done** (nulls are findings)
 
 Social science writing is not literary writing. Signpost heavily. Assume readers will not read linearly.
 
@@ -106,36 +106,41 @@ When editing scholarly text, strip empty intensifiers and replace with specifics
 | Reader-facing claims only                               | Author notes in the manuscript                                                    |
 
 
-**Manuscript vs notes to the author.** Running text and captions are for the reader. Production notes belong in chat or a memo or commented out. Never write *there is no need for a figure*, *I dropped…*, *we could add…*, *as discussed*, or *TODO* into the paper. Principle: try to have the paper be a shareable object at all times.
 
-**Comma-*and* clauses (house preference).** Prefer splitting independent clauses when that makes the sentence shorter or prevents two distinct ideas from being buried together. A clear, grammatical compound sentence is acceptable; do not split it mechanically.
-example:
-not: "The contribution is real, and it is not the contribution the introduction claims" 
-rather: "The real contribution is different to what the introduction claims"
+**Manuscript vs notes to the author.** 
 
-example:
+Running text and captions are for the reader. Production notes belong in chat or a memo or commented out. Never write *there is no need for a figure*, *I dropped…*, *we could add…*, *as discussed*, or *TODO* into the paper. Principle: try to have the paper be a shareable object at all times.
+
+**Comma-*and* clauses (house preference).** 
+
+Prefer splitting independent clauses when that makes the sentence shorter or prevents two distinct ideas from being buried together. A clear, grammatical compound sentence is acceptable; do not split it mechanically.
+
+Bad: "The contribution is real, and it is not the contribution the introduction claims" 
+
+Better: "The real contribution is different to what the introduction claims"
+
 Bad: *Two comparisons are at play, and they are easy to confuse.*
-Good: *There are two separate comparisons.* or  *Two comparisons are at play. Make sure not to confuse them*  
 
-- **Emphasis:** italics sparingly; never ALL CAPS.
-- Do not call an empirical claim *my theory*.
-- **Inferences.** Failure to reject the null is not proof of no effect.
+Better: *There are two separate comparisons.* or  *Two comparisons are at play. Make sure not to confuse them*  
 
-### that
+
+**that**
 
 don't skip 'that' if it creates ambiguity or makes things too terse:
 
 Bad: The body still argues the result the abstract has already given up -
+
 Better: "The body still claims a result that the abstract has now dropped"-
 
-### Avoid effect-first constructions; especially with negation
+**Avoid effect-first constructions; especially with negation**
 
 Bad: The decline in Y was not the effect X was designed to produce.
+
 Better: X was not designed to produce a decline in Y
 
-### Avoid passive voice
+**Avoid passive voice**
 
-Avoid the passive voice. Agents first please.
+Avoid the passive voice. Agents first please. Avoid ambiguity about who the actor is in case of multiple actors.
 
 
 ### Hand-holding quantitative walk throughs
@@ -178,6 +183,7 @@ Use when natural, not as filler:
 
 ### Other small style points
 
+
 Common slip-ups to catch when drafting or editing:
 
 - Past tense of *lead* is *led*, not *lead*
@@ -191,6 +197,7 @@ Common slip-ups to catch when drafting or editing:
 - *Necessary* / *necessarily* is a strong claim; reserve it for when you mean it
 
 
+- **Emphasis:** italics sparingly; never ALL CAPS.
 
 
 ## Structure check
