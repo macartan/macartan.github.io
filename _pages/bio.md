@@ -37,7 +37,7 @@ Recent work has appeared in the *American Political Science Review*, *Journal of
 - **Honorary Professor**, [Humboldt University Berlin](https://agnes.hu-berlin.de/lupo/rds?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfoPerson&publishSubDir=personal&keep=y&purge=y&personal.pid=32460)  
 - **Honorary Professor**, [Trinity College Dublin](https://people.tcd.ie/Profile?Username=MAHUMPHR)  
 - Secretary of the [European Political Science Society](http://epssnet.org) and associate editor of the [American Political Science Review](https://apsanet.org/publications/journals/american-political-science-review/about-the-editors/)
-- Former **Trudeau Fellow**,  **Harvard Academy Scholar**, and Professor, Columbia University (2002-2023).
+- Former **Trudeau Fellow**,  **Harvard Academy Scholar**, and Professor, Columbia University (2003-2023).
 
 ---
 
